@@ -6,10 +6,11 @@ import { formatCheck, formatMeso, formatNumber } from '../lib/format';
 import { formatFetchedAt, formatPower, nexon } from '../lib/nexon';
 import { unionMembers } from '../lib/union';
 import { useStore } from '../store';
+import EnhanceHistory from './EnhanceHistory';
 import { PurchaseTable } from './Purchases';
 import type { Character, Check, NexonCharacter, NexonEquipment, TargetSetup } from '../types';
 
-type Tab = 'overview' | 'equip' | 'target' | 'purchases';
+type Tab = 'overview' | 'equip' | 'target' | 'purchases' | 'history';
 
 export default function CharacterDetail() {
   const { id = '' } = useParams();
@@ -84,11 +85,15 @@ export default function CharacterDetail() {
         <TabButton current={tab} value="purchases" onClick={setTab}>
           구매 내역 {bought.length > 0 && `(${bought.length})`}
         </TabButton>
+        <TabButton current={tab} value="history" onClick={setTab}>
+          강화 기록
+        </TabButton>
       </div>
 
       {tab === 'overview' && <Overview c={character} />}
       {tab === 'equip' && <Equip c={character} api={api} />}
       {tab === 'target' && <Target setup={setup} />}
+      {tab === 'history' && <EnhanceHistory characterName={character.name} />}
       {tab === 'purchases' && (
         <>
           <p className="muted">

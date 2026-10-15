@@ -7,9 +7,13 @@ on:
   schedule:
     - cron: '0 21 * * *'
   workflow_dispatch:
+    inputs:
+      history_budget:
+        description: '강화 기록 조회에 쓸 최대 호출 수 (0 이면 건너뜀)'
+        default: '600'
 
 permissions:
-  contents: read
+  contents: write # 강화 기록을 저장소에 커밋
   pages: write
   id-token: write
 
@@ -25,6 +29,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 강화 기록 커밋 전 rebase 용
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -34,6 +40,21 @@ jobs:
         run: node scripts/fetch_nexon.mjs
         env:
           NEXON_API_KEY: ${{ secrets.NEXON_API_KEY }}
+      # 강화 기록은 매일 아침 실행과 수동 실행에서만 받는다 (push 배포는 키 사용량 절약)
+      - name: Fetch enhancement history
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.history_budget != '0')
+        run: node scripts/fetch_history.mjs
+        env:
+          NEXON_API_KEY: ${{ secrets.NEXON_API_KEY }}
+          HISTORY_BUDGET: ${{ inputs.history_budget || '600' }}
+      - name: Commit enhancement history
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git add data/history src/data/historySummary.json
+          if git diff --cached --quiet; then exit 0; fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -m "Update enhancement history"
+          git pull --rebase origin main && git push origin HEAD:main || echo "::warning::강화 기록 커밋 실패 (다음 실행에서 다시 받음)"
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -93,3 +93,19 @@ export interface NexonData {
   characters: Record<string, NexonCharacter>;
   errors: Record<string, string>;
 }
+
+/** scripts/fetch_history.mjs 가 만드는 장비별 강화 기록 요약 */
+export interface HistoryItem {
+  character: string;
+  item: string;
+  starforce: { attempts: number; success: number; fail: number; destroy: number; maxStar: number; last: string | null };
+  cube: { uses: number; gradeUps: number; byKind: Record<string, number>; last: string | null };
+  potential: { uses: number; gradeUps: number; last: string | null };
+}
+
+export interface HistorySummary {
+  updatedAt: string | null;
+  characters: string[];
+  state: Record<string, { lastDate: string | null; error: string | null }>;
+  items: HistoryItem[];
+}
