@@ -2,11 +2,12 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { formatCheck, formatNumber } from '../lib/format';
 import { EQUIP_SLOTS } from '../lib/equip';
+import { formatPower, nexon } from '../lib/nexon';
 import { levelTotal, unionLevel, unionMembers, UNION_SLOTS } from '../lib/union';
 import { useStore } from '../store';
 import type { Character } from '../types';
 
-type SortKey = 'default' | 'level' | 'unionPower';
+type SortKey = 'default' | 'level' | 'unionPower' | 'combatPower';
 
 function uniq(values: (string | null)[]): string[] {
   return [...new Set(values.filter((v): v is string => !!v))];
@@ -34,7 +35,8 @@ export default function CharacterList() {
         (!bossOnly || c.boss.karut === 'yes' || c.boss.stoneDesire === 'yes'),
     );
     if (sort === 'default') return filtered;
-    return [...filtered].sort((a, b) => (b[sort] ?? 0) - (a[sort] ?? 0));
+    const value = (c: Character) => (sort === 'combatPower' ? nexon.characters[c.id]?.combatPower : c[sort]) ?? 0;
+    return [...filtered].sort((a, b) => value(b) - value(a));
   }, [characters, query, jobGroup, guild, plan, bossOnly, sort]);
 
   return (
@@ -53,6 +55,7 @@ export default function CharacterList() {
         <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)}>
           <option value="default">시트 순서</option>
           <option value="level">레벨 높은 순</option>
+          <option value="combatPower">전투력 높은 순</option>
           <option value="unionPower">유니온 전투력 높은 순</option>
         </select>
         <label className="check">
@@ -80,6 +83,7 @@ export default function CharacterList() {
               <th title="카루타">카룻</th>
               <th title="스우·데미안">스데</th>
               <th title="루시드·윌·슬라임">루윌슬</th>
+              <th className="num">전투력</th>
               <th className="num">유니온 전투력</th>
               <th>비고</th>
               {showEquip && EQUIP_SLOTS.map((s) => <th key={s}>{s}</th>)}
@@ -113,6 +117,7 @@ function Row({ c, showEquip, inUnion }: { c: Character; showEquip: boolean; inUn
       <td className="center">{formatCheck(c.boss.karut)}</td>
       <td className="center">{formatCheck(c.boss.stoneDesire)}</td>
       <td className="center">{formatCheck(c.boss.lucidWillSlime)}</td>
+      <td className="num">{formatPower(nexon.characters[c.id]?.combatPower ?? null).replace(/^-$/, '')}</td>
       <td className="num">{c.unionPower ? formatNumber(c.unionPower) : ''}</td>
       <td className="note-cell">{c.note}</td>
       {showEquip && EQUIP_SLOTS.map((s) => <td key={s} className="pre">{c.equip[s]}</td>)}

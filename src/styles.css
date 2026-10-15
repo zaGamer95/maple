@@ -331,3 +331,41 @@ tr.main-row td {
 tr.out-of-union td {
   opacity: 0.45;
 }
+
+.avatar {
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  image-rendering: pixelated;
+}
+.grow {
+  flex: 1;
+  min-width: 0;
+}
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.grade {
+  display: inline-block;
+  width: 18px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--muted);
+}
+.grade.rare {
+  background: #3b82f6;
+}
+.grade.epic {
+  background: #8b5cf6;
+}
+.grade.unique {
+  background: #d4a106;
+}
+.grade.legendary {
+  background: #16a34a;
+}

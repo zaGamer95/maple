@@ -25,6 +25,11 @@ npm run build    # 타입 검사 + 빌드 (dist/)
 
   주의: `src/data` 의 JSON 을 시트 내용으로 덮어쓴다.
 
+## 넥슨 Open API
+
+배포할 때와 매일 06:00(KST)에 `scripts/fetch_nexon.mjs` 가 캐릭터 기본정보·전투력·장비·유니온을 받아 `src/data/nexon.json` 에 넣는다 (빌드 결과에만 들어가고 커밋되지 않음).
+키는 저장소 Secret `NEXON_API_KEY` 에서 읽는다. 로컬에서 받아 보려면 `NEXON_API_KEY=... node scripts/fetch_nexon.mjs`.
+
 ## 공유 (GitHub Pages)
 
 `main` 브랜치에 푸시하면 `.github/workflows/pages.yml` 이 빌드해서 배포한다.

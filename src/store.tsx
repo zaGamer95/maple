@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
 import baseCharacters from './data/characters.json';
 import basePurchases from './data/purchases.json';
+import { nexon } from './lib/nexon';
 import type { Character, Purchase } from './types';
 
 /**
@@ -60,7 +61,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     characters: loadDraft('characters'),
     purchases: loadDraft('purchases'),
   }));
-  const characters = drafts.characters ?? DATASETS.characters.base;
+  // 넥슨 API 로 받은 레벨이 있으면 그것을 쓴다 (시트·수동 입력보다 최신)
+  const characters = useMemo(
+    () =>
+      (drafts.characters ?? DATASETS.characters.base).map((c) => {
+        const level = nexon.characters[c.id]?.level;
+        return level != null && level !== c.level ? { ...c, level } : c;
+      }),
+    [drafts.characters],
+  );
   const purchases = drafts.purchases ?? DATASETS.purchases.base;
 
   const setDraft = useCallback(<K extends Dataset>(name: K, value: Data[K]) => {

@@ -59,3 +59,37 @@ export interface Todo {
   note: string | null;
   done: boolean;
 }
+
+/** scripts/fetch_nexon.mjs 가 만드는 넥슨 Open API 데이터 */
+export interface NexonEquipment {
+  slot: string;
+  part: string;
+  name: string;
+  icon: string;
+  starforce: number;
+  scrollUpgrade: number;
+  potentialGrade: string | null;
+  potential: string[];
+  additionalGrade: string | null;
+  additional: string[];
+}
+
+export interface NexonCharacter {
+  ocid: string;
+  name: string;
+  world: string;
+  job: string;
+  level: number;
+  expRate: number | null;
+  guild: string | null;
+  image: string | null;
+  combatPower: number | null;
+  equipment: NexonEquipment[];
+}
+
+export interface NexonData {
+  fetchedAt: string | null;
+  union: { level: number; grade: string } | null;
+  characters: Record<string, NexonCharacter>;
+  errors: Record<string, string>;
+}

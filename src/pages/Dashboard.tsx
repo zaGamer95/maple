@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import todos from '../data/todos.json';
 import { formatMeso, formatNumber } from '../lib/format';
+import { formatFetchedAt, formatPower, nexon } from '../lib/nexon';
 import { levelTotal, unionLevel, UNION_SLOTS } from '../lib/union';
 import { useStore } from '../store';
 import type { Todo } from '../types';
@@ -17,15 +18,24 @@ export default function Dashboard() {
   return (
     <section>
       <h1>대시보드</h1>
+      <p className="muted">넥슨 API 갱신: {formatFetchedAt(nexon.fetchedAt)}</p>
       <div className="stats">
-        <Stat label="유니온 레벨" value={formatNumber(unionLevel(characters))} sub={`레벨 상위 ${UNION_SLOTS}캐릭 합`} />
+        {nexon.union ? (
+          <Stat
+            label={`유니온 · ${nexon.union.grade}`}
+            value={formatNumber(nexon.union.level)}
+            sub={`게임 기준 · 계산값 ${formatNumber(unionLevel(characters))}`}
+          />
+        ) : (
+          <Stat label="유니온 레벨" value={formatNumber(unionLevel(characters))} sub={`레벨 상위 ${UNION_SLOTS}캐릭 합`} />
+        )}
         <Stat label="전체 레벨 합" value={formatNumber(levelTotal(characters))} sub="참고용 · 유니온 레벨과 다름" />
         <Stat label="캐릭터" value={`${characters.length}개`} />
         {main && (
           <Stat
             label={`본캐 · ${main.job}`}
             value={<Link to={`/characters/${encodeURIComponent(main.id)}`}>{main.name}</Link>}
-            sub={`Lv.${main.level} · 유니온 전투력 ${formatNumber(main.unionPower)}`}
+            sub={`Lv.${main.level} · 전투력 ${formatPower(nexon.characters[main.id]?.combatPower ?? main.unionPower)}`}
           />
         )}
       </div>

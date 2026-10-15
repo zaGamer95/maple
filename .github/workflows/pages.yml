@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # 매일 06:00 KST 에 넥슨 API 데이터를 새로 받아 다시 배포
+  schedule:
+    - cron: '0 21 * * *'
   workflow_dispatch:
 
 permissions:
@@ -27,6 +30,10 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Fetch NEXON Open API data
+        run: node scripts/fetch_nexon.mjs
+        env:
+          NEXON_API_KEY: ${{ secrets.NEXON_API_KEY }}
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

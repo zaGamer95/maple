@@ -3,10 +3,11 @@ import { Link, useParams } from 'react-router-dom';
 import targetSetups from '../data/targetSetups.json';
 import { EQUIP_SLOTS } from '../lib/equip';
 import { formatCheck, formatMeso, formatNumber } from '../lib/format';
+import { formatFetchedAt, formatPower, nexon } from '../lib/nexon';
 import { unionMembers } from '../lib/union';
 import { useStore } from '../store';
 import { PurchaseTable } from './Purchases';
-import type { Character, Check, TargetSetup } from '../types';
+import type { Character, Check, NexonCharacter, NexonEquipment, TargetSetup } from '../types';
 
 type Tab = 'overview' | 'equip' | 'target' | 'purchases';
 
@@ -21,6 +22,7 @@ export default function CharacterDetail() {
     .filter((p) => p.characterId === id)
     .sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''));
   const inUnion = unionMembers(characters).some((c) => c.id === id);
+  const api = nexon.characters[id];
 
   if (!character) {
     return (
@@ -37,7 +39,8 @@ export default function CharacterDetail() {
         ← 캐릭터 목록
       </Link>
       <div className="detail-head">
-        <div>
+        {api?.image && <img className="avatar" src={api.image} alt="" width={96} height={96} />}
+        <div className="grow">
           <h1>
             {character.name} {character.isMain && <span className="badge">본캐</span>}
           </h1>
@@ -46,6 +49,14 @@ export default function CharacterDetail() {
             {character.guild && ` · ${character.guild}`}
             {inUnion ? ' · 유니온 레벨 포함' : ' · 유니온 레벨 미포함'}
           </p>
+          {api && (
+            <p className="muted">
+              {api.world} · {api.job}
+              {api.expRate != null && ` · 경험치 ${api.expRate}%`} · 전투력 <b>{formatPower(api.combatPower)}</b>
+              {api.guild && ` · 길드 ${api.guild}`}
+            </p>
+          )}
+          {!api && nexon.errors[id] && <p className="muted">넥슨 API 조회 실패: {nexon.errors[id]}</p>}
         </div>
         <button onClick={() => setEditing((e) => !e)}>{editing ? '편집 닫기' : '편집'}</button>
       </div>
@@ -76,7 +87,7 @@ export default function CharacterDetail() {
       </div>
 
       {tab === 'overview' && <Overview c={character} />}
-      {tab === 'equip' && <Equip c={character} />}
+      {tab === 'equip' && <Equip c={character} api={api} />}
       {tab === 'target' && <Target setup={setup} />}
       {tab === 'purchases' && (
         <>
@@ -132,12 +143,70 @@ function Overview({ c }: { c: Character }) {
   );
 }
 
-function Equip({ c }: { c: Character }) {
+const GRADE_CLASS: Record<string, string> = { 레어: 'rare', 에픽: 'epic', 유니크: 'unique', 레전드리: 'legendary' };
+
+function Grade({ grade, lines }: { grade: string | null; lines: string[] }) {
+  if (!grade) return <span className="muted">-</span>;
+  return (
+    <span>
+      <span className={`grade ${GRADE_CLASS[grade] ?? ''}`}>{grade[0]}</span> {lines.join(' / ')}
+    </span>
+  );
+}
+
+function ApiEquipment({ items }: { items: NexonEquipment[] }) {
+  return (
+    <div className="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>부위</th>
+            <th>아이템</th>
+            <th className="num">스타포스</th>
+            <th>잠재능력</th>
+            <th>에디셔널</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((it) => (
+            <tr key={it.slot}>
+              <td>{it.slot}</td>
+              <td>
+                <span className="item">
+                  <img src={it.icon} alt="" width={24} height={24} loading="lazy" />
+                  {it.name}
+                  {it.scrollUpgrade > 0 && <span className="muted"> (+{it.scrollUpgrade})</span>}
+                </span>
+              </td>
+              <td className="num">{it.starforce ? `★${it.starforce}` : ''}</td>
+              <td className="note-cell">
+                <Grade grade={it.potentialGrade} lines={it.potential} />
+              </td>
+              <td className="note-cell">
+                <Grade grade={it.additionalGrade} lines={it.additional} />
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function Equip({ c, api }: { c: Character; api?: NexonCharacter }) {
   const filled = EQUIP_SLOTS.filter((s) => c.equip[s]);
-  if (filled.length === 0) return <p className="muted">기록된 장비가 없어요. 편집에서 부위별 메모를 추가할 수 있어요.</p>;
   return (
     <>
-      <p className="muted">시트에서 옮긴 메모예요. 넥슨 Open API 연동(2단계) 후에는 실제 장비 정보가 함께 표시돼요.</p>
+      {api ? (
+        <>
+          <p className="muted">넥슨 API 기준 장착 장비 · {formatFetchedAt(nexon.fetchedAt)} 갱신</p>
+          <ApiEquipment items={api.equipment} />
+        </>
+      ) : (
+        <p className="muted">넥슨 API 장비 정보가 아직 없어요. 매일 아침 6시 배포 때 갱신돼요.</p>
+      )}
+      <h3>장비 메모</h3>
+      {filled.length === 0 && <p className="muted">메모가 없어요. 편집에서 부위별 메모를 추가할 수 있어요.</p>}
       <dl className="info">
         {filled.map((s) => (
           <div key={s}>
