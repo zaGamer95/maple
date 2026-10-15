@@ -1,0 +1,247 @@
+[
+  {
+    "item": "물통",
+    "bundleSize": 1,
+    "date": "2023-07-24",
+    "price": 2600,
+    "unit": "won_per_eok"
+  },
+  {
+    "item": "물통",
+    "bundleSize": 1,
+    "date": "2023-08-25",
+    "price": 2500,
+    "unit": "won_per_eok"
+  },
+  {
+    "item": "메소 마켓",
+    "bundleSize": 1,
+    "date": "2023-07-24",
+    "price": 3033,
+    "unit": "won_per_eok"
+  },
+  {
+    "item": "메소 마켓",
+    "bundleSize": 1,
+    "date": "2023-08-25",
+    "price": 2873,
+    "unit": "won_per_eok"
+  },
+  {
+    "item": "하이퍼 확성기",
+    "bundleSize": 1,
+    "date": "2023-07-24",
+    "price": 33000000,
+    "unit": "meso"
+  },
+  {
+    "item": "하이퍼 확성기",
+    "bundleSize": 1,
+    "date": "2023-08-25",
+    "price": 40000000,
+    "unit": "meso"
+  },
+  {
+    "item": "프리미엄 마스터피스",
+    "bundleSize": 1,
+    "date": "2023-08-25",
+    "price": 72000000,
+    "unit": "meso"
+  },
+  {
+    "item": "로얄 스타일",
+    "bundleSize": 20,
+    "date": "2023-08-25",
+    "price": 1600000000,
+    "unit": "meso"
+  },
+  {
+    "item": "로얄 스타일",
+    "bundleSize": 13,
+    "date": "2023-07-24",
+    "price": 66000000,
+    "unit": "meso"
+  },
+  {
+    "item": "로얄 스타일",
+    "bundleSize": 1,
+    "date": "2023-07-24",
+    "price": 76000000,
+    "unit": "meso"
+  },
+  {
+    "item": "로얄 스타일",
+    "bundleSize": 1,
+    "date": "2023-08-25",
+    "price": 80000000,
+    "unit": "meso"
+  },
+  {
+    "item": "블랙 큐브",
+    "bundleSize": 30,
+    "date": "2023-07-24",
+    "price": 64000000,
+    "unit": "meso"
+  },
+  {
+    "item": "블랙 큐브",
+    "bundleSize": 11,
+    "date": "2023-07-24",
+    "price": 63000000,
+    "unit": "meso"
+  },
+  {
+    "item": "블랙 큐브",
+    "bundleSize": 11,
+    "date": "2023-08-25",
+    "price": 679800000,
+    "unit": "meso"
+  },
+  {
+    "item": "블랙 큐브",
+    "bundleSize": 6,
+    "date": "2023-07-24",
+    "price": 62000000,
+    "unit": "meso"
+  },
+  {
+    "item": "블랙 큐브",
+    "bundleSize": 3,
+    "date": "2023-07-24",
+    "price": 64000000,
+    "unit": "meso"
+  },
+  {
+    "item": "블랙 큐브",
+    "bundleSize": 1,
+    "date": "2023-07-24",
+    "price": 77000000,
+    "unit": "meso"
+  },
+  {
+    "item": "레드 큐브",
+    "bundleSize": 30,
+    "date": "2023-07-24",
+    "price": 900000000,
+    "unit": "meso"
+  },
+  {
+    "item": "레드 큐브",
+    "bundleSize": 12,
+    "date": "2023-07-24",
+    "price": 408000000,
+    "unit": "meso"
+  },
+  {
+    "item": "레드 큐브",
+    "bundleSize": 11,
+    "date": "2023-07-24",
+    "price": 338800000,
+    "unit": "meso"
+  },
+  {
+    "item": "레드 큐브",
+    "bundleSize": 11,
+    "date": "2023-08-25",
+    "price": 379500000,
+    "unit": "meso"
+  },
+  {
+    "item": "레드 큐브",
+    "bundleSize": 6,
+    "date": "2023-07-24",
+    "price": 180000000,
+    "unit": "meso"
+  },
+  {
+    "item": "레드 큐브",
+    "bundleSize": 6,
+    "date": "2023-08-25",
+    "price": 207000000,
+    "unit": "meso"
+  },
+  {
+    "item": "레드 큐브",
+    "bundleSize": 1,
+    "date": "2023-07-24",
+    "price": 40000000,
+    "unit": "meso"
+  },
+  {
+    "item": "레드 큐브",
+    "bundleSize": 1,
+    "date": "2023-08-25",
+    "price": 34500000,
+    "unit": "meso"
+  },
+  {
+    "item": "에디 큐브",
+    "bundleSize": 15,
+    "date": "2023-07-24",
+    "price": 56000000,
+    "unit": "meso"
+  },
+  {
+    "item": "에디 큐브",
+    "bundleSize": 11,
+    "date": "2023-08-25",
+    "price": 764500000,
+    "unit": "meso"
+  },
+  {
+    "item": "에디 큐브",
+    "bundleSize": 6,
+    "date": "2023-07-24",
+    "price": 55000000,
+    "unit": "meso"
+  },
+  {
+    "item": "에디 큐브",
+    "bundleSize": 3,
+    "date": "2023-07-24",
+    "price": 57000000,
+    "unit": "meso"
+  },
+  {
+    "item": "에디 큐브",
+    "bundleSize": 1,
+    "date": "2023-07-24",
+    "price": 81000000,
+    "unit": "meso"
+  },
+  {
+    "item": "블레어 살롱 펄리 헤어",
+    "bundleSize": 1,
+    "date": "2023-07-24",
+    "price": 1100000000,
+    "unit": "meso"
+  },
+  {
+    "item": "혈맹의 반지",
+    "bundleSize": 1,
+    "date": "2023-07-24",
+    "price": 160000000,
+    "unit": "meso"
+  },
+  {
+    "item": "부스트링",
+    "bundleSize": 1,
+    "date": "2023-08-25",
+    "price": 400000000,
+    "unit": "meso"
+  },
+  {
+    "item": "준정팬 90일",
+    "bundleSize": 1,
+    "date": "2023-08-25",
+    "price": 2667000000,
+    "unit": "meso"
+  },
+  {
+    "item": "뉴에이지 티켓",
+    "bundleSize": 1,
+    "date": "2023-07-24",
+    "price": 185000000,
+    "unit": "meso"
+  }
+]

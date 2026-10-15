@@ -1,0 +1,350 @@
+[
+  {
+    "characterId": "비숍자그",
+    "title": "비숍 템세팅",
+    "slots": [
+      {
+        "group": "무기",
+        "slot": "스태프",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": "0(피케인)",
+        "note": "총 200억 정도?"
+      },
+      {
+        "group": "보조",
+        "slot": "실드? (데이모스 세이지 실드)",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": "에9, 마 3 일단 쓰고, 6차 때 바꾸고",
+        "note": null
+      },
+      {
+        "group": "엠블렘",
+        "slot": "미트라 / 골드",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": "일단은 유닠 엠블",
+        "note": null
+      },
+      {
+        "group": "3카룻",
+        "slot": "상의",
+        "starforce": "18성",
+        "mainPot": "15% +",
+        "addPot": "2줄",
+        "flame": "110급+",
+        "scroll": "15%",
+        "budget": "20억",
+        "note": "라라꺼 가위 잘라옴 / 대충 이노 + 17성"
+      },
+      {
+        "group": "3카룻",
+        "slot": "하의",
+        "starforce": "18성",
+        "mainPot": "15% +",
+        "addPot": "2줄",
+        "flame": "110급+",
+        "scroll": "15%",
+        "budget": "20억",
+        "note": "라라꺼 가위 잘라옴 / 대충  이노 + 18성"
+      },
+      {
+        "group": "3카룻",
+        "slot": "머리",
+        "starforce": "18성",
+        "mainPot": "15%+",
+        "addPot": "2줄",
+        "flame": "110급+",
+        "scroll": "15%",
+        "budget": "20억",
+        "note": null
+      },
+      {
+        "group": "4아케인",
+        "slot": "견장",
+        "starforce": "17성",
+        "mainPot": "15%+",
+        "addPot": "2줄",
+        "flame": "150급+",
+        "scroll": "15%",
+        "budget": "2(3)0억",
+        "note": null
+      },
+      {
+        "group": "4아케인",
+        "slot": "망토",
+        "starforce": "17성",
+        "mainPot": "15%+",
+        "addPot": "2줄",
+        "flame": "150급+",
+        "scroll": "15%",
+        "budget": "2(3)0억",
+        "note": null
+      },
+      {
+        "group": "4아케인",
+        "slot": "장갑",
+        "starforce": "17성",
+        "mainPot": "15%+",
+        "addPot": "2줄",
+        "flame": "150급+",
+        "scroll": "15%",
+        "budget": "2(3)0억",
+        "note": null
+      },
+      {
+        "group": "4아케인",
+        "slot": "신발",
+        "starforce": "17성",
+        "mainPot": "15%+",
+        "addPot": "2줄",
+        "flame": "150급+",
+        "scroll": "15%",
+        "budget": "2(3)0억",
+        "note": null
+      },
+      {
+        "group": "5앱솔",
+        "slot": "머리",
+        "starforce": "18성",
+        "mainPot": "12%+",
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "5앱솔",
+        "slot": "견장",
+        "starforce": "18성",
+        "mainPot": "12% +",
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "5앱솔",
+        "slot": "망토",
+        "starforce": "18성",
+        "mainPot": "12% +",
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "5앱솔",
+        "slot": "장갑",
+        "starforce": "18성",
+        "mainPot": "12% +",
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "5앱솔",
+        "slot": "신발",
+        "starforce": "18성",
+        "mainPot": "12% +",
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "2/4여명",
+        "slot": "가엔링",
+        "starforce": "18성",
+        "mainPot": "15%+",
+        "addPot": "2줄",
+        "flame": null,
+        "scroll": "농긍떡 or 프악공",
+        "budget": "25억",
+        "note": "18성 15% / 만약 없으면 17성 966"
+      },
+      {
+        "group": "2/4여명",
+        "slot": "트왈마",
+        "starforce": "18성",
+        "mainPot": "15%+",
+        "addPot": "2줄",
+        "flame": null,
+        "scroll": null,
+        "budget": "25억",
+        "note": null
+      },
+      {
+        "group": "2/4여명",
+        "slot": "에스텔라",
+        "starforce": "18성",
+        "mainPot": "15%+",
+        "addPot": "2줄",
+        "flame": null,
+        "scroll": null,
+        "budget": "25억",
+        "note": "라라꺼 가위 잘라옴"
+      },
+      {
+        "group": "2/4여명",
+        "slot": "데브펜",
+        "starforce": "18성",
+        "mainPot": "15%+",
+        "addPot": "2줄",
+        "flame": null,
+        "scroll": null,
+        "budget": "25억",
+        "note": null
+      },
+      {
+        "group": "9보장",
+        "slot": "응축",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "9보장",
+        "slot": "아쿠아틱",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "9보장",
+        "slot": "데아시두스",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "9보장",
+        "slot": "실블링",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "9보장",
+        "slot": "고피아",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "9보장",
+        "slot": "카온목",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "9보장",
+        "slot": "메커",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "9보장",
+        "slot": "도미",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "9보장",
+        "slot": "골클벨",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "9보장",
+        "slot": "성배",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "9보장",
+        "slot": "웬투스 뱃지",
+        "starforce": null,
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      },
+      {
+        "group": "시드링",
+        "slot": "시드링",
+        "starforce": "웨펍 4렙",
+        "mainPot": null,
+        "addPot": null,
+        "flame": null,
+        "scroll": null,
+        "budget": null,
+        "note": null
+      }
+    ],
+    "note": "22성 카루타 모자상하의 대충 100억언저리인 템들 사오면 가성비 제일 좋을걸요?\n모자상하의 3부위 22성 합 300억이 훨세구\n방패는 그냥 20성찍으시구\n페어리 수에디랑 윗잠(카유잠)\n이벤링도 수에디 마 10 한줄 정도 뽑기\n데브는 17성 카르마 강화권 바르기\n엠블윗잠 마15퍼나 방무30 마6퍼정도로"
+  }
+]

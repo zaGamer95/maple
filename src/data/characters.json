@@ -1,0 +1,1395 @@
+[
+  {
+    "id": "영웅자그",
+    "name": "영웅자그",
+    "jobGroup": "모험가",
+    "job": "히어로",
+    "unionEffect": "힘",
+    "linkEffect": "회복",
+    "plan": "제로백",
+    "level": 215,
+    "note": null,
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "뱃지": "ㅇ",
+      "성배": "X",
+      "블랙셋": "0성"
+    }
+  },
+  {
+    "id": "개굴자그",
+    "name": "개굴자그",
+    "jobGroup": "모험가",
+    "job": "팔라딘",
+    "unionEffect": "힘",
+    "linkEffect": "회복",
+    "plan": "제로백",
+    "level": 200,
+    "note": null,
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "뱃지": "X",
+      "성배": "X",
+      "블랙셋": "0성"
+    }
+  },
+  {
+    "id": "혈흔의기사",
+    "name": "혈흔의기사",
+    "jobGroup": "모험가",
+    "job": "다크나이트",
+    "unionEffect": "HP",
+    "linkEffect": "회복",
+    "plan": "메가버닝",
+    "level": 0,
+    "note": null,
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "뱃지": "ㅇ",
+      "성배": "X"
+    }
+  },
+  {
+    "id": "IgnisToxicus",
+    "name": "IgnisToxicus",
+    "jobGroup": "모험가",
+    "job": "불독",
+    "unionEffect": "MP",
+    "linkEffect": "뎀+방무",
+    "plan": "테버",
+    "level": 210,
+    "note": null,
+    "guild": "으악",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "반지": "실블 10성\n플래 10성",
+      "뱃지": "ㅇ",
+      "견장": "12성 6/0",
+      "블랙셋": "0성"
+    }
+  },
+  {
+    "id": "자그4",
+    "name": "자그4",
+    "jobGroup": "모험가",
+    "job": "썬콜",
+    "unionEffect": "지능",
+    "linkEffect": "뎀+방무",
+    "plan": null,
+    "level": 224,
+    "note": "20주년 메이프릴",
+    "guild": "으악",
+    "boss": {
+      "karut": "yes",
+      "stoneDesire": "yes",
+      "lucidWillSlime": null
+    },
+    "unionPower": 14728821,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "6성",
+      "눈장식": "5성",
+      "반지": "실블 10성\n플래 12성\n이벤링 x2",
+      "뱃지": "O",
+      "견장": "5성 3/0",
+      "목걸이": "피도미",
+      "벨트": "0성 0/0",
+      "성배": "장미",
+      "블랙셋": "32성"
+    }
+  },
+  {
+    "id": "비숍자그",
+    "name": "비숍자그",
+    "jobGroup": "모험가",
+    "job": "비숍",
+    "unionEffect": "지능",
+    "linkEffect": "뎀+방무",
+    "plan": null,
+    "level": 276,
+    "note": "유니온 챔피언 - 해방중",
+    "guild": "MoonStone (그룹)",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 41124878,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "10성",
+      "눈장식": "0성",
+      "귀고리": "메탈 5성",
+      "반지": "실블 10성 9/0\n플래 0성",
+      "뱃지": "ㅇ",
+      "견장": "0성",
+      "목걸이": "카혼 0\n피도미",
+      "벨트": "0성",
+      "3카룻": "0성"
+    }
+  },
+  {
+    "id": "보마자그",
+    "name": "보마자그",
+    "jobGroup": "모험가",
+    "job": "보마",
+    "unionEffect": "덱",
+    "linkEffect": "치확+몬컬",
+    "plan": "유챔 후보",
+    "level": 265,
+    "note": null,
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 28531680,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "피노 5성",
+      "뱃지": "O",
+      "목걸이": "족쇄",
+      "벨트": "족쇄",
+      "성배": "X"
+    }
+  },
+  {
+    "id": "미모오버플로",
+    "name": "미모오버플로",
+    "jobGroup": "모험가",
+    "job": "신궁",
+    "unionEffect": "크확 5%",
+    "linkEffect": "치확+몬컬",
+    "plan": null,
+    "level": 260,
+    "note": "20주년 메이프릴",
+    "guild": "니가정해",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 24299907,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "눈장식": "페어리 5성",
+      "귀고리": "해골 5성",
+      "반지": "제작링",
+      "뱃지": "O",
+      "성배": "X",
+      "블랙셋": "0성"
+    }
+  },
+  {
+    "id": "자그2",
+    "name": "자그2",
+    "jobGroup": "모험가",
+    "job": "패파",
+    "unionEffect": "덱",
+    "linkEffect": "치확+몬컬",
+    "plan": null,
+    "level": 216,
+    "note": "아마 익성비?",
+    "guild": "니가정해",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "10성",
+      "눈장식": "8성",
+      "귀고리": "딸기 9/8",
+      "반지": "실블링 10성 9/0",
+      "뱃지": "ㅇ",
+      "견장": "12성 9/0",
+      "벨트": "그린 벨트 9/0",
+      "성배": "X",
+      "네크로": "24성 18/20"
+    }
+  },
+  {
+    "id": "zi은명iz",
+    "name": "zi은명iz",
+    "jobGroup": "모험가",
+    "job": "나로",
+    "unionEffect": "크확 5%",
+    "linkEffect": "상태이상 뎀증",
+    "plan": null,
+    "level": 250,
+    "note": null,
+    "guild": "니가정해",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 21570624,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "화이트 0",
+      "귀고리": "하트 5",
+      "반지": "실블 0 9/0",
+      "뱃지": "ㅇ",
+      "견장": "0성 9/0",
+      "목걸이": "화이트",
+      "벨트": "화이트",
+      "성배": "X",
+      "블랙셋": "32성"
+    }
+  },
+  {
+    "id": "암메해야겠지",
+    "name": "암메해야겠지",
+    "jobGroup": "모험가",
+    "job": "섀도어",
+    "unionEffect": "럭",
+    "linkEffect": "상태이상 뎀증",
+    "plan": "제로백",
+    "level": 200,
+    "note": "23년 가을: 가을의 미나르숲",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "귀고리": "블루문",
+      "뱃지": "O",
+      "성배": "X",
+      "블랙셋": "0성"
+    }
+  },
+  {
+    "id": "듀블자그",
+    "name": "듀블자그",
+    "jobGroup": "모험가",
+    "job": "듀블",
+    "unionEffect": "럭",
+    "linkEffect": "상태이상 뎀증",
+    "plan": null,
+    "level": 208,
+    "note": "빅토리아컵",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "세일러",
+      "귀고리": "하프",
+      "뱃지": "O",
+      "벨트": "세일러",
+      "성배": "X"
+    }
+  },
+  {
+    "id": "물팖",
+    "name": "물팖",
+    "jobGroup": "모험가",
+    "job": "바이퍼",
+    "unionEffect": "힘",
+    "linkEffect": "올스탯+뎀감",
+    "plan": "서펜트자그",
+    "level": 260,
+    "note": "6차 전직 완료",
+    "guild": "MoonStone (그룹)",
+    "boss": {
+      "karut": "yes",
+      "stoneDesire": "yes",
+      "lucidWillSlime": null
+    },
+    "unionPower": 29654630,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "10성 18/13",
+      "눈장식": "파풀마 10성 12/10",
+      "귀고리": "10성 9/0",
+      "반지": "실블 10성\n고피아 15성 12/16\n이벤링",
+      "뱃지": "ㅇ",
+      "견장": "앱솔 10성 12/10",
+      "목걸이": "메커 0\n피도미",
+      "벨트": "0성 3/0",
+      "성배": "86급",
+      "3카룻": "44성 21/46\n(모자는 str)",
+      "앱솔": "4앱 둘둘\n10성 12%"
+    }
+  },
+  {
+    "id": "토벤자그",
+    "name": "토벤자그",
+    "jobGroup": "모험가",
+    "job": "캡틴",
+    "unionEffect": "소환수 지속 시간",
+    "linkEffect": "올스탯+뎀감",
+    "plan": null,
+    "level": 250,
+    "note": "꿈속의 레헬른",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "화이트 5성",
+      "눈장식": "페어리 5성",
+      "귀고리": "자수정",
+      "뱃지": "O",
+      "목걸이": "화이트 5성",
+      "벨트": "화이트 5성",
+      "성배": "X",
+      "블랙셋": "8성"
+    }
+  },
+  {
+    "id": "은명캐슈",
+    "name": "은명캐슈",
+    "jobGroup": "모험가",
+    "job": "캐논 슈터",
+    "unionEffect": "힘",
+    "linkEffect": "올스탯+뎀감",
+    "plan": "제로백",
+    "level": 200,
+    "note": "23년 가을: 가을의 미나르숲",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "귀고리": "블루문",
+      "뱃지": "ㅇ",
+      "성배": "X",
+      "블랙셋": "0성"
+    }
+  },
+  {
+    "id": "soul자겜",
+    "name": "soul자겜",
+    "jobGroup": "시그너스",
+    "job": "소마",
+    "unionEffect": "HP",
+    "linkEffect": "공마+뎀감",
+    "plan": null,
+    "level": 212,
+    "note": "얘도 보스 해야하는데...",
+    "guild": "니가정해",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "3성",
+      "눈장식": "5성",
+      "귀고리": "0성",
+      "반지": "실블링 7성 9/0",
+      "뱃지": "ㅇ",
+      "견장": "7성 6/0",
+      "목걸이": "카혼목 \n메커 9성/0",
+      "벨트": "0성 0/0",
+      "성배": "30급",
+      "3카룻": "0성 0/0"
+    }
+  },
+  {
+    "id": "방패자그",
+    "name": "방패자그",
+    "jobGroup": "시그너스",
+    "job": "미하일",
+    "unionEffect": "HP",
+    "linkEffect": "공마+뎀감",
+    "plan": null,
+    "level": 210,
+    "note": "18주년 이그니션 풀 문 파티",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "유니온캐 장비 세팅": "8성 블랙 + 방패 6/0",
+      "얼굴장식": "0성",
+      "눈장식": "0성",
+      "귀고리": "0성",
+      "반지": "실블 5성",
+      "뱃지": "ㅇ",
+      "견장": "12성",
+      "목걸이": "화이트",
+      "벨트": "골클벨",
+      "성배": "82급",
+      "블랙셋": "31성"
+    }
+  },
+  {
+    "id": "불의자그",
+    "name": "불의자그",
+    "jobGroup": "시그너스",
+    "job": "플위",
+    "unionEffect": "지능",
+    "linkEffect": "공마+뎀감",
+    "plan": "테라버닝",
+    "level": 212,
+    "note": "빅토리아컵",
+    "guild": "ZemStone",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "피노 5성 3/0",
+      "눈장식": "8성 6/0",
+      "반지": "실블 10성\n플래 12성",
+      "뱃지": "ㅇ",
+      "견장": "12성 12/0",
+      "목걸이": "화이트 5성",
+      "벨트": "화이트 5성",
+      "성배": "90급",
+      "3카룻": "기간제",
+      "블랙셋": "0성"
+    }
+  },
+  {
+    "id": "자그브레이커",
+    "name": "자그브레이커",
+    "jobGroup": "시그너스",
+    "job": "윈브",
+    "unionEffect": "덱",
+    "linkEffect": "공마+뎀감",
+    "plan": "버닝 수입",
+    "level": 222,
+    "note": "스데돌이 까지 해줘...",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "0성",
+      "눈장식": "0성",
+      "귀고리": "12성 6/0",
+      "반지": "실블 7성 0/3\n플래 5성\n이벤링",
+      "뱃지": "ㅇ",
+      "견장": "5성",
+      "목걸이": "화이트 0성",
+      "벨트": "12성 0/0",
+      "성배": "가위",
+      "블랙셋": "16성"
+    }
+  },
+  {
+    "id": "그림자그",
+    "name": "그림자그",
+    "jobGroup": "시그너스",
+    "job": "나워",
+    "unionEffect": "럭",
+    "linkEffect": "공마+뎀감",
+    "plan": "버닝 수입",
+    "level": 200,
+    "note": null,
+    "guild": "ZemStone",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "귀고리": "빨간하트 5성",
+      "뱃지": "ㅇ",
+      "목걸이": "화이트 5성",
+      "벨트": "화이트 5성",
+      "성배": "X",
+      "블랙셋": "5성"
+    }
+  },
+  {
+    "id": "자그5",
+    "name": "자그5",
+    "jobGroup": "시그너스",
+    "job": "스커",
+    "unionEffect": "힘",
+    "linkEffect": "공마+뎀감",
+    "plan": null,
+    "level": 209,
+    "note": "23년 가을: 가을의 미나르숲",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "뱃지": "ㅇ",
+      "블랙셋": "8성"
+    }
+  },
+  {
+    "id": "자겜님",
+    "name": "자겜님",
+    "jobGroup": "데몬",
+    "job": "데슬",
+    "unionEffect": "상태이상 내성 4",
+    "linkEffect": "보공",
+    "plan": "데슬자그",
+    "level": 229,
+    "note": "꿈속의 레헬른",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 14882383,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "6성",
+      "눈장식": "5성",
+      "귀고리": "12성",
+      "반지": "실블 5성\n이벤링 1줄\n어비스 헌터스 링",
+      "뱃지": "ㅇ",
+      "견장": "12성",
+      "목걸이": "카혼\n화이트",
+      "벨트": "12성 골클벨",
+      "성배": "16급",
+      "블랙셋": "5성"
+    }
+  },
+  {
+    "id": "보스돌이은명",
+    "name": "보스돌이은명",
+    "jobGroup": "데몬",
+    "job": "데벤져",
+    "unionEffect": "보공 5%",
+    "linkEffect": "데미지",
+    "plan": null,
+    "level": 260,
+    "note": "스데돌이 까지 해줘...",
+    "guild": "MoonStone (그룹)",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 25643458,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "10성 18%",
+      "눈장식": "페어리",
+      "귀고리": "8성 12%/2",
+      "반지": "10성 12%",
+      "뱃지": "ㅇ",
+      "견장": "12성 9%",
+      "목걸이": "족쇄",
+      "벨트": "그린 8성 12%",
+      "성배": "1추",
+      "네크로": "토드템"
+    }
+  },
+  {
+    "id": "자그666",
+    "name": "자그666",
+    "jobGroup": "데몬",
+    "job": "레테",
+    "unionEffect": "올스탯+50, HP+2500",
+    "linkEffect": "소환수 데미지 4%",
+    "plan": null,
+    "level": 286,
+    "note": "챌섭3",
+    "guild": "마계 (챌섭)",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {}
+  },
+  {
+    "id": "메가자그",
+    "name": "메가자그",
+    "jobGroup": "레지",
+    "job": "블래",
+    "unionEffect": "방무 6%",
+    "linkEffect": "부활무적",
+    "plan": null,
+    "level": 260,
+    "note": null,
+    "guild": "니가정해",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 24299907,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "화이트 5성",
+      "눈장식": "페어리 5성",
+      "귀고리": "해골 5성",
+      "반지": "제작",
+      "뱃지": "ㅇ",
+      "목걸이": "화이트 5성",
+      "벨트": "화이트 5성",
+      "성배": "X",
+      "블랙셋": "0성"
+    }
+  },
+  {
+    "id": "배메자그",
+    "name": "배메자그",
+    "jobGroup": "레지",
+    "job": "배메",
+    "unionEffect": "지능",
+    "linkEffect": "부활무적",
+    "plan": "테라버닝",
+    "level": 212,
+    "note": null,
+    "guild": "ZemStone",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "반지": "실블 10성",
+      "뱃지": "ㅇ",
+      "견장": "12성 3/0",
+      "목걸이": "카혼목",
+      "블랙셋": "10성"
+    }
+  },
+  {
+    "id": "와헌자그",
+    "name": "와헌자그",
+    "jobGroup": "레지",
+    "job": "와헌",
+    "unionEffect": "공격시 20% 확률로 뎀증 20%",
+    "linkEffect": "부활무적",
+    "plan": null,
+    "level": 260,
+    "note": "37쿰 고정",
+    "guild": "zemStone",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 24299907,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "눈장식": "페어리 5성",
+      "귀고리": "메탈 5성",
+      "반지": "플래 10성",
+      "뱃지": "ㅇ",
+      "목걸이": "카혼 0성",
+      "성배": "X",
+      "블랙셋": "0성"
+    }
+  },
+  {
+    "id": "메카은명",
+    "name": "메카은명",
+    "jobGroup": "레지",
+    "job": "메카닉",
+    "unionEffect": "벞지 25%",
+    "linkEffect": "부활무적",
+    "plan": null,
+    "level": 250,
+    "note": "-비약 250작 중-\n차원의 저편 티르노그 내부",
+    "guild": "니가정해",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 21239378,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "눈장식": "페어리",
+      "귀고리": "장미 5성 6/0",
+      "뱃지": "ㅇ",
+      "목걸이": "혼목 0성",
+      "벨트": "파라오 5성",
+      "성배": "X",
+      "블랙셋": "20성"
+    }
+  },
+  {
+    "id": "zaGamer",
+    "name": "zaGamer",
+    "jobGroup": "레지",
+    "job": "제논",
+    "unionEffect": "힘덱럭 40",
+    "linkEffect": "부활무적",
+    "plan": null,
+    "level": 246,
+    "note": "-비약 250작 중-",
+    "guild": "니가정해",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 20342835,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "눈장식": "3성 0/0",
+      "뱃지": "ㅇ",
+      "목걸이": "카혼목 0 성 0/0",
+      "블랙셋": "20성"
+    }
+  },
+  {
+    "id": "마하자그",
+    "name": "마하자그",
+    "jobGroup": "영웅",
+    "job": "아란",
+    "unionEffect": "타격 시 70% 확률로 HP 회복",
+    "linkEffect": "콤보킬 구슬 경험치 650%",
+    "plan": "쁜놘",
+    "level": 260,
+    "note": "개화월영 하이퍼\n-차원의 저편 티르노그",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 24299907,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "세일러 5성",
+      "눈장식": "페어리 5성",
+      "귀고리": "해골",
+      "뱃지": "ㅇ",
+      "견장": "X",
+      "목걸이": "5성 족쇄",
+      "벨트": "5성 세일러",
+      "성배": "X"
+    }
+  },
+  {
+    "id": "이음좀에반데",
+    "name": "이음좀에반데",
+    "jobGroup": "영웅",
+    "job": "에반",
+    "unionEffect": "타격 시 70% 확률로 MP 회복",
+    "linkEffect": "룬 지속시간 50%증가",
+    "plan": null,
+    "level": 209,
+    "note": "빅토리아컵",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "귀고리": "블루문",
+      "반지": "플래 0",
+      "뱃지": "X",
+      "목걸이": "족쇄",
+      "성배": "X"
+    }
+  },
+  {
+    "id": "하얀자그",
+    "name": "하얀자그",
+    "jobGroup": "영웅",
+    "job": "루미",
+    "unionEffect": "지능",
+    "linkEffect": "방무",
+    "plan": "제로백",
+    "level": 200,
+    "note": "꿈속의 레헬른",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "귀고리": "블루문",
+      "뱃지": "ㅇ",
+      "성배": "X",
+      "블랙셋": "0성"
+    }
+  },
+  {
+    "id": "9은명9",
+    "name": "9은명9",
+    "jobGroup": "영웅",
+    "job": "메세",
+    "unionEffect": "쿨감6%",
+    "linkEffect": "경험치 15%",
+    "plan": null,
+    "level": 250,
+    "note": "20주년 메이프릴",
+    "guild": "야히의꼬마들",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 22239151,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "8성 0/0",
+      "눈장식": "8성 0/0",
+      "반지": "실블링 7성 6/0\n고피아 6성 6/0",
+      "뱃지": "ㅇ",
+      "목걸이": "혼목 7성 0/0",
+      "성배": "56급"
+    }
+  },
+  {
+    "id": "유령자겜",
+    "name": "유령자겜",
+    "jobGroup": "영웅",
+    "job": "팬텀",
+    "unionEffect": "메소 획득량 증가 5%",
+    "linkEffect": "치확",
+    "plan": null,
+    "level": 252,
+    "note": "19주년 메이플 모멘트리",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 21689412,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "뱃지": "X",
+      "견장": "11성 6/3",
+      "성배": "X",
+      "블랙셋": "0성"
+    }
+  },
+  {
+    "id": "은월자그",
+    "name": "은월자그",
+    "jobGroup": "영웅",
+    "job": "은월",
+    "unionEffect": "크뎀 6%",
+    "linkEffect": "구사일생",
+    "plan": null,
+    "level": 250,
+    "note": "보스+사냥 조금",
+    "guild": "으악",
+    "boss": {
+      "karut": "yes",
+      "stoneDesire": "yes",
+      "lucidWillSlime": null
+    },
+    "unionPower": 25038281,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "10성 9/0",
+      "눈장식": "12성 카핑마",
+      "귀고리": "12성 6/0",
+      "반지": "실블링 10성 9/0\n고피아 12성",
+      "뱃지": "ㅇ",
+      "견장": "18성 앱솔",
+      "목걸이": "메커 12 0/0\n피도미",
+      "벨트": "골클 11성 9/10",
+      "성배": "100급",
+      "3카룻": "54 성 27/39",
+      "앱솔": "ㅇ"
+    }
+  },
+  {
+    "id": "선조님해줘",
+    "name": "선조님해줘",
+    "jobGroup": "노바",
+    "job": "카이저",
+    "unionEffect": "힘",
+    "linkEffect": "최대 HP 증가",
+    "plan": "제로백",
+    "level": 207,
+    "note": "5차 대기중",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "반지": "실블 10성",
+      "뱃지": "ㅇ",
+      "성배": "X"
+    }
+  },
+  {
+    "id": "은명카인",
+    "name": "은명카인",
+    "jobGroup": "노바",
+    "job": "카인",
+    "unionEffect": "덱",
+    "linkEffect": "스택 뎀증",
+    "plan": null,
+    "level": 211,
+    "note": "빅토리아컵",
+    "guild": "으악",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "귀고리": "소드 8성 9/0",
+      "반지": "실블 10성",
+      "뱃지": "ㅇ",
+      "견장": "12성 9/0",
+      "벨트": "그린 5성 9/10",
+      "성배": "X",
+      "네크로": "110제 10성 9/1.5"
+    }
+  },
+  {
+    "id": "어떻게왕녀",
+    "name": "어떻게왕녀",
+    "jobGroup": "노바",
+    "job": "카데나",
+    "unionEffect": "럭",
+    "linkEffect": "렙차 뎀증, 상태이상 뎀증",
+    "plan": "제로백",
+    "level": 207,
+    "note": null,
+    "guild": "으악",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "10성 9/6",
+      "눈장식": "8성 9/10",
+      "귀고리": "10성 9/21",
+      "반지": "실블 10\n플래 10\n딥다크",
+      "뱃지": "ㅇ",
+      "견장": "15성 9/1.2",
+      "목걸이": "메커 5",
+      "벨트": "골클 10성 9/10",
+      "성배": "102급",
+      "네크로": "토드템 준비됨"
+    }
+  },
+  {
+    "id": "자그3",
+    "name": "자그3",
+    "jobGroup": "노바",
+    "job": "엔버",
+    "unionEffect": "덱",
+    "linkEffect": "극딜 버프 (3 레벨)",
+    "plan": null,
+    "level": 290,
+    "note": "본캐",
+    "guild": "MoonStone",
+    "boss": {
+      "karut": "yes",
+      "stoneDesire": "yes",
+      "lucidWillSlime": "yes"
+    },
+    "unionPower": 55588116,
+    "isMain": true,
+    "excludeFromUnion": false,
+    "equip": {}
+  },
+  {
+    "id": "zaGamer진",
+    "name": "zaGamer진",
+    "jobGroup": "레프",
+    "job": "아델",
+    "unionEffect": "힘",
+    "linkEffect": "파티원당 뎀증, 보뎀증",
+    "plan": null,
+    "level": 211,
+    "note": "빅토리아컵",
+    "guild": "니가정해",
+    "boss": {
+      "karut": "partial",
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "10성",
+      "눈장식": "8성",
+      "반지": "실블링 10성 9/0",
+      "견장": "10성 0/0",
+      "성배": "X",
+      "3카룻": "35성 27/30"
+    }
+  },
+  {
+    "id": "자그12",
+    "name": "자그12",
+    "jobGroup": "레프",
+    "job": "일리움",
+    "unionEffect": "지능",
+    "linkEffect": "움직이면 뎀증",
+    "plan": "하버",
+    "level": 270,
+    "note": "하버 캐릭",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 30976920,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "세일러",
+      "귀고리": "소드 9/10",
+      "반지": "실블 10성 6",
+      "뱃지": "X",
+      "목걸이": "레드 10성 9/10",
+      "벨트": "그린 9/10",
+      "성배": "X",
+      "네크로": "12 무스펠 둘둘"
+    }
+  },
+  {
+    "id": "칼리자그",
+    "name": "칼리자그",
+    "jobGroup": "레프",
+    "job": "칼리",
+    "unionEffect": "럭",
+    "linkEffect": "뎀증 + 회복",
+    "plan": null,
+    "level": 200,
+    "note": "빅토리아컵",
+    "guild": "으악",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "눈장식": "0성 12/10",
+      "반지": "실블 0성 9/10",
+      "뱃지": "ㅇ",
+      "목걸이": "카혼",
+      "성배": "102급",
+      "블랙셋": "20성"
+    }
+  },
+  {
+    "id": "0은명0",
+    "name": "0은명0",
+    "jobGroup": "레프",
+    "job": "아크",
+    "unionEffect": "힘",
+    "linkEffect": "전투 지속 뎀증",
+    "plan": null,
+    "level": 215,
+    "note": "20주년 메이프릴",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "뱃지": "X",
+      "벨트": "그린 5성 0/10",
+      "성배": "X"
+    }
+  },
+  {
+    "id": "자그0",
+    "name": "자그0",
+    "jobGroup": "아니마",
+    "job": "렌",
+    "unionEffect": "힘",
+    "linkEffect": "퍼뎀감",
+    "plan": "유니온 챔피언",
+    "level": 282,
+    "note": "유니온 챔피언 - 해방 완료",
+    "guild": "MoonStone (그룹)",
+    "boss": {
+      "karut": "yes",
+      "stoneDesire": "yes",
+      "lucidWillSlime": "yes"
+    },
+    "unionPower": 43983644,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {}
+  },
+  {
+    "id": "강겜",
+    "name": "강겜",
+    "jobGroup": "아니마",
+    "job": "라라",
+    "unionEffect": "지능",
+    "linkEffect": "일몹뎀증",
+    "plan": "은명라라",
+    "level": 260,
+    "note": "하이퍼 완료",
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 27240133,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "유니온캐 장비 세팅": "10성 아케인 9/6",
+      "얼굴장식": "10성 6/0",
+      "눈장식": "8성 9/2",
+      "귀고리": "에테 17성 24/10",
+      "반지": "실블 10성 9/0\n이벤링",
+      "뱃지": "ㅇ",
+      "견장": "11성 9/0",
+      "목걸이": "피도미",
+      "성배": "102급",
+      "3카룻": "기간제",
+      "앱솔": "3앱"
+    }
+  },
+  {
+    "id": "자그1",
+    "name": "자그1",
+    "jobGroup": "아니마",
+    "job": "호영",
+    "unionEffect": "럭",
+    "linkEffect": "방무 + 풀피뎀증",
+    "plan": null,
+    "level": 210,
+    "note": "빅토리아컵",
+    "guild": "니가정해",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "반지": "실블링 10성 9/0",
+      "뱃지": "ㅇ",
+      "견장": "0성 9/0",
+      "성배": "X"
+    }
+  },
+  {
+    "id": "심자",
+    "name": "심자",
+    "jobGroup": "초월자",
+    "job": "제로",
+    "unionEffect": "경험치 증가 10%",
+    "linkEffect": "방무 + 뎀감",
+    "plan": "원보아이",
+    "level": 260,
+    "note": null,
+    "guild": "니가정해",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": 28097907,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "얼굴장식": "0성 0/0",
+      "눈장식": "8성 0/0",
+      "반지": "실블링 10성 9/0",
+      "뱃지": "ㅇ",
+      "목걸이": "카혼목 0성 0/0\n메커 0성 0/0",
+      "성배": "100급"
+    }
+  },
+  {
+    "id": "사이킥자그",
+    "name": "사이킥자그",
+    "jobGroup": "프렌즈 월드",
+    "job": "키네시스",
+    "unionEffect": "지능",
+    "linkEffect": "크뎀증",
+    "plan": "제로백",
+    "level": 210,
+    "note": null,
+    "guild": null,
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {
+      "귀고리": "블루문",
+      "뱃지": "X",
+      "성배": "X",
+      "블랙셋": "0성"
+    }
+  },
+  {
+    "id": "달빛자그",
+    "name": "달빛자그",
+    "jobGroup": "특수",
+    "job": "메이플m",
+    "unionEffect": "공/마 +25",
+    "linkEffect": null,
+    "plan": null,
+    "level": 255,
+    "note": null,
+    "guild": "달놀이",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": true,
+    "equip": {}
+  },
+  {
+    "id": "특대머운",
+    "name": "특대머운",
+    "jobGroup": "리마 기념 중복캐",
+    "job": "엔버",
+    "unionEffect": null,
+    "linkEffect": null,
+    "plan": null,
+    "level": 222,
+    "note": "밈용...안씀",
+    "guild": "으악",
+    "boss": {
+      "karut": null,
+      "stoneDesire": null,
+      "lucidWillSlime": null
+    },
+    "unionPower": null,
+    "isMain": false,
+    "excludeFromUnion": false,
+    "equip": {}
+  }
+]

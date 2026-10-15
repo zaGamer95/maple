@@ -1,0 +1,233 @@
+[
+  {
+    "id": "p1",
+    "date": "2023-09-02",
+    "dateText": "2023.09.02",
+    "itemName": "아케인셰이드 파이렛글러브",
+    "detail": "쌍크 장갑",
+    "price": 15500000000,
+    "priceText": "155억",
+    "comment": null,
+    "characterId": null
+  },
+  {
+    "id": "p2",
+    "date": "2023-09-14",
+    "dateText": "2023.09.14",
+    "itemName": "트릭스터 원더러 팬츠",
+    "detail": "22성 27%/3줄 하의...",
+    "price": 24000000000,
+    "priceText": "240억",
+    "comment": null,
+    "characterId": null
+  },
+  {
+    "id": "p3",
+    "date": "2023-09-14",
+    "dateText": "23.09.14",
+    "itemName": "카데나 매물",
+    "detail": "9/10 장신구들",
+    "price": 400000000,
+    "priceText": "4억 쯤",
+    "comment": null,
+    "characterId": null
+  },
+  {
+    "id": "p4",
+    "date": "2023-09-16",
+    "dateText": "23.09.16",
+    "itemName": "미카엘라의 새 안경",
+    "detail": "쌍드",
+    "price": 14000000000,
+    "priceText": "140억",
+    "comment": null,
+    "characterId": null
+  },
+  {
+    "id": "p5",
+    "date": "2023-09-24",
+    "dateText": "23.09.24",
+    "itemName": "여명의 가디언 엔젤 링",
+    "detail": "18성 30%, 공+15작",
+    "price": 7500000000,
+    "priceText": "75억",
+    "comment": null,
+    "characterId": null
+  },
+  {
+    "id": "p6",
+    "date": "2023-09-25",
+    "dateText": "23.09.25",
+    "itemName": "마이스터 올마이티링",
+    "detail": "드드HP",
+    "price": 12500000000,
+    "priceText": "125억",
+    "comment": null,
+    "characterId": null
+  },
+  {
+    "id": "p7",
+    "date": "2023-09-26",
+    "dateText": "23.09.26",
+    "itemName": "리스트레인트 링 4렙",
+    "detail": "리레 4렙",
+    "price": 19999000000,
+    "priceText": "199.99억",
+    "comment": null,
+    "characterId": null
+  },
+  {
+    "id": "p8",
+    "date": "2023-10",
+    "dateText": "23.10.??",
+    "itemName": "트릭스터 원더러코트",
+    "detail": "18성 33%",
+    "price": 20000000000,
+    "priceText": "200억",
+    "comment": "강화해서 20성 + 작 다시",
+    "characterId": null
+  },
+  {
+    "id": "p9",
+    "date": "2023-11-29",
+    "dateText": "23.11.29",
+    "itemName": "골든 클로버 벨트",
+    "detail": "22성 24%",
+    "price": 14800000000,
+    "priceText": "148억",
+    "comment": null,
+    "characterId": null
+  },
+  {
+    "id": "p10",
+    "date": "2023-12-16",
+    "dateText": "23.12.16",
+    "itemName": "아케인셰이드 파이렛슈즈",
+    "detail": "18성 27%",
+    "price": 10000000000,
+    "priceText": "100억",
+    "comment": "가성비 딱 좋은 매물",
+    "characterId": null
+  },
+  {
+    "id": "p11",
+    "date": "2024-01-07",
+    "dateText": "24.01.07",
+    "itemName": "(스타포스) 이글아이원더러코드",
+    "detail": "17 -> 22성",
+    "price": 7000000000,
+    "priceText": "70억",
+    "comment": "망겜 욕해도됨?",
+    "characterId": null
+  },
+  {
+    "id": "p12",
+    "date": "2024-03-11",
+    "dateText": "24.03.11",
+    "itemName": "하이네스 원더러햇",
+    "detail": "30% 22성",
+    "price": 17500000000,
+    "priceText": "175억",
+    "comment": "장교불 + 가성비",
+    "characterId": null
+  },
+  {
+    "id": "p13",
+    "date": "2024-04-14",
+    "dateText": "24.04.14(?)",
+    "itemName": "데이브레이크 펜던트",
+    "detail": "22성 30% 2줄",
+    "price": 13000000000,
+    "priceText": "130억?",
+    "comment": "예쁜 정옵",
+    "characterId": null
+  },
+  {
+    "id": "p14",
+    "date": "2024-04-17",
+    "dateText": "24.04.17",
+    "itemName": "커맨더 포스 이어링",
+    "detail": "노작 깡통 30%",
+    "price": 7700000000,
+    "priceText": "77억",
+    "comment": "200제 17성 주문서 + 프악공 바르면 좋을 템",
+    "characterId": null
+  },
+  {
+    "id": "p15",
+    "date": "2024-05-05",
+    "dateText": "24.05.05",
+    "itemName": "마이스터링",
+    "detail": "22성 30% 1.5줄",
+    "price": 13600000000,
+    "priceText": "136억",
+    "comment": "무난한 정옵 정가",
+    "characterId": null
+  },
+  {
+    "id": "p16",
+    "date": "2025-02-27",
+    "dateText": "25.02.27",
+    "itemName": "마이스터링",
+    "detail": "드메",
+    "price": 6600000000,
+    "priceText": "66억",
+    "comment": "좀 비싸지만 풀메 2번 채워야해서 삼",
+    "characterId": null
+  },
+  {
+    "id": "p17",
+    "date": "2025-03-02",
+    "dateText": "25.03.02",
+    "itemName": "샤타포스",
+    "detail": "쌍크장갑 18->17",
+    "price": 15000000000,
+    "priceText": "150억....",
+    "comment": "씨발창섭",
+    "characterId": null
+  },
+  {
+    "id": "p18",
+    "date": "2025-03-02",
+    "dateText": "25.03.02",
+    "itemName": "샤타포스",
+    "detail": "에테비숍바지 12->18",
+    "price": 5000000000,
+    "priceText": "50억...",
+    "comment": null,
+    "characterId": null
+  },
+  {
+    "id": "p19",
+    "date": "2025-03-02",
+    "dateText": "25.03.02",
+    "itemName": "샤타포스",
+    "detail": "에테비숍뚝 12->흔적",
+    "price": 2000000000,
+    "priceText": "20억...",
+    "comment": null,
+    "characterId": null
+  },
+  {
+    "id": "p20",
+    "date": "2025-04-05",
+    "dateText": "25.04.05",
+    "itemName": "거대한 공포",
+    "detail": "엔버 이벤링->거공",
+    "price": 14000000000,
+    "priceText": "140억",
+    "comment": "18성 30% 에디에픽, 프악공",
+    "characterId": null
+  },
+  {
+    "id": "p21",
+    "date": "2026-01-05",
+    "dateText": "26.01.05",
+    "itemName": "고통의 근원",
+    "detail": "22성 33%2줄 쌍레",
+    "price": 67500000000,
+    "priceText": "675억+10%관세",
+    "comment": "그냥 미친 120만원 짜리 목걸이..",
+    "characterId": null
+  }
+]
