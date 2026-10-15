@@ -7,7 +7,48 @@ import { levelTotal, unionLevel, unionMembers, UNION_SLOTS } from '../lib/union'
 import { useStore } from '../store';
 import type { Character } from '../types';
 
-type SortKey = 'default' | 'level' | 'unionPower' | 'combatPower';
+type Value = string | number | null | undefined;
+
+interface Column {
+  id: string;
+  label: string;
+  title?: string;
+  num?: boolean;
+  get: (c: Character) => Value;
+}
+
+const CHECK_ORDER = { yes: 2, partial: 1, no: 0 } as const;
+const checkValue = (v: Character['boss']['karut']) => (v ? CHECK_ORDER[v] : null);
+
+/** 정렬 기준. 칸 순서는 표 순서와 같다 */
+const COLUMNS: Column[] = [
+  { id: 'jobGroup', label: '직업군', get: (c) => c.jobGroup },
+  { id: 'job', label: '직업', get: (c) => c.job },
+  { id: 'name', label: '닉네임', get: (c) => c.name },
+  { id: 'level', label: '레벨', num: true, get: (c) => c.level || null },
+  { id: 'union', label: '유니온', get: (c) => c.unionEffect },
+  { id: 'link', label: '링크', get: (c) => c.linkEffect },
+  { id: 'plan', label: '육성 계획', get: (c) => c.plan },
+  { id: 'guild', label: '길드', get: (c) => c.guild },
+  { id: 'karut', label: '카룻', title: '카루타', num: true, get: (c) => checkValue(c.boss.karut) },
+  { id: 'stone', label: '스데', title: '스우·데미안', num: true, get: (c) => checkValue(c.boss.stoneDesire) },
+  { id: 'lws', label: '루윌슬', title: '루시드·윌·슬라임', num: true, get: (c) => checkValue(c.boss.lucidWillSlime) },
+  { id: 'combatPower', label: '전투력', num: true, get: (c) => nexon.characters[c.id]?.combatPower },
+  { id: 'unionPower', label: '유니온 전투력', num: true, get: (c) => c.unionPower },
+  { id: 'note', label: '비고', get: (c) => c.note },
+];
+const EQUIP_COLUMNS: Column[] = EQUIP_SLOTS.map((s) => ({ id: `equip:${s}`, label: s, get: (c) => c.equip[s] }));
+
+/** 클릭: 숫자 칸은 큰 순 → 작은 순 → 시트 순서, 글자 칸은 가나다 → 역순 → 시트 순서 */
+type Sort = { id: string; dir: 1 | -1 } | null;
+
+function compare(a: Value, b: Value, dir: 1 | -1): number {
+  const empty = (v: Value) => v == null || v === '';
+  // 빈 값은 방향과 상관없이 맨 뒤
+  if (empty(a) || empty(b)) return Number(empty(a)) - Number(empty(b));
+  if (typeof a === 'number' && typeof b === 'number') return (a - b) * dir;
+  return String(a).localeCompare(String(b), 'ko') * dir;
+}
 
 function uniq(values: (string | null)[]): string[] {
   return [...new Set(values.filter((v): v is string => !!v))];
@@ -20,7 +61,7 @@ export default function CharacterList() {
   const [guild, setGuild] = useState('');
   const [plan, setPlan] = useState('');
   const [bossOnly, setBossOnly] = useState(false);
-  const [sort, setSort] = useState<SortKey>('default');
+  const [sort, setSort] = useState<Sort>(null);
   const [showEquip, setShowEquip] = useState(false);
   const members = useMemo(() => new Set(unionMembers(characters).map((c) => c.id)), [characters]);
 
@@ -34,10 +75,30 @@ export default function CharacterList() {
         (!plan || c.plan === plan) &&
         (!bossOnly || c.boss.karut === 'yes' || c.boss.stoneDesire === 'yes'),
     );
-    if (sort === 'default') return filtered;
-    const value = (c: Character) => (sort === 'combatPower' ? nexon.characters[c.id]?.combatPower : c[sort]) ?? 0;
-    return [...filtered].sort((a, b) => value(b) - value(a));
+    const col = sort && [...COLUMNS, ...EQUIP_COLUMNS].find((c) => c.id === sort.id);
+    if (!col) return filtered;
+    return [...filtered].sort((a, b) => compare(col.get(a), col.get(b), sort!.dir));
   }, [characters, query, jobGroup, guild, plan, bossOnly, sort]);
+
+  const toggleSort = (col: Column) => {
+    const first: 1 | -1 = col.num ? -1 : 1;
+    setSort((s) => (!s || s.id !== col.id ? { id: col.id, dir: first } : s.dir === first ? { id: col.id, dir: -first as 1 | -1 } : null));
+  };
+  const header = (col: Column) => {
+    const active = sort?.id === col.id;
+    return (
+      <th
+        key={col.id}
+        className={`sortable${col.num ? ' num' : ''}${active ? ' sorted' : ''}`}
+        title={col.title}
+        onClick={() => toggleSort(col)}
+        aria-sort={active ? (sort!.dir === 1 ? 'ascending' : 'descending') : 'none'}
+      >
+        {col.label}
+        <span className="sort-mark">{active ? (sort!.dir === 1 ? '▲' : '▼') : ''}</span>
+      </th>
+    );
+  };
 
   return (
     <section>
@@ -52,12 +113,11 @@ export default function CharacterList() {
         <Select label="직업군" value={jobGroup} onChange={setJobGroup} options={uniq(characters.map((c) => c.jobGroup))} />
         <Select label="길드" value={guild} onChange={setGuild} options={uniq(characters.map((c) => c.guild))} />
         <Select label="육성 계획" value={plan} onChange={setPlan} options={uniq(characters.map((c) => c.plan))} />
-        <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)}>
-          <option value="default">시트 순서</option>
-          <option value="level">레벨 높은 순</option>
-          <option value="combatPower">전투력 높은 순</option>
-          <option value="unionPower">유니온 전투력 높은 순</option>
-        </select>
+        {sort && (
+          <button className="ghost small" onClick={() => setSort(null)}>
+            시트 순서로
+          </button>
+        )}
         <label className="check">
           <input type="checkbox" checked={bossOnly} onChange={(e) => setBossOnly(e.target.checked)} />
           카룻/스데 가능만
@@ -72,21 +132,8 @@ export default function CharacterList() {
         <table>
           <thead>
             <tr>
-              <th>직업군</th>
-              <th>직업</th>
-              <th>닉네임</th>
-              <th className="num">레벨</th>
-              <th>유니온</th>
-              <th>링크</th>
-              <th>육성 계획</th>
-              <th>길드</th>
-              <th title="카루타">카룻</th>
-              <th title="스우·데미안">스데</th>
-              <th title="루시드·윌·슬라임">루윌슬</th>
-              <th className="num">전투력</th>
-              <th className="num">유니온 전투력</th>
-              <th>비고</th>
-              {showEquip && EQUIP_SLOTS.map((s) => <th key={s}>{s}</th>)}
+              {COLUMNS.map(header)}
+              {showEquip && EQUIP_COLUMNS.map(header)}
             </tr>
           </thead>
           <tbody>

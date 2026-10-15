@@ -114,9 +114,21 @@ export interface NexonData {
 export interface HistoryItem {
   character: string;
   item: string;
-  starforce: { attempts: number; success: number; fail: number; destroy: number; maxStar: number; last: string | null };
+  level?: number | null;
+  starforce: {
+    attempts: number;
+    success: number;
+    fail: number;
+    destroy: number;
+    maxStar: number;
+    last: string | null;
+    /** 계산한 소비 메소 */
+    meso?: number;
+    /** 장비 레벨을 몰라 비용을 계산하지 못한 시도 수 */
+    mesoUnknown?: number;
+  };
   cube: { uses: number; gradeUps: number; byKind: Record<string, number>; last: string | null };
-  potential: { uses: number; gradeUps: number; last: string | null };
+  potential: { uses: number; gradeUps: number; last: string | null; meso?: number; mesoUnknown?: number };
 }
 
 export interface HistorySummary {

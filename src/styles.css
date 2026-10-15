@@ -460,3 +460,17 @@ button.link.active {
   white-space: nowrap;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
+
+th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+th.sortable:hover,
+th.sorted {
+  color: var(--accent);
+}
+.sort-mark {
+  display: inline-block;
+  width: 1em;
+  font-size: 10px;
+}

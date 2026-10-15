@@ -24,13 +24,16 @@
     {
       "character": "자그3",
       "item": "거대한 공포",
+      "level": 200,
       "starforce": {
         "attempts": 0,
         "success": 0,
         "fail": 0,
         "destroy": 0,
         "maxStar": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 78,
@@ -44,19 +47,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "그린 소울링",
+      "level": null,
       "starforce": {
         "attempts": 0,
         "success": 0,
         "fail": 0,
         "destroy": 0,
         "maxStar": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 247,
@@ -70,19 +78,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "루즈 컨트롤 머신 마크",
+      "level": 160,
       "starforce": {
         "attempts": 4,
         "success": 1,
         "fail": 3,
         "destroy": 0,
         "maxStar": 18,
-        "last": "2025-03-23T22:15:19.556+09:00"
+        "last": "2025-03-23T22:15:19.556+09:00",
+        "meso": 267652400,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 336,
@@ -96,19 +109,24 @@
       "potential": {
         "uses": 3,
         "gradeUps": 0,
-        "last": "2024-10-28T08:05:00.3+09:00"
+        "last": "2024-10-28T08:05:00.3+09:00",
+        "meso": 87150000,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "마력이 깃든 안대",
+      "level": 160,
       "starforce": {
         "attempts": 3,
         "success": 1,
         "fail": 1,
         "destroy": 1,
         "maxStar": 17,
-        "last": "2025-04-12T00:50:28.848+09:00"
+        "last": "2025-04-12T00:50:28.848+09:00",
+        "meso": 161618900,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 98,
@@ -124,19 +142,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "마이스터링",
+      "level": 140,
       "starforce": {
         "attempts": 0,
         "success": 0,
         "fail": 0,
         "destroy": 0,
         "maxStar": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 133,
@@ -149,19 +172,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "벤젼스 링",
+      "level": null,
       "starforce": {
         "attempts": 0,
         "success": 0,
         "fail": 0,
         "destroy": 0,
         "maxStar": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 115,
@@ -175,19 +203,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "아스트라 소울링",
+      "level": 200,
       "starforce": {
         "attempts": 0,
         "success": 0,
         "fail": 0,
         "destroy": 0,
         "maxStar": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 85,
@@ -201,19 +234,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "아케인셰이드 나이트케이프",
+      "level": 200,
       "starforce": {
         "attempts": 0,
         "success": 0,
         "fail": 0,
         "destroy": 0,
         "maxStar": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 18,
@@ -226,19 +264,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "아케인셰이드 파이렛글러브",
+      "level": 200,
       "starforce": {
         "attempts": 381,
         "success": 162,
         "fail": 215,
         "destroy": 4,
         "maxStar": 20,
-        "last": "2026-07-05T15:52:03.645+09:00"
+        "last": "2026-07-05T15:52:03.645+09:00",
+        "meso": 32934166700,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 0,
@@ -249,19 +292,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "아케인셰이드 파이렛케이프",
+      "level": 200,
       "starforce": {
         "attempts": 0,
         "success": 0,
         "fail": 0,
         "destroy": 0,
         "maxStar": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 47,
@@ -275,19 +323,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "어센던트 펄스 링",
+      "level": null,
       "starforce": {
         "attempts": 0,
         "success": 0,
         "fail": 0,
         "destroy": 0,
         "maxStar": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 32,
@@ -300,19 +353,24 @@
       "potential": {
         "uses": 3,
         "gradeUps": 0,
-        "last": "2026-09-26T04:09:51.809+09:00"
+        "last": "2026-09-26T04:09:51.809+09:00",
+        "meso": 0,
+        "mesoUnknown": 3
       }
     },
     {
       "character": "자그3",
       "item": "어웨이크 링",
+      "level": null,
       "starforce": {
         "attempts": 0,
         "success": 0,
         "fail": 0,
         "destroy": 0,
         "maxStar": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 66,
@@ -326,19 +384,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "에테르넬 메이지로브",
+      "level": 250,
       "starforce": {
         "attempts": 35,
         "success": 18,
         "fail": 17,
         "destroy": 0,
         "maxStar": 18,
-        "last": "2025-05-04T21:48:10.159+09:00"
+        "last": "2025-05-04T21:48:10.159+09:00",
+        "meso": 2797470000,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 0,
@@ -349,19 +412,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "에테르넬 파이렛숄더",
+      "level": 250,
       "starforce": {
         "attempts": 43,
         "success": 18,
         "fail": 25,
         "destroy": 0,
         "maxStar": 18,
-        "last": "2025-05-04T21:53:45.509+09:00"
+        "last": "2025-05-04T21:53:45.509+09:00",
+        "meso": 5265696300,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 119,
@@ -375,19 +443,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "에테르넬 파이렛햇",
+      "level": 250,
       "starforce": {
         "attempts": 32,
         "success": 19,
         "fail": 13,
         "destroy": 0,
         "maxStar": 19,
-        "last": "2026-07-05T15:50:29.284+09:00"
+        "last": "2026-07-05T15:50:29.284+09:00",
+        "meso": 4009989300,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 6,
@@ -400,19 +473,24 @@
       "potential": {
         "uses": 112,
         "gradeUps": 0,
-        "last": "2026-05-10T04:27:22.805+09:00"
+        "last": "2026-05-10T04:27:22.805+09:00",
+        "meso": 9231600000,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "여명의 가디언 엔젤 링",
+      "level": 160,
       "starforce": {
         "attempts": 259,
         "success": 57,
         "fail": 192,
         "destroy": 10,
         "maxStar": 21,
-        "last": "2025-12-14T22:28:26.603+09:00"
+        "last": "2025-12-14T22:28:26.603+09:00",
+        "meso": 23010258600,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 0,
@@ -423,19 +501,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "익스플로시브 필<3호>",
+      "level": null,
       "starforce": {
         "attempts": 0,
         "success": 0,
         "fail": 0,
         "destroy": 0,
         "maxStar": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 164,
@@ -448,19 +531,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "제네시스 소울슈터",
+      "level": 200,
       "starforce": {
         "attempts": 0,
         "success": 0,
         "fail": 0,
         "destroy": 0,
         "maxStar": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 246,
@@ -477,19 +565,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "커맨더 포스 이어링",
+      "level": 200,
       "starforce": {
         "attempts": 45,
         "success": 9,
         "fail": 35,
         "destroy": 1,
         "maxStar": 19,
-        "last": "2026-07-05T15:53:27.711+09:00"
+        "last": "2026-07-05T15:53:27.711+09:00",
+        "meso": 10271801600,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 61,
@@ -502,19 +595,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "테네브리스 원정대 반지",
+      "level": 120,
       "starforce": {
         "attempts": 0,
         "success": 0,
         "fail": 0,
         "destroy": 0,
         "maxStar": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 29,
@@ -529,19 +627,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "페어리 하트",
+      "level": null,
       "starforce": {
         "attempts": 0,
         "success": 0,
         "fail": 0,
         "destroy": 0,
         "maxStar": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 63,
@@ -555,19 +658,24 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "플라즈마 하트",
+      "level": 130,
       "starforce": {
         "attempts": 24,
         "success": 12,
         "fail": 12,
         "destroy": 0,
         "maxStar": 20,
-        "last": "2026-07-05T00:05:00.513+09:00"
+        "last": "2026-07-05T00:05:00.513+09:00",
+        "meso": 891068300,
+        "mesoUnknown": 0
       },
       "cube": {
         "uses": 0,
@@ -578,7 +686,9 @@
       "potential": {
         "uses": 0,
         "gradeUps": 0,
-        "last": null
+        "last": null,
+        "meso": 0,
+        "mesoUnknown": 0
       }
     }
   ]

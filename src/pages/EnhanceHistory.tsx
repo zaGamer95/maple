@@ -1,5 +1,5 @@
 import summaryData from '../data/historySummary.json';
-import { formatNumber } from '../lib/format';
+import { formatMeso, formatNumber } from '../lib/format';
 import type { HistorySummary } from '../types';
 
 // JSON 에서 추론된 타입은 장비마다 키가 달라 HistorySummary 와 직접 호환되지 않는다
@@ -37,9 +37,14 @@ export default function EnhanceHistory({ characterName }: { characterName: strin
           </li>
         ))}
       </ul>
+      <Totals items={items} />
       <p className="muted">
         넥슨은 최근 2년치 기록만 줘서 {firstDate ?? '-'} 부터 집계했어요. 매일 아침 전날 기록을 더하고, 받아 둔 기록은 2년이 지나도
         남아요. 같은 이름의 장비는 한 줄로 합쳐져요.
+      </p>
+      <p className="muted small">
+        소비 메소는 넥슨이 주지 않아서 계산한 값이에요. 스타포스: 공개 비용 공식(2025-03 개편 전·후 구분) + 당시 이벤트 할인 + 파괴
+        방지 추가 비용. 메소 재설정: 장비 레벨·재설정 전 등급별 비용표. 계정마다 다른 MVP·PC방 할인(17성 미만)은 빠져 있어요.
       </p>
       {items.length === 0 ? (
         <p className="muted">아직 받은 기록이 없어요.</p>
@@ -55,7 +60,9 @@ export default function EnhanceHistory({ characterName }: { characterName: strin
                 <th className="num">파괴</th>
                 <th className="num">최고</th>
                 <th className="num">큐브</th>
+                <th className="num">스타포스 메소</th>
                 <th className="num">메소 재설정</th>
+                <th className="num">재설정 메소</th>
                 <th>마지막</th>
               </tr>
             </thead>
@@ -73,7 +80,15 @@ export default function EnhanceHistory({ characterName }: { characterName: strin
                     <td className="num" title={Object.entries(i.cube.byKind).map(([k, v]) => `${k} ${v}`).join(', ')}>
                       {i.cube.uses || ''}
                     </td>
+                    <td className="num" title={i.starforce.mesoUnknown ? `장비 레벨을 몰라 ${i.starforce.mesoUnknown}회는 빠짐` : undefined}>
+                      {i.starforce.meso ? formatMeso(i.starforce.meso) : ''}
+                      {i.starforce.mesoUnknown ? '*' : ''}
+                    </td>
                     <td className="num">{i.potential.uses || ''}</td>
+                    <td className="num" title={i.potential.mesoUnknown ? `장비 레벨을 몰라 ${i.potential.mesoUnknown}회는 빠짐` : undefined}>
+                      {i.potential.meso ? formatMeso(i.potential.meso) : ''}
+                      {i.potential.mesoUnknown ? '*' : ''}
+                    </td>
                     <td className="mono">{day(last)}</td>
                   </tr>
                 );
@@ -83,5 +98,31 @@ export default function EnhanceHistory({ characterName }: { characterName: strin
         </div>
       )}
     </>
+  );
+}
+
+function Totals({ items }: { items: HistorySummary['items'] }) {
+  const sum = (f: (i: HistorySummary['items'][number]) => number) => items.reduce((s, i) => s + f(i), 0);
+  const sfMeso = sum((i) => i.starforce.meso ?? 0);
+  const resetMeso = sum((i) => i.potential.meso ?? 0);
+  const unknown = sum((i) => (i.starforce.mesoUnknown ?? 0) + (i.potential.mesoUnknown ?? 0));
+  return (
+    <div className="stats">
+      <div className="stat">
+        <div className="stat-label">스타포스 · {formatNumber(sum((i) => i.starforce.attempts))}회</div>
+        <div className="stat-value">{formatMeso(sfMeso)}</div>
+        <div className="stat-sub">파괴 {sum((i) => i.starforce.destroy)}회</div>
+      </div>
+      <div className="stat">
+        <div className="stat-label">메소 재설정 · {formatNumber(sum((i) => i.potential.uses))}회</div>
+        <div className="stat-value">{formatMeso(resetMeso)}</div>
+        <div className="stat-sub">큐브 {formatNumber(sum((i) => i.cube.uses))}회 (메소 아님)</div>
+      </div>
+      <div className="stat">
+        <div className="stat-label">합계</div>
+        <div className="stat-value">{formatMeso(sfMeso + resetMeso)}</div>
+        <div className="stat-sub">{unknown ? `* 레벨 모름 ${unknown}회 제외 · ` : ''}MVP·PC방 할인 미반영</div>
+      </div>
+    </div>
   );
 }

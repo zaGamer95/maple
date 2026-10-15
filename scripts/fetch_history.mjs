@@ -9,7 +9,8 @@
 // - 원본은 data/history/*.json (사이트에 넣지 않음), 장비별 요약은 src/data/historySummary.json.
 // - 어떤 경우에도 0 으로 끝나 배포를 막지 않는다.
 
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
+import { levelResolver, potentialResetCost, starforceAttemptCost } from './enhance_cost.mjs';
 
 const API = 'https://open.api.nexon.com/maplestory/v1/history';
 const RAW_DIR = new URL('../data/history/', import.meta.url);
@@ -92,11 +93,16 @@ function compact(type, r) {
       starcatch: r.starcatch_result,
       destroyDefence: r.destroy_defence,
       chanceTime: r.chance_time,
+      // 비용 계산용: 당시 이벤트 비용 할인율(%), 주문서·특수 재화 사용 여부
+      costDiscount: Math.max(0, ...(r.starforce_event_list ?? []).map((e) => Number(e.cost_discount_rate) || 0)),
+      upgradeItem: r.upgrade_item || null,
     };
   }
   return {
     ...base,
     kind: r.cube_type ?? r.potential_type ?? null,
+    itemLevel: r.item_level ?? null,
+    part: r.item_equipment_part ?? null,
     result: r.item_upgrade_result,
     grade: r.potential_option_grade,
     additionalGrade: r.additional_potential_option_grade,
@@ -149,16 +155,32 @@ async function findFirstDate(type, start, until) {
   return toDate(hi);
 }
 
-function summarize(raw) {
+async function knownLevels(raw) {
+  const known = new Map();
+  for (const r of [...raw.cube, ...raw.potential]) if (r.itemLevel) known.set(r.item, r.itemLevel);
+  const dir = new URL('../data/nexon/', import.meta.url);
+  for (const f of await readdir(dir).catch(() => [])) {
+    if (!f.endsWith('.json')) continue;
+    const d = JSON.parse(await readFile(new URL(f, dir), 'utf8'));
+    for (const it of d['character/item-equipment']?.item_equipment ?? []) {
+      const lv = Number(it.item_base_option?.base_equipment_level);
+      if (lv) known.set(it.item_name, lv);
+    }
+  }
+  return levelResolver(known);
+}
+
+function summarize(raw, levelOf) {
   // "캐릭터|아이템" 별 집계
   const items = {};
   const entry = (r) =>
     (items[`${r.character}|${r.item}`] ??= {
       character: r.character,
       item: r.item,
-      starforce: { attempts: 0, success: 0, fail: 0, destroy: 0, maxStar: 0, last: null },
+      level: levelOf(r.item),
+      starforce: { attempts: 0, success: 0, fail: 0, destroy: 0, maxStar: 0, last: null, meso: 0, mesoUnknown: 0 },
       cube: { uses: 0, gradeUps: 0, byKind: {}, last: null },
-      potential: { uses: 0, gradeUps: 0, last: null },
+      potential: { uses: 0, gradeUps: 0, last: null, meso: 0, mesoUnknown: 0 },
     });
   for (const r of raw.starforce) {
     const s = entry(r).starforce;
@@ -168,6 +190,8 @@ function summarize(raw) {
     else s.fail++;
     s.maxStar = Math.max(s.maxStar, r.after ?? 0);
     if (!s.last || r.date > s.last) s.last = r.date;
+    const cost = starforceAttemptCost(r, levelOf(r.item));
+    cost == null ? s.mesoUnknown++ : (s.meso += cost);
   }
   for (const type of ['cube', 'potential']) {
     for (const r of raw[type]) {
@@ -176,6 +200,10 @@ function summarize(raw) {
       if (r.result?.includes('상승')) s.gradeUps++;
       if (type === 'cube' && r.kind) s.byKind[r.kind] = (s.byKind[r.kind] ?? 0) + 1;
       if (!s.last || r.date > s.last) s.last = r.date;
+      if (type === 'potential') {
+        const cost = potentialResetCost(r, r.itemLevel ?? levelOf(r.item));
+        cost == null ? s.mesoUnknown++ : (s.meso += cost);
+      }
     }
   }
   return Object.values(items).sort((a, b) => a.character.localeCompare(b.character) || a.item.localeCompare(b.item));
@@ -183,7 +211,13 @@ function summarize(raw) {
 
 async function main() {
   if (!key) {
-    console.warn('[history] NEXON_API_KEY 가 없어 건너뜀');
+    // 키가 없으면 저장된 기록으로 요약만 다시 만든다 (비용 계산식을 바꿨을 때 등)
+    console.warn('[history] NEXON_API_KEY 가 없어 요약만 다시 만듦');
+    const raw = {};
+    for (const type of Object.keys(TYPES)) raw[type] = await readJson(new URL(`${type}.json`, RAW_DIR), []);
+    const prev = await readJson(SUMMARY_FILE, {});
+    const summary = { ...prev, items: summarize(raw, await knownLevels(raw)) };
+    await writeFile(SUMMARY_FILE, JSON.stringify(summary, null, 2) + '\n');
     return;
   }
   await mkdir(RAW_DIR, { recursive: true });
@@ -234,7 +268,7 @@ async function main() {
   }
 
   await writeFile(new URL('state.json', RAW_DIR), JSON.stringify(state, null, 2) + '\n');
-  const summary = { updatedAt: new Date().toISOString(), characters: [...characters], state, items: summarize(raw) };
+  const summary = { updatedAt: new Date().toISOString(), characters: [...characters], state, items: summarize(raw, await knownLevels(raw)) };
   await writeFile(SUMMARY_FILE, JSON.stringify(summary, null, 2) + '\n');
 }
 
