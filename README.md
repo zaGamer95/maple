@@ -29,3 +29,8 @@ npm run build    # 타입 검사 + 빌드 (dist/)
 `main` 브랜치에 푸시하면 `.github/workflows/pages.yml` 이 빌드해서 배포한다.
 처음 한 번은 저장소 **Settings → Pages → Build and deployment → Source** 를 **GitHub Actions** 로 바꿔야 한다.
 배포 주소: `https://zagamer95.github.io/maple/`
+
+## 해외에서 NEXON Open API 로그인 (한국 계정)
+
+openapi.nexon.com 은 접속 국가로 로그인 플랫폼을 골라서, 해외 IP에서는 한국 계정이어도 글로벌/SEA 로그인으로 넘어간다.
+`tools/nexon-openapi-krpc.user.js` 유저스크립트를 Tampermonkey 등에 설치하면 항상 넥슨코리아 로그인을 쓴다.
