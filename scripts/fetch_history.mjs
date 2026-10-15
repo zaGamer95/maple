@@ -1,7 +1,7 @@
 // 넥슨 Open API 의 스타포스·큐브·잠재 재설정 기록을 하루치씩 받아 쌓는다.
 //
 // 사용법: NEXON_API_KEY=... node scripts/fetch_history.mjs
-//   HISTORY_BUDGET     이번 실행에서 쓸 최대 호출 수 (기본 600, 개발 키 하루 한도 1000)
+//   HISTORY_BUDGET     이번 실행에서 쓸 최대 호출 수 (기본 500, 개발 키 하루 한도 1000)
 //   HISTORY_CHARACTERS 기록을 남길 캐릭터, 쉼표 구분 (기본 "자그3")
 //
 // - API 키를 발급한 계정의 기록만 조회된다.
@@ -24,7 +24,7 @@ const TYPES = {
 };
 
 const key = process.env.NEXON_API_KEY;
-let budget = Number(process.env.HISTORY_BUDGET ?? 600);
+let budget = Number(process.env.HISTORY_BUDGET ?? 500);
 const characters = new Set((process.env.HISTORY_CHARACTERS ?? '자그3').split(',').map((s) => s.trim()));
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
