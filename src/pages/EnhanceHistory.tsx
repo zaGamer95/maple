@@ -2,7 +2,8 @@ import summaryData from '../data/historySummary.json';
 import { formatNumber } from '../lib/format';
 import type { HistorySummary } from '../types';
 
-const summary = summaryData as HistorySummary;
+// JSON 에서 추론된 타입은 장비마다 키가 달라 HistorySummary 와 직접 호환되지 않는다
+const summary = summaryData as unknown as HistorySummary;
 
 const TYPE_LABEL: Record<string, string> = { starforce: '스타포스', cube: '큐브', potential: '잠재 재설정(메소)' };
 
@@ -16,6 +17,10 @@ export default function EnhanceHistory({ characterName }: { characterName: strin
       </p>
     );
   }
+  const firstDate = Object.values(summary.state)
+    .map((st) => st.firstDate)
+    .filter(Boolean)
+    .sort()[0];
   const items = summary.items
     .filter((i) => i.character === characterName)
     .sort((a, b) => b.starforce.attempts + b.cube.uses + b.potential.uses - (a.starforce.attempts + a.cube.uses + a.potential.uses));
@@ -33,8 +38,8 @@ export default function EnhanceHistory({ characterName }: { characterName: strin
         ))}
       </ul>
       <p className="muted">
-        넥슨 기록은 2023-12-27 부터 있어요. 매일 아침 하루치씩 과거부터 받아 오는 중이라, 다 받을 때까지 숫자가 늘어나요. 같은
-        이름의 장비는 한 줄로 합쳐져요.
+        넥슨은 최근 2년치 기록만 줘서 {firstDate ?? '-'} 부터 집계했어요. 매일 아침 전날 기록을 더하고, 받아 둔 기록은 2년이 지나도
+        남아요. 같은 이름의 장비는 한 줄로 합쳐져요.
       </p>
       {items.length === 0 ? (
         <p className="muted">아직 받은 기록이 없어요.</p>

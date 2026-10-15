@@ -1,7 +1,7 @@
 import data from '../data/nexon.json';
 import type { NexonData } from '../types';
 
-export const nexon = data as NexonData;
+export const nexon = data as unknown as NexonData;
 
 /** "2026. 10. 16. 오전 6:01" */
 export function formatFetchedAt(iso: string | null): string {
