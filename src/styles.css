@@ -328,3 +328,6 @@ tr.main-row td {
   gap: 8px;
   margin-bottom: 8px;
 }
+tr.out-of-union td {
+  opacity: 0.45;
+}

@@ -1,9 +1,10 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
-import { useStore } from './store';
+import { useStore, type Dataset } from './store';
 import Dashboard from './pages/Dashboard';
 import CharacterList from './pages/CharacterList';
 import CharacterDetail from './pages/CharacterDetail';
 import ComingSoon from './pages/ComingSoon';
+import Purchases from './pages/Purchases';
 
 const NAV = [
   { to: '/', label: '대시보드', end: true },
@@ -15,18 +16,24 @@ const NAV = [
   { to: '/todo', label: '할 일' },
 ];
 
+const DATASET_LABEL: Record<Dataset, string> = { characters: 'characters.json', purchases: 'purchases.json' };
+
 function DraftBanner() {
-  const { hasDraft, exportCharacters, discardDraft } = useStore();
-  if (!hasDraft) return null;
+  const { changed, exportDataset, discardDrafts } = useStore();
+  if (changed.length === 0) return null;
   return (
     <div className="draft-banner">
-      <span>이 브라우저에만 저장된 수정 사항이 있어요. 공유 링크에도 반영하려면 JSON을 내보내 저장소에 커밋하세요.</span>
+      <span>이 브라우저에만 저장된 수정 사항이 있어요. 공유 링크에도 반영하려면 JSON을 내보내 src/data 에 덮어쓰고 커밋하세요.</span>
       <span className="draft-actions">
-        <button onClick={exportCharacters}>JSON 내보내기</button>
+        {changed.map((name) => (
+          <button key={name} onClick={() => exportDataset(name)}>
+            {DATASET_LABEL[name]} 내보내기
+          </button>
+        ))}
         <button
           className="ghost"
           onClick={() => {
-            if (confirm('이 브라우저의 수정 사항을 지우고 저장소 데이터로 되돌릴까요?')) discardDraft();
+            if (confirm('이 브라우저의 수정 사항을 지우고 저장소 데이터로 되돌릴까요?')) discardDrafts();
           }}
         >
           되돌리기
@@ -55,7 +62,7 @@ export default function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/characters" element={<CharacterList />} />
           <Route path="/characters/:id" element={<CharacterDetail />} />
-          <Route path="/purchases" element={<ComingSoon title="구매 내역" phase={3} />} />
+          <Route path="/purchases" element={<Purchases />} />
           <Route path="/guides" element={<ComingSoon title="공략 노트" phase={5} />} />
           <Route path="/tools" element={<ComingSoon title="계산기" phase={5} />} />
           <Route path="/prices" element={<ComingSoon title="시세" phase={5} />} />

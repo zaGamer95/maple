@@ -1,73 +1,107 @@
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
 import baseCharacters from './data/characters.json';
-import type { Character } from './types';
+import basePurchases from './data/purchases.json';
+import type { Character, Purchase } from './types';
 
 /**
  * 데이터의 원본은 저장소의 src/data/*.json 이다.
  * 웹에서 수정한 내용은 이 브라우저의 localStorage 에만 임시로 저장되고,
  * "JSON 내보내기"로 받은 파일을 src/data 에 덮어써 커밋해야 다른 사람(공유 링크)에게도 반영된다.
  */
-const DRAFT_KEY = 'maple:characters:draft:v1';
+const DATASETS = {
+  characters: { key: 'maple:characters:draft:v1', base: baseCharacters as Character[] },
+  purchases: { key: 'maple:purchases:draft:v1', base: basePurchases as Purchase[] },
+};
+export type Dataset = keyof typeof DATASETS;
+type Data = { characters: Character[]; purchases: Purchase[] };
+type Drafts = { [K in Dataset]: Data[K] | null };
 
-function loadDraft(): Character[] | null {
+function loadDraft<K extends Dataset>(name: K): Data[K] | null {
   try {
-    const raw = localStorage.getItem(DRAFT_KEY);
-    return raw ? (JSON.parse(raw) as Character[]) : null;
+    const raw = localStorage.getItem(DATASETS[name].key);
+    return raw ? (JSON.parse(raw) as Data[K]) : null;
   } catch {
     return null;
   }
 }
 
-function saveDraft(characters: Character[] | null) {
+function saveDraft(name: Dataset, value: unknown[] | null) {
   try {
-    if (characters) localStorage.setItem(DRAFT_KEY, JSON.stringify(characters));
-    else localStorage.removeItem(DRAFT_KEY);
+    if (value) localStorage.setItem(DATASETS[name].key, JSON.stringify(value));
+    else localStorage.removeItem(DATASETS[name].key);
   } catch {
     // 저장소 사용 불가(시크릿 모드 등) — 이번 세션 동안만 유지된다
   }
 }
 
-interface Store {
-  characters: Character[];
-  hasDraft: boolean;
+function download(filename: string, value: unknown) {
+  const blob = new Blob([JSON.stringify(value, null, 2) + '\n'], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+interface Store extends Data {
+  /** 이 브라우저에만 저장된 수정이 있는 데이터 */
+  changed: Dataset[];
   updateCharacter: (id: string, patch: Partial<Character>) => void;
-  exportCharacters: () => void;
-  discardDraft: () => void;
+  updatePurchase: (id: string, patch: Partial<Purchase>) => void;
+  exportDataset: (name: Dataset) => void;
+  discardDrafts: () => void;
 }
 
 const StoreContext = createContext<Store | null>(null);
 
 export function StoreProvider({ children }: { children: ReactNode }) {
-  const [draft, setDraft] = useState<Character[] | null>(loadDraft);
-  const characters = draft ?? (baseCharacters as Character[]);
+  const [drafts, setDrafts] = useState<Drafts>(() => ({
+    characters: loadDraft('characters'),
+    purchases: loadDraft('purchases'),
+  }));
+  const characters = drafts.characters ?? DATASETS.characters.base;
+  const purchases = drafts.purchases ?? DATASETS.purchases.base;
+
+  const setDraft = useCallback(<K extends Dataset>(name: K, value: Data[K]) => {
+    setDrafts((d) => ({ ...d, [name]: value }));
+    saveDraft(name, value);
+  }, []);
 
   const updateCharacter = useCallback(
-    (id: string, patch: Partial<Character>) => {
-      const next = characters.map((c) => (c.id === id ? { ...c, ...patch } : c));
-      setDraft(next);
-      saveDraft(next);
-    },
-    [characters],
+    (id: string, patch: Partial<Character>) =>
+      setDraft('characters', characters.map((c) => (c.id === id ? { ...c, ...patch } : c))),
+    [characters, setDraft],
   );
 
-  const exportCharacters = useCallback(() => {
-    const blob = new Blob([JSON.stringify(characters, null, 2) + '\n'], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'characters.json';
-    a.click();
-    URL.revokeObjectURL(url);
-  }, [characters]);
+  const updatePurchase = useCallback(
+    (id: string, patch: Partial<Purchase>) =>
+      setDraft('purchases', purchases.map((p) => (p.id === id ? { ...p, ...patch } : p))),
+    [purchases, setDraft],
+  );
 
-  const discardDraft = useCallback(() => {
-    setDraft(null);
-    saveDraft(null);
+  const exportDataset = useCallback(
+    (name: Dataset) => download(`${name}.json`, name === 'characters' ? characters : purchases),
+    [characters, purchases],
+  );
+
+  const discardDrafts = useCallback(() => {
+    setDrafts({ characters: null, purchases: null });
+    saveDraft('characters', null);
+    saveDraft('purchases', null);
   }, []);
 
   const value = useMemo(
-    () => ({ characters, hasDraft: draft !== null, updateCharacter, exportCharacters, discardDraft }),
-    [characters, draft, updateCharacter, exportCharacters, discardDraft],
+    () => ({
+      characters,
+      purchases,
+      changed: (Object.keys(drafts) as Dataset[]).filter((k) => drafts[k] !== null),
+      updateCharacter,
+      updatePurchase,
+      exportDataset,
+      discardDrafts,
+    }),
+    [characters, purchases, drafts, updateCharacter, updatePurchase, exportDataset, discardDrafts],
   );
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }

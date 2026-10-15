@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { formatCheck, formatNumber } from '../lib/format';
 import { EQUIP_SLOTS } from '../lib/equip';
-import { levelTotal, unionLevel } from '../lib/union';
+import { levelTotal, unionLevel, unionMembers, UNION_SLOTS } from '../lib/union';
 import { useStore } from '../store';
 import type { Character } from '../types';
 
@@ -21,6 +21,7 @@ export default function CharacterList() {
   const [bossOnly, setBossOnly] = useState(false);
   const [sort, setSort] = useState<SortKey>('default');
   const [showEquip, setShowEquip] = useState(false);
+  const members = useMemo(() => new Set(unionMembers(characters).map((c) => c.id)), [characters]);
 
   const rows = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -40,8 +41,8 @@ export default function CharacterList() {
     <section>
       <h1>캐릭터</h1>
       <p className="muted">
-        유니온 레벨 <b>{formatNumber(unionLevel(characters))}</b> · 레벨 총합 {formatNumber(levelTotal(characters))} ·{' '}
-        {rows.length}/{characters.length}캐릭 표시
+        유니온 레벨 <b>{formatNumber(unionLevel(characters))}</b> (레벨 상위 {UNION_SLOTS}캐릭, 흐린 행은 미포함) · 전체
+        레벨 합 {formatNumber(levelTotal(characters))} · {rows.length}/{characters.length}캐릭 표시
       </p>
 
       <div className="filters">
@@ -86,7 +87,7 @@ export default function CharacterList() {
           </thead>
           <tbody>
             {rows.map((c) => (
-              <Row key={c.id} c={c} showEquip={showEquip} />
+              <Row key={c.id} c={c} showEquip={showEquip} inUnion={members.has(c.id)} />
             ))}
           </tbody>
         </table>
@@ -95,9 +96,10 @@ export default function CharacterList() {
   );
 }
 
-function Row({ c, showEquip }: { c: Character; showEquip: boolean }) {
+function Row({ c, showEquip, inUnion }: { c: Character; showEquip: boolean; inUnion: boolean }) {
+  const className = [c.isMain && 'main-row', !inUnion && 'out-of-union'].filter(Boolean).join(' ');
   return (
-    <tr className={c.isMain ? 'main-row' : undefined}>
+    <tr className={className || undefined} title={inUnion ? undefined : '유니온 레벨에 포함되지 않는 캐릭터'}>
       <td>{c.jobGroup}</td>
       <td>{c.job}</td>
       <td>

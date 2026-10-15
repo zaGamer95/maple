@@ -2,19 +2,25 @@ import { useState, type ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import targetSetups from '../data/targetSetups.json';
 import { EQUIP_SLOTS } from '../lib/equip';
-import { formatCheck, formatNumber } from '../lib/format';
+import { formatCheck, formatMeso, formatNumber } from '../lib/format';
+import { unionMembers } from '../lib/union';
 import { useStore } from '../store';
+import { PurchaseTable } from './Purchases';
 import type { Character, Check, TargetSetup } from '../types';
 
-type Tab = 'overview' | 'equip' | 'target';
+type Tab = 'overview' | 'equip' | 'target' | 'purchases';
 
 export default function CharacterDetail() {
   const { id = '' } = useParams();
-  const { characters, updateCharacter } = useStore();
+  const { characters, purchases, updateCharacter } = useStore();
   const character = characters.find((c) => c.id === id);
   const setup = (targetSetups as TargetSetup[]).find((t) => t.characterId === id);
   const [tab, setTab] = useState<Tab>('overview');
   const [editing, setEditing] = useState(false);
+  const bought = purchases
+    .filter((p) => p.characterId === id)
+    .sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''));
+  const inUnion = unionMembers(characters).some((c) => c.id === id);
 
   if (!character) {
     return (
@@ -38,6 +44,7 @@ export default function CharacterDetail() {
           <p className="muted">
             {character.jobGroup} · {character.job} · Lv.{character.level || '-'}
             {character.guild && ` · ${character.guild}`}
+            {inUnion ? ' · 유니온 레벨 포함' : ' · 유니온 레벨 미포함'}
           </p>
         </div>
         <button onClick={() => setEditing((e) => !e)}>{editing ? '편집 닫기' : '편집'}</button>
@@ -63,11 +70,23 @@ export default function CharacterDetail() {
         <TabButton current={tab} value="target" onClick={setTab}>
           목표 세팅
         </TabButton>
+        <TabButton current={tab} value="purchases" onClick={setTab}>
+          구매 내역 {bought.length > 0 && `(${bought.length})`}
+        </TabButton>
       </div>
 
       {tab === 'overview' && <Overview c={character} />}
       {tab === 'equip' && <Equip c={character} />}
       {tab === 'target' && <Target setup={setup} />}
+      {tab === 'purchases' && (
+        <>
+          <p className="muted">
+            {bought.length}건 · 합계 {formatMeso(bought.reduce((sum, p) => sum + (p.price ?? 0), 0))} · 연결은{' '}
+            <Link to="/purchases">구매 내역</Link>에서 바꿀 수 있어요.
+          </p>
+          <PurchaseTable rows={bought} showCharacter={false} />
+        </>
+      )}
     </section>
   );
 }

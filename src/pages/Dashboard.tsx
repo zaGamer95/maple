@@ -1,16 +1,15 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import purchases from '../data/purchases.json';
 import todos from '../data/todos.json';
 import { formatMeso, formatNumber } from '../lib/format';
-import { levelTotal, unionLevel } from '../lib/union';
+import { levelTotal, unionLevel, UNION_SLOTS } from '../lib/union';
 import { useStore } from '../store';
-import type { Purchase, Todo } from '../types';
+import type { Todo } from '../types';
 
 export default function Dashboard() {
-  const { characters } = useStore();
+  const { characters, purchases } = useStore();
   const main = characters.find((c) => c.isMain);
-  const recent = [...(purchases as Purchase[])]
+  const recent = [...purchases]
     .sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''))
     .slice(0, 5);
   const openTodos = (todos as Todo[]).filter((t) => !t.done);
@@ -19,8 +18,8 @@ export default function Dashboard() {
     <section>
       <h1>대시보드</h1>
       <div className="stats">
-        <Stat label="유니온 레벨" value={formatNumber(unionLevel(characters))} sub="상위 42캐릭 합" />
-        <Stat label="레벨 총합" value={formatNumber(levelTotal(characters))} />
+        <Stat label="유니온 레벨" value={formatNumber(unionLevel(characters))} sub={`레벨 상위 ${UNION_SLOTS}캐릭 합`} />
+        <Stat label="전체 레벨 합" value={formatNumber(levelTotal(characters))} sub="참고용 · 유니온 레벨과 다름" />
         <Stat label="캐릭터" value={`${characters.length}개`} />
         {main && (
           <Stat
@@ -33,7 +32,9 @@ export default function Dashboard() {
 
       <div className="columns">
         <div className="card">
-          <h2>최근 구매</h2>
+          <h2>
+            <Link to="/purchases">최근 구매</Link>
+          </h2>
           <ul className="list">
             {recent.map((p) => (
               <li key={p.id}>
