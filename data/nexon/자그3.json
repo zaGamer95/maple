@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-15T12:18:10.349Z",
+  "fetchedAt": "2026-10-15T17:03:51.589Z",
   "character": "자그3",
   "character/stat": {
     "date": null,
@@ -7,11 +7,11 @@
     "final_stat": [
       {
         "stat_name": "최소 스탯공격력",
-        "stat_value": "75938928"
+        "stat_value": "73582799"
       },
       {
         "stat_name": "최대 스탯공격력",
-        "stat_value": "79935711"
+        "stat_value": "77455577"
       },
       {
         "stat_name": "데미지",
@@ -167,15 +167,15 @@
       },
       {
         "stat_name": "공격력",
-        "stat_value": "6156"
+        "stat_value": "5965"
       },
       {
         "stat_name": "마력",
-        "stat_value": "1488"
+        "stat_value": "1395"
       },
       {
         "stat_name": "전투력",
-        "stat_value": "122312175"
+        "stat_value": "120672015"
       },
       {
         "stat_name": "소환수 지속시간 증가",
@@ -13732,38 +13732,6 @@
         ]
       },
       {
-        "set_name": "쁘띠 죽음의 데스 세트",
-        "total_set_count": 3,
-        "set_effect_info": [
-          {
-            "set_count": 1,
-            "set_option": "[어둠의 다크니스 Lv.1] 스킬 사용 가능"
-          },
-          {
-            "set_count": 2,
-            "set_option": "[어둠의 다크니스 Lv.2] 스킬 사용 가능"
-          },
-          {
-            "set_count": 3,
-            "set_option": "[어둠의 다크니스 Lv.3] 스킬 사용 가능"
-          }
-        ],
-        "set_option_full": [
-          {
-            "set_count": 1,
-            "set_option": "[어둠의 다크니스 Lv.1] 스킬 사용 가능"
-          },
-          {
-            "set_count": 2,
-            "set_option": "[어둠의 다크니스 Lv.2] 스킬 사용 가능"
-          },
-          {
-            "set_count": 3,
-            "set_option": "[어둠의 다크니스 Lv.3] 스킬 사용 가능"
-          }
-        ]
-      },
-      {
         "set_name": "마스터 카오스 세트",
         "total_set_count": 5,
         "set_effect_info": [
@@ -14485,7 +14453,7 @@
         "ability_value": "일반 몬스터 공격 시 데미지 7% 증가"
       }
     ],
-    "remain_fame": 173447,
+    "remain_fame": 176367,
     "preset_no": 3,
     "ability_preset_1": {
       "ability_preset_grade": "레전드리",

@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-10-15T12:00:27.122Z",
+  "updatedAt": "2026-10-15T17:14:05.262Z",
   "characters": [
     "자그3"
   ],
   "state": {
     "starforce": {
       "firstDate": "2024-10-16",
-      "lastDate": "2026-10-14",
+      "lastDate": "2026-10-15",
       "error": null
     },
     "cube": {
-      "firstDate": "2024-10-16",
-      "lastDate": "2026-10-14",
+      "firstDate": "2024-10-17",
+      "lastDate": "2026-10-15",
       "error": null
     },
     "potential": {
-      "firstDate": "2024-10-16",
-      "lastDate": "2026-10-14",
+      "firstDate": "2024-10-17",
+      "lastDate": "2026-10-15",
       "error": null
     }
   },
@@ -55,7 +55,7 @@
     {
       "character": "자그3",
       "item": "그린 소울링",
-      "level": null,
+      "level": 100,
       "starforce": {
         "attempts": 0,
         "success": 0,
@@ -125,7 +125,7 @@
         "destroy": 1,
         "maxStar": 17,
         "last": "2025-04-12T00:50:28.848+09:00",
-        "meso": 161618900,
+        "meso": 133826200,
         "mesoUnknown": 0
       },
       "cube": {
@@ -180,7 +180,7 @@
     {
       "character": "자그3",
       "item": "벤젼스 링",
-      "level": null,
+      "level": 120,
       "starforce": {
         "attempts": 0,
         "success": 0,
@@ -280,7 +280,7 @@
         "destroy": 4,
         "maxStar": 20,
         "last": "2026-07-05T15:52:03.645+09:00",
-        "meso": 32934166700,
+        "meso": 24369819900,
         "mesoUnknown": 0
       },
       "cube": {
@@ -331,7 +331,7 @@
     {
       "character": "자그3",
       "item": "어센던트 펄스 링",
-      "level": null,
+      "level": 130,
       "starforce": {
         "attempts": 0,
         "success": 0,
@@ -343,25 +343,25 @@
         "mesoUnknown": 0
       },
       "cube": {
-        "uses": 32,
+        "uses": 42,
         "gradeUps": 0,
         "byKind": {
-          "펄스 인핸서": 32
+          "펄스 인핸서": 42
         },
-        "last": "2026-10-09T10:04:15.815+09:00"
+        "last": "2026-10-15T17:19:44.231+09:00"
       },
       "potential": {
         "uses": 3,
         "gradeUps": 0,
         "last": "2026-09-26T04:09:51.809+09:00",
-        "meso": 0,
-        "mesoUnknown": 3
+        "meso": 120000000,
+        "mesoUnknown": 0
       }
     },
     {
       "character": "자그3",
       "item": "어웨이크 링",
-      "level": null,
+      "level": 120,
       "starforce": {
         "attempts": 0,
         "success": 0,
@@ -400,7 +400,7 @@
         "destroy": 0,
         "maxStar": 18,
         "last": "2025-05-04T21:48:10.159+09:00",
-        "meso": 2797470000,
+        "meso": 1958229400,
         "mesoUnknown": 0
       },
       "cube": {
@@ -428,7 +428,7 @@
         "destroy": 0,
         "maxStar": 18,
         "last": "2025-05-04T21:53:45.509+09:00",
-        "meso": 5265696300,
+        "meso": 3685988000,
         "mesoUnknown": 0
       },
       "cube": {
@@ -459,7 +459,7 @@
         "destroy": 0,
         "maxStar": 19,
         "last": "2026-07-05T15:50:29.284+09:00",
-        "meso": 4009989300,
+        "meso": 2878792500,
         "mesoUnknown": 0
       },
       "cube": {
@@ -489,7 +489,7 @@
         "destroy": 10,
         "maxStar": 21,
         "last": "2025-12-14T22:28:26.603+09:00",
-        "meso": 23010258600,
+        "meso": 16633921300,
         "mesoUnknown": 0
       },
       "cube": {
@@ -509,7 +509,7 @@
     {
       "character": "자그3",
       "item": "익스플로시브 필<3호>",
-      "level": null,
+      "level": 100,
       "starforce": {
         "attempts": 0,
         "success": 0,
@@ -581,7 +581,7 @@
         "destroy": 1,
         "maxStar": 19,
         "last": "2026-07-05T15:53:27.711+09:00",
-        "meso": 10271801600,
+        "meso": 7347086600,
         "mesoUnknown": 0
       },
       "cube": {
@@ -635,7 +635,7 @@
     {
       "character": "자그3",
       "item": "페어리 하트",
-      "level": null,
+      "level": 100,
       "starforce": {
         "attempts": 0,
         "success": 0,
@@ -674,7 +674,7 @@
         "destroy": 0,
         "maxStar": 20,
         "last": "2026-07-05T00:05:00.513+09:00",
-        "meso": 891068300,
+        "meso": 623748300,
         "mesoUnknown": 0
       },
       "cube": {
