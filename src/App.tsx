@@ -70,6 +70,9 @@ export default function App() {
           <Route path="*" element={<ComingSoon title="페이지를 찾을 수 없어요" />} />
         </Routes>
       </main>
+      <footer className="footer">
+        Data based on NEXON Open API · 넥슨코리아와 관련 없는 개인 페이지입니다.
+      </footer>
     </div>
   );
 }

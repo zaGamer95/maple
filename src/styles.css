@@ -369,3 +369,12 @@ tr.out-of-union td {
 .grade.legendary {
   background: #16a34a;
 }
+
+.footer {
+  max-width: 1400px;
+  margin: 24px auto 0;
+  padding: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+}
