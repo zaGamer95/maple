@@ -210,8 +210,9 @@ def import_purchases(wb):
 WON_RATE_ITEMS = ("물통", "메소 마켓")
 
 
-def import_prices(wb):
+def import_prices(wb, wb_formulas):
     ws = wb["mvp작 참고용 옥션 시세표"]
+    formulas = wb_formulas["mvp작 참고용 옥션 시세표"]
     dates = {}
     for col in range(3, ws.max_column + 1):
         header = clean(ws.cell(1, col).value)
@@ -233,8 +234,10 @@ def import_prices(wb):
             if item in WON_RATE_ITEMS:
                 price, unit = round(value), "won_per_eok"
             else:
-                # 시트 값은 세트 전체 가격(억)
-                price, unit = round(value * EOK), "meso"
+                # 시트에는 수식(=11*0.618 등)이면 세트 합계, 그냥 숫자면 개당 가격(억)이 섞여 있다
+                is_formula = str(formulas.cell(row, col).value).startswith("=")
+                total = value if is_formula or bundle == 1 else value * bundle
+                price, unit = round(total * EOK), "meso"
             quotes.append(
                 {"item": item, "bundleSize": bundle, "date": date, "price": price, "unit": unit}
             )
@@ -282,7 +285,7 @@ def main():
     write("characters", import_characters(wb))
     write("targetSetups", import_target_setups(wb))
     write("purchases", keep_links(import_purchases(wb)))
-    write("prices", import_prices(wb))
+    write("prices", import_prices(wb, openpyxl.load_workbook(src)))
     write("todos", import_todos())
 
 

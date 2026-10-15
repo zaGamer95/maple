@@ -51,6 +51,20 @@ export interface Purchase {
   priceText: string | null;
   comment: string | null;
   characterId: string | null;
+  /** 없으면 구매 */
+  type?: 'buy' | 'sell';
+  /** 판매 수수료율 (기본 5%) */
+  feeRate?: number;
+}
+
+export interface PriceQuote {
+  item: string;
+  bundleSize: number;
+  /** YYYY-MM-DD */
+  date: string;
+  price: number;
+  /** meso: 세트 전체 메소 가격, won_per_eok: 1억 메소당 원화 */
+  unit: 'meso' | 'won_per_eok';
 }
 
 export interface Todo {

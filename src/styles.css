@@ -378,3 +378,85 @@ tr.out-of-union td {
   color: var(--muted);
   font-size: 12px;
 }
+
+.badge.sell {
+  background: #e6f4ea;
+  color: #1e7b3c;
+}
+@media (prefers-color-scheme: dark) {
+  .badge.sell {
+    background: #173523;
+    color: #7fd39a;
+  }
+}
+.small {
+  font-size: 12px;
+}
+button.small {
+  padding: 2px 8px;
+  font-size: 12px;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+button.link {
+  background: none;
+  border: none;
+  color: var(--text);
+  padding: 0;
+  text-align: left;
+}
+button.link.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.chart {
+  position: relative;
+  margin: 8px 0 12px;
+}
+.chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.chart .grid {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+.chart .axis {
+  stroke: var(--muted);
+  stroke-width: 1;
+}
+.chart .series {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+.chart .dot {
+  fill: var(--accent);
+  stroke: var(--surface);
+  stroke-width: 2;
+}
+.chart .crosshair {
+  stroke: var(--muted);
+  stroke-dasharray: 3 3;
+}
+.chart .tick {
+  fill: var(--muted);
+  font-size: 11px;
+}
+.chart .tooltip {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}

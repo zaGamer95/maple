@@ -43,7 +43,7 @@ export default function Dashboard() {
       <div className="columns">
         <div className="card">
           <h2>
-            <Link to="/purchases">최근 구매</Link>
+            <Link to="/purchases">최근 거래</Link>
           </h2>
           <ul className="list">
             {recent.map((p) => (

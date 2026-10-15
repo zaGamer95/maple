@@ -83,7 +83,7 @@ export default function CharacterDetail() {
           목표 세팅
         </TabButton>
         <TabButton current={tab} value="purchases" onClick={setTab}>
-          구매 내역 {bought.length > 0 && `(${bought.length})`}
+          거래 내역 {bought.length > 0 && `(${bought.length})`}
         </TabButton>
         <TabButton current={tab} value="history" onClick={setTab}>
           강화 기록
@@ -98,7 +98,7 @@ export default function CharacterDetail() {
         <>
           <p className="muted">
             {bought.length}건 · 합계 {formatMeso(bought.reduce((sum, p) => sum + (p.price ?? 0), 0))} · 연결은{' '}
-            <Link to="/purchases">구매 내역</Link>에서 바꿀 수 있어요.
+            <Link to="/purchases">거래 내역</Link>에서 바꿀 수 있어요.
           </p>
           <PurchaseTable rows={bought} showCharacter={false} />
         </>

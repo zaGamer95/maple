@@ -1,8 +1,9 @@
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
 import baseCharacters from './data/characters.json';
 import basePurchases from './data/purchases.json';
+import basePrices from './data/prices.json';
 import { nexon } from './lib/nexon';
-import type { Character, Purchase } from './types';
+import type { Character, PriceQuote, Purchase } from './types';
 
 /**
  * 데이터의 원본은 저장소의 src/data/*.json 이다.
@@ -12,9 +13,10 @@ import type { Character, Purchase } from './types';
 const DATASETS = {
   characters: { key: 'maple:characters:draft:v1', base: baseCharacters as Character[] },
   purchases: { key: 'maple:purchases:draft:v1', base: basePurchases as Purchase[] },
+  prices: { key: 'maple:prices:draft:v1', base: basePrices as PriceQuote[] },
 };
 export type Dataset = keyof typeof DATASETS;
-type Data = { characters: Character[]; purchases: Purchase[] };
+type Data = { characters: Character[]; purchases: Purchase[]; prices: PriceQuote[] };
 type Drafts = { [K in Dataset]: Data[K] | null };
 
 function loadDraft<K extends Dataset>(name: K): Data[K] | null {
@@ -56,6 +58,10 @@ interface Store extends Data {
   changed: Dataset[];
   updateCharacter: (id: string, patch: Partial<Character>) => void;
   updatePurchase: (id: string, patch: Partial<Purchase>) => void;
+  addPurchase: (p: Purchase) => void;
+  removePurchase: (id: string) => void;
+  addPrice: (q: PriceQuote) => void;
+  removePrice: (q: PriceQuote) => void;
   exportDataset: (name: Dataset) => void;
   discardDrafts: () => void;
 }
@@ -66,6 +72,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [drafts, setDrafts] = useState<Drafts>(() => ({
     characters: loadDraft('characters'),
     purchases: loadDraft('purchases'),
+    prices: loadDraft('prices'),
   }));
   // 넥슨 API 로 받은 레벨이 있으면 그것을 쓴다 (시트·수동 입력보다 최신)
   const characters = useMemo(
@@ -77,6 +84,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     [drafts.characters],
   );
   const purchases = drafts.purchases ?? DATASETS.purchases.base;
+  const prices = drafts.prices ?? DATASETS.prices.base;
 
   const setDraft = useCallback(<K extends Dataset>(name: K, value: Data[K]) => {
     setDrafts((d) => ({ ...d, [name]: value }));
@@ -95,28 +103,56 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     [purchases, setDraft],
   );
 
+  const addPurchase = useCallback((p: Purchase) => setDraft('purchases', [...purchases, p]), [purchases, setDraft]);
+  const removePurchase = useCallback(
+    (id: string) => setDraft('purchases', purchases.filter((p) => p.id !== id)),
+    [purchases, setDraft],
+  );
+  const addPrice = useCallback((q: PriceQuote) => setDraft('prices', [...prices, q]), [prices, setDraft]);
+  const removePrice = useCallback(
+    (q: PriceQuote) => setDraft('prices', prices.filter((x) => x !== q)),
+    [prices, setDraft],
+  );
+
   const exportDataset = useCallback(
-    (name: Dataset) => download(`${name}.json`, name === 'characters' ? characters : purchases),
-    [characters, purchases],
+    (name: Dataset) => download(`${name}.json`, { characters, purchases, prices }[name]),
+    [characters, purchases, prices],
   );
 
   const discardDrafts = useCallback(() => {
-    setDrafts({ characters: null, purchases: null });
-    saveDraft('characters', null);
-    saveDraft('purchases', null);
+    setDrafts({ characters: null, purchases: null, prices: null });
+    (Object.keys(DATASETS) as Dataset[]).forEach((name) => saveDraft(name, null));
   }, []);
 
   const value = useMemo(
     () => ({
       characters,
       purchases,
+      prices,
       changed: (Object.keys(drafts) as Dataset[]).filter((k) => drafts[k] !== null),
       updateCharacter,
       updatePurchase,
+      addPurchase,
+      removePurchase,
+      addPrice,
+      removePrice,
       exportDataset,
       discardDrafts,
     }),
-    [characters, purchases, drafts, updateCharacter, updatePurchase, exportDataset, discardDrafts],
+    [
+      characters,
+      purchases,
+      prices,
+      drafts,
+      updateCharacter,
+      updatePurchase,
+      addPurchase,
+      removePurchase,
+      addPrice,
+      removePrice,
+      exportDataset,
+      discardDrafts,
+    ],
   );
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }
