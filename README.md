@@ -18,6 +18,7 @@ npm run build    # 타입 검사 + 빌드 (dist/)
 - **시트에서 다시 가져오기**: 구글 시트를 xlsx 로 내려받은 뒤
 
   ```bash
+  python3 -m venv .venv && source .venv/bin/activate   # macOS(Homebrew 파이썬)는 전역 pip 설치를 막으므로 가상환경 사용
   pip install openpyxl
   python scripts/import_sheet.py 시트.xlsx
   ```
@@ -33,4 +34,7 @@ npm run build    # 타입 검사 + 빌드 (dist/)
 ## 해외에서 NEXON Open API 로그인 (한국 계정)
 
 openapi.nexon.com 은 접속 국가로 로그인 플랫폼을 골라서, 해외 IP에서는 한국 계정이어도 글로벌/SEA 로그인으로 넘어간다.
-`tools/nexon-openapi-krpc.user.js` 유저스크립트를 Tampermonkey 등에 설치하면 항상 넥슨코리아 로그인을 쓴다.
+`tools/nexon-openapi-krpc.user.js` 유저스크립트를 설치하면 항상 넥슨코리아 로그인을 쓴다.
+
+- **크롬 (맥/윈도우)**: Tampermonkey 설치 → 확장 프로그램 관리(`chrome://extensions`)에서 Tampermonkey 의 "세부정보" → **사용자 스크립트 허용** 켜기 (구버전 크롬은 오른쪽 위 **개발자 모드** 켜기) → 스크립트의 raw 주소를 열어 설치.
+- **사파리 (맥)**: App Store 의 무료 **Userscripts** 앱 설치 → 사파리 설정 → 확장 프로그램에서 켜고 openapi.nexon.com, signin.nexon.com 권한 허용 → raw 주소를 사파리에서 열고 툴바의 Userscripts 아이콘에서 설치.
