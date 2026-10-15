@@ -20,7 +20,13 @@ type Drafts = { [K in Dataset]: Data[K] | null };
 function loadDraft<K extends Dataset>(name: K): Data[K] | null {
   try {
     const raw = localStorage.getItem(DATASETS[name].key);
-    return raw ? (JSON.parse(raw) as Data[K]) : null;
+    if (!raw) return null;
+    // 내보낸 JSON 이 저장소에 커밋돼 배포되면 임시본과 같아진다 → 임시본은 지운다
+    if (raw === JSON.stringify(DATASETS[name].base)) {
+      localStorage.removeItem(DATASETS[name].key);
+      return null;
+    }
+    return JSON.parse(raw) as Data[K];
   } catch {
     return null;
   }

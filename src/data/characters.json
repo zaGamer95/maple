@@ -50,30 +50,6 @@
     }
   },
   {
-    "id": "혈흔의기사",
-    "name": "혈흔의기사",
-    "jobGroup": "모험가",
-    "job": "다크나이트",
-    "unionEffect": "HP",
-    "linkEffect": "회복",
-    "plan": "메가버닝",
-    "level": 0,
-    "note": null,
-    "guild": null,
-    "boss": {
-      "karut": null,
-      "stoneDesire": null,
-      "lucidWillSlime": null
-    },
-    "unionPower": null,
-    "isMain": false,
-    "excludeFromUnion": false,
-    "equip": {
-      "뱃지": "ㅇ",
-      "성배": "X"
-    }
-  },
-  {
     "id": "IgnisToxicus",
     "name": "IgnisToxicus",
     "jobGroup": "모험가",
@@ -1106,8 +1082,8 @@
     "equip": {}
   },
   {
-    "id": "zaGamer진",
-    "name": "zaGamer진",
+    "id": "커자",
+    "name": "커자",
     "jobGroup": "레프",
     "job": "아델",
     "unionEffect": "힘",

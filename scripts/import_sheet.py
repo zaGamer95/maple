@@ -255,6 +255,17 @@ def import_todos():
     ]
 
 
+def keep_links(purchases):
+    """웹에서 연결해 둔 구매 ↔ 캐릭터 연결은 다시 가져와도 유지한다."""
+    path = OUT_DIR / "purchases.json"
+    if not path.exists():
+        return purchases
+    old = {(p["dateText"], p["itemName"], p["detail"]): p.get("characterId") for p in json.loads(path.read_text("utf-8"))}
+    for p in purchases:
+        p["characterId"] = old.get((p["dateText"], p["itemName"], p["detail"]))
+    return purchases
+
+
 def write(name, data):
     path = OUT_DIR / f"{name}.json"
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -270,7 +281,7 @@ def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     write("characters", import_characters(wb))
     write("targetSetups", import_target_setups(wb))
-    write("purchases", import_purchases(wb))
+    write("purchases", keep_links(import_purchases(wb)))
     write("prices", import_prices(wb))
     write("todos", import_todos())
 
