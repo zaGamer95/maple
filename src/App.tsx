@@ -6,12 +6,14 @@ import CharacterDetail from './pages/CharacterDetail';
 import ComingSoon from './pages/ComingSoon';
 import Purchases from './pages/Purchases';
 import Prices from './pages/Prices';
+import Upgrade from './pages/Upgrade';
 
 const NAV = [
   { to: '/', label: '대시보드', end: true },
   { to: '/characters', label: '캐릭터' },
   { to: '/purchases', label: '거래 내역' },
   { to: '/guides', label: '공략' },
+  { to: '/upgrade', label: '장비 교체' },
   { to: '/tools', label: '계산기' },
   { to: '/prices', label: '시세' },
   { to: '/todo', label: '할 일' },
@@ -71,6 +73,7 @@ export default function App() {
           <Route path="/guides" element={<ComingSoon title="공략 노트" phase={5} />} />
           <Route path="/tools" element={<ComingSoon title="계산기" phase={5} />} />
           <Route path="/prices" element={<Prices />} />
+          <Route path="/upgrade" element={<Upgrade />} />
           <Route path="/todo" element={<ComingSoon title="할 일" phase={5} />} />
           <Route path="*" element={<ComingSoon title="페이지를 찾을 수 없어요" />} />
         </Routes>

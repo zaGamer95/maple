@@ -1,0 +1,822 @@
+{
+  "characters": {
+    "자그3": {
+      "character": "자그3",
+      "job": "엔젤릭버스터",
+      "fetchedAt": "2026-10-15T12:18:10.349Z",
+      "mainStat": "DEX",
+      "subStat": "STR",
+      "stat": {
+        "main": 54558,
+        "sub": 7750,
+        "att": 6156,
+        "dmg": 91,
+        "boss": 301,
+        "finalDmg": 76.96,
+        "critDmg": 94.6,
+        "ied": 86.42,
+        "combatPower": 122312175
+      },
+      "model": {
+        "mainPct": 332,
+        "subPct": 161,
+        "attPct": 105,
+        "mainUnapplied": 28750,
+        "subUnapplied": 0,
+        "symbol": 27800,
+        "hyperMain": 150,
+        "hexa": 800
+      },
+      "items": [
+        {
+          "slot": "모자",
+          "name": "에테르넬 파이렛햇",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPCOOGF",
+          "starforce": 19,
+          "sets": [
+            "에테르넬"
+          ],
+          "mainFlat": 406,
+          "subFlat": 190,
+          "attFlat": 79,
+          "allPct": 5,
+          "mainPct": 7,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [
+            15
+          ],
+          "lines": [
+            "스킬 재사용 대기시간 -2초",
+            "스킬 재사용 대기시간 -1초",
+            "INT +10%",
+            "최대 HP +9%",
+            "스킬 재사용 대기시간 -2초",
+            "DEX +7%"
+          ]
+        },
+        {
+          "slot": "얼굴장식",
+          "name": "트와일라이트 마크",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPDJALG",
+          "starforce": 17,
+          "sets": [],
+          "mainFlat": 120,
+          "subFlat": 74,
+          "attFlat": 34,
+          "allPct": 7,
+          "mainPct": 6,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "아이템 드롭률 +20%",
+            "DEX +4%",
+            "아이템 드롭률 +20%",
+            "DEX +2%",
+            "최대 HP +9%",
+            "INT +2%"
+          ]
+        },
+        {
+          "slot": "눈장식",
+          "name": "미카엘라의 새 안경",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPAJFKH",
+          "starforce": 0,
+          "sets": [],
+          "mainFlat": 2,
+          "subFlat": 2,
+          "attFlat": 2,
+          "allPct": 2,
+          "mainPct": 0,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "아이템 드롭률 +20%",
+            "아이템 드롭률 +20%",
+            "최대 MP +9%"
+          ]
+        },
+        {
+          "slot": "귀고리",
+          "name": "하프 이어링",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPBJHMD",
+          "starforce": 5,
+          "sets": [],
+          "mainFlat": 10,
+          "subFlat": 16,
+          "attFlat": 6,
+          "allPct": 0,
+          "mainPct": 0,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "메소 획득량 +20%",
+            "공격력 +6",
+            "메소 획득량 +20%",
+            "최대 HP +40",
+            "방어력 +9%",
+            "이동속도 +3"
+          ]
+        },
+        {
+          "slot": "상의",
+          "name": "이글아이 원더러코트",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPGJFLJ",
+          "starforce": 22,
+          "sets": [
+            "루타비스"
+          ],
+          "mainFlat": 280,
+          "subFlat": 147,
+          "attFlat": 114,
+          "allPct": 6,
+          "mainPct": 37,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [
+            5
+          ],
+          "lines": [
+            "DEX +12%",
+            "DEX +4%",
+            "DEX +12%",
+            "공격력 +10",
+            "DEX +9%",
+            "공격력 +10"
+          ]
+        },
+        {
+          "slot": "하의",
+          "name": "트릭스터 원더러팬츠",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPEJGII",
+          "starforce": 22,
+          "sets": [
+            "루타비스"
+          ],
+          "mainFlat": 291,
+          "subFlat": 147,
+          "attFlat": 104,
+          "allPct": 21,
+          "mainPct": 22,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [
+            5
+          ],
+          "lines": [
+            "올스탯 +9%",
+            "DEX +6%",
+            "DEX +12%",
+            "DEX +4%",
+            "올스탯 +6%",
+            "공격력 +11"
+          ]
+        },
+        {
+          "slot": "신발",
+          "name": "아케인셰이드 파이렛슈즈",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPFIGID",
+          "starforce": 18,
+          "sets": [
+            "아케인셰이드"
+          ],
+          "mainFlat": 331,
+          "subFlat": 155,
+          "attFlat": 59,
+          "allPct": 10,
+          "mainPct": 25,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "DEX +12%",
+            "DEX +4%",
+            "올스탯 +6%",
+            "INT +10",
+            "DEX +9%",
+            "공격력 +10"
+          ]
+        },
+        {
+          "slot": "장갑",
+          "name": "아케인셰이드 파이렛글러브",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPKJBHI",
+          "starforce": 20,
+          "sets": [
+            "아케인셰이드"
+          ],
+          "mainFlat": 251,
+          "subFlat": 185,
+          "attFlat": 118,
+          "allPct": 6,
+          "mainPct": 10,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 16,
+          "ied": [],
+          "lines": [
+            "크리티컬 데미지 +8%",
+            "DEX +6%",
+            "크리티컬 데미지 +8%",
+            "DEX +4%",
+            "INT +9%",
+            "최대 HP +5%"
+          ]
+        },
+        {
+          "slot": "망토",
+          "name": "아케인셰이드 파이렛케이프",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOCJOKF",
+          "starforce": 22,
+          "sets": [
+            "아케인셰이드"
+          ],
+          "mainFlat": 344,
+          "subFlat": 216,
+          "attFlat": 123,
+          "allPct": 5,
+          "mainPct": 25,
+          "subPct": 2,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "DEX +12%",
+            "DEX +4%",
+            "DEX +9%",
+            "공격력 +10",
+            "INT +9%",
+            "STR +2%"
+          ]
+        },
+        {
+          "slot": "보조무기",
+          "name": "아스트라 소울링",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIAIBOB",
+          "starforce": 0,
+          "sets": [],
+          "mainFlat": 10,
+          "subFlat": 10,
+          "attFlat": 7,
+          "allPct": 0,
+          "mainPct": 0,
+          "subPct": 9,
+          "attPct": 21,
+          "boss": 95,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "보스 몬스터 데미지 +35%",
+            "공격력 +12%",
+            "보스 몬스터 데미지 +30%",
+            "공격력 +9%",
+            "보스 몬스터 데미지 +30%",
+            "STR +9%"
+          ]
+        },
+        {
+          "slot": "무기",
+          "name": "제네시스 소울슈터",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KENAJGMD",
+          "starforce": 22,
+          "sets": [
+            "아케인셰이드",
+            "에테르넬"
+          ],
+          "mainFlat": 327,
+          "subFlat": 339,
+          "attFlat": 707,
+          "allPct": 9,
+          "mainPct": 0,
+          "subPct": 0,
+          "attPct": 33,
+          "boss": 70,
+          "dmg": 5,
+          "critDmg": 0,
+          "ied": [
+            20,
+            30
+          ],
+          "lines": [
+            "공격력 +12%",
+            "공격력 +12%",
+            "몬스터 방어율 무시 +30%",
+            "올스탯 +9%",
+            "보스 몬스터 데미지 +40%",
+            "공격력 +9%"
+          ]
+        },
+        {
+          "slot": "반지1",
+          "name": "테네브리스 원정대 반지",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEOG",
+          "starforce": 0,
+          "sets": [],
+          "mainFlat": 40,
+          "subFlat": 40,
+          "attFlat": 38,
+          "allPct": 0,
+          "mainPct": 9,
+          "subPct": 9,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "아이템 드롭률 +20%",
+            "공격력 +10",
+            "STR +9%",
+            "이동속도 +4",
+            "DEX +9%",
+            "공격력 +3"
+          ]
+        },
+        {
+          "slot": "반지2",
+          "name": "글로리온 링 : 슈프림",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEPH",
+          "starforce": 0,
+          "sets": [],
+          "mainFlat": 46,
+          "subFlat": 40,
+          "attFlat": 35,
+          "allPct": 0,
+          "mainPct": 9,
+          "subPct": 9,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "아이템 드롭률 +20%",
+            "공격력 +10",
+            "STR +9%",
+            "DEX +6",
+            "DEX +9%",
+            "LUK +6"
+          ]
+        },
+        {
+          "slot": "반지3",
+          "name": "마이스터 올마이티링",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODIHIG",
+          "starforce": 5,
+          "sets": [],
+          "mainFlat": 16,
+          "subFlat": 21,
+          "attFlat": 1,
+          "allPct": 0,
+          "mainPct": 0,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "아이템 드롭률 +20%",
+            "점프력 +4",
+            "아이템 드롭률 +20%",
+            "STR +5",
+            "최대 HP +9%",
+            "INT +5"
+          ]
+        },
+        {
+          "slot": "반지4",
+          "name": "마이스터링",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODIHLE",
+          "starforce": 0,
+          "sets": [],
+          "mainFlat": 5,
+          "subFlat": 5,
+          "attFlat": 1,
+          "allPct": 0,
+          "mainPct": 0,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "아이템 드롭률 +20%",
+            "메소 획득량 +20%",
+            "최대 HP +9%"
+          ]
+        },
+        {
+          "slot": "펜던트",
+          "name": "정령의 펜던트",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJENF",
+          "starforce": 0,
+          "sets": [],
+          "mainFlat": 0,
+          "subFlat": 0,
+          "attFlat": 0,
+          "allPct": 0,
+          "mainPct": 0,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": []
+        },
+        {
+          "slot": "훈장",
+          "name": "메이플 어택",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOGICME",
+          "starforce": 0,
+          "sets": [],
+          "mainFlat": 23,
+          "subFlat": 23,
+          "attFlat": 7,
+          "allPct": 0,
+          "mainPct": 0,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": []
+        },
+        {
+          "slot": "벨트",
+          "name": "골든 클로버 벨트",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOBJFJD",
+          "starforce": 22,
+          "sets": [],
+          "mainFlat": 197,
+          "subFlat": 120,
+          "attFlat": 107,
+          "allPct": 20,
+          "mainPct": 13,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "올스탯 +9%",
+            "공격력 +11",
+            "DEX +9%",
+            "DEX +4%",
+            "올스탯 +6%",
+            "점프력 +8"
+          ]
+        },
+        {
+          "slot": "어깨장식",
+          "name": "에테르넬 파이렛숄더",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOHJFPH",
+          "starforce": 18,
+          "sets": [
+            "에테르넬"
+          ],
+          "mainFlat": 144,
+          "subFlat": 144,
+          "attFlat": 79,
+          "allPct": 7,
+          "mainPct": 24,
+          "subPct": 5,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "DEX +10%",
+            "DEX +7%",
+            "올스탯 +7%",
+            "INT +5%",
+            "DEX +7%",
+            "STR +5%"
+          ]
+        },
+        {
+          "slot": "포켓 아이템",
+          "name": "저주받은 녹의 마도서",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOEJHGD",
+          "starforce": 0,
+          "sets": [],
+          "mainFlat": 104,
+          "subFlat": 40,
+          "attFlat": 10,
+          "allPct": 6,
+          "mainPct": 0,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": []
+        },
+        {
+          "slot": "기계 심장",
+          "name": "플라즈마 하트",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEJFJHHI",
+          "starforce": 20,
+          "sets": [],
+          "mainFlat": 115,
+          "subFlat": 115,
+          "attFlat": 164,
+          "allPct": 6,
+          "mainPct": 21,
+          "subPct": 4,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [
+            15
+          ],
+          "lines": [
+            "DEX +12%",
+            "STR +4%",
+            "DEX +9%",
+            "공격력 +10",
+            "올스탯 +6%",
+            "공격력 +10"
+          ]
+        },
+        {
+          "slot": "뱃지",
+          "name": "크리스탈 웬투스 뱃지",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOKJHGG",
+          "starforce": 0,
+          "sets": [],
+          "mainFlat": 10,
+          "subFlat": 10,
+          "attFlat": 5,
+          "allPct": 0,
+          "mainPct": 0,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": []
+        },
+        {
+          "slot": "엠블렘",
+          "name": "미트라의 분노 : 해적",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOLLCLI",
+          "starforce": 0,
+          "sets": [],
+          "mainFlat": 40,
+          "subFlat": 40,
+          "attFlat": 5,
+          "allPct": 0,
+          "mainPct": 0,
+          "subPct": 0,
+          "attPct": 51,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "공격력 +12%",
+            "공격력 +12%",
+            "공격력 +9%",
+            "공격력 +9%",
+            "공격력 +9%",
+            "크리티컬 확률 +9%"
+          ]
+        },
+        {
+          "slot": "펜던트2",
+          "name": "그리드 펜던트",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJFPI",
+          "starforce": 0,
+          "sets": [],
+          "mainFlat": 13,
+          "subFlat": 8,
+          "attFlat": 6,
+          "allPct": 3,
+          "mainPct": 1,
+          "subPct": 0,
+          "attPct": 0,
+          "boss": 0,
+          "dmg": 0,
+          "critDmg": 0,
+          "ied": [],
+          "lines": [
+            "아이템 드롭률 +20%",
+            "DEX +1%",
+            "메소 획득량 +20%",
+            "공격력 +2",
+            "LUK +9%",
+            "LUK +5"
+          ]
+        }
+      ],
+      "sets": {
+        "아케인셰이드": {
+          "name": "아케인셰이드 세트(해적)",
+          "count": 4,
+          "tiers": {
+            "2": {
+              "mainFlat": 0,
+              "subFlat": 0,
+              "attFlat": 30,
+              "boss": 10,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": []
+            },
+            "3": {
+              "mainFlat": 0,
+              "subFlat": 0,
+              "attFlat": 30,
+              "boss": 0,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": [
+                10
+              ]
+            },
+            "4": {
+              "mainFlat": 50,
+              "subFlat": 50,
+              "attFlat": 35,
+              "boss": 10,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": []
+            },
+            "5": {
+              "mainFlat": 0,
+              "subFlat": 0,
+              "attFlat": 40,
+              "boss": 10,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": []
+            },
+            "6": {
+              "mainFlat": 0,
+              "subFlat": 0,
+              "attFlat": 30,
+              "boss": 0,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": []
+            },
+            "7": {
+              "mainFlat": 0,
+              "subFlat": 0,
+              "attFlat": 30,
+              "boss": 0,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": [
+                10
+              ]
+            }
+          }
+        },
+        "루타비스": {
+          "name": "루타비스 세트(해적)",
+          "count": 2,
+          "tiers": {
+            "2": {
+              "mainFlat": 20,
+              "subFlat": 20,
+              "attFlat": 0,
+              "boss": 0,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": []
+            },
+            "3": {
+              "mainFlat": 0,
+              "subFlat": 0,
+              "attFlat": 50,
+              "boss": 0,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": []
+            },
+            "4": {
+              "mainFlat": 0,
+              "subFlat": 0,
+              "attFlat": 0,
+              "boss": 30,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": []
+            }
+          }
+        },
+        "에테르넬": {
+          "name": "에테르넬 세트(해적)",
+          "count": 3,
+          "tiers": {
+            "2": {
+              "mainFlat": 0,
+              "subFlat": 0,
+              "attFlat": 40,
+              "boss": 10,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": []
+            },
+            "3": {
+              "mainFlat": 50,
+              "subFlat": 50,
+              "attFlat": 40,
+              "boss": 10,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": []
+            },
+            "4": {
+              "mainFlat": 0,
+              "subFlat": 0,
+              "attFlat": 40,
+              "boss": 10,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": []
+            },
+            "5": {
+              "mainFlat": 0,
+              "subFlat": 0,
+              "attFlat": 40,
+              "boss": 0,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": [
+                20
+              ]
+            },
+            "6": {
+              "mainFlat": 0,
+              "subFlat": 0,
+              "attFlat": 40,
+              "boss": 15,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": []
+            },
+            "7": {
+              "mainFlat": 50,
+              "subFlat": 50,
+              "attFlat": 40,
+              "boss": 15,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": []
+            },
+            "8": {
+              "mainFlat": 0,
+              "subFlat": 0,
+              "attFlat": 40,
+              "boss": 15,
+              "dmg": 0,
+              "critDmg": 0,
+              "ied": []
+            }
+          }
+        }
+      }
+    }
+  }
+}
