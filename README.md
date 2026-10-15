@@ -1,6 +1,6 @@
-# 메이플 캐릭터 관리
+# 자그노트
 
-구글 시트로 관리하던 메이플스토리 캐릭터·장비·구매 기록을 웹으로 옮긴 개인용 페이지. 설계는 [docs/DESIGN.md](docs/DESIGN.md) 참고.
+구글 시트로 관리하던 메이플스토리 캐릭터·장비·구매·강화 기록을 웹으로 옮긴 개인용 페이지 (https://wonbo.site/maple/). 설계는 [docs/DESIGN.md](docs/DESIGN.md) 참고.
 
 ## 실행
 

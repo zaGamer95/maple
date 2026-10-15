@@ -47,7 +47,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="topbar">
-        <span className="brand">메이플 관리</span>
+        <span className="brand">자그노트</span>
         <nav>
           {NAV.map((n) => (
             <NavLink key={n.to} to={n.to} end={n.end}>
