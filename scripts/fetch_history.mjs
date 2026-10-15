@@ -117,6 +117,38 @@ async function fetchDay(type, date) {
   }
 }
 
+const isInvalidDate = (e) => e instanceof ApiError && e.code === 'OPENAPI00004';
+
+async function accepts(type, date) {
+  try {
+    await call(type, { count: 10, date });
+    return true;
+  } catch (e) {
+    if (isInvalidDate(e)) return false;
+    throw e;
+  }
+}
+
+/**
+ * 조회 가능한 가장 오래된 날짜. 넥슨은 오래된 기록을 일정 기간만 보관해서
+ * 공지된 시작일(def.start)이 거부될 수 있다 → 어제가 되는지 본 뒤 이분 탐색.
+ */
+async function findFirstDate(type, start, until) {
+  if (!(await accepts(type, until))) throw new Error(`어제(${until}) 날짜도 조회 거부 — 이 키로는 사용할 수 없는 API 로 보임`);
+  if (await accepts(type, start)) return start;
+  const toDays = (d) => Date.parse(`${d}T00:00:00Z`) / 86_400_000;
+  const toDate = (n) => new Date(n * 86_400_000).toISOString().slice(0, 10);
+  let lo = toDays(start); // 거부
+  let hi = toDays(until); // 허용
+  while (hi - lo > 1) {
+    const mid = Math.floor((lo + hi) / 2);
+    if (await accepts(type, toDate(mid))) hi = mid;
+    else lo = mid;
+  }
+  console.log(`[history] ${type}: 조회 가능한 가장 오래된 날짜 ${toDate(hi)}`);
+  return toDate(hi);
+}
+
 function summarize(raw) {
   // "캐릭터|아이템" 별 집계
   const items = {};
@@ -166,12 +198,16 @@ async function main() {
     const share = Math.floor(pool / (entries.length - i));
     budget = share;
     raw[type] = await readJson(new URL(`${type}.json`, RAW_DIR), []);
-    const st = (state[type] ??= { lastDate: null, error: null });
+    const st = (state[type] ??= { firstDate: null, lastDate: null, error: null });
     const seen = new Set(raw[type].map((r) => r.id));
     let date = st.lastDate ? nextDay(st.lastDate) : def.start;
     let days = 0;
     let added = 0;
     try {
+      if (!st.lastDate) {
+        date = await findFirstDate(type, def.start, until);
+        st.firstDate = date;
+      }
       while (date <= until) {
         const rows = await fetchDay(type, date);
         for (const r of rows) {

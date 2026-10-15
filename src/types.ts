@@ -106,6 +106,6 @@ export interface HistoryItem {
 export interface HistorySummary {
   updatedAt: string | null;
   characters: string[];
-  state: Record<string, { lastDate: string | null; error: string | null }>;
+  state: Record<string, { firstDate?: string | null; lastDate: string | null; error: string | null }>;
   items: HistoryItem[];
 }
