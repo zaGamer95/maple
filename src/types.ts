@@ -98,6 +98,8 @@ export interface NexonCharacter {
   guild: string | null;
   image: string | null;
   combatPower: number | null;
+  /** 종합 능력치 (스탯 이름 → 값) */
+  stat?: Record<string, string>;
   equipment: NexonEquipment[];
 }
 

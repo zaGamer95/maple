@@ -5,11 +5,24 @@
 // 키가 없거나 API 가 실패해도 빌드가 멈추지 않도록 항상 0 으로 끝난다.
 // (실패하면 기존 nexon.json 을 그대로 두고 경고만 남긴다.)
 
-import { readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const API = 'https://open.api.nexon.com/maplestory/v1';
 const DATA_DIR = new URL('../src/data/', import.meta.url);
-// 개발 단계 키는 초당 5건 제한
+// 본캐 효율 계산용 원본 응답 (사이트 번들에는 넣지 않음)
+const DETAIL_DIR = new URL('../data/nexon/', import.meta.url);
+const DETAIL_ENDPOINTS = [
+  'character/stat',
+  'character/item-equipment',
+  'character/set-effect',
+  'character/symbol-equipment',
+  'character/hyper-stat',
+  'character/ability',
+  'character/hexamatrix-stat',
+  'character/link-skill',
+  'user/union-raider',
+];
+// 개발 단계 키는 초당 5건 제한 (서비스 키는 500건이지만 여유 있게 유지)
 const REQUEST_INTERVAL_MS = 250;
 
 const key = process.env.NEXON_API_KEY;
@@ -81,6 +94,8 @@ async function fetchCharacter(name) {
     guild: basic.character_guild_name ?? null,
     image: basic.character_image ?? null,
     combatPower: combatPower != null ? Number(combatPower) : null,
+    // 종합 능력치 전체 (전투력 공식 검증용)
+    stat: Object.fromEntries((stat.final_stat ?? []).map((s) => [s.stat_name, s.stat_value])),
     equipment: (equip.item_equipment ?? []).map(toEquipment),
   };
 }
@@ -106,6 +121,19 @@ async function main() {
 
   const mainChar = targets.find((c) => c.isMain && result.characters[c.id]);
   if (mainChar) {
+    await mkdir(DETAIL_DIR, { recursive: true });
+    const ocid = result.characters[mainChar.id].ocid;
+    const detail = { fetchedAt: result.fetchedAt, character: mainChar.id };
+    for (const path of DETAIL_ENDPOINTS) {
+      try {
+        detail[path] = await call(path, { ocid });
+      } catch (e) {
+        detail[path] = { error: e.message };
+        console.warn(`[nexon] ${mainChar.name} ${path}: ${e.message}`);
+      }
+    }
+    await writeFile(new URL(`${encodeURIComponent(mainChar.id)}.json`, DETAIL_DIR), JSON.stringify(detail, null, 2) + '\n');
+
     try {
       const u = await call('user/union', { ocid: result.characters[mainChar.id].ocid });
       result.union = { level: u.union_level, grade: u.union_grade };
