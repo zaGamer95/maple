@@ -143,13 +143,21 @@ function Overview({ c }: { c: Character }) {
   );
 }
 
-const GRADE_CLASS: Record<string, string> = { 레어: 'rare', 에픽: 'epic', 유니크: 'unique', 레전드리: 'legendary' };
+const GRADE: Record<string, { cls: string; label: string }> = {
+  레어: { cls: 'rare', label: 'R' },
+  에픽: { cls: 'epic', label: 'E' },
+  유니크: { cls: 'unique', label: 'U' },
+  레전드리: { cls: 'legendary', label: 'L' },
+};
 
 function Grade({ grade, lines }: { grade: string | null; lines: string[] }) {
   if (!grade) return <span className="muted">-</span>;
   return (
     <span>
-      <span className={`grade ${GRADE_CLASS[grade] ?? ''}`}>{grade[0]}</span> {lines.join(' / ')}
+      <span className={`grade ${GRADE[grade]?.cls ?? ''}`} title={grade}>
+        {GRADE[grade]?.label ?? grade[0]}
+      </span>{' '}
+      {lines.join(' / ')}
     </span>
   );
 }
