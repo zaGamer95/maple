@@ -1,0 +1,17 @@
+{
+  "starforce": {
+    "firstDate": "2024-10-16",
+    "lastDate": "2024-10-23",
+    "error": null
+  },
+  "cube": {
+    "firstDate": "2024-10-16",
+    "lastDate": "2024-10-19",
+    "error": "cube: 재시도 초과"
+  },
+  "potential": {
+    "firstDate": null,
+    "lastDate": null,
+    "error": "potential: 재시도 초과"
+  }
+}
