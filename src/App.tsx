@@ -13,7 +13,7 @@ const NAV = [
   { to: '/', label: '대시보드', end: true },
   { to: '/characters', label: '캐릭터' },
   { to: '/purchases', label: '거래 내역' },
-  { to: '/hunts', label: '사냥' },
+  { to: '/hunts', label: '사냥·경험치' },
   { to: '/guides', label: '공략' },
   { to: '/upgrade', label: '장비 교체' },
   { to: '/tools', label: '계산기' },
@@ -26,6 +26,7 @@ const DATASET_LABEL: Record<Dataset, string> = {
   purchases: 'purchases.json',
   prices: 'prices.json',
   hunts: 'hunts.json',
+  expNotes: 'expNotes.json',
 };
 
 function DraftBanner() {

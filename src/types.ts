@@ -57,6 +57,12 @@ export interface Purchase {
   feeRate?: number;
 }
 
+/** 날짜별 메모 (경험치 히스토리) */
+export interface ExpNote {
+  date: string;
+  note: string;
+}
+
 /** 전투분석 결과 한 번 (사냥 기록) */
 export interface HuntLog {
   id: string;

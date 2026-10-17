@@ -509,3 +509,13 @@ th.sorted {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
+.chart .bar {
+  fill: var(--accent);
+  opacity: 0.85;
+}
+.chart .bar.hover {
+  opacity: 1;
+}
+.chart .bar.partial {
+  opacity: 0.45;
+}

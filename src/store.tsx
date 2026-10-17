@@ -3,8 +3,9 @@ import baseCharacters from './data/characters.json';
 import basePurchases from './data/purchases.json';
 import basePrices from './data/prices.json';
 import baseHunts from './data/hunts.json';
+import baseExpNotes from './data/expNotes.json';
 import { nexon } from './lib/nexon';
-import type { Character, HuntLog, PriceQuote, Purchase } from './types';
+import type { Character, ExpNote, HuntLog, PriceQuote, Purchase } from './types';
 
 /**
  * 데이터의 원본은 저장소의 src/data/*.json 이다.
@@ -16,9 +17,10 @@ const DATASETS = {
   purchases: { key: 'maple:purchases:draft:v1', base: basePurchases as Purchase[] },
   prices: { key: 'maple:prices:draft:v1', base: basePrices as PriceQuote[] },
   hunts: { key: 'maple:hunts:draft:v1', base: baseHunts as HuntLog[] },
+  expNotes: { key: 'maple:expNotes:draft:v1', base: baseExpNotes as ExpNote[] },
 };
 export type Dataset = keyof typeof DATASETS;
-type Data = { characters: Character[]; purchases: Purchase[]; prices: PriceQuote[]; hunts: HuntLog[] };
+type Data = { characters: Character[]; purchases: Purchase[]; prices: PriceQuote[]; hunts: HuntLog[]; expNotes: ExpNote[] };
 type Drafts = { [K in Dataset]: Data[K] | null };
 
 function loadDraft<K extends Dataset>(name: K): Data[K] | null {
@@ -66,6 +68,8 @@ interface Store extends Data {
   removePrice: (q: PriceQuote) => void;
   addHunt: (h: HuntLog) => void;
   removeHunt: (id: string) => void;
+  /** 빈 글이면 메모 삭제 */
+  setExpNote: (date: string, note: string) => void;
   exportDataset: (name: Dataset) => void;
   discardDrafts: () => void;
 }
@@ -78,6 +82,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     purchases: loadDraft('purchases'),
     prices: loadDraft('prices'),
     hunts: loadDraft('hunts'),
+    expNotes: loadDraft('expNotes'),
   }));
   // 넥슨 API 로 받은 레벨이 있으면 그것을 쓴다 (시트·수동 입력보다 최신)
   const characters = useMemo(
@@ -91,6 +96,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const purchases = drafts.purchases ?? DATASETS.purchases.base;
   const prices = drafts.prices ?? DATASETS.prices.base;
   const hunts = drafts.hunts ?? DATASETS.hunts.base;
+  const expNotes = drafts.expNotes ?? DATASETS.expNotes.base;
 
   const setDraft = useCallback(<K extends Dataset>(name: K, value: Data[K]) => {
     setDrafts((d) => ({ ...d, [name]: value }));
@@ -123,13 +129,24 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const addHunt = useCallback((h: HuntLog) => setDraft('hunts', [...hunts, h]), [hunts, setDraft]);
   const removeHunt = useCallback((id: string) => setDraft('hunts', hunts.filter((h) => h.id !== id)), [hunts, setDraft]);
 
+  const setExpNote = useCallback(
+    (date: string, note: string) =>
+      setDraft(
+        'expNotes',
+        [...expNotes.filter((n) => n.date !== date), ...(note.trim() ? [{ date, note: note.trim() }] : [])].sort((a, b) =>
+          a.date.localeCompare(b.date),
+        ),
+      ),
+    [expNotes, setDraft],
+  );
+
   const exportDataset = useCallback(
-    (name: Dataset) => download(`${name}.json`, { characters, purchases, prices, hunts }[name]),
-    [characters, purchases, prices, hunts],
+    (name: Dataset) => download(`${name}.json`, { characters, purchases, prices, hunts, expNotes }[name]),
+    [characters, purchases, prices, hunts, expNotes],
   );
 
   const discardDrafts = useCallback(() => {
-    setDrafts({ characters: null, purchases: null, prices: null, hunts: null });
+    setDrafts({ characters: null, purchases: null, prices: null, hunts: null, expNotes: null });
     (Object.keys(DATASETS) as Dataset[]).forEach((name) => saveDraft(name, null));
   }, []);
 
@@ -139,6 +156,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       purchases,
       prices,
       hunts,
+      expNotes,
       changed: (Object.keys(drafts) as Dataset[]).filter((k) => drafts[k] !== null),
       updateCharacter,
       updatePurchase,
@@ -148,6 +166,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       removePrice,
       addHunt,
       removeHunt,
+      setExpNote,
       exportDataset,
       discardDrafts,
     }),
@@ -156,6 +175,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       purchases,
       prices,
       hunts,
+      expNotes,
       drafts,
       updateCharacter,
       updatePurchase,
@@ -165,6 +185,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       removePrice,
       addHunt,
       removeHunt,
+      setExpNote,
       exportDataset,
       discardDrafts,
     ],

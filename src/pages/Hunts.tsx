@@ -3,6 +3,7 @@ import { formatKoreanNumber, formatMeso, parseKoreanNumber, todayKst } from '../
 import { nexon } from '../lib/nexon';
 import { useStore } from '../store';
 import type { HuntLog } from '../types';
+import ExpHistory from './ExpHistory';
 
 const perHour = (v: number | null, h: HuntLog) => (v == null ? null : (v / h.seconds) * 3600);
 
@@ -39,8 +40,10 @@ export default function Hunts() {
 
   return (
     <section>
+      <h1>사냥·경험치</h1>
+      <ExpHistory />
       <div className="detail-head">
-        <h1>사냥 기록</h1>
+        <h2>사냥 기록</h2>
         <button onClick={() => setAdding((a) => !a)}>{adding ? '닫기' : '기록 추가'}</button>
       </div>
       <p className="muted">전투분석 결과를 기록해요. 시간당 값은 전투 시간으로 환산한 값이에요.</p>
