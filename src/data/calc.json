@@ -3,18 +3,18 @@
     "자그3": {
       "character": "자그3",
       "job": "엔젤릭버스터",
-      "fetchedAt": "2026-10-17T14:22:21.885Z",
+      "fetchedAt": "2026-10-17T22:53:16.834Z",
       "mainStat": "DEX",
       "subStat": "STR",
       "stat": {
-        "main": 54450,
-        "sub": 7445,
-        "att": 6078,
-        "dmg": 91,
-        "boss": 301,
-        "finalDmg": 76.96,
-        "critDmg": 112.6,
-        "ied": 86.42,
+        "main": 54471,
+        "sub": 7420,
+        "att": 6020,
+        "dmg": 284,
+        "boss": 331,
+        "finalDmg": 78.44,
+        "critDmg": 150.6,
+        "ied": 87.51,
         "combatPower": 120120421
       },
       "model": {
