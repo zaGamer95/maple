@@ -57,6 +57,24 @@ export interface Purchase {
   feeRate?: number;
 }
 
+/** 전투분석 결과 한 번 (사냥 기록) */
+export interface HuntLog {
+  id: string;
+  /** YYYY-MM-DD */
+  date: string;
+  characterId: string | null;
+  map: string;
+  /** 전투 시간 (초) */
+  seconds: number;
+  kills: number | null;
+  meso: number | null;
+  totalDamage: number | null;
+  exp: number | null;
+  /** 트레저 헌터·룬·부스터 등 */
+  note: string | null;
+  skills: { name: string; damage: number; share: number }[];
+}
+
 export interface PriceQuote {
   item: string;
   bundleSize: number;
@@ -95,6 +113,7 @@ export interface NexonCharacter {
   job: string;
   level: number;
   expRate: number | null;
+  exp?: number | null;
   guild: string | null;
   image: string | null;
   combatPower: number | null;

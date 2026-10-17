@@ -7,11 +7,13 @@ import ComingSoon from './pages/ComingSoon';
 import Purchases from './pages/Purchases';
 import Prices from './pages/Prices';
 import Upgrade from './pages/Upgrade';
+import Hunts from './pages/Hunts';
 
 const NAV = [
   { to: '/', label: '대시보드', end: true },
   { to: '/characters', label: '캐릭터' },
   { to: '/purchases', label: '거래 내역' },
+  { to: '/hunts', label: '사냥' },
   { to: '/guides', label: '공략' },
   { to: '/upgrade', label: '장비 교체' },
   { to: '/tools', label: '계산기' },
@@ -23,6 +25,7 @@ const DATASET_LABEL: Record<Dataset, string> = {
   characters: 'characters.json',
   purchases: 'purchases.json',
   prices: 'prices.json',
+  hunts: 'hunts.json',
 };
 
 function DraftBanner() {
@@ -74,6 +77,7 @@ export default function App() {
           <Route path="/tools" element={<ComingSoon title="계산기" phase={5} />} />
           <Route path="/prices" element={<Prices />} />
           <Route path="/upgrade" element={<Upgrade />} />
+          <Route path="/hunts" element={<Hunts />} />
           <Route path="/todo" element={<ComingSoon title="할 일" phase={5} />} />
           <Route path="*" element={<ComingSoon title="페이지를 찾을 수 없어요" />} />
         </Routes>

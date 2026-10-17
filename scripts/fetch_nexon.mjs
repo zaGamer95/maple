@@ -91,6 +91,8 @@ async function fetchCharacter(name) {
     job: basic.character_class,
     level: basic.character_level,
     expRate: basic.character_exp_rate != null ? Number(basic.character_exp_rate) : null,
+    // 현재 레벨에서 쌓은 경험치 (경험치 % 와 함께 레벨업 필요 경험치를 역산)
+    exp: basic.character_exp != null ? Number(basic.character_exp) : null,
     guild: basic.character_guild_name ?? null,
     image: basic.character_image ?? null,
     combatPower: combatPower != null ? Number(combatPower) : null,

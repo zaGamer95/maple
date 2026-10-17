@@ -46,6 +46,37 @@ export function parseMeso(text: string): number | null {
   return Number.isFinite(n) && n > 0 ? Math.round(n * EOK) : null;
 }
 
+/** "1530조 3369억", "1만 9020", "9939억 8020만", "19020" → 숫자. 해석할 수 없으면 null */
+export function parseKoreanNumber(text: string): number | null {
+  const s = text.replace(/[,\s]/g, '');
+  if (!s) return null;
+  if (/^\d+(\.\d+)?$/.test(s)) return Number(s);
+  const m = s.match(/^(?:([\d.]+)조)?(?:([\d.]+)억)?(?:([\d.]+)만)?(\d+)?$/);
+  if (!m || !(m[1] || m[2] || m[3])) return null;
+  const n = (v?: string) => (v ? Number(v) : 0);
+  return Math.round(n(m[1]) * 1e12 + n(m[2]) * 1e8 + n(m[3]) * 1e4 + n(m[4]));
+}
+
+/** 큰 수 → "1530조 3369억", "2억 7610만", "1만 9020" (위 두 단위까지) */
+export function formatKoreanNumber(n: number | null | undefined): string {
+  if (n == null) return '-';
+  const units: [number, string][] = [
+    [1e12, '조'],
+    [1e8, '억'],
+    [1e4, '만'],
+    [1, ''],
+  ];
+  let rest = Math.round(n);
+  const parts: string[] = [];
+  for (const [u, label] of units) {
+    const q = Math.floor(rest / u);
+    if (q > 0) parts.push(`${q.toLocaleString()}${label}`);
+    rest -= q * u;
+    if (parts.length === 2) break;
+  }
+  return parts.join(' ') || '0';
+}
+
 export const DEFAULT_FEE_RATE = 0.05;
 
 /** 오늘 (KST) YYYY-MM-DD */

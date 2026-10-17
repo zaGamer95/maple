@@ -2,8 +2,9 @@ import { createContext, useCallback, useContext, useMemo, useState, type ReactNo
 import baseCharacters from './data/characters.json';
 import basePurchases from './data/purchases.json';
 import basePrices from './data/prices.json';
+import baseHunts from './data/hunts.json';
 import { nexon } from './lib/nexon';
-import type { Character, PriceQuote, Purchase } from './types';
+import type { Character, HuntLog, PriceQuote, Purchase } from './types';
 
 /**
  * 데이터의 원본은 저장소의 src/data/*.json 이다.
@@ -14,9 +15,10 @@ const DATASETS = {
   characters: { key: 'maple:characters:draft:v1', base: baseCharacters as Character[] },
   purchases: { key: 'maple:purchases:draft:v1', base: basePurchases as Purchase[] },
   prices: { key: 'maple:prices:draft:v1', base: basePrices as PriceQuote[] },
+  hunts: { key: 'maple:hunts:draft:v1', base: baseHunts as HuntLog[] },
 };
 export type Dataset = keyof typeof DATASETS;
-type Data = { characters: Character[]; purchases: Purchase[]; prices: PriceQuote[] };
+type Data = { characters: Character[]; purchases: Purchase[]; prices: PriceQuote[]; hunts: HuntLog[] };
 type Drafts = { [K in Dataset]: Data[K] | null };
 
 function loadDraft<K extends Dataset>(name: K): Data[K] | null {
@@ -62,6 +64,8 @@ interface Store extends Data {
   removePurchase: (id: string) => void;
   addPrice: (q: PriceQuote) => void;
   removePrice: (q: PriceQuote) => void;
+  addHunt: (h: HuntLog) => void;
+  removeHunt: (id: string) => void;
   exportDataset: (name: Dataset) => void;
   discardDrafts: () => void;
 }
@@ -73,6 +77,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     characters: loadDraft('characters'),
     purchases: loadDraft('purchases'),
     prices: loadDraft('prices'),
+    hunts: loadDraft('hunts'),
   }));
   // 넥슨 API 로 받은 레벨이 있으면 그것을 쓴다 (시트·수동 입력보다 최신)
   const characters = useMemo(
@@ -85,6 +90,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   );
   const purchases = drafts.purchases ?? DATASETS.purchases.base;
   const prices = drafts.prices ?? DATASETS.prices.base;
+  const hunts = drafts.hunts ?? DATASETS.hunts.base;
 
   const setDraft = useCallback(<K extends Dataset>(name: K, value: Data[K]) => {
     setDrafts((d) => ({ ...d, [name]: value }));
@@ -114,13 +120,16 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     [prices, setDraft],
   );
 
+  const addHunt = useCallback((h: HuntLog) => setDraft('hunts', [...hunts, h]), [hunts, setDraft]);
+  const removeHunt = useCallback((id: string) => setDraft('hunts', hunts.filter((h) => h.id !== id)), [hunts, setDraft]);
+
   const exportDataset = useCallback(
-    (name: Dataset) => download(`${name}.json`, { characters, purchases, prices }[name]),
-    [characters, purchases, prices],
+    (name: Dataset) => download(`${name}.json`, { characters, purchases, prices, hunts }[name]),
+    [characters, purchases, prices, hunts],
   );
 
   const discardDrafts = useCallback(() => {
-    setDrafts({ characters: null, purchases: null, prices: null });
+    setDrafts({ characters: null, purchases: null, prices: null, hunts: null });
     (Object.keys(DATASETS) as Dataset[]).forEach((name) => saveDraft(name, null));
   }, []);
 
@@ -129,6 +138,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       characters,
       purchases,
       prices,
+      hunts,
       changed: (Object.keys(drafts) as Dataset[]).filter((k) => drafts[k] !== null),
       updateCharacter,
       updatePurchase,
@@ -136,6 +146,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       removePurchase,
       addPrice,
       removePrice,
+      addHunt,
+      removeHunt,
       exportDataset,
       discardDrafts,
     }),
@@ -143,6 +155,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       characters,
       purchases,
       prices,
+      hunts,
       drafts,
       updateCharacter,
       updatePurchase,
@@ -150,6 +163,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       removePurchase,
       addPrice,
       removePrice,
+      addHunt,
+      removeHunt,
       exportDataset,
       discardDrafts,
     ],
