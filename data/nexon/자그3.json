@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-17T22:53:16.834Z",
+  "fetchedAt": "2026-10-18T22:46:24.989Z",
   "character": "자그3",
   "character/stat": {
     "date": null,
@@ -7,35 +7,35 @@
     "final_stat": [
       {
         "stat_name": "최소 스탯공격력",
-        "stat_value": "151672555"
+        "stat_value": "75110841"
       },
       {
         "stat_name": "최대 스탯공격력",
-        "stat_value": "157992241"
+        "stat_value": "79064041"
       },
       {
         "stat_name": "데미지",
-        "stat_value": "284.00"
+        "stat_value": "91.00"
       },
       {
         "stat_name": "보스 몬스터 데미지",
-        "stat_value": "331.00"
+        "stat_value": "301.00"
       },
       {
         "stat_name": "최종 데미지",
-        "stat_value": "78.44"
+        "stat_value": "76.96"
       },
       {
         "stat_name": "방어율 무시",
-        "stat_value": "87.51"
+        "stat_value": "86.42"
       },
       {
         "stat_name": "크리티컬 확률",
-        "stat_value": "109"
+        "stat_value": "99"
       },
       {
         "stat_name": "크리티컬 데미지",
-        "stat_value": "150.60"
+        "stat_value": "94.60"
       },
       {
         "stat_name": "상태이상 내성",
@@ -47,7 +47,7 @@
       },
       {
         "stat_name": "방어력",
-        "stat_value": "50726"
+        "stat_value": "51306"
       },
       {
         "stat_name": "이동속도",
@@ -67,31 +67,31 @@
       },
       {
         "stat_name": "어센틱포스",
-        "stat_value": "710"
+        "stat_value": "720"
       },
       {
         "stat_name": "STR",
-        "stat_value": "7420"
+        "stat_value": "7669"
       },
       {
         "stat_name": "DEX",
-        "stat_value": "54471"
+        "stat_value": "55092"
       },
       {
         "stat_name": "INT",
-        "stat_value": "4601"
+        "stat_value": "4768"
       },
       {
         "stat_name": "LUK",
-        "stat_value": "3734"
+        "stat_value": "3885"
       },
       {
         "stat_name": "HP",
-        "stat_value": "69801"
+        "stat_value": "70656"
       },
       {
         "stat_name": "MP",
-        "stat_value": "34490"
+        "stat_value": "38252"
       },
       {
         "stat_name": "AP 배분 STR",
@@ -119,11 +119,11 @@
       },
       {
         "stat_name": "아이템 드롭률",
-        "stat_value": "337"
+        "stat_value": "223"
       },
       {
         "stat_name": "메소 획득량",
-        "stat_value": "225"
+        "stat_value": "141"
       },
       {
         "stat_name": "버프 지속시간",
@@ -135,7 +135,7 @@
       },
       {
         "stat_name": "일반 몬스터 데미지",
-        "stat_value": "109.00"
+        "stat_value": "98.00"
       },
       {
         "stat_name": "재사용 대기시간 감소 (초)",
@@ -159,23 +159,23 @@
       },
       {
         "stat_name": "무기 숙련도",
-        "stat_value": "96"
+        "stat_value": "95"
       },
       {
         "stat_name": "추가 경험치 획득",
-        "stat_value": "608.00"
+        "stat_value": "268.00"
       },
       {
         "stat_name": "공격력",
-        "stat_value": "6020"
+        "stat_value": "6034"
       },
       {
         "stat_name": "마력",
-        "stat_value": "1473"
+        "stat_value": "1431"
       },
       {
         "stat_name": "전투력",
-        "stat_value": "120120421"
+        "stat_value": "123264500"
       },
       {
         "stat_name": "소환수 지속시간 증가",
@@ -1689,22 +1689,22 @@
       {
         "item_equipment_part": "반지",
         "item_equipment_slot": "반지1",
-        "item_name": "어센던트 펄스 링",
-        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPENE",
-        "item_description": "고대신의 힘이 흘러넘치는 반지다.\n신비하지만 알 수 없는 신호가 느껴진다.",
-        "item_shape_name": "어센던트 펄스 링",
-        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPENE",
+        "item_name": "어웨이크 링",
+        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEPJ",
+        "item_description": "각성의 산에서 얻을 수 있는 특별한 능력의 반지이다.\r\n어웨이크 링 전용 강화 주문서만 사용 가능\r\n잠재능력 및 에디셔널 잠재능력 부여 가능",
+        "item_shape_name": "어웨이크 링",
+        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEPJ",
         "item_gender": null,
         "item_total_option": {
-          "str": "5",
-          "dex": "5",
-          "int": "5",
-          "luk": "5",
-          "max_hp": "200",
-          "max_mp": "200",
-          "attack_power": "1",
-          "magic_power": "1",
-          "armor": "150",
+          "str": "40",
+          "dex": "40",
+          "int": "40",
+          "luk": "40",
+          "max_hp": "4000",
+          "max_mp": "4000",
+          "attack_power": "25",
+          "magic_power": "25",
+          "armor": "0",
           "speed": "0",
           "jump": "0",
           "boss_damage": "0",
@@ -1716,15 +1716,15 @@
           "max_mp_rate": "0"
         },
         "item_base_option": {
-          "str": "5",
-          "dex": "5",
-          "int": "5",
-          "luk": "5",
-          "max_hp": "200",
-          "max_mp": "200",
-          "attack_power": "1",
-          "magic_power": "1",
-          "armor": "150",
+          "str": "10",
+          "dex": "10",
+          "int": "10",
+          "luk": "10",
+          "max_hp": "1000",
+          "max_mp": "1000",
+          "attack_power": "10",
+          "magic_power": "10",
+          "armor": "0",
           "speed": "0",
           "jump": "0",
           "boss_damage": "0",
@@ -1732,18 +1732,18 @@
           "all_stat": "0",
           "max_hp_rate": "0",
           "max_mp_rate": "0",
-          "base_equipment_level": 130
+          "base_equipment_level": 120
         },
         "potential_option_grade": "레전드리",
         "additional_potential_option_grade": "레어",
         "potential_option_flag": "false",
-        "potential_option_1": "아이템 드롭률 +20%",
-        "potential_option_2": "DEX +9%",
-        "potential_option_3": "최대 HP +9%",
+        "potential_option_1": "메소 획득량 +20%",
+        "potential_option_2": "올스탯 +6%",
+        "potential_option_3": "DEX +9%",
         "additional_potential_option_flag": "false",
-        "additional_potential_option_1": "이동속도 +6",
-        "additional_potential_option_2": "LUK +6",
-        "additional_potential_option_3": "INT +6",
+        "additional_potential_option_1": "공격력 +10",
+        "additional_potential_option_2": "이동속도 +4",
+        "additional_potential_option_3": "점프력 +4",
         "equipment_level_increase": 0,
         "item_exceptional_option": {
           "str": "0",
@@ -1775,7 +1775,7 @@
         },
         "growth_exp": 0,
         "growth_level": 0,
-        "scroll_upgrade": "0",
+        "scroll_upgrade": "3",
         "cuttable_count": "255",
         "golden_hammer_flag": "미적용",
         "scroll_resilience_count": "0",
@@ -1791,14 +1791,14 @@
         "soul_potential_option_2": null,
         "soul_potential_option_3": null,
         "item_etc_option": {
-          "str": "0",
-          "dex": "0",
-          "int": "0",
-          "luk": "0",
-          "max_hp": "0",
-          "max_mp": "0",
-          "attack_power": "0",
-          "magic_power": "0",
+          "str": "30",
+          "dex": "30",
+          "int": "30",
+          "luk": "30",
+          "max_hp": "3000",
+          "max_mp": "3000",
+          "attack_power": "15",
+          "magic_power": "15",
           "armor": "0",
           "speed": "0",
           "jump": "0"
@@ -7133,22 +7133,22 @@
       {
         "item_equipment_part": "반지",
         "item_equipment_slot": "반지1",
-        "item_name": "어센던트 펄스 링",
-        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPENE",
-        "item_description": "고대신의 힘이 흘러넘치는 반지다.\n신비하지만 알 수 없는 신호가 느껴진다.",
-        "item_shape_name": "어센던트 펄스 링",
-        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPENE",
+        "item_name": "어웨이크 링",
+        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEPJ",
+        "item_description": "각성의 산에서 얻을 수 있는 특별한 능력의 반지이다.\r\n어웨이크 링 전용 강화 주문서만 사용 가능\r\n잠재능력 및 에디셔널 잠재능력 부여 가능",
+        "item_shape_name": "어웨이크 링",
+        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEPJ",
         "item_gender": null,
         "item_total_option": {
-          "str": "5",
-          "dex": "5",
-          "int": "5",
-          "luk": "5",
-          "max_hp": "200",
-          "max_mp": "200",
-          "attack_power": "1",
-          "magic_power": "1",
-          "armor": "150",
+          "str": "40",
+          "dex": "40",
+          "int": "40",
+          "luk": "40",
+          "max_hp": "4000",
+          "max_mp": "4000",
+          "attack_power": "25",
+          "magic_power": "25",
+          "armor": "0",
           "speed": "0",
           "jump": "0",
           "boss_damage": "0",
@@ -7160,15 +7160,15 @@
           "max_mp_rate": "0"
         },
         "item_base_option": {
-          "str": "5",
-          "dex": "5",
-          "int": "5",
-          "luk": "5",
-          "max_hp": "200",
-          "max_mp": "200",
-          "attack_power": "1",
-          "magic_power": "1",
-          "armor": "150",
+          "str": "10",
+          "dex": "10",
+          "int": "10",
+          "luk": "10",
+          "max_hp": "1000",
+          "max_mp": "1000",
+          "attack_power": "10",
+          "magic_power": "10",
+          "armor": "0",
           "speed": "0",
           "jump": "0",
           "boss_damage": "0",
@@ -7176,18 +7176,18 @@
           "all_stat": "0",
           "max_hp_rate": "0",
           "max_mp_rate": "0",
-          "base_equipment_level": 130
+          "base_equipment_level": 120
         },
         "potential_option_grade": "레전드리",
         "additional_potential_option_grade": "레어",
         "potential_option_flag": "false",
-        "potential_option_1": "아이템 드롭률 +20%",
-        "potential_option_2": "DEX +9%",
-        "potential_option_3": "최대 HP +9%",
+        "potential_option_1": "메소 획득량 +20%",
+        "potential_option_2": "올스탯 +6%",
+        "potential_option_3": "DEX +9%",
         "additional_potential_option_flag": "false",
-        "additional_potential_option_1": "이동속도 +6",
-        "additional_potential_option_2": "LUK +6",
-        "additional_potential_option_3": "INT +6",
+        "additional_potential_option_1": "공격력 +10",
+        "additional_potential_option_2": "이동속도 +4",
+        "additional_potential_option_3": "점프력 +4",
         "equipment_level_increase": 0,
         "item_exceptional_option": {
           "str": "0",
@@ -7219,7 +7219,7 @@
         },
         "growth_exp": 0,
         "growth_level": 0,
-        "scroll_upgrade": "0",
+        "scroll_upgrade": "3",
         "cuttable_count": "255",
         "golden_hammer_flag": "미적용",
         "scroll_resilience_count": "0",
@@ -7235,14 +7235,14 @@
         "soul_potential_option_2": null,
         "soul_potential_option_3": null,
         "item_etc_option": {
-          "str": "0",
-          "dex": "0",
-          "int": "0",
-          "luk": "0",
-          "max_hp": "0",
-          "max_mp": "0",
-          "attack_power": "0",
-          "magic_power": "0",
+          "str": "30",
+          "dex": "30",
+          "int": "30",
+          "luk": "30",
+          "max_hp": "3000",
+          "max_mp": "3000",
+          "attack_power": "15",
+          "magic_power": "15",
           "armor": "0",
           "speed": "0",
           "jump": "0"
@@ -13821,18 +13821,18 @@
         "symbol_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDIHOF",
         "symbol_description": "아르테리아 지역의 어센틱심볼이다. 어센틱심볼은 어센틱포스를 가지며 소지한 자와 공명하여 해당 캐릭터에 맞는 주스탯을 증가시켜준다.\n\r해당 장비를 장착한 후, 인벤토리 내 같은 종류의 어센틱심볼을 더블 클릭하면 성장시킬 수 있다. 어센틱심볼의 성장치가 일정 수준 이상이 되면 해당 장비를 강화하여 레벨을 올릴 수 있다.\n\r어센틱심볼로 상승하는 스탯은 스탯 % 증가 효과를 받지 않는다.",
         "symbol_other_effect_description": "성장 레벨 11 이상: 찬란한 흉성, 벨로나 공격 시 데미지 +20%, 추가 경험치 획득 +10%",
-        "symbol_force": "100",
-        "symbol_level": 10,
+        "symbol_force": "110",
+        "symbol_level": 11,
         "symbol_str": "0",
-        "symbol_dex": "2300",
+        "symbol_dex": "2500",
         "symbol_int": "0",
         "symbol_luk": "0",
         "symbol_hp": "0",
         "symbol_drop_rate": "0%",
         "symbol_meso_rate": "0%",
         "symbol_exp_rate": "0%",
-        "symbol_growth_count": 1097,
-        "symbol_require_growth_count": 1100
+        "symbol_growth_count": 0,
+        "symbol_require_growth_count": 1309
       },
       {
         "symbol_name": "어센틱심볼 : 카르시온",
@@ -13849,7 +13849,7 @@
         "symbol_drop_rate": "0%",
         "symbol_meso_rate": "0%",
         "symbol_exp_rate": "0%",
-        "symbol_growth_count": 964,
+        "symbol_growth_count": 986,
         "symbol_require_growth_count": 1100
       },
       {
@@ -13867,7 +13867,7 @@
         "symbol_drop_rate": "11%",
         "symbol_meso_rate": "11%",
         "symbol_exp_rate": "34%",
-        "symbol_growth_count": 591,
+        "symbol_growth_count": 613,
         "symbol_require_growth_count": 581
       }
     ]
@@ -14213,7 +14213,7 @@
         "ability_value": "일반 몬스터 공격 시 데미지 7% 증가"
       }
     ],
-    "remain_fame": 222237,
+    "remain_fame": 243517,
     "preset_no": 3,
     "ability_preset_1": {
       "ability_preset_grade": "레전드리",
