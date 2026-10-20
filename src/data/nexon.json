@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-18T22:46:24.989Z",
+  "fetchedAt": "2026-10-20T00:06:34.511Z",
   "union": {
     "level": 10027,
     "grade": "그랜드 마스터 유니온 5"
@@ -1044,31 +1044,31 @@
       "expRate": 30.536,
       "exp": 3821577130088,
       "guild": "MoonStone",
-      "image": "https://open.api.nexon.com/static/maplestory/character/look/GGKNBHEAFBNFGFMOJANLHLBPKCHAPAKJEBHKIHHFKNEAOAALJEBIGAPIHDPDFCJGEGINGPBGAJMGGDEMHKNDOIKPIFMCCHJFIBGCBDNPOHPEPMEPINPIHNIOCJFBPGNJAAFNHIGGEKNHPMPJHHDLJMOBFOLCEJGCDFKAHHBJMFNLDIMJFNFNPPAGMPGEALAOIPDNKHBMFNEGAPLJFFJKHNPFAGOPKBGEOGOFCNCHJJGCBKAIAIAAEFFLDIJHGMIGAGFCBIIMEMOCNJNMFBBNPCKMBMPBJDMEBILGIGLGIBNFDACKPMDGLBOBJPLGBBJLPMHANOGEEDAJNDAIJLJEBEBBBBGADLCDECCHADMKFHKKOGCMIDLEAKOHLMBIFDBFNMPLMCMGANMLLFLGFDPONNNEBNCNDFOHHPOCPFFFJNJDDMCIPLCCOACDNEPNJDKLFMDOMAKAIALLCAFNAFIJDNPDOKJDHKNPGCAGKMDHOBOFHLMNGLIKNKCCHAFLDCKKAEBCJOHBNNHEIKINJJJAOKAAEPLCOBEDNBOIOFIKDPJNFLHIHBODPLAFFDKEHDIEAFFPDHEDJGKIFLPBJAFPLDJJPDKHHLNGMMLIMKAFBNKLCHDCNHBOJHDMCLFGOJPLKMJFLOJKDAJBAONIIPJAAFHGEHPGBPEHKGPANNGFHDOAELEHEJOEJCIILKJELGKPJMIJLEMOEEDLJCKGCFNJMBLOLJGJLLMAOGDEFMHEDNFGBLKHJHBHONJCBAEIEFNECBEBCMCKNCEPLLMFCAAKAFDAKGPEJMHJNABNBGDNGPBBFGBMIFLJDDHOPEOGCFPGNFCFMHBMNBAAOICDIBOLLAAKMAONDJOAPHCKLMENJHDOFJJLFHAKBFNOAJNOJOAGDJKGPIGNPPIJKMBOMAKCJJIDCKIFKPKIIMADAGGAOKPMDCMCIIFEDEMFKLLLBPHBPMLIEGBJJKAIAMFLFGGEDBAEEAHFFCNHOAFIDEOMCCHLKKKDLNIOFDJCDFJKPGFL?wmotion=W00",
-      "combatPower": 55272531,
+      "image": "https://open.api.nexon.com/static/maplestory/character/look/GGKNBHEAFBNFGFMOJANLHLBPKCHAPAKJEBHKIHHFKNEAOAALJEBIGAPIHDPDFCJGEGINGPBGAJMGGDEMHKNDOIKPIFMCCHJFFCNBADOIFJDKDFKGKBJFJOKPIAOKGOMEPDGDENBJGKFKCHJDLMBPFGJFEJBBGIHMJMEBFHDMFFEOIPDEKOLIMOJGFCPLKHDMIJDKEGEGIOIGGOOBPAHAKEKKJNIMHJANJHNJEHJGGMHPIFNGJFLPCPIOKKAAPHAMMHEKAIBCPGDMNOKPIFKLHDGCJHNHPCMAMJJPFLDMOCJJBEJOMPGLKEBHDHHIBJIEPCBAKJINABBAKOAJADPMHDGBIIKLCCILIPHENFECPPGKIHHDACEPCGNPKBNEGLFJILPHMPCHMCMAEPNJLFBBKKGBKKGOCNOIBAJLEBEOANPGMPHGAKPAABHKODHNLMHIMLIAMBHHIKAKPIOPPCBPJKGAJEDEOACOAHKKEKEIDAFKPEIEBKDJKFLCEBMLBOEODFFMAGIFHJMKCKDIDHMEIJMOFAHIPFHMJHFNPFBLFFMCIFOGHBKFACIHNFNCANEOIAHDBGMKDGEHGCIPHBKJODEDPMABFIAEOIJHJPHMPMMDOONEFFMBOHBCIBAJHGNPDJJCOGHOJBNACMGMPLKOOCBOLHGOGAAFJIHFFJHEAOPOCMGCCLPOCDKJIFHLFMGGOHAAFDFCOLMKHMCKBGKHINACGAOPJILMIFAHJFOFODKAPLOPNDJKNNMCECBCNKPBHJCCDGBKEEOKFIKKLHEACPCFGELOIKONLEOAEDPMNKNKKEBEAAGAPGKAJNCCMEHEFDEAHLGAMADFEPFDCCGPGBICAJBIEMIKFJMGDLJOAHMONFDAGCILMJDONEENMMLFCMGJIJBAIMLIKEIACFAFBNLAIECMBPILABPGPBDKFLIKLKDDEFBFGCBCKLAGCOOLCDOBODIGLPECKDLOGPNBOEFHOMEOOJEGIGLMBMDJPDLCODEMHIINLAGLNJNPKAMN?wmotion=W00",
+      "combatPower": 53298608,
       "stat": {
-        "최소 스탯공격력": "45778961",
-        "최대 스탯공격력": "48188377",
+        "최소 스탯공격력": "48984185",
+        "최대 스탯공격력": "51562297",
         "데미지": "93.00",
-        "보스 몬스터 데미지": "381.00",
+        "보스 몬스터 데미지": "341.00",
         "최종 데미지": "203.17",
-        "방어율 무시": "95.85",
-        "크리티컬 확률": "124",
+        "방어율 무시": "93.08",
+        "크리티컬 확률": "119",
         "크리티컬 데미지": "76.40",
         "상태이상 내성": "86",
         "스탠스": "100",
-        "방어력": "23345",
+        "방어력": "23226",
         "이동속도": "170",
         "점프력": "123",
-        "스타포스": "305",
+        "스타포스": "323",
         "아케인포스": "1350",
         "어센틱포스": "90",
-        "STR": "4344",
-        "DEX": "4470",
-        "INT": "44236",
-        "LUK": "7445",
-        "HP": "56690",
-        "MP": "90274",
+        "STR": "4370",
+        "DEX": "4284",
+        "INT": "45216",
+        "LUK": "7189",
+        "HP": "52151",
+        "MP": "86035",
         "AP 배분 STR": "4",
         "AP 배분 DEX": "4",
         "AP 배분 INT": "1398",
@@ -1077,19 +1077,19 @@
         "AP 배분 MP": "0",
         "아이템 드롭률": "12",
         "메소 획득량": "17",
-        "버프 지속시간": "116",
+        "버프 지속시간": "121",
         "공격 속도": "8",
-        "일반 몬스터 데미지": "12.00",
+        "일반 몬스터 데미지": "52.00",
         "재사용 대기시간 감소 (초)": "2",
         "재사용 대기시간 감소 (%)": "6",
         "재사용 대기시간 미적용": "3",
         "속성 내성 무시": "15.00",
         "상태이상 추가 데미지": "17.00",
         "무기 숙련도": "95",
-        "추가 경험치 획득": "24.00",
-        "공격력": "1870",
-        "마력": "3722",
-        "전투력": "55272531",
+        "추가 경험치 획득": "34.00",
+        "공격력": "1965",
+        "마력": "3905",
+        "전투력": "53298608",
         "소환수 지속시간 증가": "12"
       },
       "equipment": [
@@ -1358,21 +1358,21 @@
         {
           "slot": "반지4",
           "part": "반지",
-          "name": "테네브리스 원정대 반지",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEOG",
-          "starforce": 0,
+          "name": "여명의 가디언 엔젤 링",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODIEPH",
+          "starforce": 18,
           "scrollUpgrade": 3,
-          "potentialGrade": "레전드리",
+          "potentialGrade": "유니크",
           "potential": [
-            "DEX +12%",
-            "올스탯 +6%",
-            "LUK +9%"
+            "INT +9%",
+            "INT +6%",
+            "INT +6%"
           ],
-          "additionalGrade": "레어",
+          "additionalGrade": "에픽",
           "additional": [
-            "INT +2%",
-            "이동속도 +4",
-            "점프력 +4"
+            "최대 MP +5%",
+            "마력 +10",
+            "마력 +10"
           ]
         },
         {
@@ -12057,8 +12057,8 @@
       "world": "엘리시움",
       "job": "엔젤릭버스터",
       "level": 291,
-      "expRate": 19.024,
-      "exp": 61586662013534,
+      "expRate": 19.714,
+      "exp": 63822745518848,
       "guild": "MoonStone",
       "image": "https://open.api.nexon.com/static/maplestory/character/look/OKHLOKAOJAKNDDHOPHFCPGGPOICAEHEMAFDAOBHABAIKIBJGOGPHNNGIAILBFGHHIBGBCJEKCEFFEEIDDFGANAFHHPMJLEDDNJKOPIBFABCDIBBFMGOJGACJKKPOICGCOJJLJGNAFDFBIOIFLJHBEBBNEPJNDHLDHHBPANNIHDHCJLMBBCMJLLODOJENIFBDJCGCAIBLGPFDPPDMBPLBABBDHJEOCLONEHGIJPCONEJOGMGJANCGLOLINFAPEGNCLDNJIMKBECLBCEIKGMNKMLPGGHMJAMEEJHNMBDLBBHJOHBJKOKEMFGHANKOKAENNOHBIDDLJLEBHHNJKPLEAABFEODNAFJLANBEJINOIOENIEDEFAEMBOCGAMIBOEONCADJOHGLBJNIFCGBFELLJJDAPNKCGGOIOKBPLFEDNABOHAMAFKOFIMMIJOLIELGGPHKCEDMHPDNCJIFNBFONIHJHPEPEGOHKHAKMNPBMIIDNCOAPBIDKNKCAPFAFNIFFIAEOIANBLGOLEFPNJLHGLHBAIPKLJFFNIBCJLNCLPEJOHIJPIJHPNKAONKJBBBFANDMCOFEPPHFLHEEJFAHOBIGEECCKGNLLPEGPOIEMJHNPEJPGEGHGBBNOHACOCJJIJJEDDKGEBMNBGIPAJDCDAHFOFDJNCPLNLEFHHIJJBOEEMIENNFJBEKENDBIIBDJJFLLBJOKOEGHKDIEHEMOOOAAJHAPNENIPCOCDIFOLLIJCOLDNEAJFHJMGNCKKBNIMLABPPGEDDHPJPCDAJEDGHCMFEBBKHBFENPCDPBKEDNDCLPKHAMKLDNCFIKGLIEOOCJJBIGGKMIPIINPOGOEDLEPCKCCDFFGMDCCABLDHJIOOFGJFCLHDOMCELALHGIONPPINKOJFKOCKBMJDCKDLFPDJKIADCNKNHHOJJKCBMKDMEEAEMGLIEEHMHPKBFFGKDJHPNEEBDJCLCLJOPMDPNDDKABIENHCJMMMPAKFMBIAFONGDKMIBLAADOBHEENKJD?wmotion=W00",
       "combatPower": 123264500,
@@ -13832,42 +13832,42 @@
       "expRate": 10.27,
       "exp": 10219869469533,
       "guild": "MoonStone",
-      "image": "https://open.api.nexon.com/static/maplestory/character/look/HENGANLCCFHIOELNEFIBDMPLMIGJDHDNMGPEHJPPBDLCDJJANGABBLBAJDDOPJMECKHIOCFFJFNEFDJLILBEAMLAIIIKFOCMGENIEJNAPENJNMBPBNAAPFNFNMGMPKFCKPEDOKAHHOPIOFCFOCHDGMIOINPOGLHFPMKPAILPHDPMFGDLDCANPPOIMFPKOOJKKPNLGPHIOAAFIEGCGJDFBPPJBPDBFIHAPBOOHBAOOLEJIDMGHPAEDHOEOBDFDFGJFLBFHDLAMAHCPOOCLMIHFOBHJOAOBBGNMNDHNAPAFGOANPIPNDKJDMEECPBBHEDNGOGPKIOAAHGNLEIPGJHACHEBOGONDBHAJMELJDOHDJELFFAPDAOGMNGGBPGGACPLKEEOGDJEKOMEJMBBBCMEDGBNCDOOIBCENJEJFEEHNDKGJNOBPFNPDLGFCKGIIILICPOADEFNBJDPFLGMFODNENJJMILACHEJNIDNDKJJEONAAFIDABLNAGDINCOKPODEDMMNJKCEOMMILAEIBGOCDFNMCJDMJCEGKIOAGLPNBKIGFGJOBPMGOPOHADDHGIPEEAEBALAKGNOOAIJLDCCMJEDHOFOJPEMEEPJBNPJEHICKIODLLBJOKEPNAMJOKHEPINJLFOAHIBCAMPKMEMJFFDEGKJIKNFNFLPNPPFCLNNICPLFBPAGGLCPDDNFOFMJPAKJFNEFHHBKLPIBECDGGHANMLAODLCBLEOIGGPNLEPNNDDGOHPKLANKIHCGEDNAHOAFMFLGKEGBMMGJBNJEAGCBDEBDOJCHEIKCIDKMODDBDANCKMHBAAMOFOBCMELIMDCAGNEIEEIKAAJAJBIPOPODALGHOJAIJCANEEDLHOAODNHNKPGCIIDOFDJMFKBDBNKFIIBALDMCMKINCLGHJGFKOBFADEOFINEPNIPGGCKJJHJLOCHGNEIPNABKKDFPONCJCBCDLBFJDDHJALLKFLGLHOIBAFNFDAEFHDPLCMKOGFBDCHMGFNFACODOFGAIK?wmotion=W00",
-      "combatPower": 84122639,
+      "image": "https://open.api.nexon.com/static/maplestory/character/look/HENGANLCCFHIOELNEFIBDMPLMIGJDHDNMGPEHJPPBDLCDJJANGABBLBAJDDOPJMECKHIOCFFJFNEFDJLILBEAMLAIIIKFOCMFGPMGJBPGHHOJIHDOPDAMPMHIEJOLIALHGBNONCCIEBDKJBDACPACBMKANIPFEGFOOLMFGFLINPBMLGNEBLGLDDCLDNHKNMPAOOKLHEOHPDCJCKDBGGHDJKKMDEBEIBPIOEFIMHDJMHBIBKJJAAOHEOKIOOGOJMOKOFFNGDOJNLPFCPGBIEDLJKMGKCDPNNMKLHDJGDBELHECPLAILMEGPMEFCDJLFKLIBBHMBHIBALKJCAJDMBFPDAJPEOMKFFBGCEDAECGEEBOMFHCGMGADKFFHHFKOAEJKKHOGKHMMBPBPNDHALAAAGIDNGKPMMLCMGCGALIMFKFKLIHCPPMPGMHIIHLAKPEDNPJGNEOCDNFBGEGLLOIFCPJAJBDMMNMHPDJBFGBJPBGGPAOKLPCNMAOBLKBPFLDPCECFPIHIMOLKBHANEDBFLKABGNBOJJOIGDJNDMEBBKBAGEGEJMCFMBLIPCIEKIBCIONLHAADDDPDPFJMKPKGPEJLOOCNIPNPFCLGNBMLOMMLBHCDDKAGDMLAMEPIEJOGEADNBEOEJOGACNHGJNBAONPHHMKGNIKOMEKBDEDNLONNPFIOBJMNGLDNFEOAKOCBKDJLKGNLPFIOFBPMILCCBKAPFKCHHAPFJBLGLFHGFIGHKJBDLNDBJELHHNBKDDHIGLDBIDODDPKKJMKKBJDEIEGFHNKMIMOBNCMBLMPKPLKAHANLPEOMAFCHBCOPIDEPGMCEDDHPIMFNHMIMFOBHEIAMMDPPHHKALNKLEGJDEENNEDCHIILAPAKHABCDGMDMLFNIANEMBBKPBLHKKKIMAHCIKGHLEOOLNJCEPJFNPDPLFPJOFNIAPEOFCDMGHJAENFLGMDDEJACCAMDLJBBGFJJBAAAKHIIDANLFILHPKEBBIOLKJGEJLFLDHNGCMBFC?wmotion=W00",
+      "combatPower": 79407021,
       "stat": {
-        "최소 스탯공격력": "33315533",
-        "최대 스탯공격력": "37017257",
+        "최소 스탯공격력": "31528834",
+        "최대 스탯공격력": "35032036",
         "데미지": "76.00",
         "보스 몬스터 데미지": "428.00",
         "최종 데미지": "81.50",
-        "방어율 무시": "91.26",
-        "크리티컬 확률": "104",
+        "방어율 무시": "90.29",
+        "크리티컬 확률": "98",
         "크리티컬 데미지": "65.85",
         "상태이상 내성": "66",
         "스탠스": "100",
-        "방어력": "92130",
+        "방어력": "92037",
         "이동속도": "170",
         "점프력": "123",
-        "스타포스": "275",
+        "스타포스": "230",
         "아케인포스": "1350",
         "어센틱포스": "340",
-        "STR": "44737",
-        "DEX": "6220",
-        "INT": "3692",
-        "LUK": "4039",
-        "HP": "92101",
-        "MP": "36670",
+        "STR": "43019",
+        "DEX": "6010",
+        "INT": "3354",
+        "LUK": "3620",
+        "HP": "97405",
+        "MP": "42908",
         "AP 배분 STR": "1443",
         "AP 배분 DEX": "4",
         "AP 배분 INT": "4",
         "AP 배분 LUK": "4",
         "AP 배분 HP": "0",
         "AP 배분 MP": "0",
-        "아이템 드롭률": "32",
+        "아이템 드롭률": "52",
         "메소 획득량": "17",
         "버프 지속시간": "108",
         "공격 속도": "7",
-        "일반 몬스터 데미지": "52.00",
+        "일반 몬스터 데미지": "72.00",
         "재사용 대기시간 감소 (초)": "0",
         "재사용 대기시간 감소 (%)": "6",
         "재사용 대기시간 미적용": "3",
@@ -13875,9 +13875,9 @@
         "상태이상 추가 데미지": "9.00",
         "무기 숙련도": "90",
         "추가 경험치 획득": "44.00",
-        "공격력": "4814",
-        "마력": "1183",
-        "전투력": "84122639",
+        "공격력": "4737",
+        "마력": "1169",
+        "전투력": "79407021",
         "소환수 지속시간 증가": "22"
       },
       "equipment": [
@@ -13894,8 +13894,12 @@
             "HP 회복 아이템 및 회복 스킬 효율 +30%",
             "STR +7%"
           ],
-          "additionalGrade": null,
-          "additional": []
+          "additionalGrade": "에픽",
+          "additional": [
+            "최대 MP +6%",
+            "이동속도 +9",
+            "점프력 +9"
+          ]
         },
         {
           "slot": "얼굴장식",
@@ -13966,8 +13970,12 @@
             "방어력 +7%",
             "STR +7%"
           ],
-          "additionalGrade": null,
-          "additional": []
+          "additionalGrade": "에픽",
+          "additional": [
+            "올스탯 +3%",
+            "최대 MP +6%",
+            "방어력 +5%"
+          ]
         },
         {
           "slot": "하의",
@@ -13982,8 +13990,12 @@
             "LUK +10%",
             "STR +7%"
           ],
-          "additionalGrade": null,
-          "additional": []
+          "additionalGrade": "에픽",
+          "additional": [
+            "점프력 +9",
+            "마력 +12",
+            "올스탯 +3%"
+          ]
         },
         {
           "slot": "신발",
@@ -14088,8 +14100,8 @@
         {
           "slot": "반지1",
           "part": "반지",
-          "name": "컨티뉴어스 링",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODIEMI",
+          "name": "어비스 헌터스 링",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEMG",
           "starforce": 0,
           "scrollUpgrade": 0,
           "potentialGrade": null,
@@ -14140,48 +14152,28 @@
         {
           "slot": "반지4",
           "part": "반지",
-          "name": "가디언 엔젤 링",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODIEPC",
-          "starforce": 17,
-          "scrollUpgrade": 0,
-          "potentialGrade": "유니크",
+          "name": "어웨이크 링",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEPJ",
+          "starforce": 0,
+          "scrollUpgrade": 3,
+          "potentialGrade": "레전드리",
           "potential": [
-            "올스탯 +6%",
-            "최대 MP +6%",
+            "아이템 드롭률 +20%",
+            "STR +9%",
             "STR +9%"
-          ],
-          "additionalGrade": "에픽",
-          "additional": [
-            "공격력 +11",
-            "LUK +10",
-            "공격력 +10"
-          ]
-        },
-        {
-          "slot": "펜던트",
-          "part": "펜던트",
-          "name": "베어스 퍼플 펜던트",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJHHA",
-          "starforce": 18,
-          "scrollUpgrade": 1,
-          "potentialGrade": "에픽",
-          "potential": [
-            "STR +6%",
-            "STR +3%",
-            "최대 HP +120"
           ],
           "additionalGrade": "레어",
           "additional": [
             "공격력 +10",
-            "점프력 +4",
-            "방어력 +60"
+            "INT +6",
+            "마력 +3"
           ]
         },
         {
           "slot": "훈장",
           "part": "훈장",
-          "name": "토요일엔 역시 몬스터파크",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOGJOMB",
+          "name": "일요일엔 역시 몬스터파크",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOGJOMA",
           "starforce": 0,
           "scrollUpgrade": 0,
           "potentialGrade": null,
@@ -14296,28 +14288,16 @@
         {
           "slot": "펜던트2",
           "part": "펜던트",
-          "name": "도미네이터 펜던트",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJEJD",
-          "starforce": 15,
-          "scrollUpgrade": 5,
+          "name": "그리드 펜던트",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJFPI",
+          "starforce": 5,
+          "scrollUpgrade": 0,
           "potentialGrade": "유니크",
           "potential": [
-            "STR +9%",
+            "DEX +9%",
             "STR +6%",
-            "크리티컬 확률 +6%"
+            "최대 HP +6%"
           ],
-          "additionalGrade": null,
-          "additional": []
-        },
-        {
-          "slot": "예비 특수 반지",
-          "part": "반지",
-          "name": "웨폰퍼프 - S링",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODIGPC",
-          "starforce": 0,
-          "scrollUpgrade": 0,
-          "potentialGrade": null,
-          "potential": [],
           "additionalGrade": null,
           "additional": []
         }
