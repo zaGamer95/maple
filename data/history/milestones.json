@@ -1,0 +1,54 @@
+{
+ "character": "자그3",
+ "regions": {
+  "소멸의 여로": {
+   "firstDate": null,
+   "before": "2023-12-21"
+  },
+  "츄츄 아일랜드": {
+   "firstDate": null,
+   "before": "2023-12-21"
+  },
+  "레헬른": {
+   "firstDate": null,
+   "before": "2023-12-21"
+  },
+  "아르카나": {
+   "firstDate": null,
+   "before": "2023-12-21"
+  },
+  "모라스": {
+   "firstDate": null,
+   "before": "2023-12-21"
+  },
+  "에스페라": {
+   "firstDate": null,
+   "before": "2023-12-21"
+  },
+  "세르니움": {
+   "firstDate": null,
+   "before": "2023-12-21"
+  },
+  "아르크스": {
+   "firstDate": null,
+   "before": "2023-12-21"
+  },
+  "오디움": {
+   "firstDate": null,
+   "before": "2023-12-21"
+  },
+  "도원경": {
+   "firstDate": null,
+   "before": "2023-12-21"
+  },
+  "아르테리아": {
+   "firstDate": "2024-06-01"
+  },
+  "카르시온": {
+   "firstDate": "2025-06-11"
+  },
+  "탈라하트": {
+   "firstDate": "2026-07-27"
+  }
+ }
+}
