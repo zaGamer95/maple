@@ -519,3 +519,31 @@ th.sorted {
 .chart .bar.partial {
   opacity: 0.45;
 }
+
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+}
+.region {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: var(--surface);
+}
+.region img {
+  image-rendering: pixelated;
+}
+.region-none {
+  opacity: 0.5;
+}
+.region-blank {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px dashed var(--border);
+  flex: none;
+}

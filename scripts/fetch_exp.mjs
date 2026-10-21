@@ -1,7 +1,7 @@
 // 본캐의 날짜별 레벨·경험치를 넥슨 API(character/basic?date=)로 받아 쌓는다.
 //
 // 사용법: NEXON_API_KEY=... node scripts/fetch_exp.mjs
-//   EXP_DAYS  처음 받을 때 며칠 전부터 받을지 (기본 365)
+//   EXP_DAYS  며칠 전부터 받을지 (기본: 넥슨 일별 데이터가 있는 2023-12-21 부터 전부)
 //
 // - 원본: data/history/exp.json, 사이트용: src/data/expHistory.json
 // - 이미 받은 날짜는 다시 받지 않는다. 어떤 경우에도 0 으로 끝난다.
@@ -17,7 +17,7 @@ const CHARACTERS = new URL('../src/data/characters.json', import.meta.url);
 const API_START = '2023-12-21';
 
 const key = process.env.NEXON_API_KEY;
-const days = Number(process.env.EXP_DAYS ?? 365);
+const days = process.env.EXP_DAYS ? Number(process.env.EXP_DAYS) : Infinity;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function readJson(url, fallback) {
@@ -71,7 +71,7 @@ async function main() {
   const raw = await readJson(RAW, { character: mainChar?.id ?? null, points: {} });
 
   if (key && ocid) {
-    const from = [kstDate(-days), API_START].sort().pop();
+    const from = Number.isFinite(days) ? [kstDate(-days), API_START].sort().pop() : API_START;
     const until = kstDate(-1);
     let fetched = 0;
     try {

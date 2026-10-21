@@ -1,0 +1,103 @@
+{
+ "character": "자그3",
+ "symbols": [
+  {
+   "region": "소멸의 여로",
+   "name": "아케인심볼 : 소멸의 여로",
+   "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDJHOA",
+   "level": 20,
+   "firstDate": null
+  },
+  {
+   "region": "츄츄 아일랜드",
+   "name": "아케인심볼 : 츄츄 아일랜드",
+   "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDJHOD",
+   "level": 20,
+   "firstDate": null
+  },
+  {
+   "region": "레헬른",
+   "name": "아케인심볼 : 레헬른",
+   "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDJHOC",
+   "level": 20,
+   "firstDate": null
+  },
+  {
+   "region": "아르카나",
+   "name": "아케인심볼 : 아르카나",
+   "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDJHOF",
+   "level": 20,
+   "firstDate": null
+  },
+  {
+   "region": "모라스",
+   "name": "아케인심볼 : 모라스",
+   "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDJHOE",
+   "level": 20,
+   "firstDate": null
+  },
+  {
+   "region": "에스페라",
+   "name": "아케인심볼 : 에스페라",
+   "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDJHOH",
+   "level": 20,
+   "firstDate": null
+  },
+  {
+   "region": "세르니움",
+   "name": "어센틱심볼 : 세르니움",
+   "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDIHOB",
+   "level": 11,
+   "firstDate": null
+  },
+  {
+   "region": "아르크스",
+   "name": "어센틱심볼 : 아르크스",
+   "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDIHOA",
+   "level": 11,
+   "firstDate": null
+  },
+  {
+   "region": "오디움",
+   "name": "어센틱심볼 : 오디움",
+   "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDIHOD",
+   "level": 11,
+   "firstDate": null
+  },
+  {
+   "region": "도원경",
+   "name": "어센틱심볼 : 도원경",
+   "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDIHOC",
+   "level": 11,
+   "firstDate": null
+  },
+  {
+   "region": "아르테리아",
+   "name": "어센틱심볼 : 아르테리아",
+   "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDIHOF",
+   "level": 11,
+   "firstDate": null
+  },
+  {
+   "region": "카르시온",
+   "name": "어센틱심볼 : 카르시온",
+   "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDIHOE",
+   "level": 10,
+   "firstDate": null
+  },
+  {
+   "region": "탈라하트",
+   "name": "그랜드 어센틱심볼 : 탈라하트",
+   "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDPHOB",
+   "level": 7,
+   "firstDate": null
+  }
+ ],
+ "medal": {
+  "name": "메이플 어택",
+  "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOGICME",
+  "description": "메이플스토리 23주년 기념 훈장이다.",
+  "shapeName": "일급 마법사",
+  "shapeIcon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOGIDJE"
+ }
+}

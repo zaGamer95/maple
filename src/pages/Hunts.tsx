@@ -4,6 +4,7 @@ import { nexon } from '../lib/nexon';
 import { useStore } from '../store';
 import type { HuntLog } from '../types';
 import ExpHistory from './ExpHistory';
+import Milestones from './Milestones';
 
 const perHour = (v: number | null, h: HuntLog) => (v == null ? null : (v / h.seconds) * 3600);
 
@@ -42,6 +43,7 @@ export default function Hunts() {
     <section>
       <h1>사냥·경험치</h1>
       <ExpHistory />
+      <Milestones />
       <div className="detail-head">
         <h2>사냥 기록</h2>
         <button onClick={() => setAdding((a) => !a)}>{adding ? '닫기' : '기록 추가'}</button>
