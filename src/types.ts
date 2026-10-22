@@ -121,6 +121,8 @@ export interface NexonCharacter {
   expRate: number | null;
   exp?: number | null;
   guild: string | null;
+  /** 캐릭터 생성일 YYYY-MM-DD */
+  createdAt?: string | null;
   image: string | null;
   combatPower: number | null;
   /** 종합 능력치 (스탯 이름 → 값) */

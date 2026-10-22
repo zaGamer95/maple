@@ -94,6 +94,8 @@ async function fetchCharacter(name) {
     // 현재 레벨에서 쌓은 경험치 (경험치 % 와 함께 레벨업 필요 경험치를 역산)
     exp: basic.character_exp != null ? Number(basic.character_exp) : null,
     guild: basic.character_guild_name ?? null,
+    // 캐릭터 생성일 ("2019-07-18T00:00+09:00" → "2019-07-18")
+    createdAt: basic.character_date_create?.slice(0, 10) ?? null,
     image: basic.character_image ?? null,
     combatPower: combatPower != null ? Number(combatPower) : null,
     // 종합 능력치 전체 (전투력 공식 검증용)

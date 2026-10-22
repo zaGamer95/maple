@@ -2,7 +2,7 @@ import { useState, type ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import targetSetups from '../data/targetSetups.json';
 import { EQUIP_SLOTS } from '../lib/equip';
-import { formatCheck, formatMeso, formatNumber } from '../lib/format';
+import { formatCheck, formatMeso, formatNumber, todayKst } from '../lib/format';
 import { formatFetchedAt, formatPower, nexon } from '../lib/nexon';
 import { unionMembers } from '../lib/union';
 import { useStore } from '../store';
@@ -125,8 +125,16 @@ function TabButton({
   );
 }
 
+/** "2019-07-18" → "2019-07-18 (2654일째)" — 생성일을 1일째로 센다 */
+function birthday(date: string | null | undefined): string | null {
+  if (!date) return null;
+  const days = Math.round((Date.parse(todayKst()) - Date.parse(date)) / 86_400_000) + 1;
+  return `${date} (${days.toLocaleString()}일째)`;
+}
+
 function Overview({ c }: { c: Character }) {
   const rows: [string, ReactNode][] = [
+    ['생일', birthday(nexon.characters[c.id]?.createdAt)],
     ['유니온 효과', c.unionEffect],
     ['링크 효과', c.linkEffect],
     ['육성 계획', c.plan],
