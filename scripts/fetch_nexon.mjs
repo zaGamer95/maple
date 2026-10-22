@@ -14,6 +14,8 @@ const DETAIL_DIR = new URL('../data/nexon/', import.meta.url);
 const DETAIL_ENDPOINTS = [
   'character/stat',
   'character/item-equipment',
+  'character/cashitem-equipment',
+  'character/beauty-equipment',
   'character/set-effect',
   'character/symbol-equipment',
   'character/hyper-stat',

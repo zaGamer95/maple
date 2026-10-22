@@ -1,6 +1,9 @@
 import { useState, type ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import illustrationData from '../data/illustrations.json';
+import milestoneData from '../data/milestones.json';
 import targetSetups from '../data/targetSetups.json';
+import CharacterSprite from '../components/CharacterSprite';
 import { EQUIP_SLOTS } from '../lib/equip';
 import { formatCheck, formatMeso, formatNumber, todayKst } from '../lib/format';
 import { formatFetchedAt, formatPower, nexon } from '../lib/nexon';
@@ -39,8 +42,9 @@ export default function CharacterDetail() {
       <Link to="/characters" className="muted">
         ← 캐릭터 목록
       </Link>
+      {character.isMain && api && <Hero name={character.name} id={id} api={api} />}
       <div className="detail-head">
-        {api?.image && <img className="avatar" src={api.image} alt="" width={96} height={96} />}
+        {!character.isMain && api?.image && <CharacterSprite className="avatar" src={api.image} scale={2} />}
         <div className="grow">
           <h1>
             {character.name} {character.isMain && <span className="badge">본캐</span>}
@@ -122,6 +126,62 @@ function TabButton({
     <button className={current === value ? 'tab active' : 'tab'} onClick={() => onClick(value)}>
       {children}
     </button>
+  );
+}
+
+type Illustration = { file: string; label: string };
+/** public/illustrations 에 저장한 일러스트 (캐릭터 id → 목록). 한 번 만들어 두고 그대로 쓴다 */
+const ILLUSTRATIONS = illustrationData as Record<string, Illustration[]>;
+const medal = (milestoneData as unknown as { medal: { name: string; icon: string } | null }).medal;
+
+/** 본캐 상단: 일러스트(있으면)와 크게 키운 캐릭터 도트, 핵심 정보 */
+function Hero({ name, id, api }: { name: string; id: string; api: NonNullable<(typeof nexon.characters)[string]> }) {
+  const list = ILLUSTRATIONS[id] ?? [];
+  const [pick, setPick] = useState(0);
+  const art = list[pick];
+  return (
+    <div className={`hero${art ? ' hero-art' : ''}`}>
+      {art ? (
+        <img className="hero-illust" src={art.file} alt={`${name} 일러스트`} />
+      ) : (
+        api.image && <CharacterSprite className="hero-sprite" src={api.image} scale={3} />
+      )}
+      <div className="hero-info">
+        <div className="hero-name">{name}</div>
+        <div className="hero-sub">
+          {api.job} · Lv.{api.level}
+          {api.expRate != null && ` (${api.expRate}%)`} · {api.world}
+        </div>
+        <dl className="hero-stats">
+          <div>
+            <dt>전투력</dt>
+            <dd>{formatPower(api.combatPower)}</dd>
+          </div>
+          <div>
+            <dt>생일</dt>
+            <dd>{birthday(api.createdAt) ?? '-'}</dd>
+          </div>
+          {medal && (
+            <div>
+              <dt>훈장</dt>
+              <dd className="item">
+                <img src={medal.icon} alt="" width={20} height={20} /> {medal.name}
+              </dd>
+            </div>
+          )}
+        </dl>
+        {art && api.image && <CharacterSprite className="hero-mini" src={api.image} scale={2} />}
+        {list.length > 1 && (
+          <div className="hero-picks">
+            {list.map((l, i) => (
+              <button key={l.file} className={i === pick ? 'small' : 'ghost small'} onClick={() => setPick(i)}>
+                {l.label}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 
