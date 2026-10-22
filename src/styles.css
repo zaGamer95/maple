@@ -629,3 +629,17 @@ canvas.avatar {
   color: #d9d4ff;
   border-color: #6d64a8;
 }
+.hero-looks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+}
+.hero-looks figure {
+  margin: 0;
+  text-align: center;
+}
+.hero-looks figcaption {
+  color: #9c97c0;
+  font-size: 12px;
+}

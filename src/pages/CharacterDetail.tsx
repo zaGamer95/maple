@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import illustrationData from '../data/illustrations.json';
+import lookData from '../data/looks.json';
 import milestoneData from '../data/milestones.json';
 import targetSetups from '../data/targetSetups.json';
 import CharacterSprite from '../components/CharacterSprite';
@@ -132,6 +133,9 @@ function TabButton({
 type Illustration = { file: string; label: string };
 /** public/illustrations 에 저장한 일러스트 (캐릭터 id → 목록). 한 번 만들어 두고 그대로 쓴다 */
 const ILLUSTRATIONS = illustrationData as Record<string, Illustration[]>;
+/** 외형이 두 가지인 직업의 모드별 이미지 (scripts/fetch_nexon.mjs 가 모은다) */
+const LOOKS = lookData as Record<string, { modes: Record<string, { image: string; date: string }> }>;
+const LOOK_LABEL: Record<string, string[]> = { 엔젤릭버스터: ['일반', '드레스 업'], 제로: ['알파', '베타'] };
 const medal = (milestoneData as unknown as { medal: { name: string; icon: string } | null }).medal;
 
 /** 본캐 상단: 일러스트(있으면)와 크게 키운 캐릭터 도트, 핵심 정보 */
@@ -170,7 +174,7 @@ function Hero({ name, id, api }: { name: string; id: string; api: NonNullable<(t
             </div>
           )}
         </dl>
-        {art && api.image && <CharacterSprite className="hero-mini" src={api.image} scale={2} />}
+        {art && <HeroSprites id={id} job={api.job} image={api.image} />}
         {list.length > 1 && (
           <div className="hero-picks">
             {list.map((l, i) => (
@@ -183,6 +187,25 @@ function Hero({ name, id, api }: { name: string; id: string; api: NonNullable<(t
       </div>
     </div>
   );
+}
+
+/** 모드별 이미지가 둘 다 있으면 나란히, 아니면 지금 모습만 */
+function HeroSprites({ id, job, image }: { id: string; job: string; image: string | null }) {
+  const modes = LOOKS[id]?.modes ?? {};
+  const labels = LOOK_LABEL[job];
+  if (labels && modes['0'] && modes['1']) {
+    return (
+      <div className="hero-looks">
+        {['0', '1'].map((m) => (
+          <figure key={m}>
+            <CharacterSprite className="hero-mini" src={modes[m].image} scale={2} />
+            <figcaption>{labels[Number(m)]}</figcaption>
+          </figure>
+        ))}
+      </div>
+    );
+  }
+  return image ? <CharacterSprite className="hero-mini" src={image} scale={2} /> : null;
 }
 
 /** "2019-07-18" → "2019-07-18 (2654일째)" — 생성일을 1일째로 센다 */

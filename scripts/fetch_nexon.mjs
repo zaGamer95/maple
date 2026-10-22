@@ -106,6 +106,41 @@ async function fetchCharacter(name) {
   };
 }
 
+/**
+ * 엔젤릭버스터(일반/드레스 업)·제로(알파/베타)처럼 외형이 두 가지인 캐릭터의 이미지를 모드별로 모은다.
+ * character_image 는 지금 모드의 모습만 주므로, 본 적 있는 모드의 이미지를 src/data/looks.json 에 쌓아 둔다.
+ * 다른 모드 이미지가 없으면 한 번만 과거 날짜를 한 달 간격으로 훑어 그 모드였던 날의 이미지를 찾는다.
+ */
+async function updateLooks(id, ocid, image, cash) {
+  if (cash?.character_look_mode == null) return;
+  const file = new URL('looks.json', DATA_DIR);
+  const looks = JSON.parse(await readFile(file, 'utf8').catch(() => '{}'));
+  const entry = (looks[id] ??= { modes: {} });
+  const mode = String(cash.character_look_mode);
+  const today = kstToday();
+  entry.modes[mode] = { image, date: today };
+  const other = mode === '0' ? '1' : '0';
+  if (!entry.modes[other] && !entry.searched) {
+    for (let d = addDays(today, -1); d >= '2023-12-21'; d = addDays(d, -30)) {
+      try {
+        const past = await call('character/cashitem-equipment', { ocid, date: d });
+        if (String(past.character_look_mode) !== other) continue;
+        const basic = await call('character/basic', { ocid, date: d });
+        entry.modes[other] = { image: basic.character_image, date: d };
+        break;
+      } catch (e) {
+        console.warn(`[nexon] 외형 기록 ${d}: ${e.message}`);
+        break;
+      }
+    }
+    entry.searched = true;
+  }
+  await writeFile(file, JSON.stringify(looks, null, 2) + '\n');
+}
+
+const addDays = (date, n) => new Date(Date.parse(`${date}T00:00:00Z`) + n * 86_400_000).toISOString().slice(0, 10);
+const kstToday = () => new Date(Date.now() + 9 * 3600_000).toISOString().slice(0, 10);
+
 async function main() {
   const characters = JSON.parse(await readFile(new URL('characters.json', DATA_DIR), 'utf8'));
   const targets = characters.filter((c) => !c.excludeFromUnion);
@@ -139,6 +174,7 @@ async function main() {
       }
     }
     await writeFile(new URL(`${encodeURIComponent(mainChar.id)}.json`, DETAIL_DIR), JSON.stringify(detail, null, 2) + '\n');
+    await updateLooks(mainChar.id, ocid, result.characters[mainChar.id].image, detail['character/cashitem-equipment']);
 
     try {
       const u = await call('user/union', { ocid: result.characters[mainChar.id].ocid });
