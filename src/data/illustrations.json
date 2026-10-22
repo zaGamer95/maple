@@ -1,1 +1,6 @@
-{ "자그3": [{ "file": "illustrations/zag3-gpt.webp", "label": "GPT" }] }
+{
+  "자그3": [
+    { "file": "illustrations/zag3-gemini.webp", "label": "Gemini" },
+    { "file": "illustrations/zag3-gpt.webp", "label": "GPT" }
+  ]
+}
