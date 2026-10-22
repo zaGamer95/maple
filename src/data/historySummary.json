@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-10-21T23:53:46.162Z",
+  "updatedAt": "2026-10-22T23:54:24.814Z",
   "characters": [
     "자그3"
   ],
   "state": {
     "starforce": {
       "firstDate": "2024-10-16",
-      "lastDate": "2026-10-21",
+      "lastDate": "2026-10-22",
       "error": null
     },
     "cube": {
       "firstDate": "2024-10-17",
-      "lastDate": "2026-10-21",
+      "lastDate": "2026-10-22",
       "error": null
     },
     "potential": {
       "firstDate": "2024-10-17",
-      "lastDate": "2026-10-21",
+      "lastDate": "2026-10-22",
       "error": null
     }
   },
@@ -343,12 +343,12 @@
         "mesoUnknown": 0
       },
       "cube": {
-        "uses": 42,
+        "uses": 56,
         "gradeUps": 0,
         "byKind": {
-          "펄스 인핸서": 42
+          "펄스 인핸서": 56
         },
-        "last": "2026-10-15T17:19:44.231+09:00"
+        "last": "2026-10-22T14:10:47.612+09:00"
       },
       "potential": {
         "uses": 3,
