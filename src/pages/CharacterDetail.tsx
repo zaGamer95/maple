@@ -324,7 +324,7 @@ function Equip({ c, api }: { c: Character; api?: NexonCharacter }) {
       {api ? (
         <>
           <p className="muted">넥슨 API 기준 장착 장비 · {formatFetchedAt(nexon.fetchedAt)} 갱신</p>
-          <EquipWindow items={api.equipment} image={api.image} presets={presets} />
+          <EquipWindow items={api.equipment} image={api.image} presets={presets} sets={api.sets} />
           <details className="eq-list">
             <summary className="muted">목록으로 보기</summary>
             <ApiEquipment items={api.equipment} />

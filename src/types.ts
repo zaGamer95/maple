@@ -119,6 +119,13 @@ export interface NexonEquipment {
   additional: string[];
 }
 
+/** 지금 장착 장비의 세트 효과 (발동 중인 단계의 옵션만) */
+export interface SetEffect {
+  name: string;
+  count: number;
+  effects: string[];
+}
+
 export interface NexonCharacter {
   ocid: string;
   name: string;
@@ -135,6 +142,7 @@ export interface NexonCharacter {
   /** 종합 능력치 (스탯 이름 → 값) */
   stat?: Record<string, string>;
   equipment: NexonEquipment[];
+  sets?: SetEffect[];
 }
 
 export interface NexonData {

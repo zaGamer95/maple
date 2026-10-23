@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { NexonEquipment } from '../types';
+import type { NexonEquipment, SetEffect } from '../types';
 import CharacterSprite from './CharacterSprite';
 
 /** 인게임 장비창과 비슷한 배치 (6칸 × 6줄). CHAR 는 가운데 캐릭터 자리 */
@@ -68,9 +68,9 @@ function Potential({ title, grade, lines }: { title: string; grade: string | nul
   );
 }
 
-function Tooltip({ it, row }: { it: NexonEquipment; row: number }) {
+function ItemDetail({ it }: { it: NexonEquipment }) {
   return (
-    <div className="eq-tip" role="tooltip" style={{ ['--row' as string]: row }}>
+    <div className="eq-detail">
       {it.starforce > 0 && <div className="eq-tip-stars">★ {it.starforce}</div>}
       <div className="eq-tip-name">
         {it.name}
@@ -86,13 +86,64 @@ function Tooltip({ it, row }: { it: NexonEquipment; row: number }) {
   );
 }
 
+const GRADES = ['레전드리', '유니크', '에픽', '레어'];
+
+/** 아무 칸도 고르지 않았을 때 오른쪽 패널: 스타포스·잠재 등급 분포·세트 효과 */
+function Summary({ items, sets, preset }: { items: NexonEquipment[]; sets?: SetEffect[]; preset: number | null }) {
+  const stars = items.reduce((sum, it) => sum + it.starforce, 0);
+  const count = (key: 'potentialGrade' | 'additionalGrade') =>
+    GRADES.map((g) => [g, items.filter((it) => it[key] === g).length] as const).filter(([, n]) => n > 0);
+  return (
+    <div className="eq-detail">
+      <div className="eq-tip-name">장비 요약{preset ? ` · 프리셋 ${preset}` : ''}</div>
+      <div className="eq-tip-slot">칸에 마우스를 올리거나 누르면 아이템 성능이 여기에 보여요.</div>
+      <div className="eq-tip-sec">
+        <div className="eq-tip-head">스타포스</div>
+        <div>합계 ★{stars}</div>
+      </div>
+      {(['potentialGrade', 'additionalGrade'] as const).map((key) => (
+        <div key={key} className="eq-tip-sec">
+          <div className="eq-tip-head">{key === 'potentialGrade' ? '잠재능력' : '에디셔널'}</div>
+          <div>
+            {count(key).map(([g, n], i) => (
+              <span key={g} className={`grade-text ${GRADE_CLASS[g]}`}>
+                {i > 0 && ' · '}
+                {g} {n}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+      {sets && sets.length > 0 && (
+        <div className="eq-tip-sec">
+          <div className="eq-tip-head">세트 효과 (지금 쓰는 프리셋 기준)</div>
+          {sets.map((st) => (
+            <div key={st.name} className="eq-set">
+              <b>
+                {st.name} {st.count}세트
+              </b>
+              {st.effects.map((e, i) => (
+                <div key={i} className="muted-dark">
+                  {e}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function EquipWindow({
   items,
   image,
   presets,
+  sets,
 }: {
   items: NexonEquipment[];
   image: string | null;
+  sets?: SetEffect[];
   /** 프리셋 1~3 과 지금 쓰는 번호 (불러오기 전이면 없음) */
   presets?: { preset: number | null; presets: NexonEquipment[][] };
 }) {
@@ -103,73 +154,80 @@ export default function EquipWindow({
   const bySlot = new Map(items.map((it) => [it.slot, it]));
   const [active, setActive] = useState<string | null>(null);
   const activeItem = active ? bySlot.get(active) : undefined;
-  const activeRow = active ? LAYOUT.findIndex((row) => row.includes(active)) : 0;
   let charPlaced = false;
 
   return (
-    <div className="eq-wrap" onMouseLeave={() => setActive(null)}>
-      <div className="eq-window">
-        {LAYOUT.flatMap((row, r) =>
-          row.map((slot, c) => {
-            if (slot === CHAR) {
-              if (charPlaced) return null;
-              charPlaced = true;
+    <div className="eq-layout">
+      <div className="eq-wrap" onMouseLeave={() => setActive(null)}>
+        <div className="eq-window">
+          {LAYOUT.flatMap((row, r) =>
+            row.map((slot, c) => {
+              if (slot === CHAR) {
+                if (charPlaced) return null;
+                charPlaced = true;
+                return (
+                  <div
+                    key="char"
+                    className="eq-char"
+                    style={{
+                      gridRow: `${r + 1} / span 4`,
+                      gridColumn: `${c + 1} / span 2`,
+                    }}
+                  >
+                    {image && <CharacterSprite src={image} scale={1} />}
+                  </div>
+                );
+              }
+              const it = slot ? bySlot.get(slot) : undefined;
+              const pos = { gridRow: r + 1, gridColumn: c + 1 };
+              if (!slot) return <div key={`${r}-${c}`} className="eq-cell eq-empty" style={pos} />;
+              const grade = it?.potentialGrade ? GRADE_CLASS[it.potentialGrade] : '';
               return (
-                <div
-                  key="char"
-                  className="eq-char"
-                  style={{
-                    gridRow: `${r + 1} / span 4`,
-                    gridColumn: `${c + 1} / span 2`,
-                  }}
-                >
-                  {image && <CharacterSprite src={image} scale={1} />}
+                <div key={slot} className="eq-slot" style={pos}>
+                  <button
+                    type="button"
+                    className={`eq-cell ${it ? '' : 'eq-none'} ${grade ? `eq-${grade}` : ''}`}
+                    title={it ? undefined : slot}
+                    aria-label={it ? `${slot} ${it.name}` : `${slot} 비어 있음`}
+                    onMouseEnter={() => setActive(slot)}
+                    onFocus={() => setActive(slot)}
+                    onBlur={() => setActive((a) => (a === slot ? null : a))}
+                    onClick={() => setActive((a) => (a === slot ? null : slot))}
+                  >
+                    {it && <img src={it.shapeIcon ?? it.icon} alt="" loading="lazy" />}
+                    {it && it.starforce > 0 && <span className="eq-star">{it.starforce}</span>}
+                  </button>
                 </div>
               );
-            }
-            const it = slot ? bySlot.get(slot) : undefined;
-            const pos = { gridRow: r + 1, gridColumn: c + 1 };
-            if (!slot) return <div key={`${r}-${c}`} className="eq-cell eq-empty" style={pos} />;
-            const grade = it?.potentialGrade ? GRADE_CLASS[it.potentialGrade] : '';
-            return (
-              <div key={slot} className="eq-slot" style={pos}>
-                <button
-                  type="button"
-                  className={`eq-cell ${it ? '' : 'eq-none'} ${grade ? `eq-${grade}` : ''}`}
-                  title={it ? undefined : slot}
-                  aria-label={it ? `${slot} ${it.name}` : `${slot} 비어 있음`}
-                  onMouseEnter={() => setActive(slot)}
-                  onFocus={() => setActive(slot)}
-                  onBlur={() => setActive((a) => (a === slot ? null : a))}
-                  onClick={() => setActive((a) => (a === slot ? null : slot))}
-                >
-                  {it && <img src={it.shapeIcon ?? it.icon} alt="" loading="lazy" />}
-                  {it && it.starforce > 0 && <span className="eq-star">{it.starforce}</span>}
-                </button>
-              </div>
-            );
-          }),
+            }),
+          )}
+        </div>
+        {presets && (
+          <div className="eq-presets">
+            <span>PRESETS</span>
+            {[1, 2, 3].map((n) => (
+              <button
+                key={n}
+                type="button"
+                className={n === shown ? 'small' : 'ghost small'}
+                disabled={!presets.presets[n - 1]?.length}
+                title={n === current ? '지금 쓰는 프리셋' : undefined}
+                onClick={() => setPick(n)}
+              >
+                {n}
+                {n === current ? ' ✓' : ''}
+              </button>
+            ))}
+          </div>
         )}
       </div>
-      {presets && (
-        <div className="eq-presets">
-          <span>PRESETS</span>
-          {[1, 2, 3].map((n) => (
-            <button
-              key={n}
-              type="button"
-              className={n === shown ? 'small' : 'ghost small'}
-              disabled={!presets.presets[n - 1]?.length}
-              title={n === current ? '지금 쓰는 프리셋' : undefined}
-              onClick={() => setPick(n)}
-            >
-              {n}
-              {n === current ? ' ✓' : ''}
-            </button>
-          ))}
-        </div>
-      )}
-      {activeItem && <Tooltip it={activeItem} row={activeRow} />}
+      <aside className="eq-panel" aria-live="polite">
+        {activeItem ? (
+          <ItemDetail it={activeItem} />
+        ) : (
+          <Summary items={items} sets={shown === current ? sets : undefined} preset={shown} />
+        )}
+      </aside>
     </div>
   );
 }

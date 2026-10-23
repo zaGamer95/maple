@@ -372,8 +372,8 @@ tr.out-of-union td {
 
 .footer {
   max-width: 1400px;
-  margin: 24px auto 0;
-  padding: 16px;
+  margin: 48px auto 0;
+  padding: 16px 16px 48px;
   border-top: 1px solid var(--border);
   color: var(--muted);
   font-size: 12px;
@@ -718,34 +718,57 @@ canvas.avatar {
   max-width: 100%;
   max-height: 100%;
 }
+.eq-layout {
+  display: grid;
+  grid-template-columns: auto minmax(260px, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
 .eq-wrap {
-  position: relative;
-  display: inline-block;
   max-width: 100%;
 }
-.eq-tip {
+.eq-panel {
+  /* 높이는 왼쪽 장비창에 맞추고, 넘치는 내용은 패널 안에서 스크롤 (페이지가 흔들리지 않게) */
+  position: relative;
+  min-height: 0;
+  border-radius: 12px;
+  background: #2b2f3a;
+  border: 1px solid #3c4252;
+}
+.eq-panel > .eq-detail {
   position: absolute;
-  left: calc(100% + 10px);
-  top: calc(12px + var(--row, 0) * 58px);
-  z-index: 20;
-  width: 260px;
-  padding: 10px 12px;
-  border-radius: 8px;
-  background: rgba(20, 22, 30, 0.96);
+  inset: 0;
+  overflow-y: auto;
+}
+.eq-detail {
+  padding: 14px 16px;
   color: #e8e9ee;
-  font-size: 12px;
-  line-height: 1.55;
-  text-align: left;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-  pointer-events: none;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.eq-panel > .eq-detail {
+  /* 넓은 화면에서는 여러 단으로 펼쳐 스크롤 없이 보이게 */
+  columns: 3 240px;
+  column-gap: 28px;
+}
+.eq-detail > * {
+  break-inside: avoid;
+}
+.eq-set + .eq-set {
+  margin-top: 6px;
+}
+.muted-dark {
+  color: #b4b9c6;
 }
 @media (max-width: 760px) {
-  .eq-tip {
+  .eq-layout {
+    grid-template-columns: 1fr;
+  }
+  .eq-panel > .eq-detail {
     position: static;
-    margin-top: 8px;
-    width: auto;
   }
 }
+
 .eq-tip-stars {
   color: #f6c344;
   font-weight: 700;
@@ -787,9 +810,6 @@ canvas.avatar {
   .eq-cell {
     width: 44px;
     height: 44px;
-  }
-  .eq-tip {
-    width: 220px;
   }
 }
 .eq-presets {

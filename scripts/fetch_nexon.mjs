@@ -100,6 +100,7 @@ async function fetchCharacter(name) {
   const basic = await call('character/basic', { ocid });
   const stat = await call('character/stat', { ocid });
   const equip = await call('character/item-equipment', { ocid });
+  const setEffect = await call('character/set-effect', { ocid }).catch(() => null);
   const combatPower = stat.final_stat?.find((s) => s.stat_name === '전투력')?.stat_value;
   return {
     ocid,
@@ -118,6 +119,13 @@ async function fetchCharacter(name) {
     // 종합 능력치 전체 (전투력 공식 검증용)
     stat: Object.fromEntries((stat.final_stat ?? []).map((s) => [s.stat_name, s.stat_value])),
     equipment: (equip.item_equipment ?? []).map(toEquipment),
+    sets: (setEffect?.set_effect ?? [])
+      .filter((st) => st.set_effect_info?.length)
+      .map((st) => ({
+        name: st.set_name,
+        count: st.total_set_count,
+        effects: st.set_effect_info.map((e) => `${e.set_count}세트: ${e.set_option.replace(/\s+/g, ' ')}`),
+      })),
     // 프리셋 1~3 은 크기가 커서 public/equip/<id>.json 으로 따로 저장한다 (main 에서 꺼냄)
     _presets: {
       preset: equip.preset_no ?? null,
