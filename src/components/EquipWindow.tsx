@@ -115,19 +115,19 @@ function Summary({ items, sets, preset }: { items: NexonEquipment[]; sets?: SetE
         </div>
       ))}
       {sets && sets.length > 0 && (
-        <div className="eq-tip-sec">
+        <div className="eq-tip-sec eq-sets">
           <div className="eq-tip-head">세트 효과 (지금 쓰는 프리셋 기준)</div>
           {sets.map((st) => (
-            <div key={st.name} className="eq-set">
-              <b>
-                {st.name} {st.count}세트
-              </b>
+            <details key={st.name} className="eq-set">
+              <summary>
+                {st.name} <b>{st.count}세트</b>
+              </summary>
               {st.effects.map((e, i) => (
                 <div key={i} className="muted-dark">
                   {e}
                 </div>
               ))}
-            </div>
+            </details>
           ))}
         </div>
       )}
