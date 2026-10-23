@@ -104,9 +104,9 @@
   }
  ],
  "medal": {
-  "name": "메이플 어택",
-  "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOGICME",
-  "description": "메이플스토리 23주년 기념 훈장이다.",
+  "name": "칠요의 몬스터파커",
+  "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOGJOMD",
+  "description": "이 훈장을 차고 다니면 당신이 7개의 요일 훈장을 모두 수집한 몬스터파크 VIP임을 주위 사람들이 알게 된다.",
   "shapeName": "일급 마법사",
   "shapeIcon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOGIDJE"
  }
