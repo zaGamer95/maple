@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-23T10:05:20.381Z",
+  "fetchedAt": "2026-10-23T23:44:50.252Z",
   "character": "자그3",
   "character/stat": {
     "date": null,
@@ -7,11 +7,11 @@
     "final_stat": [
       {
         "stat_name": "최소 스탯공격력",
-        "stat_value": "139939818"
+        "stat_value": "137308626"
       },
       {
         "stat_name": "최대 스탯공격력",
-        "stat_value": "147305070"
+        "stat_value": "144535394"
       },
       {
         "stat_name": "데미지",
@@ -87,7 +87,7 @@
       },
       {
         "stat_name": "HP",
-        "stat_value": "63856"
+        "stat_value": "67624"
       },
       {
         "stat_name": "MP",
@@ -119,11 +119,11 @@
       },
       {
         "stat_name": "아이템 드롭률",
-        "stat_value": "43"
+        "stat_value": "23"
       },
       {
         "stat_name": "메소 획득량",
-        "stat_value": "53"
+        "stat_value": "28"
       },
       {
         "stat_name": "버프 지속시간",
@@ -167,11 +167,11 @@
       },
       {
         "stat_name": "공격력",
-        "stat_value": "7765"
+        "stat_value": "7619"
       },
       {
         "stat_name": "마력",
-        "stat_value": "2089"
+        "stat_value": "2009"
       },
       {
         "stat_name": "전투력",
@@ -514,8 +514,8 @@
         "additional_potential_option_grade": "에픽",
         "potential_option_flag": "false",
         "potential_option_1": "DEX +12%",
-        "potential_option_2": "DEX +9%",
-        "potential_option_3": "HP 회복 아이템 및 회복 스킬 효율 +30%",
+        "potential_option_2": "최대 HP +9%",
+        "potential_option_3": "DEX +9%",
         "additional_potential_option_flag": "false",
         "additional_potential_option_1": "공격력 +11",
         "additional_potential_option_2": "STR +10",
@@ -3916,8 +3916,8 @@
         "additional_potential_option_grade": "에픽",
         "potential_option_flag": "false",
         "potential_option_1": "DEX +12%",
-        "potential_option_2": "DEX +9%",
-        "potential_option_3": "HP 회복 아이템 및 회복 스킬 효율 +30%",
+        "potential_option_2": "최대 HP +9%",
+        "potential_option_3": "DEX +9%",
         "additional_potential_option_flag": "false",
         "additional_potential_option_1": "공격력 +11",
         "additional_potential_option_2": "STR +10",
@@ -10720,8 +10720,8 @@
         "additional_potential_option_grade": "에픽",
         "potential_option_flag": "false",
         "potential_option_1": "DEX +12%",
-        "potential_option_2": "DEX +9%",
-        "potential_option_3": "HP 회복 아이템 및 회복 스킬 효율 +30%",
+        "potential_option_2": "최대 HP +9%",
+        "potential_option_3": "DEX +9%",
         "additional_potential_option_flag": "false",
         "additional_potential_option_1": "공격력 +11",
         "additional_potential_option_2": "STR +10",
@@ -15678,7 +15678,7 @@
         "ability_value": "버프 스킬의 지속 시간 38% 증가"
       }
     ],
-    "remain_fame": 276965,
+    "remain_fame": 306965,
     "preset_no": 2,
     "ability_preset_1": {
       "ability_preset_grade": "레전드리",
