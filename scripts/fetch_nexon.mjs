@@ -11,6 +11,8 @@ const API = 'https://open.api.nexon.com/maplestory/v1';
 const DATA_DIR = new URL('../src/data/', import.meta.url);
 // 본캐 효율 계산용 원본 응답 (사이트 번들에는 넣지 않음)
 const DETAIL_DIR = new URL('../data/nexon/', import.meta.url);
+// 캐릭터별 장비 프리셋 (사이트가 장비 탭을 열 때 불러옴)
+const EQUIP_DIR = new URL('../public/equip/', import.meta.url);
 const DETAIL_ENDPOINTS = [
   'character/stat',
   'character/item-equipment',
@@ -116,6 +118,11 @@ async function fetchCharacter(name) {
     // 종합 능력치 전체 (전투력 공식 검증용)
     stat: Object.fromEntries((stat.final_stat ?? []).map((s) => [s.stat_name, s.stat_value])),
     equipment: (equip.item_equipment ?? []).map(toEquipment),
+    // 프리셋 1~3 은 크기가 커서 public/equip/<id>.json 으로 따로 저장한다 (main 에서 꺼냄)
+    _presets: {
+      preset: equip.preset_no ?? null,
+      presets: [1, 2, 3].map((n) => (equip[`item_equipment_preset_${n}`] ?? []).map(toEquipment)),
+    },
   };
 }
 
@@ -162,7 +169,10 @@ async function main() {
   let failedInRow = 0;
   for (const c of targets) {
     try {
-      result.characters[c.id] = await fetchCharacter(c.name);
+      const { _presets, ...character } = await fetchCharacter(c.name);
+      result.characters[c.id] = character;
+      await mkdir(EQUIP_DIR, { recursive: true });
+      await writeFile(new URL(`${c.id}.json`, EQUIP_DIR), JSON.stringify(_presets) + '\n');
       failedInRow = 0;
       console.log(`[nexon] ${c.name}: Lv.${result.characters[c.id].level}`);
     } catch (e) {

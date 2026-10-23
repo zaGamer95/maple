@@ -792,3 +792,11 @@ canvas.avatar {
     width: 220px;
   }
 }
+.eq-presets {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}

@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import illustrationData from '../data/illustrations.json';
 import lookData from '../data/looks.json';
@@ -298,14 +298,33 @@ function ApiEquipment({ items }: { items: NexonEquipment[] }) {
   );
 }
 
+type Presets = { preset: number | null; presets: NexonEquipment[][] };
+
+/** scripts/fetch_nexon.mjs 가 저장한 public/equip/<id>.json (장비 프리셋 1~3) */
+function usePresets(id: string): Presets | undefined {
+  const [data, setData] = useState<Presets>();
+  useEffect(() => {
+    let alive = true;
+    fetch(`equip/${encodeURIComponent(id)}.json`)
+      .then((r) => (r.ok ? r.json() : undefined))
+      .then((d) => alive && setData(d))
+      .catch(() => undefined);
+    return () => {
+      alive = false;
+    };
+  }, [id]);
+  return data;
+}
+
 function Equip({ c, api }: { c: Character; api?: NexonCharacter }) {
   const filled = EQUIP_SLOTS.filter((s) => c.equip[s]);
+  const presets = usePresets(c.id);
   return (
     <>
       {api ? (
         <>
           <p className="muted">넥슨 API 기준 장착 장비 · {formatFetchedAt(nexon.fetchedAt)} 갱신</p>
-          <EquipWindow items={api.equipment} image={api.image} />
+          <EquipWindow items={api.equipment} image={api.image} presets={presets} />
           <details className="eq-list">
             <summary className="muted">목록으로 보기</summary>
             <ApiEquipment items={api.equipment} />
