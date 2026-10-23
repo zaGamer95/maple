@@ -62,12 +62,25 @@ async function call(path, params = {}) {
 const potentials = (item, prefix) =>
   [1, 2, 3].map((i) => item[`${prefix}_${i}`]).filter(Boolean);
 
+/** 옵션 객체에서 0 이 아닌 값만 숫자로 남긴다 (툴팁용, 용량 절약) */
+const nonZero = (opt) =>
+  Object.fromEntries(
+    Object.entries(opt ?? {})
+      .map(([k, v]) => [k, Number(v)])
+      .filter(([, v]) => v),
+  );
+
 function toEquipment(item) {
   return {
     slot: item.item_equipment_slot ?? item.equipment_slot ?? item.item_equipment_part,
     part: item.item_equipment_part,
     name: item.item_name,
     icon: item.item_icon,
+    // 인게임 장비창은 외형(신비의 모루) 아이콘으로 보인다
+    shapeName: item.item_shape_name && item.item_shape_name !== item.item_name ? item.item_shape_name : null,
+    shapeIcon: item.item_shape_icon && item.item_shape_icon !== item.item_icon ? item.item_shape_icon : null,
+    total: nonZero(item.item_total_option),
+    flame: nonZero(item.item_add_option),
     starforce: Number(item.starforce) || 0,
     scrollUpgrade: Number(item.scroll_upgrade) || 0,
     potentialGrade: item.potential_option_grade ?? null,

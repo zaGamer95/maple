@@ -5,6 +5,7 @@ import lookData from '../data/looks.json';
 import milestoneData from '../data/milestones.json';
 import targetSetups from '../data/targetSetups.json';
 import CharacterSprite from '../components/CharacterSprite';
+import EquipWindow from '../components/EquipWindow';
 import { EQUIP_SLOTS } from '../lib/equip';
 import { formatCheck, formatMeso, formatNumber, todayKst } from '../lib/format';
 import { formatFetchedAt, formatPower, nexon } from '../lib/nexon';
@@ -304,7 +305,11 @@ function Equip({ c, api }: { c: Character; api?: NexonCharacter }) {
       {api ? (
         <>
           <p className="muted">넥슨 API 기준 장착 장비 · {formatFetchedAt(nexon.fetchedAt)} 갱신</p>
-          <ApiEquipment items={api.equipment} />
+          <EquipWindow items={api.equipment} image={api.image} />
+          <details className="eq-list">
+            <summary className="muted">목록으로 보기</summary>
+            <ApiEquipment items={api.equipment} />
+          </details>
         </>
       ) : (
         <p className="muted">넥슨 API 장비 정보가 아직 없어요. 매일 아침 6시 배포 때 갱신돼요.</p>

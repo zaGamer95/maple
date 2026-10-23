@@ -104,6 +104,13 @@ export interface NexonEquipment {
   part: string;
   name: string;
   icon: string;
+  /** 외형 이름·아이콘 (원래 아이템과 다를 때만) */
+  shapeName?: string | null;
+  shapeIcon?: string | null;
+  /** 최종 옵션 합계 (API 키 → 값, 0 은 생략) */
+  total?: Record<string, number>;
+  /** 추가 옵션 (환생의 불꽃) */
+  flame?: Record<string, number>;
   starforce: number;
   scrollUpgrade: number;
   potentialGrade: string | null;
