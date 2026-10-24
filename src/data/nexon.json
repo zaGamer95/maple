@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-23T23:44:50.252Z",
+  "fetchedAt": "2026-10-24T22:53:24.797Z",
   "union": {
     "level": 10027,
     "grade": "그랜드 마스터 유니온 5"
@@ -2915,15 +2915,15 @@
       "guild": "으악",
       "createdAt": "2024-12-19",
       "image": "https://open.api.nexon.com/static/maplestory/character/look/ICHDJHBDMDGFBCLMFAGOOKEGJBBEMDLGGOBJKGDHKFMHFNKKPBMFGIHAKKIMPDLAAFLOOAEHKPBNCMDANDBEGALHHACKHAPHOBPMJNGNCOEPHPAHLGOJFPOPCFGLGNFFEOIIFCGBFHLGNBEJEAIHHHKDNINCPBGGDEDAANAGKJACNECBOABKINDDHMOELLADNFMBFHMDBFEKPHNKMKKFLECCPJOADJOADELBCEMPDMJGKHOGMPCIECAGBJOOHEDNPPABDFDNAGHCPAMANNOLKILDJCNFIBIGPINDDAEFBEIMHHLJGODLHCOIJJCNCAFFPMFDMCDGJDNAPIGEJFLPHDCJJBOEGLEAGODMMFLLDODFKLDLIILNIKBBJEILBFPBAMAFCFMJIANEKMCPPHMFKABHONAMCFFEJLKKDIMGCCJFJCPCIFBBDBJOBOAOCILPGPCHINPADPIEHCLMJGDNLAIGMMAGLIPFEHAAMOOLHAENILJKAFJBOCLOFAABMFHNBPCIHNDJILGPHGGNKGIKPMPIDKEBPNMFMAJHPFPCBICKCAAMDOEAEIMEOLOHNEHDBIKDLHKKNOKILEMPGNIJCEMNOILDACEFHPKHBDDJJOJPOIJNPAGKLFCLGJMDILMNHGEBAPGBLLKJNBPBNKCAFPMFEAHLOHIHMKANFMKGNCDPLFELGKKELEHIGMHJKDBHKGNGJMDOLMEJGNEMPNANKPOJBOFCMGNALDDMGECFHHGKOJIEOBDELICKMONGPDONPLNDOOKJMKPDPCPPHHPKENLGJIMLJGIMKJGMOAKCLCPBHPPFBEDHCBGBOFPDAEOCGGCBJMPEFMBKOEMGAFMJGHJOELFEBFODLEINPEOKLPLLPGJHMPCGLFGJNGMBONJCEJGNIOFPPBALBKLJFIDKIKNCJLOLAHGKAIJNGIMGKLDNHNLOJFIBOJHAAKCBCDPKOODBICPJONHCKDCHIIBKBLMMACJILBOPIKMDAACLJJEEDMHKMBNEHECIPJPILEAK?wmotion=W00",
-      "combatPower": 6349170,
+      "combatPower": 7125827,
       "stat": {
         "최소 스탯공격력": "4953307",
         "최대 스탯공격력": "5827419",
         "데미지": "58.00",
-        "보스 몬스터 데미지": "194.00",
+        "보스 몬스터 데미지": "234.00",
         "최종 데미지": "59.85",
-        "방어율 무시": "88.00",
-        "크리티컬 확률": "111",
+        "방어율 무시": "92.80",
+        "크리티컬 확률": "116",
         "크리티컬 데미지": "62.00",
         "상태이상 내성": "41",
         "스탠스": "100",
@@ -2947,19 +2947,19 @@
         "AP 배분 MP": "0",
         "아이템 드롭률": "52",
         "메소 획득량": "25",
-        "버프 지속시간": "67",
+        "버프 지속시간": "62",
         "공격 속도": "8",
-        "일반 몬스터 데미지": "79.00",
+        "일반 몬스터 데미지": "39.00",
         "재사용 대기시간 감소 (초)": "0",
         "재사용 대기시간 감소 (%)": "6",
         "재사용 대기시간 미적용": "3",
         "속성 내성 무시": "3.00",
         "상태이상 추가 데미지": "9.00",
         "무기 숙련도": "85",
-        "추가 경험치 획득": "34.00",
+        "추가 경험치 획득": "24.00",
         "공격력": "1884",
         "마력": "671",
-        "전투력": "6349170",
+        "전투력": "7125827",
         "소환수 지속시간 증가": "12"
       },
       "equipment": [
@@ -13564,34 +13564,34 @@
       "job": "레테",
       "level": 286,
       "expRate": 32.12,
-      "exp": 35159624427836,
+      "exp": 35159754807839,
       "guild": "MoonStone",
       "createdAt": "2026-06-18",
       "image": "https://open.api.nexon.com/static/maplestory/character/look/NBBKCKGGMOFNIOKGPIJEFCGPGMNMBANKGHDKBBLMINOBOJJLIAJCNACIKKDJMBOCALECILPLFOCALACJCCDDGKLLOFBHEDMHDMKGFGDFCOAMFAHNMMPIBNGFBEHCCGGIBBDFAGLJMOAOAPGDNIFHFIDFFNAPEPFINLEOHAJIMDDHOCFAFMKIIBLNLEADBMAGAPALLGNEMEGDDPPKOMOMHNMLHLOBOKABPMGBFFJIJAIGBFALGPPCJKIJMJJOABJDIDGJEKNOILAHKDOKOAECEPBHMDLAMLBJDOIAHJNLGPAKAKDGBOBCHHBFPHPPFKKOOLNMPGAKOAOPGHFKDOFBBCAILNPALDECILMBKPFIFGBOKHAOILLPHMFLLOELILAGOGOFJNJJGHHKFANBPNLAFNCBMDEPEGOODKBNEGLEMMKDCFGEHMHJAMGKKDJHMHAIEPOOAMFDFFMPFKGJLOLJFFCOIGBHCHEPBMHDELPGELGAKKNNCLFELIKIDHNMMGAMPIEHECMALPKIJJDNAELHAOKADLFEMONLLLMOJJAJBBANPIGJFLFODMLIFMPBBAGDBMOFEODBDGABMHAFEAGJIGEANEKDGCIFCILEFJADOKCIDILOCPLAAHGDHPKNKAGIIBNDMELEKGEEOFOEKIIEKHHPKNLFCAKBFNODNDJOFIICKMKGDILLALHHMJEMGGMJBDAABNMOLPAJALNDACFFABOJFPFLLECKPONINAIBJPMEMNIKENMEDIMGHECBINPJPJFOBCABNOOHNKEGFPADKMFFDNKDHCNFOEPJINGLCJEJNKJAJMOAOBHPOGJKLNLKPIHNPMJFPIBOPOPJCAGAAKLNDPMNNCLMGMJAAOHKBMCBGHMEEPKGPPPKPACNKNOLNJPNBODIKOIIONCHCCFMLPDHOAFCLDEPLLEBIPGNHJAPMCILDMLKGLHPBMHDDAHOFBEPFLEOHPFDLFEBPNEGNPOOMOEEDKGAHAGOHNHMEMIGIDOKMFGALKOFOMGMADCA?wmotion=W00",
-      "combatPower": 115153867,
+      "combatPower": 128114034,
       "stat": {
-        "최소 스탯공격력": "77400826",
-        "최대 스탯공격력": "86000914",
+        "최소 스탯공격력": "77342668",
+        "최대 스탯공격력": "85936295",
         "데미지": "97.00",
-        "보스 몬스터 데미지": "375.00",
+        "보스 몬스터 데미지": "425.00",
         "최종 데미지": "186.70",
-        "방어율 무시": "92.76",
-        "크리티컬 확률": "90",
-        "크리티컬 데미지": "69.80",
+        "방어율 무시": "96.09",
+        "크리티컬 확률": "94",
+        "크리티컬 데미지": "80.80",
         "상태이상 내성": "56",
         "스탠스": "100",
-        "방어력": "19833",
+        "방어력": "19578",
         "이동속도": "170",
         "점프력": "123",
-        "스타포스": "353",
+        "스타포스": "331",
         "아케인포스": "1350",
         "어센틱포스": "400",
-        "STR": "4068",
-        "DEX": "3617",
-        "INT": "53526",
-        "LUK": "6649",
-        "HP": "61171",
-        "MP": "50441",
+        "STR": "4024",
+        "DEX": "3494",
+        "INT": "52446",
+        "LUK": "6661",
+        "HP": "64696",
+        "MP": "54766",
         "AP 배분 STR": "4",
         "AP 배분 DEX": "4",
         "AP 배분 INT": "1448",
@@ -13600,19 +13600,19 @@
         "AP 배분 MP": "0",
         "아이템 드롭률": "12",
         "메소 획득량": "17",
-        "버프 지속시간": "71",
-        "공격 속도": "6",
-        "일반 몬스터 데미지": "52.00",
+        "버프 지속시간": "67",
+        "공격 속도": "8",
+        "일반 몬스터 데미지": "12.00",
         "재사용 대기시간 감소 (초)": "2",
         "재사용 대기시간 감소 (%)": "6",
         "재사용 대기시간 미적용": "23",
         "속성 내성 무시": "5.00",
         "상태이상 추가 데미지": "16.00",
         "무기 숙련도": "90",
-        "추가 경험치 획득": "34.00",
-        "공격력": "2518",
-        "마력": "5748",
-        "전투력": "115153867",
+        "추가 경험치 획득": "24.00",
+        "공격력": "2608",
+        "마력": "5858",
+        "전투력": "128114034",
         "소환수 지속시간 증가": "12"
       },
       "equipment": [
@@ -13881,36 +13881,35 @@
         {
           "slot": "장갑",
           "part": "장갑",
-          "name": "도전자의 장갑",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPKJPPE",
+          "name": "에테르넬 메이지글러브",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPKJAIA",
           "shapeName": null,
           "shapeIcon": null,
           "total": {
-            "int": 221,
-            "luk": 176,
-            "attack_power": 92,
-            "magic_power": 141,
-            "armor": 456,
+            "str": 42,
+            "int": 139,
+            "luk": 97,
+            "magic_power": 16,
+            "armor": 325,
             "all_stat": 5
           },
           "flame": {
-            "int": 70,
-            "luk": 25,
-            "magic_power": 5,
+            "str": 42,
+            "int": 84,
+            "luk": 42,
+            "magic_power": 4,
             "all_stat": 5
           },
-          "starforce": 22,
-          "scrollUpgrade": 8,
-          "potentialGrade": "유니크",
+          "starforce": 0,
+          "scrollUpgrade": 0,
+          "potentialGrade": "레전드리",
           "potential": [
-            "INT +9%",
-            "INT +6%"
+            "<쓸만한 윈드 부스터> 스킬 사용 가능",
+            "크리티컬 데미지 +8%",
+            "피격 시 5% 확률로 데미지의 20% 무시"
           ],
-          "additionalGrade": "에픽",
-          "additional": [
-            "INT +4%",
-            "마력 +10"
-          ]
+          "additionalGrade": null,
+          "additional": []
         },
         {
           "slot": "망토",
@@ -14473,16 +14472,22 @@
           ]
         },
         {
+          "name": "에테르넬 세트(마법사)",
+          "count": 2,
+          "effects": [
+            "2세트: 최대 HP +2500, 최대 MP +2500, 공격력 +40, 마력 +40, 보스 몬스터 데미지 +10%"
+          ]
+        },
+        {
           "name": "도전자의 장비 세트(마법사)",
-          "count": 8,
+          "count": 7,
           "effects": [
             "2세트: 올스탯 +20, 최대 HP +1000, 최대 MP +1000, 공격력 +20, 마력 +20",
             "3세트: 최대 HP +1500, 최대 MP +1500, 공격력 +20, 마력 +20, 몬스터 방어율 무시 +10%",
             "4세트: 올스탯 +30, 최대 HP +1500, 최대 MP +1500, 공격력 +20, 마력 +20, 보스 몬스터 데미지 +10%",
             "5세트: 공격력 +25, 마력 +25, 방어력 +200, 보스 몬스터 데미지 +10%",
             "6세트: 공격력 +30, 마력 +30, 몬스터 방어율 무시 +10%",
-            "7세트: 공격력 +30, 마력 +30, 보스 몬스터 데미지 +10%",
-            "8세트: 공격력 +30, 마력 +30, 몬스터 방어율 무시 +10%"
+            "7세트: 공격력 +30, 마력 +30, 보스 몬스터 데미지 +10%"
           ]
         },
         {
@@ -22898,56 +22903,56 @@
       "world": "엘리시움",
       "job": "엔젤릭버스터",
       "level": 291,
-      "expRate": 30.765,
-      "exp": 99596778994752,
+      "expRate": 32.373,
+      "exp": 104802183729460,
       "guild": "MoonStone",
       "createdAt": "2019-11-27",
       "image": "https://open.api.nexon.com/static/maplestory/character/look/OKHLOKAOJAKNDDHOPHFCPGGPOICAEHEMAFDAOBHABAIKIBJGOGPHNNGIAILBFGHHIBGBCJEKCEFFEEIDDFGANAFHHPMJLEDDNJKOPIBFABCDIBBFMGOJGACJKKPOICGCOJJLJGNAFDFBIOIFLJHBEBBNEPJNDHLDHHBPANNIHDHCJLMBBCMJLLODOJENIFBDJCGCAIBLGPFDPPDMBPLBABBDHJEOCLONEHGIJPCONEJOGMGJANCGLOLINFAPEGNCLDNJIMKBECLBCEIKGMNKMLPGGHMJAMEEJHNMBDLBBHJOHBJKOKEMFGHANKOKAENNOHBIDDLJLEBHHNJKPLEAABFEODNAFJLANBEJINOIOENIEDEFAEMBOCGAMIBOEONCADJOHGLBJNIFCGBFELLJJDAPNKCGGOIOKBPLFEDNABOHAMAFKOFIMMIJOLIELGGPHKCEDMHPDNCJIFNBFONIHJHPEPEGOHKHAKMNPBMIIDNCOAPBIDKNKCAPFAFNIFFIAEOIANBLGOLEFPNJLHGLHBAIPKLJFFNIBCJLNCLPEJOHIJPIJHPNKAONKJBBBFANDMCOFEPPHFLHEEJFAHOBIGEECCKGNLLPEGPOIEMJHNPEJPGEGHGBBNOHACOCJJIJJEDDKGEBMNBGIPAJDCDAHFOFDJNCPLNLEFHHIJJBOEEMIENNFJBEKENDBIIBDJJFLLBJOKOEGHKDIEHEMOOOAAJHAPNENIPCOCDIFOLLIJCOLDNEAJFHJMGNCKKBNIMLABPPGEDDHPJPCDAJEDGHCMFEBBKHBFENPCDPBKEDNDCLPKHAMKLDNCFIKGLIEOOCJJBIGGKMIPIINPOGOEDLEPCKCCDFFGMDCCABLDHJIOOFGJFCLHDOMCELALHGIONPPINKOJFKOCKBMJDCKDLFPDJKIADCNKNHHOJJKCBMKDMEEAEMGLIEEHMHPKBFFGKDJHPNEEBDJCLCLJOPMDPNDDKABIENHCJMMMPAKFMBIAFONGDKMIBLAADOBHEENKJD?wmotion=W00",
-      "combatPower": 306488375,
+      "combatPower": 121007015,
       "stat": {
-        "최소 스탯공격력": "137308626",
-        "최대 스탯공격력": "144535394",
-        "데미지": "94.00",
-        "보스 몬스터 데미지": "450.00",
+        "최소 스탯공격력": "75515888",
+        "최대 스탯공격력": "79490407",
+        "데미지": "91.00",
+        "보스 몬스터 데미지": "301.00",
         "최종 데미지": "76.96",
-        "방어율 무시": "96.62",
-        "크리티컬 확률": "92",
-        "크리티컬 데미지": "105.60",
-        "상태이상 내성": "76",
+        "방어율 무시": "87.78",
+        "크리티컬 확률": "99",
+        "크리티컬 데미지": "94.60",
+        "상태이상 내성": "91",
         "스탠스": "100",
-        "방어력": "65368",
+        "방어력": "50855",
         "이동속도": "171",
         "점프력": "123",
-        "스타포스": "384",
+        "스타포스": "247",
         "아케인포스": "1350",
         "어센틱포스": "720",
-        "STR": "11054",
-        "DEX": "78497",
-        "INT": "7751",
-        "LUK": "6522",
-        "HP": "67624",
-        "MP": "28255",
+        "STR": "7445",
+        "DEX": "54650",
+        "INT": "4627",
+        "LUK": "3757",
+        "HP": "69051",
+        "MP": "33920",
         "AP 배분 STR": "4",
         "AP 배분 DEX": "1473",
         "AP 배분 INT": "4",
         "AP 배분 LUK": "4",
         "AP 배분 HP": "0",
         "AP 배분 MP": "0",
-        "아이템 드롭률": "23",
-        "메소 획득량": "28",
-        "버프 지속시간": "104",
+        "아이템 드롭률": "243",
+        "메소 획득량": "121",
+        "버프 지속시간": "71",
         "공격 속도": "8",
-        "일반 몬스터 데미지": "12.00",
+        "일반 몬스터 데미지": "98.00",
         "재사용 대기시간 감소 (초)": "5",
         "재사용 대기시간 감소 (%)": "6",
         "재사용 대기시간 미적용": "3",
         "속성 내성 무시": "5.00",
-        "상태이상 추가 데미지": "16.00",
+        "상태이상 추가 데미지": "0.00",
         "무기 숙련도": "95",
-        "추가 경험치 획득": "233.00",
-        "공격력": "7619",
-        "마력": "2009",
-        "전투력": "306488375",
+        "추가 경험치 획득": "298.00",
+        "공격력": "6120",
+        "마력": "1484",
+        "전투력": "121007015",
         "소환수 지속시간 증가": "12"
       },
       "equipment": [
@@ -22993,117 +22998,105 @@
         {
           "slot": "얼굴장식",
           "part": "얼굴장식",
-          "name": "루즈 컨트롤 머신 마크",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPDJBND",
+          "name": "트와일라이트 마크",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPDJALG",
           "shapeName": null,
           "shapeIcon": null,
           "total": {
-            "str": 150,
-            "dex": 170,
-            "int": 90,
-            "luk": 89,
-            "attack_power": 70,
-            "magic_power": 44,
-            "armor": 503,
-            "speed": 3,
-            "all_stat": 6
+            "str": 74,
+            "dex": 120,
+            "int": 101,
+            "luk": 116,
+            "max_mp": 70,
+            "attack_power": 34,
+            "magic_power": 26,
+            "armor": 264,
+            "all_stat": 7
           },
           "flame": {
-            "str": 61,
-            "dex": 79,
-            "all_stat": 6
+            "dex": 48,
+            "int": 32,
+            "luk": 48,
+            "all_stat": 7
           },
-          "starforce": 18,
-          "scrollUpgrade": 6,
+          "starforce": 17,
+          "scrollUpgrade": 4,
           "potentialGrade": "레전드리",
           "potential": [
-            "올스탯 +9%",
-            "DEX +12%",
-            "DEX +9%"
+            "아이템 드롭률 +20%",
+            "아이템 드롭률 +20%",
+            "최대 HP +9%"
           ],
           "additionalGrade": "에픽",
           "additional": [
-            "공격력 +11",
-            "LUK +10",
-            "공격력 +10"
+            "DEX +4%",
+            "DEX +2%",
+            "INT +2%"
           ]
         },
         {
           "slot": "눈장식",
           "part": "눈장식",
-          "name": "마력이 깃든 안대",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPAJFJJ",
+          "name": "미카엘라의 새 안경",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPAJFKH",
           "shapeName": null,
           "shapeIcon": null,
           "total": {
-            "str": 147,
-            "dex": 207,
-            "int": 173,
-            "luk": 147,
-            "attack_power": 113,
-            "magic_power": 101,
-            "armor": 902,
-            "all_stat": 6
+            "str": 2,
+            "dex": 2,
+            "int": 2,
+            "luk": 7,
+            "attack_power": 2,
+            "magic_power": 2,
+            "all_stat": 2
           },
           "flame": {
-            "dex": 61,
-            "int": 25,
-            "magic_power": 5,
-            "all_stat": 6
+            "luk": 5,
+            "all_stat": 2
           },
-          "starforce": 22,
-          "scrollUpgrade": 4,
+          "starforce": 0,
+          "scrollUpgrade": 0,
           "potentialGrade": "레전드리",
           "potential": [
-            "DEX +12%",
-            "최대 HP +9%",
-            "DEX +9%"
+            "아이템 드롭률 +20%",
+            "아이템 드롭률 +20%",
+            "최대 MP +9%"
           ],
-          "additionalGrade": "에픽",
-          "additional": [
-            "공격력 +11",
-            "STR +10",
-            "공격력 +10"
-          ]
+          "additionalGrade": null,
+          "additional": []
         },
         {
           "slot": "귀고리",
           "part": "귀고리",
-          "name": "커맨더 포스 이어링",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPBJEPH",
+          "name": "하프 이어링",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEPBJHMD",
           "shapeName": null,
           "shapeIcon": null,
           "total": {
-            "str": 108,
-            "dex": 199,
-            "int": 139,
-            "luk": 176,
-            "max_hp": 500,
-            "max_mp": 510,
-            "attack_power": 89,
-            "magic_power": 62,
-            "armor": 278,
-            "all_stat": 6
+            "str": 16,
+            "dex": 10,
+            "int": 22,
+            "luk": 12,
+            "armor": 6
           },
           "flame": {
-            "dex": 91,
-            "int": 30,
-            "luk": 66,
-            "all_stat": 6
+            "str": 2,
+            "int": 12,
+            "luk": 2
           },
-          "starforce": 19,
-          "scrollUpgrade": 7,
+          "starforce": 5,
+          "scrollUpgrade": 1,
           "potentialGrade": "레전드리",
           "potential": [
-            "DEX +12%",
-            "DEX +9%",
-            "DEX +9%"
+            "메소 획득량 +20%",
+            "메소 획득량 +20%",
+            "방어력 +9%"
           ],
-          "additionalGrade": "레전드리",
+          "additionalGrade": "레어",
           "additional": [
-            "모든 스킬의 MP 소모 -10%",
-            "DEX +6%",
-            "DEX +6%"
+            "공격력 +6",
+            "최대 HP +40",
+            "이동속도 +3"
           ]
         },
         {
@@ -23371,18 +23364,140 @@
         {
           "slot": "반지1",
           "part": "반지",
-          "name": "리스트레인트 링",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODIHHJ",
+          "name": "어센던트 펄스 링",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPENE",
           "shapeName": null,
           "shapeIcon": null,
           "total": {
-            "str": 4,
-            "dex": 4,
-            "int": 4,
-            "luk": 4,
-            "attack_power": 4,
-            "magic_power": 4
+            "str": 5,
+            "dex": 5,
+            "int": 5,
+            "luk": 5,
+            "max_hp": 200,
+            "max_mp": 200,
+            "attack_power": 1,
+            "magic_power": 1,
+            "armor": 150
           },
+          "flame": {},
+          "starforce": 0,
+          "scrollUpgrade": 0,
+          "potentialGrade": "레전드리",
+          "potential": [
+            "아이템 드롭률 +20%",
+            "DEX +9%",
+            "최대 HP +9%"
+          ],
+          "additionalGrade": "레어",
+          "additional": [
+            "이동속도 +6",
+            "LUK +6",
+            "INT +6"
+          ]
+        },
+        {
+          "slot": "반지2",
+          "part": "반지",
+          "name": "글로리온 링 : 슈프림",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEPH",
+          "shapeName": null,
+          "shapeIcon": null,
+          "total": {
+            "str": 40,
+            "dex": 40,
+            "int": 40,
+            "luk": 40,
+            "max_hp": 4000,
+            "max_mp": 4000,
+            "attack_power": 25,
+            "magic_power": 25
+          },
+          "flame": {},
+          "starforce": 0,
+          "scrollUpgrade": 0,
+          "potentialGrade": "레전드리",
+          "potential": [
+            "아이템 드롭률 +20%",
+            "STR +9%",
+            "DEX +9%"
+          ],
+          "additionalGrade": "레어",
+          "additional": [
+            "공격력 +10",
+            "DEX +6",
+            "LUK +6"
+          ]
+        },
+        {
+          "slot": "반지3",
+          "part": "반지",
+          "name": "마이스터 올마이티링",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODIHIG",
+          "shapeName": null,
+          "shapeIcon": null,
+          "total": {
+            "str": 16,
+            "dex": 16,
+            "int": 16,
+            "luk": 16,
+            "max_hp": 35,
+            "attack_power": 1,
+            "armor": 38
+          },
+          "flame": {},
+          "starforce": 5,
+          "scrollUpgrade": 1,
+          "potentialGrade": "레전드리",
+          "potential": [
+            "아이템 드롭률 +20%",
+            "아이템 드롭률 +20%",
+            "최대 HP +9%"
+          ],
+          "additionalGrade": "레어",
+          "additional": [
+            "점프력 +4",
+            "STR +5",
+            "INT +5"
+          ]
+        },
+        {
+          "slot": "반지4",
+          "part": "반지",
+          "name": "마이스터링",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODIHLE",
+          "shapeName": null,
+          "shapeIcon": null,
+          "total": {
+            "str": 5,
+            "dex": 5,
+            "int": 5,
+            "luk": 5,
+            "max_hp": 200,
+            "max_mp": 200,
+            "attack_power": 1,
+            "magic_power": 1,
+            "armor": 150
+          },
+          "flame": {},
+          "starforce": 0,
+          "scrollUpgrade": 0,
+          "potentialGrade": "레전드리",
+          "potential": [
+            "아이템 드롭률 +20%",
+            "메소 획득량 +20%",
+            "최대 HP +9%"
+          ],
+          "additionalGrade": null,
+          "additional": []
+        },
+        {
+          "slot": "펜던트",
+          "part": "펜던트",
+          "name": "정령의 펜던트",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJFPE",
+          "shapeName": null,
+          "shapeIcon": null,
+          "total": {},
           "flame": {},
           "starforce": 0,
           "scrollUpgrade": 0,
@@ -23392,163 +23507,21 @@
           "additional": []
         },
         {
-          "slot": "반지2",
-          "part": "반지",
-          "name": "마이스터링",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODIHLE",
-          "shapeName": null,
-          "shapeIcon": null,
-          "total": {
-            "str": 108,
-            "dex": 108,
-            "int": 108,
-            "luk": 108,
-            "max_hp": 455,
-            "max_mp": 200,
-            "attack_power": 87,
-            "magic_power": 79,
-            "armor": 456
-          },
-          "flame": {},
-          "starforce": 22,
-          "scrollUpgrade": 2,
-          "potentialGrade": "레전드리",
-          "potential": [
-            "DEX +12%",
-            "DEX +9%",
-            "DEX +9%"
-          ],
-          "additionalGrade": "에픽",
-          "additional": [
-            "DEX +4%",
-            "최대 MP +100",
-            "공격력 +10"
-          ]
-        },
-        {
-          "slot": "반지3",
-          "part": "반지",
-          "name": "거대한 공포",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODIEOH",
-          "shapeName": null,
-          "shapeIcon": null,
-          "total": {
-            "str": 90,
-            "dex": 90,
-            "int": 90,
-            "luk": 90,
-            "max_hp": 505,
-            "max_mp": 250,
-            "attack_power": 55,
-            "magic_power": 43,
-            "armor": 19
-          },
-          "flame": {},
-          "starforce": 18,
-          "scrollUpgrade": 3,
-          "potentialGrade": "레전드리",
-          "potential": [
-            "DEX +12%",
-            "DEX +9%",
-            "DEX +9%"
-          ],
-          "additionalGrade": "유니크",
-          "additional": [
-            "공격력 +14",
-            "최대 HP +5%",
-            "DEX +4%"
-          ]
-        },
-        {
-          "slot": "반지4",
-          "part": "반지",
-          "name": "여명의 가디언 엔젤 링",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODIEPH",
-          "shapeName": null,
-          "shapeIcon": null,
-          "total": {
-            "str": 125,
-            "dex": 125,
-            "int": 124,
-            "luk": 123,
-            "max_hp": 485,
-            "max_mp": 260,
-            "attack_power": 92,
-            "magic_power": 77,
-            "armor": 24
-          },
-          "flame": {},
-          "starforce": 21,
-          "scrollUpgrade": 3,
-          "potentialGrade": "레전드리",
-          "potential": [
-            "DEX +12%",
-            "DEX +9%",
-            "DEX +9%"
-          ],
-          "additionalGrade": "레전드리",
-          "additional": [
-            "STR +20",
-            "올스탯 +5%",
-            "올스탯 +5%"
-          ]
-        },
-        {
-          "slot": "펜던트",
-          "part": "펜던트",
-          "name": "데이브레이크 펜던트",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJDKC",
-          "shapeName": null,
-          "shapeIcon": null,
-          "total": {
-            "str": 137,
-            "dex": 179,
-            "int": 116,
-            "luk": 115,
-            "max_hp": 255,
-            "max_mp": 80,
-            "attack_power": 110,
-            "magic_power": 87,
-            "armor": 323,
-            "all_stat": 6,
-            "max_hp_rate": 5
-          },
-          "flame": {
-            "str": 24,
-            "dex": 64,
-            "attack_power": 4,
-            "all_stat": 6
-          },
-          "starforce": 22,
-          "scrollUpgrade": 6,
-          "potentialGrade": "레전드리",
-          "potential": [
-            "DEX +12%",
-            "DEX +9%",
-            "DEX +9%"
-          ],
-          "additionalGrade": "에픽",
-          "additional": [
-            "DEX +4%",
-            "공격력 +10",
-            "STR +10"
-          ]
-        },
-        {
           "slot": "훈장",
           "part": "훈장",
-          "name": "칠요의 몬스터파커",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOGJOMD",
+          "name": "메이플 어택",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOGICME",
           "shapeName": null,
           "shapeIcon": null,
           "total": {
-            "str": 7,
-            "dex": 7,
-            "int": 7,
-            "luk": 7,
+            "str": 23,
+            "dex": 23,
+            "int": 23,
+            "luk": 23,
+            "max_hp": 1000,
+            "max_mp": 1000,
             "attack_power": 7,
-            "magic_power": 7,
-            "ignore_monster_armor": 10
+            "magic_power": 7
           },
           "flame": {},
           "starforce": 0,
@@ -23753,75 +23726,41 @@
         {
           "slot": "펜던트2",
           "part": "펜던트",
-          "name": "고통의 근원",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJDNB",
+          "name": "그리드 펜던트",
+          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJFPI",
           "shapeName": null,
           "shapeIcon": null,
           "total": {
-            "str": 173,
-            "dex": 247,
-            "int": 142,
-            "luk": 172,
-            "max_hp": 255,
-            "attack_power": 123,
-            "magic_power": 97,
-            "armor": 608,
-            "all_stat": 4,
-            "max_hp_rate": 5
+            "str": 8,
+            "dex": 13,
+            "int": 9,
+            "luk": 11,
+            "max_hp": 40,
+            "attack_power": 4,
+            "armor": 101,
+            "all_stat": 3
           },
           "flame": {
-            "str": 30,
-            "dex": 105,
-            "luk": 30,
-            "all_stat": 4
+            "dex": 8,
+            "all_stat": 3
           },
-          "starforce": 22,
-          "scrollUpgrade": 6,
+          "starforce": 0,
+          "scrollUpgrade": 3,
           "potentialGrade": "레전드리",
           "potential": [
-            "DEX +12%",
-            "DEX +12%",
-            "DEX +9%"
+            "아이템 드롭률 +20%",
+            "메소 획득량 +20%",
+            "LUK +9%"
           ],
-          "additionalGrade": "레전드리",
+          "additionalGrade": "레어",
           "additional": [
-            "DEX +8%",
-            "최대 HP +8%",
-            "DEX +6%"
+            "DEX +1%",
+            "공격력 +2",
+            "LUK +5"
           ]
-        },
-        {
-          "slot": "예비 특수 반지",
-          "part": "반지",
-          "name": "컨티뉴어스 링",
-          "icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODIEMI",
-          "shapeName": null,
-          "shapeIcon": null,
-          "total": {
-            "str": 4,
-            "dex": 4,
-            "int": 4,
-            "luk": 4,
-            "attack_power": 4,
-            "magic_power": 4
-          },
-          "flame": {},
-          "starforce": 0,
-          "scrollUpgrade": 0,
-          "potentialGrade": null,
-          "potential": [],
-          "additionalGrade": null,
-          "additional": []
         }
       ],
       "sets": [
-        {
-          "name": "여명의 보스 세트",
-          "count": 2,
-          "effects": [
-            "2세트: 올스탯 +10, 최대 HP +250, 공격력 +10, 마력 +10, 보스 몬스터 데미지 +10%"
-          ]
-        },
         {
           "name": "아케인셰이드 세트(해적)",
           "count": 4,
@@ -23865,14 +23804,9 @@
         },
         {
           "name": "칠흑의 보스 세트",
-          "count": 7,
+          "count": 2,
           "effects": [
-            "2세트: 올스탯 +10, 최대 HP +250, 공격력 +10, 마력 +10, 보스 몬스터 데미지 +10%",
-            "3세트: 올스탯 +10, 최대 HP +250, 공격력 +10, 마력 +10, 방어력 +250, 몬스터 방어율 무시 +10%",
-            "4세트: 올스탯 +15, 최대 HP +375, 공격력 +15, 마력 +15, 크리티컬 데미지 +5%",
-            "5세트: 올스탯 +15, 최대 HP +375, 공격력 +15, 마력 +15, 보스 몬스터 데미지 +10%",
-            "6세트: 올스탯 +15, 최대 HP +375, 공격력 +15, 마력 +15, 몬스터 방어율 무시 +10%",
-            "7세트: 올스탯 +15, 최대 HP +375, 공격력 +15, 마력 +15, 크리티컬 데미지 +5%"
+            "2세트: 올스탯 +10, 최대 HP +250, 공격력 +10, 마력 +10, 보스 몬스터 데미지 +10%"
           ]
         }
       ]
@@ -26300,26 +26234,26 @@
       "guild": "MoonStone",
       "createdAt": "2025-06-19",
       "image": "https://open.api.nexon.com/static/maplestory/character/look/HENGANLCCFHIOELNEFIBDMPLMIGJDHDNMGPEHJPPBDLCDJJANGABBLBAJDDOPJMECKHIOCFFJFNEFDJLILBEAMLAIIIKFOCMGENIEJNAPENJNMBPBNAAPFNFNMGMPKFCKPEDOKAHHOPIOFCFOCHDGMIOINPOGLHFPMKPAILPHDPMFGDLDCANPPOIMFPKOOJKKPNLGPHIOAAFIEGCGJDFBPPJBPDBFIHAPBOOHBAOOLEJIDMGHPAEDHOEOBDFDFGJFLBFHDLAMAHCPOOCLMIHFOBHJOAOBBGNMNDHNAPAFGOANPIPNDKJDMEECPBBHEDNGOGPKIOAAHGNLEIPGJHACHEBOGONDBHAJMELJDOHDJELFFAPDAOGMNGGBPGGACPLKEEOGDJEKOMEJMBBBCMEDGBNCDOOIBCENJEJFEEHNDKGJNOBPFNPDLGFCKGIIILICPOADEFNBJDPFLGMFODNENJJMILACHEJNIDNDKJJEONAAFIDABLNAGDINCOKPODEDMMNJKCEOMMILAEIBGOCDFNMCJDMJCEGKIOAGLPNBKIGFGJOBPMGOPOHADDHGIPEEAEBALAKGNOOAIJLDCCMJEDHOFOJPEMEEPJBNPJEHICKIODLLBJOKEPNAMJOKHEPINJLFOAHIBCAMPKMEMJFFDEGKJIKNFNFLPNPPFCLNNICPLFBPAGGLCPDDNFOFMJPAKJFNEFHHBKLPIBECDGGHANMLAODLCBLEOIGGPNLEPNNDDGOHPKLANKIHCGEDNAHOAFMFLGKEGBMMGJBNJEAGCBDEBDOJCHEIKCIDKMODDBDANCKMHBAAMOFOBCMELIMDCAGNEIEEIKAAJAJBIPOPODALGHOJAIJCANEEDLHOAODNHNKPGCIIDOFDJMFKBDBNKFIIBALDMCMKINCLGHJGFKOBFADEOFINEPNIPGGCKJJHJLOCHGNEIPNABKKDFPONCJCBCDLBFJDDHJALLKFLGLHOIBAFNFDAEFHDPLCMKOGFBDCHMGFNFACODOFGAIK?wmotion=W00",
-      "combatPower": 90686446,
+      "combatPower": 91106545,
       "stat": {
-        "최소 스탯공격력": "34309961",
-        "최대 스탯공격력": "38122177",
+        "최소 스탯공격력": "35200387",
+        "최대 스탯공격력": "39111539",
         "데미지": "76.00",
-        "보스 몬스터 데미지": "488.00",
+        "보스 몬스터 데미지": "468.00",
         "최종 데미지": "81.50",
-        "방어율 무시": "94.76",
-        "크리티컬 확률": "99",
-        "크리티컬 데미지": "65.85",
+        "방어율 무시": "95.75",
+        "크리티컬 확률": "109",
+        "크리티컬 데미지": "62.85",
         "상태이상 내성": "66",
         "스탠스": "100",
-        "방어력": "96813",
+        "방어력": "96861",
         "이동속도": "170",
         "점프력": "123",
         "스타포스": "275",
         "아케인포스": "1350",
         "어센틱포스": "340",
         "STR": "45038",
-        "DEX": "6283",
+        "DEX": "6386",
         "INT": "3779",
         "LUK": "4133",
         "HP": "92101",
@@ -26332,7 +26266,7 @@
         "AP 배분 MP": "0",
         "아이템 드롭률": "32",
         "메소 획득량": "17",
-        "버프 지속시간": "123",
+        "버프 지속시간": "103",
         "공격 속도": "7",
         "일반 몬스터 데미지": "12.00",
         "재사용 대기시간 감소 (초)": "0",
@@ -26342,9 +26276,9 @@
         "상태이상 추가 데미지": "9.00",
         "무기 숙련도": "90",
         "추가 경험치 획득": "34.00",
-        "공격력": "4924",
-        "마력": "1242",
-        "전투력": "90686446",
+        "공격력": "5049",
+        "마력": "1315",
+        "전투력": "91106545",
         "소환수 지속시간 증가": "22"
       },
       "equipment": [

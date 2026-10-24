@@ -1,17 +1,17 @@
 {
   "starforce": {
     "firstDate": "2024-10-16",
-    "lastDate": "2026-10-23",
+    "lastDate": "2026-10-24",
     "error": null
   },
   "cube": {
     "firstDate": "2024-10-17",
-    "lastDate": "2026-10-23",
+    "lastDate": "2026-10-24",
     "error": null
   },
   "potential": {
     "firstDate": "2024-10-17",
-    "lastDate": "2026-10-23",
+    "lastDate": "2026-10-24",
     "error": null
   }
 }
