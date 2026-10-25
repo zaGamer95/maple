@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-24T22:53:24.797Z",
+  "fetchedAt": "2026-10-25T23:01:01.836Z",
   "character": "자그3",
   "character/stat": {
     "date": null,
@@ -7,11 +7,11 @@
     "final_stat": [
       {
         "stat_name": "최소 스탯공격력",
-        "stat_value": "75515888"
+        "stat_value": "77059032"
       },
       {
         "stat_name": "최대 스탯공격력",
-        "stat_value": "79490407"
+        "stat_value": "80269823"
       },
       {
         "stat_name": "데미지",
@@ -23,7 +23,7 @@
       },
       {
         "stat_name": "최종 데미지",
-        "stat_value": "76.96"
+        "stat_value": "78.44"
       },
       {
         "stat_name": "방어율 무시",
@@ -31,11 +31,11 @@
       },
       {
         "stat_name": "크리티컬 확률",
-        "stat_value": "99"
+        "stat_value": "109"
       },
       {
         "stat_name": "크리티컬 데미지",
-        "stat_value": "94.60"
+        "stat_value": "123.60"
       },
       {
         "stat_name": "상태이상 내성",
@@ -47,7 +47,7 @@
       },
       {
         "stat_name": "방어력",
-        "stat_value": "50855"
+        "stat_value": "50882"
       },
       {
         "stat_name": "이동속도",
@@ -75,7 +75,7 @@
       },
       {
         "stat_name": "DEX",
-        "stat_value": "54650"
+        "stat_value": "54714"
       },
       {
         "stat_name": "INT",
@@ -119,7 +119,7 @@
       },
       {
         "stat_name": "아이템 드롭률",
-        "stat_value": "243"
+        "stat_value": "267"
       },
       {
         "stat_name": "메소 획득량",
@@ -159,15 +159,15 @@
       },
       {
         "stat_name": "무기 숙련도",
-        "stat_value": "95"
+        "stat_value": "96"
       },
       {
         "stat_name": "추가 경험치 획득",
-        "stat_value": "298.00"
+        "stat_value": "333.00"
       },
       {
         "stat_name": "공격력",
-        "stat_value": "6120"
+        "stat_value": "6122"
       },
       {
         "stat_name": "마력",
@@ -175,7 +175,7 @@
       },
       {
         "stat_name": "전투력",
-        "stat_value": "121007015"
+        "stat_value": "122798827"
       },
       {
         "stat_name": "소환수 지속시간 증가",
@@ -15037,7 +15037,7 @@
         "symbol_drop_rate": "0%",
         "symbol_meso_rate": "0%",
         "symbol_exp_rate": "0%",
-        "symbol_growth_count": 1098,
+        "symbol_growth_count": 1100,
         "symbol_require_growth_count": 1100
       },
       {
@@ -15055,7 +15055,7 @@
         "symbol_drop_rate": "11%",
         "symbol_meso_rate": "11%",
         "symbol_exp_rate": "34%",
-        "symbol_growth_count": 725,
+        "symbol_growth_count": 749,
         "symbol_require_growth_count": 581
       }
     ]
@@ -15401,7 +15401,7 @@
         "ability_value": "일반 몬스터 공격 시 데미지 7% 증가"
       }
     ],
-    "remain_fame": 321855,
+    "remain_fame": 341085,
     "preset_no": 3,
     "ability_preset_1": {
       "ability_preset_grade": "레전드리",
