@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-25T23:01:01.836Z",
+  "fetchedAt": "2026-10-27T00:14:11.388Z",
   "character": "자그3",
   "character/stat": {
     "date": null,
@@ -7,11 +7,11 @@
     "final_stat": [
       {
         "stat_name": "최소 스탯공격력",
-        "stat_value": "77059032"
+        "stat_value": "73751195"
       },
       {
         "stat_name": "최대 스탯공격력",
-        "stat_value": "80269823"
+        "stat_value": "77632835"
       },
       {
         "stat_name": "데미지",
@@ -19,23 +19,23 @@
       },
       {
         "stat_name": "보스 몬스터 데미지",
-        "stat_value": "301.00"
+        "stat_value": "341.00"
       },
       {
         "stat_name": "최종 데미지",
-        "stat_value": "78.44"
+        "stat_value": "76.96"
       },
       {
         "stat_name": "방어율 무시",
-        "stat_value": "87.78"
+        "stat_value": "92.67"
       },
       {
         "stat_name": "크리티컬 확률",
-        "stat_value": "109"
+        "stat_value": "94"
       },
       {
         "stat_name": "크리티컬 데미지",
-        "stat_value": "123.60"
+        "stat_value": "97.60"
       },
       {
         "stat_name": "상태이상 내성",
@@ -47,7 +47,7 @@
       },
       {
         "stat_name": "방어력",
-        "stat_value": "50882"
+        "stat_value": "50777"
       },
       {
         "stat_name": "이동속도",
@@ -67,23 +67,23 @@
       },
       {
         "stat_name": "어센틱포스",
-        "stat_value": "720"
+        "stat_value": "730"
       },
       {
         "stat_name": "STR",
-        "stat_value": "7445"
+        "stat_value": "7420"
       },
       {
         "stat_name": "DEX",
-        "stat_value": "54714"
+        "stat_value": "54590"
       },
       {
         "stat_name": "INT",
-        "stat_value": "4627"
+        "stat_value": "4601"
       },
       {
         "stat_name": "LUK",
-        "stat_value": "3757"
+        "stat_value": "3734"
       },
       {
         "stat_name": "HP",
@@ -119,7 +119,7 @@
       },
       {
         "stat_name": "아이템 드롭률",
-        "stat_value": "267"
+        "stat_value": "243"
       },
       {
         "stat_name": "메소 획득량",
@@ -127,7 +127,7 @@
       },
       {
         "stat_name": "버프 지속시간",
-        "stat_value": "71"
+        "stat_value": "86"
       },
       {
         "stat_name": "공격 속도",
@@ -135,7 +135,7 @@
       },
       {
         "stat_name": "일반 몬스터 데미지",
-        "stat_value": "98.00"
+        "stat_value": "58.00"
       },
       {
         "stat_name": "재사용 대기시간 감소 (초)",
@@ -159,23 +159,23 @@
       },
       {
         "stat_name": "무기 숙련도",
-        "stat_value": "96"
+        "stat_value": "95"
       },
       {
         "stat_name": "추가 경험치 획득",
-        "stat_value": "333.00"
+        "stat_value": "298.00"
       },
       {
         "stat_name": "공격력",
-        "stat_value": "6122"
+        "stat_value": "5984"
       },
       {
         "stat_name": "마력",
-        "stat_value": "1484"
+        "stat_value": "1417"
       },
       {
         "stat_name": "전투력",
-        "stat_value": "122798827"
+        "stat_value": "133519704"
       },
       {
         "stat_name": "소환수 지속시간 증가",
@@ -15027,18 +15027,18 @@
         "symbol_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEIDIHOE",
         "symbol_description": "카르시온 지역의 어센틱심볼이다. 어센틱심볼은 어센틱포스를 가지며 소지한 자와 공명하여 해당 캐릭터에 맞는 주스탯을 증가시켜준다.\n\r해당 장비를 장착한 후, 인벤토리 내 같은 종류의 어센틱심볼을 더블 클릭하면 성장시킬 수 있다. 어센틱심볼의 성장치가 일정 수준 이상이 되면 해당 장비를 강화하여 레벨을 올릴 수 있다.\n\r어센틱심볼로 상승하는 스탯은 스탯 % 증가 효과를 받지 않는다.",
         "symbol_other_effect_description": "성장 레벨 11 이상: 림보 공격 시 데미지 +20%, 추가 경험치 획득 +10%",
-        "symbol_force": "100",
-        "symbol_level": 10,
+        "symbol_force": "110",
+        "symbol_level": 11,
         "symbol_str": "0",
-        "symbol_dex": "2300",
+        "symbol_dex": "2500",
         "symbol_int": "0",
         "symbol_luk": "0",
         "symbol_hp": "0",
         "symbol_drop_rate": "0%",
         "symbol_meso_rate": "0%",
         "symbol_exp_rate": "0%",
-        "symbol_growth_count": 1100,
-        "symbol_require_growth_count": 1100
+        "symbol_growth_count": 0,
+        "symbol_require_growth_count": 1309
       },
       {
         "symbol_name": "그랜드 어센틱심볼 : 탈라하트",
@@ -15055,7 +15055,7 @@
         "symbol_drop_rate": "11%",
         "symbol_meso_rate": "11%",
         "symbol_exp_rate": "34%",
-        "symbol_growth_count": 749,
+        "symbol_growth_count": 773,
         "symbol_require_growth_count": 581
       }
     ]
@@ -15401,7 +15401,7 @@
         "ability_value": "일반 몬스터 공격 시 데미지 7% 증가"
       }
     ],
-    "remain_fame": 341085,
+    "remain_fame": 341245,
     "preset_no": 3,
     "ability_preset_1": {
       "ability_preset_grade": "레전드리",
@@ -16013,7 +16013,7 @@
     "union_occupied_stat": [],
     "union_block": [],
     "union_inner_stat": [],
-    "use_preset_no": 3,
+    "use_preset_no": 5,
     "union_raider_preset_1": null,
     "union_raider_preset_2": null,
     "union_raider_preset_3": null,
@@ -16022,12 +16022,11 @@
     "union_state_stat": [
       "STR 75 증가",
       "크리티컬 데미지 20.00% 증가",
-      "DEX 75 증가",
+      "DEX 25 증가",
       "공격력 15 증가",
-      "획득 경험치 10.0% 증가",
-      "크리티컬 확률 5% 증가",
-      "일반 몬스터 공격 시 데미지 40% 증가",
-      "버프 지속시간 16% 증가"
+      "보스 몬스터 공격 시 데미지 40% 증가",
+      "버프 지속시간 31% 증가",
+      "방어율 무시 40% 증가"
     ],
     "union_state_stat_preset": [
       {
@@ -16047,12 +16046,11 @@
         "preset_no": 2,
         "union_state_stat": [
           "INT 75 증가",
-          "크리티컬 확률 9% 증가",
-          "LUK 75 증가",
           "마력 15 증가",
           "크리티컬 데미지 20.00% 증가",
+          "크리티컬 확률 8% 증가",
           "보스 몬스터 공격 시 데미지 40% 증가",
-          "버프 지속시간 12% 증가",
+          "버프 지속시간 28% 증가",
           "방어율 무시 40% 증가"
         ]
       },
