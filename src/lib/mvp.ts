@@ -3,6 +3,10 @@
  *
  * 회수율 = 경매장 판매가(억) × (1 − 경매장 수수료) × 메소 현금 시세(원/억) × (1 − 현금화 수수료) ÷ 캐시 가격
  * 기준선(메포) = 메소 현금 시세 ÷ 메소마켓 가격(포인트/억) × (1 − 현금화 수수료). 바로 끝나지만 손실이 크다.
+ *
+ * 2026-09-17 마일리지 개편: 넥슨캐시로 산 금액의 5% 가 메이플크레딧으로 쌓이고 (메이플포인트 구매 포함),
+ * 크레딧샵의 프라임 큐브(1만)·프라임 에디셔널 큐브(2만)를 사서 경매장에 팔 수 있다. 그 몫을 모든 루트의 회수율에 더한다.
+ * 기존 마일리지는 신규 적립 없이 2026-11-19 점검 전까지만 복합결제로 쓸 수 있다.
  */
 
 export interface MvpItem {
@@ -32,6 +36,12 @@ export interface MvpSettings {
   cashoutFee: number;
   /** 판매 1건당 수고비 (원). 클수록 건수가 적은 조합을 고른다 */
   effortPerListing: number;
+  /** 넥슨캐시 구매액 중 메이플크레딧으로 쌓이는 비율 (0.05) */
+  creditRate: number;
+  /** 프라임 큐브(1만 크레딧) 경매장 판매가 (억). 비우면 크레딧은 계산에서 뺀다 */
+  primeCube: number | null;
+  /** 프라임 에디셔널 큐브(2만 크레딧) 경매장 판매가 (억) */
+  primeAddCube: number | null;
 }
 
 export const DEFAULT_SETTINGS: MvpSettings = {
@@ -41,6 +51,9 @@ export const DEFAULT_SETTINGS: MvpSettings = {
   auctionFee: 0.03,
   cashoutFee: 0,
   effortPerListing: 300,
+  creditRate: 0.05,
+  primeCube: null,
+  primeAddCube: null,
 };
 
 /** 캐시 가격은 maple-mvp.com 계산기와 커뮤니티 글 기준. 캐시샵에서 한 번 확인하고 쓴다 */
@@ -48,12 +61,12 @@ export const DEFAULT_ITEMS: MvpItem[] = [
   { id: 'karma', name: '플래티넘 카르마의 가위', cash: 5900, price: null, maxQty: null, hours: null },
   {
     id: 'karma-mileage',
-    name: '플래티넘 카르마의 가위 (마일리지 1770 사용)',
+    name: '플래티넘 카르마의 가위 (구 마일리지 1770 사용)',
     cash: 4130,
     price: null,
-    maxQty: null,
+    maxQty: 0,
     hours: null,
-    note: '마일리지 부분은 MVP 실적에 안 들어가서 캐시 4130만 센다. 최대 개수 = 보유 마일리지 ÷ 1770',
+    note: '구 마일리지는 신규 적립이 없고 11/19(목) 점검 전까지만 쓸 수 있다. 최대 개수 = 남은 마일리지 ÷ 1770. 마일리지 부분은 MVP 실적에 안 들어간다',
   },
   { id: 'prism', name: '컬러링 프리즘', cash: 5900, price: null, maxQty: null, hours: null },
   { id: 'prismpro', name: '컬러링 프리즘 프로 (컬프프)', cash: 25000, price: null, maxQty: null, hours: null },
@@ -81,13 +94,22 @@ export const DEFAULT_ITEMS: MvpItem[] = [
 /** 1억 메소가 최종적으로 돌아오는 현금 (원) */
 export const wonPerEokNet = (s: MvpSettings) => s.wonPerEok * (1 - s.cashoutFee);
 
-/** 메포로 바로 메소를 사는 기준선 회수율 */
-export const baselineRate = (s: MvpSettings) => wonPerEokNet(s) / s.mesoMarket;
+/** 크레딧 1개를 큐브로 바꿔 팔았을 때 돌아오는 현금 (원). 더 나은 큐브 기준 */
+export function creditWon(s: MvpSettings): number {
+  const per = (price: number | null, credits: number) => (price ? (price * (1 - s.auctionFee) * wonPerEokNet(s)) / credits : 0);
+  return Math.max(per(s.primeCube, 10_000), per(s.primeAddCube, 20_000));
+}
+
+/** 캐시 1원을 쓸 때 크레딧으로 더 돌아오는 비율 */
+export const creditBonus = (s: MvpSettings) => s.creditRate * creditWon(s);
+
+/** 메포로 바로 메소를 사는 기준선 회수율 (메포 구매에도 크레딧이 쌓인다) */
+export const baselineRate = (s: MvpSettings) => wonPerEokNet(s) / s.mesoMarket + creditBonus(s);
 
 /** 아이템 회수율 (판매가가 없으면 null) */
 export function itemRate(it: MvpItem, s: MvpSettings): number | null {
   if (!it.price || !it.cash) return null;
-  return (it.price * (1 - s.auctionFee) * wonPerEokNet(s)) / it.cash;
+  return (it.price * (1 - s.auctionFee) * wonPerEokNet(s)) / it.cash + creditBonus(s);
 }
 
 /** 메소 1억을 얻는 데 드는 현금 (원/억) */

@@ -5,6 +5,7 @@ import {
   DEFAULT_SETTINGS,
   baselineRate,
   bestPlan,
+  creditBonus,
   itemRate,
   wonPerEokCost,
   type MvpItem,
@@ -20,11 +21,19 @@ function load(): Saved {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
       const saved = JSON.parse(raw) as Saved;
-      // 새로 추가된 기본 아이템은 목록 끝에 붙인다
+      // 기본 아이템의 이름·설명은 최신으로 바꾸고 (입력한 시세·개수는 유지), 새로 추가된 기본 아이템은 끝에 붙인다
+      const defaults = new Map(DEFAULT_ITEMS.map((it) => [it.id, it]));
       const known = new Set(saved.items.map((it) => it.id));
+      const items = saved.items.map((it) => {
+        const d = defaults.get(it.id);
+        if (!d) return it;
+        // 구 마일리지 플가는 개편 후 한도 없이 두면 안 되므로 비어 있으면 0 으로
+        const maxQty = it.id === 'karma-mileage' && it.maxQty == null ? 0 : it.maxQty;
+        return { ...it, name: d.name, note: d.note, maxQty };
+      });
       return {
         settings: { ...DEFAULT_SETTINGS, ...saved.settings },
-        items: [...saved.items, ...DEFAULT_ITEMS.filter((it) => !known.has(it.id))],
+        items: [...items, ...DEFAULT_ITEMS.filter((it) => !known.has(it.id))],
       };
     }
   } catch {
@@ -78,11 +87,19 @@ export default function MvpCalc() {
           </label>
           <label>
             메소 현금 시세 (원 / 1억)
-            <input inputMode="numeric" value={settings.wonPerEok} onChange={(e) => setS({ wonPerEok: num(e.target.value) ?? 0 })} />
+            <input
+              inputMode="numeric"
+              value={settings.wonPerEok}
+              onChange={(e) => setS({ wonPerEok: num(e.target.value) ?? 0 })}
+            />
           </label>
           <label>
             메소마켓 (포인트 / 1억)
-            <input inputMode="numeric" value={settings.mesoMarket} onChange={(e) => setS({ mesoMarket: num(e.target.value) ?? 0 })} />
+            <input
+              inputMode="numeric"
+              value={settings.mesoMarket}
+              onChange={(e) => setS({ mesoMarket: num(e.target.value) ?? 0 })}
+            />
           </label>
           <label>
             경매장 수수료 (%)
@@ -101,6 +118,24 @@ export default function MvpCalc() {
             />
           </label>
           <label>
+            프라임 큐브 경매장가 (억, 1만 크레딧)
+            <input
+              inputMode="decimal"
+              placeholder="비우면 크레딧 제외"
+              value={settings.primeCube ?? ''}
+              onChange={(e) => setS({ primeCube: num(e.target.value) })}
+            />
+          </label>
+          <label>
+            프라임 에디셔널 큐브 경매장가 (억, 2만 크레딧)
+            <input
+              inputMode="decimal"
+              placeholder="비우면 크레딧 제외"
+              value={settings.primeAddCube ?? ''}
+              onChange={(e) => setS({ primeAddCube: num(e.target.value) })}
+            />
+          </label>
+          <label>
             판매 1건당 수고비 (원)
             <input
               inputMode="numeric"
@@ -110,7 +145,9 @@ export default function MvpCalc() {
           </label>
         </div>
         <p className="muted small">
-          기준선(메포로 바로 메소화) 회수율 <b>{pct(base)}</b> · 수고비가 클수록 판매 건수가 적은 조합(묶음, 전승 스크롤)을 골라요.
+          기준선(메포로 바로 메소화) 회수율 <b>{pct(base)}</b>
+          {creditBonus(settings) > 0 && ` (메이플크레딧 +${pct(creditBonus(settings))} 포함)`} · 수고비가 클수록 판매 건수가 적은
+          조합(묶음, 전승 스크롤)을 골라요. 쓴 캐시의 5%가 메이플크레딧으로 쌓이고, 큐브로 바꿔 팔면 그만큼 회수율이 올라요.
         </p>
       </div>
 
@@ -240,13 +277,14 @@ export default function MvpCalc() {
         </table>
       </div>
       <p className="muted small">
-        "원 / 1억"은 메소 1억을 얻는 데 드는 현금이에요. 메소마켓(지금 {settings.mesoMarket.toLocaleString()}원)보다 낮으면 그 아이템으로
-        메소를 사는 게 싸요. 판매 시간은 아직 계산에 쓰지 않는 메모예요.
+        "원 / 1억"은 메소 1억을 얻는 데 드는 현금이에요. 메소마켓(지금 {settings.mesoMarket.toLocaleString()}원)보다 낮으면 그
+        아이템으로 메소를 사는 게 싸요. 판매 시간은 아직 계산에 쓰지 않는 메모예요.
       </p>
       <button
         className="ghost small"
         onClick={() => {
-          if (confirm('입력한 시세와 설정을 기본값으로 되돌릴까요?')) setState({ settings: DEFAULT_SETTINGS, items: DEFAULT_ITEMS });
+          if (confirm('입력한 시세와 설정을 기본값으로 되돌릴까요?'))
+            setState({ settings: DEFAULT_SETTINGS, items: DEFAULT_ITEMS });
         }}
       >
         기본값으로 되돌리기
