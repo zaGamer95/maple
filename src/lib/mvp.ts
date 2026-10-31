@@ -74,7 +74,6 @@ export const DEFAULT_ITEMS: MvpItem[] = [
   { id: 'luna', name: '루나 크리스탈', cash: 3900, price: null, maxQty: null, hours: null },
   { id: 'additional', name: '추가옵션 전승 스크롤', cash: 49000, price: null, maxQty: null, hours: null },
   { id: 'potential', name: '잠재능력 전승 스크롤', cash: 99000, price: null, maxQty: null, hours: null },
-  { id: 'customdye', name: '커스텀 믹스염색 쿠폰', cash: 48000, price: null, maxQty: null, hours: null },
   { id: 'balancedye', name: '밸런스 믹스 염색 쿠폰', cash: 24000, price: null, maxQty: null, hours: null },
   { id: 'customlens', name: '커스텀 믹스 컬러렌즈', cash: 24000, price: null, maxQty: null, hours: null },
 ];
