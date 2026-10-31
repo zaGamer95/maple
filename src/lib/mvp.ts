@@ -21,6 +21,8 @@ export interface MvpItem {
   /** 한 건이 팔리는 데 걸리는 대략적인 시간 (시간 단위, 참고용) */
   hours: number | null;
   note?: string;
+  /** 크레딧샵에서도 같은 가격(크레딧)으로 판다 (크레딧으로 사서 경매장에 팔 수 있음) */
+  creditShop?: boolean;
 }
 
 export interface MvpSettings {
@@ -42,6 +44,8 @@ export interface MvpSettings {
   primeCube: number | null;
   /** 프라임 에디셔널 큐브(2만 크레딧) 경매장 판매가 (억) */
   primeAddCube: number | null;
+  /** 크레딧샵 아이템을 크레딧으로 사서 팔 때 크레딧 1개당 현금 (화면에서 아이템 시세로 채운다) */
+  creditItemWon?: number;
 }
 
 export const DEFAULT_SETTINGS: MvpSettings = {
@@ -58,7 +62,7 @@ export const DEFAULT_SETTINGS: MvpSettings = {
 
 /** 캐시 가격은 maple-mvp.com 계산기와 커뮤니티 글 기준. 캐시샵에서 한 번 확인하고 쓴다 */
 export const DEFAULT_ITEMS: MvpItem[] = [
-  { id: 'karma', name: '플래티넘 카르마의 가위', cash: 5900, price: null, maxQty: null, hours: null },
+  { id: 'karma', name: '플래티넘 카르마의 가위', cash: 5900, price: null, maxQty: null, hours: null, creditShop: true },
   {
     id: 'karma-mileage',
     name: '플래티넘 카르마의 가위 (구 마일리지 1770 사용)',
@@ -69,26 +73,26 @@ export const DEFAULT_ITEMS: MvpItem[] = [
     note: '구 마일리지는 신규 적립이 없고 11/19(목) 점검 전까지만 쓸 수 있다. 최대 개수 = 남은 마일리지 ÷ 1770. 마일리지 부분은 MVP 실적에 안 들어간다',
   },
   { id: 'prism', name: '컬러링 프리즘', cash: 5900, price: null, maxQty: null, hours: null },
-  { id: 'prismpro', name: '컬러링 프리즘 프로 (컬프프)', cash: 25000, price: null, maxQty: null, hours: null },
-  { id: 'wonder1', name: '위습의 원더베리 1개', cash: 5400, price: null, maxQty: null, hours: null },
-  { id: 'wonder11', name: '위습의 원더베리 11개 묶음', cash: 54000, price: null, maxQty: null, hours: null },
-  { id: 'royal10', name: '로얄스타일 쿠폰 10개', cash: 22000, price: null, maxQty: null, hours: null },
+  { id: 'prismpro', name: '컬러링 프리즘 프로 (컬프프)', cash: 25000, price: null, maxQty: null, hours: null, creditShop: true },
+  { id: 'wonder1', name: '위습의 원더베리 1개', cash: 5400, price: null, maxQty: null, hours: null, creditShop: true },
+  { id: 'wonder11', name: '위습의 원더베리 11개 묶음', cash: 54000, price: null, maxQty: null, hours: null, creditShop: true },
+  { id: 'royal10', name: '로얄스타일 쿠폰 10개', cash: 22000, price: null, maxQty: null, hours: null, creditShop: true },
   {
     id: 'royal45',
     name: '메이플 로얄 스타일 45개',
     cash: 99000,
     price: null,
     maxQty: null,
-    hours: null,
+    hours: null, creditShop: true,
     note: '캐시 가격은 1개 2,200 × 45 로 가정. 캐시샵 가격과 다르면 고쳐 쓴다',
   },
-  { id: 'hair', name: '프리미엄 헤어 쿠폰', cash: 5500, price: null, maxQty: null, hours: null },
-  { id: 'face', name: '프리미엄 성형 쿠폰', cash: 3500, price: null, maxQty: null, hours: null },
-  { id: 'luna', name: '루나 크리스탈', cash: 3900, price: null, maxQty: null, hours: null },
+  { id: 'hair', name: '프리미엄 헤어 쿠폰', cash: 5500, price: null, maxQty: null, hours: null, creditShop: true },
+  { id: 'face', name: '프리미엄 성형 쿠폰', cash: 3500, price: null, maxQty: null, hours: null, creditShop: true },
+  { id: 'luna', name: '루나 크리스탈', cash: 3900, price: null, maxQty: null, hours: null, creditShop: true },
   { id: 'additional', name: '추가옵션 전승 스크롤', cash: 49000, price: null, maxQty: null, hours: null },
   { id: 'potential', name: '잠재능력 전승 스크롤', cash: 99000, price: null, maxQty: null, hours: null },
-  { id: 'balancedye', name: '밸런스 믹스 염색 쿠폰', cash: 24000, price: null, maxQty: null, hours: null },
-  { id: 'customlens', name: '커스텀 믹스 컬러렌즈', cash: 24000, price: null, maxQty: null, hours: null },
+  { id: 'balancedye', name: '밸런스 믹스 염색 쿠폰', cash: 24000, price: null, maxQty: null, hours: null, creditShop: true },
+  { id: 'customlens', name: '커스텀 믹스 컬러렌즈', cash: 24000, price: null, maxQty: null, hours: null, creditShop: true },
 ];
 
 /** 1억 메소가 최종적으로 돌아오는 현금 (원) */
@@ -97,7 +101,15 @@ export const wonPerEokNet = (s: MvpSettings) => s.wonPerEok * (1 - s.cashoutFee)
 /** 크레딧 1개를 큐브로 바꿔 팔았을 때 돌아오는 현금 (원). 더 나은 큐브 기준 */
 export function creditWon(s: MvpSettings): number {
   const per = (price: number | null, credits: number) => (price ? (price * (1 - s.auctionFee) * wonPerEokNet(s)) / credits : 0);
-  return Math.max(per(s.primeCube, 10_000), per(s.primeAddCube, 20_000));
+  return Math.max(per(s.primeCube, 10_000), per(s.primeAddCube, 20_000), s.creditItemWon ?? 0);
+}
+
+/** 크레딧샵 아이템을 크레딧으로 사서 팔 때 크레딧 1개당 현금 (가장 좋은 아이템 기준). 크레딧 가격 = 캐시 가격 */
+export function creditItemWon(items: MvpItem[], s: MvpSettings): number {
+  const rates = items
+    .filter((it) => it.creditShop && it.price && it.cash)
+    .map((it) => (it.price! * (1 - s.auctionFee) * wonPerEokNet(s)) / it.cash);
+  return Math.max(0, ...rates);
 }
 
 /** 캐시 1원을 쓸 때 크레딧으로 더 돌아오는 비율 */

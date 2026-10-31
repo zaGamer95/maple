@@ -6,6 +6,7 @@ import {
   baselineRate,
   bestPlan,
   creditBonus,
+  creditItemWon,
   itemRate,
   wonPerEokCost,
   type MvpItem,
@@ -29,7 +30,7 @@ function load(): Saved {
         if (!d) return it;
         // 구 마일리지 플가는 개편 후 한도 없이 두면 안 되므로 비어 있으면 0 으로
         const maxQty = it.id === 'karma-mileage' && it.maxQty == null ? 0 : it.maxQty;
-        return { ...it, name: d.name, note: d.note, maxQty };
+        return { ...it, name: d.name, note: d.note, creditShop: d.creditShop, maxQty };
       });
       return {
         settings: { ...DEFAULT_SETTINGS, ...saved.settings },
@@ -47,14 +48,16 @@ const pct = (r: number) => `${(r * 100).toFixed(1)}%`;
 const num = (v: string) => (v.trim() === '' ? null : Number(v.replace(/,/g, '')));
 
 export default function MvpCalc() {
-  const [{ settings, items }, setState] = useState<Saved>(load);
+  const [{ settings: input, items }, setState] = useState<Saved>(load);
+  // 크레딧은 큐브 또는 크레딧샵 아이템 중 가장 비싸게 팔리는 것으로 바꾼다고 본다
+  const settings = useMemo(() => ({ ...input, creditItemWon: creditItemWon(items, input) }), [input, items]);
   useEffect(() => {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({ settings, items }));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ settings: input, items }));
     } catch {
       // 저장 못 해도 이번 화면에서는 동작
     }
-  }, [settings, items]);
+  }, [input, items]);
 
   const setS = (patch: Partial<MvpSettings>) => setState((x) => ({ ...x, settings: { ...x.settings, ...patch } }));
   const setItem = (id: string, patch: Partial<MvpItem>) =>
@@ -147,7 +150,7 @@ export default function MvpCalc() {
         <p className="muted small">
           기준선(메포로 바로 메소화) 회수율 <b>{pct(base)}</b>
           {creditBonus(settings) > 0 && ` (메이플크레딧 +${pct(creditBonus(settings))} 포함)`} · 수고비가 클수록 판매 건수가 적은
-          조합(묶음, 전승 스크롤)을 골라요. 쓴 캐시의 5%가 메이플크레딧으로 쌓이고, 큐브로 바꿔 팔면 그만큼 회수율이 올라요.
+          조합(묶음, 전승 스크롤)을 골라요. 쓴 캐시의 5%가 메이플크레딧으로 쌓이고, 크레딧샵의 큐브나 아이템(성형 쿠폰 등)을 사서 팔면 그만큼 회수율이 올라요. 시세를 넣은 것 중 크레딧당 가장 비싸게 팔리는 것을 기준으로 해요.
         </p>
       </div>
 
