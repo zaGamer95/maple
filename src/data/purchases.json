@@ -229,5 +229,42 @@
     "priceText": "675억+10%관세",
     "comment": "그냥 미친 120만원 짜리 목걸이..",
     "characterId": "자그3"
+  },
+  {
+    "id": "p22",
+    "date": "2026-11-01",
+    "dateText": "26.11.01",
+    "itemName": "프라임 에디셔널 큐브",
+    "detail": "메이플크레딧 20,000으로 구매 → 경매장 판매",
+    "price": 1250000000,
+    "priceText": "12.5억",
+    "comment": "MVP작 크레딧. 등록 직후 누가 13.5억까지 쓸어가서 약 1억 덜 받음",
+    "characterId": "자그3",
+    "type": "sell",
+    "feeRate": 0.03
+  },
+  {
+    "id": "p23",
+    "date": "2026-11-01",
+    "dateText": "26.11.01",
+    "itemName": "잠재능력 전승 스크롤 ×2",
+    "detail": "캐시샵 99,000캐시 × 2 = 198,000캐시 (MVP 실적)",
+    "price": null,
+    "priceText": "198,000캐시",
+    "comment": "MVP작. 사용 기한 12/1 04:19, 시세 보고 판매 예정 (목표 52~53억, 하한 45.5억)",
+    "characterId": "자그3",
+    "type": "buy"
+  },
+  {
+    "id": "p24",
+    "date": "2026-11-01",
+    "dateText": "26.11.01",
+    "itemName": "몬스터파크 핸즈 이용권 ×4",
+    "detail": "캐시샵 9,900캐시 × 4 = 39,600캐시 (MVP 실적), 4시간 충전",
+    "price": null,
+    "priceText": "39,600캐시",
+    "comment": "핸즈 효율 실측용. 결과(경험치·메소·조각·기운) 기록 예정",
+    "characterId": "자그3",
+    "type": "buy"
   }
 ]
