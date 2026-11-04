@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-03T02:45:40.708Z",
+  "fetchedAt": "2026-11-04T01:02:17.000Z",
   "character": "자그3",
   "character/stat": {
     "date": null,
@@ -7,11 +7,11 @@
     "final_stat": [
       {
         "stat_name": "최소 스탯공격력",
-        "stat_value": "79379610"
+        "stat_value": "80898593"
       },
       {
         "stat_name": "최대 스탯공격력",
-        "stat_value": "83557482"
+        "stat_value": "85156412"
       },
       {
         "stat_name": "데미지",
@@ -167,11 +167,11 @@
       },
       {
         "stat_name": "공격력",
-        "stat_value": "6271"
+        "stat_value": "6391"
       },
       {
         "stat_name": "마력",
-        "stat_value": "1545"
+        "stat_value": "1606"
       },
       {
         "stat_name": "전투력",
