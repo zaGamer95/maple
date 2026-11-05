@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-04T01:02:17.000Z",
+  "fetchedAt": "2026-11-05T01:17:29.529Z",
   "character": "자그3",
   "character/stat": {
     "date": null,
@@ -7,11 +7,11 @@
     "final_stat": [
       {
         "stat_name": "최소 스탯공격력",
-        "stat_value": "80898593"
+        "stat_value": "82622910"
       },
       {
         "stat_name": "최대 스탯공격력",
-        "stat_value": "85156412"
+        "stat_value": "86065530"
       },
       {
         "stat_name": "데미지",
@@ -23,19 +23,19 @@
       },
       {
         "stat_name": "최종 데미지",
-        "stat_value": "76.96"
+        "stat_value": "78.44"
       },
       {
         "stat_name": "방어율 무시",
-        "stat_value": "87.78"
+        "stat_value": "89.14"
       },
       {
         "stat_name": "크리티컬 확률",
-        "stat_value": "99"
+        "stat_value": "109"
       },
       {
         "stat_name": "크리티컬 데미지",
-        "stat_value": "97.60"
+        "stat_value": "123.60"
       },
       {
         "stat_name": "상태이상 내성",
@@ -47,7 +47,7 @@
       },
       {
         "stat_name": "방어력",
-        "stat_value": "52456"
+        "stat_value": "52720"
       },
       {
         "stat_name": "이동속도",
@@ -71,27 +71,27 @@
       },
       {
         "stat_name": "STR",
-        "stat_value": "8061"
+        "stat_value": "8087"
       },
       {
         "stat_name": "DEX",
-        "stat_value": "55957"
+        "stat_value": "56067"
       },
       {
         "stat_name": "INT",
-        "stat_value": "4812"
+        "stat_value": "4839"
       },
       {
         "stat_name": "LUK",
-        "stat_value": "3925"
+        "stat_value": "3949"
       },
       {
         "stat_name": "HP",
-        "stat_value": "71015"
+        "stat_value": "71720"
       },
       {
         "stat_name": "MP",
-        "stat_value": "38252"
+        "stat_value": "38822"
       },
       {
         "stat_name": "AP 배분 STR",
@@ -119,7 +119,7 @@
       },
       {
         "stat_name": "아이템 드롭률",
-        "stat_value": "223"
+        "stat_value": "247"
       },
       {
         "stat_name": "메소 획득량",
@@ -159,15 +159,15 @@
       },
       {
         "stat_name": "무기 숙련도",
-        "stat_value": "95"
+        "stat_value": "96"
       },
       {
         "stat_name": "추가 경험치 획득",
-        "stat_value": "278.00"
+        "stat_value": "373.00"
       },
       {
         "stat_name": "공격력",
-        "stat_value": "6391"
+        "stat_value": "6393"
       },
       {
         "stat_name": "마력",
@@ -2228,6 +2228,142 @@
         },
         "special_ring_level": 0,
         "date_expire": null,
+        "freestyle_flag": "0"
+      },
+      {
+        "item_equipment_part": "펜던트",
+        "item_equipment_slot": "펜던트",
+        "item_name": "정령의 펜던트",
+        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJFPE",
+        "item_description": "착용 시 30%의 추가 경험치 효과를 얻습니다.",
+        "item_shape_name": "정령의 펜던트",
+        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJFPE",
+        "item_gender": null,
+        "item_total_option": {
+          "str": "0",
+          "dex": "0",
+          "int": "0",
+          "luk": "0",
+          "max_hp": "0",
+          "max_mp": "0",
+          "attack_power": "0",
+          "magic_power": "0",
+          "armor": "0",
+          "speed": "0",
+          "jump": "0",
+          "boss_damage": "0",
+          "ignore_monster_armor": "0",
+          "all_stat": "0",
+          "damage": "0",
+          "equipment_level_decrease": 0,
+          "max_hp_rate": "0",
+          "max_mp_rate": "0"
+        },
+        "item_base_option": {
+          "str": "0",
+          "dex": "0",
+          "int": "0",
+          "luk": "0",
+          "max_hp": "0",
+          "max_mp": "0",
+          "attack_power": "0",
+          "magic_power": "0",
+          "armor": "0",
+          "speed": "0",
+          "jump": "0",
+          "boss_damage": "0",
+          "ignore_monster_armor": "0",
+          "all_stat": "0",
+          "max_hp_rate": "0",
+          "max_mp_rate": "0",
+          "base_equipment_level": 0
+        },
+        "potential_option_grade": null,
+        "additional_potential_option_grade": null,
+        "potential_option_flag": "false",
+        "potential_option_1": null,
+        "potential_option_2": null,
+        "potential_option_3": null,
+        "additional_potential_option_flag": "false",
+        "additional_potential_option_1": null,
+        "additional_potential_option_2": null,
+        "additional_potential_option_3": null,
+        "equipment_level_increase": 0,
+        "item_exceptional_option": {
+          "str": "0",
+          "dex": "0",
+          "int": "0",
+          "luk": "0",
+          "max_hp": "0",
+          "max_mp": "0",
+          "attack_power": "0",
+          "magic_power": "0",
+          "exceptional_upgrade": 0
+        },
+        "item_add_option": {
+          "str": "0",
+          "dex": "0",
+          "int": "0",
+          "luk": "0",
+          "max_hp": "0",
+          "max_mp": "0",
+          "attack_power": "0",
+          "magic_power": "0",
+          "armor": "0",
+          "speed": "0",
+          "jump": "0",
+          "boss_damage": "0",
+          "damage": "0",
+          "all_stat": "0",
+          "equipment_level_decrease": 0
+        },
+        "growth_exp": 0,
+        "growth_level": 0,
+        "scroll_upgrade": "0",
+        "cuttable_count": "255",
+        "golden_hammer_flag": "미적용",
+        "scroll_resilience_count": "0",
+        "scroll_upgradeable_count": "0",
+        "soul_name": null,
+        "soul_option": null,
+        "soul_pad": "0",
+        "soul_mad": "0",
+        "soul_active": null,
+        "soul_potential_grade": null,
+        "soul_potential_amplified_grade": null,
+        "soul_potential_option_1": null,
+        "soul_potential_option_2": null,
+        "soul_potential_option_3": null,
+        "item_etc_option": {
+          "str": "0",
+          "dex": "0",
+          "int": "0",
+          "luk": "0",
+          "max_hp": "0",
+          "max_mp": "0",
+          "attack_power": "0",
+          "magic_power": "0",
+          "armor": "0",
+          "speed": "0",
+          "jump": "0"
+        },
+        "starforce": "0",
+        "starforce_scroll_flag": "미사용",
+        "item_starforce_option": {
+          "str": "0",
+          "dex": "0",
+          "int": "0",
+          "luk": "0",
+          "max_hp": "0",
+          "max_mp": "0",
+          "attack_power": "0",
+          "magic_power": "0",
+          "armor": "0",
+          "speed": "0",
+          "jump": "0"
+        },
+        "special_ring_level": 0,
+        "date_expire": "2026-11-11T19:04+09:00",
         "freestyle_flag": "0"
       },
       {
@@ -7672,6 +7808,142 @@
         },
         "special_ring_level": 0,
         "date_expire": null,
+        "freestyle_flag": "0"
+      },
+      {
+        "item_equipment_part": "펜던트",
+        "item_equipment_slot": "펜던트",
+        "item_name": "정령의 펜던트",
+        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJFPE",
+        "item_description": "착용 시 30%의 추가 경험치 효과를 얻습니다.",
+        "item_shape_name": "정령의 펜던트",
+        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJFPE",
+        "item_gender": null,
+        "item_total_option": {
+          "str": "0",
+          "dex": "0",
+          "int": "0",
+          "luk": "0",
+          "max_hp": "0",
+          "max_mp": "0",
+          "attack_power": "0",
+          "magic_power": "0",
+          "armor": "0",
+          "speed": "0",
+          "jump": "0",
+          "boss_damage": "0",
+          "ignore_monster_armor": "0",
+          "all_stat": "0",
+          "damage": "0",
+          "equipment_level_decrease": 0,
+          "max_hp_rate": "0",
+          "max_mp_rate": "0"
+        },
+        "item_base_option": {
+          "str": "0",
+          "dex": "0",
+          "int": "0",
+          "luk": "0",
+          "max_hp": "0",
+          "max_mp": "0",
+          "attack_power": "0",
+          "magic_power": "0",
+          "armor": "0",
+          "speed": "0",
+          "jump": "0",
+          "boss_damage": "0",
+          "ignore_monster_armor": "0",
+          "all_stat": "0",
+          "max_hp_rate": "0",
+          "max_mp_rate": "0",
+          "base_equipment_level": 0
+        },
+        "potential_option_grade": null,
+        "additional_potential_option_grade": null,
+        "potential_option_flag": "false",
+        "potential_option_1": null,
+        "potential_option_2": null,
+        "potential_option_3": null,
+        "additional_potential_option_flag": "false",
+        "additional_potential_option_1": null,
+        "additional_potential_option_2": null,
+        "additional_potential_option_3": null,
+        "equipment_level_increase": 0,
+        "item_exceptional_option": {
+          "str": "0",
+          "dex": "0",
+          "int": "0",
+          "luk": "0",
+          "max_hp": "0",
+          "max_mp": "0",
+          "attack_power": "0",
+          "magic_power": "0",
+          "exceptional_upgrade": 0
+        },
+        "item_add_option": {
+          "str": "0",
+          "dex": "0",
+          "int": "0",
+          "luk": "0",
+          "max_hp": "0",
+          "max_mp": "0",
+          "attack_power": "0",
+          "magic_power": "0",
+          "armor": "0",
+          "speed": "0",
+          "jump": "0",
+          "boss_damage": "0",
+          "damage": "0",
+          "all_stat": "0",
+          "equipment_level_decrease": 0
+        },
+        "growth_exp": 0,
+        "growth_level": 0,
+        "scroll_upgrade": "0",
+        "cuttable_count": "255",
+        "golden_hammer_flag": "미적용",
+        "scroll_resilience_count": "0",
+        "scroll_upgradeable_count": "0",
+        "soul_name": null,
+        "soul_option": null,
+        "soul_pad": "0",
+        "soul_mad": "0",
+        "soul_active": null,
+        "soul_potential_grade": null,
+        "soul_potential_amplified_grade": null,
+        "soul_potential_option_1": null,
+        "soul_potential_option_2": null,
+        "soul_potential_option_3": null,
+        "item_etc_option": {
+          "str": "0",
+          "dex": "0",
+          "int": "0",
+          "luk": "0",
+          "max_hp": "0",
+          "max_mp": "0",
+          "attack_power": "0",
+          "magic_power": "0",
+          "armor": "0",
+          "speed": "0",
+          "jump": "0"
+        },
+        "starforce": "0",
+        "starforce_scroll_flag": "미사용",
+        "item_starforce_option": {
+          "str": "0",
+          "dex": "0",
+          "int": "0",
+          "luk": "0",
+          "max_hp": "0",
+          "max_mp": "0",
+          "attack_power": "0",
+          "magic_power": "0",
+          "armor": "0",
+          "speed": "0",
+          "jump": "0"
+        },
+        "special_ring_level": 0,
+        "date_expire": "2026-11-11T19:04+09:00",
         "freestyle_flag": "0"
       },
       {
@@ -14783,7 +15055,7 @@
         "symbol_drop_rate": "11%",
         "symbol_meso_rate": "11%",
         "symbol_exp_rate": "34%",
-        "symbol_growth_count": 965,
+        "symbol_growth_count": 1013,
         "symbol_require_growth_count": 581
       }
     ]
@@ -15129,7 +15401,7 @@
         "ability_value": "일반 몬스터 공격 시 데미지 7% 증가"
       }
     ],
-    "remain_fame": 588318,
+    "remain_fame": 596714,
     "preset_no": 3,
     "ability_preset_1": {
       "ability_preset_grade": "레전드리",

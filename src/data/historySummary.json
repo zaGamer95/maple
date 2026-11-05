@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-11-04T01:03:27.775Z",
+  "updatedAt": "2026-11-05T01:18:38.472Z",
   "characters": [
     "자그3"
   ],
   "state": {
     "starforce": {
       "firstDate": "2024-10-16",
-      "lastDate": "2026-11-03",
+      "lastDate": "2026-11-04",
       "error": null
     },
     "cube": {
       "firstDate": "2024-10-17",
-      "lastDate": "2026-11-03",
+      "lastDate": "2026-11-04",
       "error": null
     },
     "potential": {
       "firstDate": "2024-10-17",
-      "lastDate": "2026-11-03",
+      "lastDate": "2026-11-04",
       "error": null
     }
   },
