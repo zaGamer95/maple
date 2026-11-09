@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-11-08T00:12:47.201Z",
+  "updatedAt": "2026-11-09T00:33:48.020Z",
   "characters": [
     "자그3"
   ],
   "state": {
     "starforce": {
       "firstDate": "2024-10-16",
-      "lastDate": "2026-11-07",
+      "lastDate": "2026-11-08",
       "error": null
     },
     "cube": {
       "firstDate": "2024-10-17",
-      "lastDate": "2026-11-07",
+      "lastDate": "2026-11-08",
       "error": null
     },
     "potential": {
       "firstDate": "2024-10-17",
-      "lastDate": "2026-11-07",
+      "lastDate": "2026-11-08",
       "error": null
     }
   },
@@ -223,13 +223,14 @@
         "mesoUnknown": 0
       },
       "cube": {
-        "uses": 141,
+        "uses": 208,
         "gradeUps": 0,
         "byKind": {
           "대적자의 화이트 에디셔널 큐브": 76,
-          "카르마 화이트 에디셔널 큐브": 65
+          "카르마 화이트 에디셔널 큐브": 112,
+          "카르마 블랙 큐브": 20
         },
-        "last": "2026-11-01T16:50:07.159+09:00"
+        "last": "2026-11-08T20:53:26.564+09:00"
       },
       "potential": {
         "uses": 0,
@@ -343,12 +344,12 @@
         "mesoUnknown": 0
       },
       "cube": {
-        "uses": 74,
+        "uses": 87,
         "gradeUps": 0,
         "byKind": {
-          "펄스 인핸서": 74
+          "펄스 인핸서": 87
         },
-        "last": "2026-11-01T04:20:38.327+09:00"
+        "last": "2026-11-08T20:41:02.816+09:00"
       },
       "potential": {
         "uses": 3,
