@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-10T01:52:07.171Z",
+  "fetchedAt": "2026-11-10T01:55:30.022Z",
   "union": {
     "level": 10027,
     "grade": "그랜드 마스터 유니온 5",
@@ -416,6 +416,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "인빈서블 빌리프(히어로)",
+        "level": 4,
+        "effect": "현재 HP가 최대 HP의 15% 이하가 되었을 때 자동 발동되어 3초 동안 1초 마다 최대 HP의 29% 회복\n재발동 대기시간 250초",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHODJC"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -770,6 +776,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "인빈서블 빌리프(팔라딘)",
+        "level": 4,
+        "effect": "현재 HP가 최대 HP의 15% 이하가 되었을 때 자동 발동되어 3초 동안 1초 마다 최대 HP의 29% 회복\n재발동 대기시간 250초",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHODJD"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -1218,6 +1230,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "임피리컬 널리지(아크메이지 불, 독)",
+        "level": 6,
+        "effect": "공격한 적에 대한 약점을 70% 확률로 파악, 파악한 약점은 10초 동안 지속되며 최대 3회까지 중첩\n중첩 당 데미지 3%, 방어율 무시 3% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHODJF"
+      },
       "sets": [
         {
           "name": "8th 메이지 세트",
@@ -1950,6 +1968,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "임피리컬 널리지(아크메이지 썬, 콜)",
+        "level": 6,
+        "effect": "공격한 적에 대한 약점을 70% 확률로 파악, 파악한 약점은 10초 동안 지속되며 최대 3회까지 중첩\n중첩 당 데미지 3%, 방어율 무시 3% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHODJG"
+      },
       "sets": [
         {
           "name": "레헬른 세트",
@@ -2899,6 +2923,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "임피리컬 널리지(비숍)",
+        "level": 6,
+        "effect": "공격한 적에 대한 약점을 70% 확률로 파악, 파악한 약점은 10초 동안 지속되며 최대 3회까지 중첩\n중첩 당 데미지 3%, 방어율 무시 3% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHODJH"
+      },
       "sets": [
         {
           "name": "여명의 보스 세트",
@@ -3727,6 +3757,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "어드벤쳐러 큐리어스(보우마스터)",
+        "level": 6,
+        "effect": "몬스터 컬렉션 등록 확률 35%, 크리티컬 확률 10% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHODJI"
+      },
       "sets": [
         {
           "name": "레헬른 세트",
@@ -4138,6 +4174,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "어드벤쳐러 큐리어스(신궁)",
+        "level": 6,
+        "effect": "몬스터 컬렉션 등록 확률 35%, 크리티컬 확률 10% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHODJJ"
+      },
       "sets": []
     },
     "자그2": {
@@ -4941,6 +4983,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "어드벤쳐러 큐리어스(패스파인더)",
+        "level": 6,
+        "effect": "몬스터 컬렉션 등록 확률 35%, 크리티컬 확률 10% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHODKA"
+      },
       "sets": [
         {
           "name": "루타비스 세트(궁수)",
@@ -5564,6 +5612,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "시프 커닝(나이트로드)",
+        "level": 6,
+        "effect": "적에게 상태 이상을 적용시키면 10초 동안 데미지 18% 증가\n재발동 대기시간 20초 ",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHODKB"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -5962,6 +6016,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "시프 커닝(섀도어)",
+        "level": 2,
+        "effect": "적에게 상태 이상을 적용시키면 10초 동안 데미지 6% 증가\n재발동 대기시간 20초 ",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHODKC"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -6351,6 +6411,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "시프 커닝(듀얼블레이드)",
+        "level": 6,
+        "effect": "적에게 상태 이상을 적용시키면 10초 동안 데미지 18% 증가\n재발동 대기시간 20초 ",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHODKD"
+      },
       "sets": []
     },
     "물팖": {
@@ -7199,6 +7265,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "파이렛 블레스(바이퍼)",
+        "level": 6,
+        "effect": "힘 70, 민첩 70, 지력 70, 운 70, 최대 HP 1225, 최대 MP 1225 증가\n피격 데미지 15% 감소\n재사용 대기시간 5초",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHODKE"
+      },
       "sets": [
         {
           "name": "루타비스 세트(해적)",
@@ -7719,6 +7791,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "파이렛 블레스(캡틴)",
+        "level": 6,
+        "effect": "힘 70, 민첩 70, 지력 70, 운 70, 최대 HP 1225, 최대 MP 1225 증가\n피격 데미지 15% 감소\n재사용 대기시간 5초",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHODKF"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -8103,6 +8181,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "파이렛 블레스(캐논슈터)",
+        "level": 2,
+        "effect": "힘 30, 민첩 30, 지력 30, 운 30, 최대 HP 525, 최대 MP 525 증가\n피격 데미지 7% 감소\n재사용 대기시간 5초",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFPCLHOANA"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -8901,6 +8985,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "시그너스 블레스(전사)",
+        "level": 10,
+        "effect": "공격력과 마력 25, 상태 이상 내성 15, 모든 속성 내성 15% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFOCLHODJF"
+      },
       "sets": [
         {
           "name": "결속의 반지",
@@ -9657,6 +9747,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "빛의 수호",
+        "level": 2,
+        "effect": "20초 동안 보호막이 생성, 최대 6번의 피해를 방어, 데미지 20% 증가\n단, 최대 HP의 일정 비율로 피해를 입히는 공격에 한해 피해 20% 감소\n재사용 대기시간 120초",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFKCLHPDNE"
+      },
       "sets": [
         {
           "name": "8th 워리어 세트",
@@ -10320,6 +10416,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "시그너스 블레스(마법사)",
+        "level": 10,
+        "effect": "공격력과 마력 25, 상태 이상 내성 15, 모든 속성 내성 15% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFOCLHODJG"
+      },
       "sets": [
         {
           "name": "8th 메이지 세트",
@@ -11087,6 +11189,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "시그너스 블레스(궁수)",
+        "level": 10,
+        "effect": "공격력과 마력 25, 상태 이상 내성 15, 모든 속성 내성 15% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFOCLHODJH"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -11579,6 +11687,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "시그너스 블레스(도적)",
+        "level": 2,
+        "effect": "공격력과 마력 9, 상태 이상 내성 3, 모든 속성 내성 3% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFOCLHODJI"
+      },
       "sets": [
         {
           "name": "3rd 로그 세트",
@@ -12093,6 +12207,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "시그너스 블레스(해적)",
+        "level": 2,
+        "effect": "공격력과 마력 9, 상태 이상 내성 3, 모든 속성 내성 3% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFOCLHODJJ"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -12839,6 +12959,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "데몬스 퓨리",
+        "level": 2,
+        "effect": "보스 몬스터 공격 시 데미지 15% 증가, 10의 포스 추가 흡수",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFMCLGOANC"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -13597,6 +13723,12 @@
           ]
         }
       ],
+      "link": {
+        "name": "와일드 레이지",
+        "level": 2,
+        "effect": "데미지 10% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFMCLGODIB"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -14509,6 +14641,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "커버넌트",
+        "level": 2,
+        "effect": "소환수 소환 시 데미지 8% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KEGCLHOBMA"
+      },
       "sets": [
         {
           "name": "여명의 보스 세트",
@@ -15107,6 +15245,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "스피릿 오브 프리덤(전사)",
+        "level": 8,
+        "effect": "부활 시 8초 동안 무적 상태, 맵 이동 시 해제",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFMCLHOBLH"
+      },
       "sets": [
         {
           "name": "보스 장신구 세트",
@@ -15677,6 +15821,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "스피릿 오브 프리덤(마법사)",
+        "level": 8,
+        "effect": "부활 시 8초 동안 무적 상태, 맵 이동 시 해제",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFMCLHOBLE"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -16483,6 +16633,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "스피릿 오브 프리덤(궁수)",
+        "level": 8,
+        "effect": "부활 시 8초 동안 무적 상태, 맵 이동 시 해제",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFMCLHOBLF"
+      },
       "sets": [
         {
           "name": "여명의 보스 세트",
@@ -17016,6 +17172,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "스피릿 오브 프리덤(해적)",
+        "level": 8,
+        "effect": "부활 시 8초 동안 무적 상태, 맵 이동 시 해제",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFMCLHOBLG"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -17746,6 +17908,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "하이브리드 로직",
+        "level": 2,
+        "effect": "모든 능력치 10% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFMCLFODPD"
+      },
       "sets": [
         {
           "name": "아케인셰이드 세트(도적)",
@@ -18315,6 +18483,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "콤보킬 어드밴티지",
+        "level": 2,
+        "effect": "영구적으로 콤보킬 구슬 경험치 획득량 650% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFNCLHODFH"
+      },
       "sets": [
         {
           "name": "보스 장신구 세트",
@@ -18694,6 +18868,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "룬 퍼시스턴스",
+        "level": 2,
+        "effect": "해방된 룬의 힘 지속시간 50% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFNCLGODFE"
+      },
       "sets": [
         {
           "name": "6th 메이지 세트",
@@ -19070,6 +19250,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "퍼미에이트",
+        "level": 2,
+        "effect": "방어율 무시 15% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFNCLDODNI"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -19819,6 +20005,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "엘프의 축복",
+        "level": 2,
+        "effect": "사용 시 에우렐로 귀환\n재사용 대기시간 600초\n[패시브 효과 : 경험치 획득량 15% 증가]",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFNCLFPANA"
+      },
       "sets": [
         {
           "name": "루타비스 세트(궁수)",
@@ -20336,6 +20528,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "데들리 인스팅트",
+        "level": 2,
+        "effect": "크리티컬 확률 15% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFNCLEODME"
+      },
       "sets": [
         {
           "name": "블랙 세트",
@@ -21234,6 +21432,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "구사 일생",
+        "level": 2,
+        "effect": "사망에 이르는 공격을 당할 시, 10% 확률로 생존",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFNCLCODEG"
+      },
       "sets": [
         {
           "name": "루타비스 세트(해적)",
@@ -21668,6 +21872,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "아이언 윌",
+        "level": 2,
+        "effect": "HP 10% 증가, 모프 게이지 단계당 데미지 3% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFJCLHODOC"
+      },
       "sets": [
         {
           "name": "5th 워리어 세트",
@@ -22186,6 +22396,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "프라이어 프리퍼레이션",
+        "level": 2,
+        "effect": "적 8명 처치, 혹은 보스 몬스터에게 5번 공격 적중 시 사전 준비 1번 완료, 사전 준비를 5번 마치면 20초 동안 데미지 17% 증가\n재발동 대기시간 40초",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFJCLEODIB"
+      },
       "sets": [
         {
           "name": "5th 아처 세트",
@@ -22941,6 +23157,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "인텐시브 인썰트",
+        "level": 3,
+        "effect": "캐릭터보다 레벨이 낮은 몬스터 공격 시 데미지 9% 증가, 상태 이상에 걸린 몬스터 공격 시 데미지 9% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFJCLFODNI"
+      },
       "sets": [
         {
           "name": "보스 장신구 세트",
@@ -23820,6 +24042,12 @@
           ]
         }
       ],
+      "link": {
+        "name": "소울 컨트랙트",
+        "level": 3,
+        "effect": "MP 30 소비, 10초 동안 데미지 120% 증가\n링크 스킬로 사용 시 효과가 절반으로 감소\n재사용 대기시간 60초",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFJCLGPDNJ"
+      },
       "sets": [
         {
           "name": "아케인셰이드 세트(해적)",
@@ -24525,6 +24753,12 @@
           ]
         }
       ],
+      "link": {
+        "name": "노블레스",
+        "level": 2,
+        "effect": "보스 몬스터 공격 시 데미지 4% 증가\n같은 맵에 있는 자신을 포함한 파티원 1명 당 데미지 2% 증가, 최대 8%까지 증가\n파티를 하지 않았을 때는 자신만 파티한 것으로 취급",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KEKCLFODIB"
+      },
       "sets": [
         {
           "name": "결속의 반지",
@@ -25329,6 +25563,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "전투의 흐름",
+        "level": 2,
+        "effect": "25초 동안 데미지 10% 증가\n링크 스킬로 사용 시 지속시간 10초로 감소",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KEKCLHOBNH"
+      },
       "sets": [
         {
           "name": "7th 메이지 세트",
@@ -25873,6 +26113,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "이네이트 기프트",
+        "level": 2,
+        "effect": "데미지 5% 증가\n공격 시 100% 확률로 5초 동안 매초 최대 HP/MP의 2% 회복\n재발동 대기시간 30초",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KEKCLEODIB"
+      },
       "sets": [
         {
           "name": "보스 장신구 세트",
@@ -26271,6 +26517,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "무아",
+        "level": 2,
+        "effect": "전투 상태에 돌입 시 데미지 11% 증가, 지속시간 10초",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KEKCLGODIB"
+      },
       "sets": [
         {
           "name": "3rd 파이렛 세트",
@@ -27203,6 +27455,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "강체",
+        "level": 2,
+        "effect": "최대 HP의 일정 비율로 피해를 입히는 공격 포함한 피해 4% 감소",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KEJCLFOBMB"
+      },
       "sets": [
         {
           "name": "여명의 보스 세트",
@@ -27998,6 +28256,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "자연의 벗",
+        "level": 2,
+        "effect": "데미지 5% 증가\n일반 몬스터 20명 처치 시 자연의 도움 발동, 자연의 도움 발동 시 30초 동안 일반 몬스터 공격 시 데미지 11% 증가\n재발동 대기시간 30초",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KEJCLGOBMB"
+      },
       "sets": [
         {
           "name": "앱솔랩스 세트(마법사)",
@@ -28603,6 +28867,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "자신감",
+        "level": 2,
+        "effect": "방어율 무시 10% 증가, HP가 100%인 몬스터 공격 시 데미지 14% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KEJCLHOBMB"
+      },
       "sets": [
         {
           "name": "앱솔랩스 세트(도적)",
@@ -29399,6 +29669,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "륀느의 축복",
+        "level": 5,
+        "effect": "받는 데미지 15% 감소, 방어율 무시 10% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KEPCLHODLB"
+      },
       "sets": [
         {
           "name": "여명의 보스 세트",
@@ -29969,6 +30245,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "판단",
+        "level": 3,
+        "effect": " 크리티컬 데미지 6% 증가",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KELCLHODFC"
+      },
       "sets": [
         {
           "name": "8th 메이지 세트",
@@ -30710,6 +30992,12 @@
           "additional": []
         }
       ],
+      "link": {
+        "name": "소울 컨트랙트",
+        "level": 2,
+        "effect": "MP 30 소비, 10초 동안 데미지 90% 증가\n링크 스킬로 사용 시 효과가 절반으로 감소\n재사용 대기시간 60초",
+        "icon": "https://open.api.nexon.com/static/maplestory/skill/icon/KFJCLGPDNJ"
+      },
       "sets": [
         {
           "name": "보스 장신구 세트",
