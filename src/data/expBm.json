@@ -199,7 +199,6 @@
     "id": "express-booster",
     "name": "익스프레스 부스터 (메소샵)",
     "category": "시즌 한정",
-    "season": "26년 1월 시트 기준, 현재 판매 여부 확인",
     "limit": "-",
     "cost": {
       "meso": 30000000
@@ -208,13 +207,13 @@
     "refundWon": 0,
     "measuredAt": null,
     "source": "인벤 경험치 BM 효율 시트 (레틴/매화잔해, 26.01.13 갱신) Lv.291 값",
-    "note": ""
+    "note": "",
+    "unavailable": "지금 판매 안 함"
   },
   {
     "id": "express-pass",
     "name": "익스프레스 패스",
     "category": "시즌 한정",
-    "season": "26년 1월 시트 기준, 현재 판매 여부 확인",
     "limit": "-",
     "cost": {
       "won": 30000
@@ -223,13 +222,13 @@
     "refundWon": 0,
     "measuredAt": null,
     "source": "인벤 경험치 BM 효율 시트 (레틴/매화잔해, 26.01.13 갱신) Lv.291 값",
-    "note": "부스터 120회분"
+    "note": "부스터 120회분",
+    "unavailable": "지금 판매 안 함"
   },
   {
     "id": "mechaberry",
     "name": "메카베리 농장 입장권 (메소샵)",
     "category": "시즌 한정",
-    "season": "26년 1월 시트 기준, 현재 판매 여부 확인",
     "limit": "-",
     "cost": {
       "meso": 500000000
@@ -238,7 +237,8 @@
     "refundWon": 0,
     "measuredAt": null,
     "source": "인벤 경험치 BM 효율 시트 (레틴/매화잔해, 26.01.13 갱신) Lv.291 값",
-    "note": ""
+    "note": "",
+    "unavailable": "지금 판매 안 함"
   },
   {
     "id": "ring-blood",
@@ -275,7 +275,6 @@
     "name": "아즈모스 영약 (30분, 추가 경험치 +20%)",
     "category": "도핑 (경매장)",
     "limit": "-",
-    "discontinued": true,
     "cost": {
       "meso": 2370000
     },
@@ -283,7 +282,8 @@
     "refundWon": 0,
     "measuredAt": null,
     "source": "인벤 경험치 BM 효율 시트 (26.01.13) 가격. 경험치: 분당 320마리 × 30분 × +20%",
-    "note": "단종되어 지금은 구할 수 없음"
+    "note": "단종되어 지금은 구할 수 없음",
+    "unavailable": "단종"
   },
   {
     "id": "small-potion",
@@ -355,5 +355,33 @@
     "measuredAt": "2026-11-10",
     "source": "가격: 상점 50만 메소. 경험치: 분당 320마리 × 30분 × +15% (추가 경험치와 더해진다고 가정)",
     "note": "월드 내 내 캐릭터 간 이동 가능"
+  },
+  {
+    "id": "momentum-premium",
+    "name": "모멘텀 패스 PLUS 프리미엄 패스",
+    "category": "시즌 패스",
+    "limit": "2026.10.22~11.18",
+    "unavailable": "이전 이벤트에서 구매해 이번 시즌 사용 불가",
+    "cost": {},
+    "exp": null,
+    "refundWon": 0,
+    "measuredAt": "2026-11-10",
+    "source": "인게임 모멘텀 패스 PLUS 창 (프리미엄 패스 구매 불가 표시)",
+    "note": "보상 경험치·가격 확인 필요"
+  },
+  {
+    "id": "momentum-prime",
+    "name": "모멘텀 패스 PLUS 프라임 패스",
+    "category": "시즌 패스",
+    "limit": "2026.10.22~11.18",
+    "unavailable": "이전 이벤트에서 구매해 이번 시즌 사용 불가",
+    "cost": {
+      "won": 49800
+    },
+    "exp": null,
+    "refundWon": 0,
+    "measuredAt": "2026-11-10",
+    "source": "가격: 인벤 경험치 BM 시트(26.01) 49,800원. 사용 불가: 인게임 창",
+    "note": "보상 경험치 확인 필요"
   }
 ]

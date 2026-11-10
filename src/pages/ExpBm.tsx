@@ -8,8 +8,8 @@ interface ExpBm {
   category: string;
   /** 시즌 한정 BM 의 판매 시기 메모 */
   season?: string;
-  /** 단종되어 지금은 구할 수 없음 (회색으로 맨 아래) */
-  discontinued?: boolean;
+  /** 지금 구할 수 없는 이유 (단종, 판매 안 함 등). 있으면 회색으로 맨 아래 */
+  unavailable?: string;
   /** 사용 횟수·시간 한도 */
   limit: string;
   /** 한 번 쓰는 데 드는 값: 현금(원), 메이플포인트, 메이플크레딧, 메소 중 하나 */
@@ -69,7 +69,7 @@ export default function ExpBmTable() {
         return { it, net, exps, perTril: exps.map((e) => (e ? net / (e / 1e12) : null)) };
       }).sort(
         (a, b) =>
-          Number(!!a.it.discontinued) - Number(!!b.it.discontinued) ||
+          Number(!!a.it.unavailable) - Number(!!b.it.unavailable) ||
           (a.perTril[SORT_SCENARIO] ?? Infinity) - (b.perTril[SORT_SCENARIO] ?? Infinity),
       ),
     [],
@@ -104,11 +104,11 @@ export default function ExpBmTable() {
             {rows.map(({ it, net, exps, perTril }) => (
               <tr
                 key={it.id}
-                className={it.discontinued ? 'row-disabled' : undefined}
-                aria-disabled={it.discontinued || undefined}
+                className={it.unavailable ? 'row-disabled' : undefined}
+                aria-disabled={it.unavailable ? true : undefined}
               >
                 <td className="note-cell bm-name" title={`기준: ${it.source}${it.measuredAt ? ` (${it.measuredAt})` : ''}`}>
-                  <b>{it.name}</b> {it.discontinued && <span className="badge">단종</span>}
+                  <b>{it.name}</b> {it.unavailable && <span className="badge">{it.unavailable}</span>}
                   {it.note && <div className="muted small">{it.note}</div>}
                 </td>
                 <td className="note-cell small">
