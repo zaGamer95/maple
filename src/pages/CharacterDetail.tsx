@@ -46,7 +46,7 @@ export default function CharacterDetail() {
       </Link>
       {character.isMain && api && <Hero name={character.name} id={id} api={api} />}
       <div className="detail-head">
-        {!character.isMain && api?.image && <CharacterSprite className="avatar" src={api.image} scale={2} />}
+        {!character.isMain && api?.image && <CharacterSprite className="avatar" src={api.image} local={id} scale={2} />}
         <div className="grow">
           <h1>
             {character.name} {character.isMain && <span className="badge">본캐</span>}
@@ -149,7 +149,7 @@ function Hero({ name, id, api }: { name: string; id: string; api: NonNullable<(t
       {art ? (
         <img className="hero-illust" src={art.file} alt={`${name} 일러스트`} />
       ) : (
-        api.image && <CharacterSprite className="hero-sprite" src={api.image} scale={3} />
+        api.image && <CharacterSprite className="hero-sprite" src={api.image} local={id} scale={3} />
       )}
       <div className="hero-info">
         <div className="hero-name">{name}</div>
@@ -199,14 +199,14 @@ function HeroSprites({ id, job, image }: { id: string; job: string; image: strin
       <div className="hero-looks">
         {['0', '1'].map((m) => (
           <figure key={m}>
-            <CharacterSprite className="hero-mini" src={modes[m].image} scale={2} />
+            <CharacterSprite className="hero-mini" src={modes[m].image} local={`${id}-look${m}`} scale={2} />
             <figcaption>{labels[Number(m)]}</figcaption>
           </figure>
         ))}
       </div>
     );
   }
-  return image ? <CharacterSprite className="hero-mini" src={image} scale={2} /> : null;
+  return image ? <CharacterSprite className="hero-mini" src={image} local={id} scale={2} /> : null;
 }
 
 /** "2019-07-18" → "2019-07-18 (2654일째)" — 생성일을 1일째로 센다 */
@@ -330,7 +330,7 @@ function Equip({ c, api }: { c: Character; api?: NexonCharacter }) {
       {api ? (
         <>
           <p className="muted">넥슨 API 기준 장착 장비 · {formatFetchedAt(nexon.fetchedAt)} 갱신</p>
-          <EquipWindow items={api.equipment} image={api.image} presets={presets} sets={api.sets} />
+          <EquipWindow items={api.equipment} image={api.image} imageId={c.id} presets={presets} sets={api.sets} />
           <details className="eq-list">
             <summary className="muted">목록으로 보기</summary>
             <ApiEquipment items={api.equipment} />

@@ -4,11 +4,30 @@ import { useEffect, useRef, useState } from 'react';
  * 넥슨 캐릭터 이미지(300×300 캔버스, 캐릭터는 원래 도트 크기)에서 빈 공간을 잘라내고
  * 정수 배율로 선명하게 키워 그린다. 이미지 서버가 CORS 를 허용해서 픽셀을 읽을 수 있다.
  * 실패하면 원본 이미지를 그대로 보여 준다.
+ * local 이 있으면 사이트에 같이 올린 사본(public/chars)을 먼저 쓴다. 넥슨 이미지 서버가 막히는 환경이 있어서.
  */
-export default function CharacterSprite({ src, scale = 2, className }: { src: string; scale?: number; className?: string }) {
+export default function CharacterSprite({
+  src,
+  local,
+  scale = 2,
+  className,
+}: {
+  src: string;
+  /** public/chars 안의 파일 이름 (확장자 빼고) */
+  local?: string;
+  scale?: number;
+  className?: string;
+}) {
   const ref = useRef<HTMLCanvasElement>(null);
   const [failed, setFailed] = useState(false);
   const [gone, setGone] = useState(false);
+  const [useRemote, setUseRemote] = useState(!local);
+  const localUrl = local ? `chars/${encodeURIComponent(local)}.png` : null;
+  const url = useRemote || !localUrl ? src : localUrl;
+
+  useEffect(() => {
+    setUseRemote(!local);
+  }, [local, src]);
 
   useEffect(() => {
     setFailed(false);
@@ -46,9 +65,9 @@ export default function CharacterSprite({ src, scale = 2, className }: { src: st
         setFailed(true);
       }
     };
-    img.onerror = () => setFailed(true);
-    img.src = src;
-  }, [src, scale]);
+    img.onerror = () => (url !== src ? setUseRemote(true) : setFailed(true));
+    img.src = url;
+  }, [url, src, scale]);
 
   // 원본은 300×300 캔버스라 그대로 두면 너무 크다. 원본마저 못 불러오면 깨진 그림 대신 아무것도 안 보인다
   if (gone) return null;
@@ -56,7 +75,7 @@ export default function CharacterSprite({ src, scale = 2, className }: { src: st
     return (
       <img
         className={`sprite ${className ?? ''}`}
-        src={src}
+        src={url}
         alt=""
         width={100 * scale}
         height={100 * scale}

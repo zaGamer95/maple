@@ -138,11 +138,14 @@ function Summary({ items, sets, preset }: { items: NexonEquipment[]; sets?: SetE
 export default function EquipWindow({
   items,
   image,
+  imageId,
   presets,
   sets,
 }: {
   items: NexonEquipment[];
   image: string | null;
+  /** public/chars 에 올린 사본 이름 */
+  imageId?: string;
   sets?: SetEffect[];
   /** 프리셋 1~3 과 지금 쓰는 번호 (불러오기 전이면 없음) */
   presets?: { preset: number | null; presets: NexonEquipment[][] };
@@ -174,7 +177,7 @@ export default function EquipWindow({
                       gridColumn: `${c + 1} / span 2`,
                     }}
                   >
-                    {image && <CharacterSprite src={image} scale={1} />}
+                    {image && <CharacterSprite src={image} local={imageId} scale={1} />}
                   </div>
                 );
               }

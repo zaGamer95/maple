@@ -631,13 +631,18 @@ canvas.avatar {
 }
 .hero-looks {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-end;
   gap: 16px;
 }
 .hero-looks figure {
   margin: 0;
+  flex: 1 1 0;
+  min-width: 0;
   text-align: center;
+}
+.hero-looks canvas {
+  max-width: 100%;
+  height: auto;
 }
 .hero-looks figcaption {
   color: #9c97c0;

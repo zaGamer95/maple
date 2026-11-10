@@ -11,6 +11,23 @@ const API = 'https://open.api.nexon.com/maplestory/v1';
 const DATA_DIR = new URL('../src/data/', import.meta.url);
 // 본캐 효율 계산용 원본 응답 (사이트 번들에는 넣지 않음)
 const DETAIL_DIR = new URL('../data/nexon/', import.meta.url);
+// 캐릭터 이미지를 사이트에 같이 저장한다 (넥슨 이미지 서버가 일부 지역 브라우저에서 안 열리는 경우가 있어서)
+const IMAGE_DIR = new URL('../public/chars/', import.meta.url);
+
+/** 이미지 URL 을 받아 public/chars/<name>.png 로 저장. 실패해도 넘어간다 */
+async function saveImage(url, name) {
+  if (!url) return false;
+  try {
+    const res = await fetch(url);
+    if (!res.ok || !(res.headers.get('content-type') ?? '').startsWith('image/')) return false;
+    await mkdir(IMAGE_DIR, { recursive: true });
+    await writeFile(new URL(`${name}.png`, IMAGE_DIR), Buffer.from(await res.arrayBuffer()));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 // 캐릭터별 장비 프리셋 (사이트가 장비 탭을 열 때 불러옴)
 const EQUIP_DIR = new URL('../public/equip/', import.meta.url);
 const DETAIL_ENDPOINTS = [
@@ -153,6 +170,7 @@ async function updateLooks(id, ocid, image, cash) {
   const mode = String(cash.character_look_mode);
   const today = kstToday();
   entry.modes[mode] = { image, date: today };
+  await saveImage(image, `${id}-look${mode}`);
   const other = mode === '0' ? '1' : '0';
   if (!entry.modes[other] && !entry.searched) {
     for (let d = addDays(today, -1); d >= '2023-12-21'; d = addDays(d, -30)) {
@@ -161,6 +179,7 @@ async function updateLooks(id, ocid, image, cash) {
         if (String(past.character_look_mode) !== other) continue;
         const basic = await call('character/basic', { ocid, date: d });
         entry.modes[other] = { image: basic.character_image, date: d };
+        await saveImage(basic.character_image, `${id}-look${other}`);
         break;
       } catch (e) {
         console.warn(`[nexon] 외형 기록 ${d}: ${e.message}`);
@@ -185,6 +204,7 @@ async function main() {
     try {
       const { _presets, ...character } = await fetchCharacter(c.name);
       result.characters[c.id] = character;
+      await saveImage(character.image, c.id);
       await mkdir(EQUIP_DIR, { recursive: true });
       await writeFile(new URL(`${c.id}.json`, EQUIP_DIR), JSON.stringify(_presets) + '\n');
       failedInRow = 0;
