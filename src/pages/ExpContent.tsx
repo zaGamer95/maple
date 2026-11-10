@@ -81,10 +81,12 @@ export default function ExpContent() {
                       </td>
                       <td className="num">
                         {formatKoreanNumber(row.exp[2])}
-                        <div className="muted small">{p2.toLocaleString()} 포인트</div>
+                        <div className="muted small">
+                          +{p2.toLocaleString()} (합계 {(p1 + p2).toLocaleString()}) 포인트
+                        </div>
                       </td>
                       <td className="num">{perTril(p1 - p0, row.exp[1] - row.exp[0])}</td>
-                      <td className="num">{perTril(p2 - p1, row.exp[2] - row.exp[1])}</td>
+                      <td className="num">{perTril(p2, row.exp[2] - row.exp[1])}</td>
                     </>
                   ) : (
                     <td className="muted" colSpan={5}>

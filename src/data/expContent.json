@@ -1,6 +1,6 @@
 {
- "source": "인벤 경험치 BM 효율 시트 (레틴/매화잔해, 26.01.13 갱신)",
- "sourceUrl": "https://www.inven.co.kr/board/maple/2304/46627",
+ "source": "인벤 경험치 BM 효율 시트 (26.05.10 수정본)",
+ "sourceUrl": "https://www.inven.co.kr/board/maple/2304/47295",
  "epicDungeons": [
   {
    "name": "하이마운틴",
@@ -961,5 +961,6 @@
     "exp": 458142355440
    }
   ]
- }
+ },
+ "stagePointsNote": "stagePoints 는 단계마다 추가로 내는 포인트 (1단계, 1단계→2단계)"
 }
