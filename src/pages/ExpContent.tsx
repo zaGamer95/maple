@@ -22,6 +22,13 @@ const WON_PER_POINT = 1450 / 2246;
 const perTril = (points: number, exp: number) =>
   exp > 0 ? `${Math.round((points * WON_PER_POINT) / (exp / 1e12)).toLocaleString()}원` : '-';
 
+/** 몬스터파크 요일 보너스 (클리어 경험치에 더한다) */
+const MONPARK_DAYS = [
+  { id: 'weekday', label: '평일', bonus: 0 },
+  { id: 'sunday', label: '일요일', bonus: 0.5 },
+  { id: 'sundaymaple', label: '썬데이 메이플 (+250%)', bonus: 3 },
+];
+
 /** 레벨표에서 해당 레벨 행 (표 범위를 넘으면 가장 가까운 행) */
 function atLevel<T extends { level: number }>(rows: T[], level: number): T | undefined {
   return rows.find((r) => r.level === level) ?? (level > rows[rows.length - 1]?.level ? rows[rows.length - 1] : undefined);
@@ -30,6 +37,7 @@ function atLevel<T extends { level: number }>(rows: T[], level: number): T | und
 export default function ExpContent() {
   const mainLevel = Object.values(nexon.characters).find((c) => c.name === '자그3')?.level ?? 291;
   const [level, setLevel] = useState(mainLevel);
+  const [tonic, setTonic] = useState(false);
   const region = [...data.monsterPark.regions].reverse().find((r) => level >= r.minLevel);
   const sauna = atLevel(data.vipSauna.levels, level);
 
@@ -100,9 +108,16 @@ export default function ExpContent() {
         </table>
       </div>
 
-      <h2>몬스터파크</h2>
+      <div className="detail-head">
+        <h2>몬스터파크</h2>
+        <label className={`toggle${tonic ? ' on' : ''}`}>
+          <input type="checkbox" checked={tonic} onChange={(e) => setTonic(e.target.checked)} />
+          보약 버프 +50%
+        </label>
+      </div>
       <p className="muted small">
-        {data.monsterPark.note}. 추가 입장 1회 {data.monsterPark.extraEntryPoints} 포인트.
+        {data.monsterPark.note}. 추가 입장 1회 {data.monsterPark.extraEntryPoints} 포인트. 클리어 경험치 = 기본 × (1 + 요일 보너스
+        + 보약 버프): 평일 0%, 일요일 +50%, 썬데이 메이플 "몬스터파크 클리어 경험치 250% 추가"가 있는 날 +300% (일요일 50% 포함).
       </p>
       <div className="table-wrap">
         <table>
@@ -110,8 +125,12 @@ export default function ExpContent() {
             <tr>
               <th>지역</th>
               <th className="num">입장 레벨</th>
-              <th className="num">클리어 경험치</th>
-              <th className="num">추가 입장 1조당</th>
+              {MONPARK_DAYS.map((d) => (
+                <th key={d.id} className="num">
+                  {d.label}
+                  <div className="small">경험치 · 1조당</div>
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
@@ -119,8 +138,15 @@ export default function ExpContent() {
               <tr key={r.region} className={r === region ? 'main-row' : undefined}>
                 <td>{r.region}</td>
                 <td className="num">{r.minLevel}</td>
-                <td className="num">{formatKoreanNumber(r.exp)}</td>
-                <td className="num">{perTril(data.monsterPark.extraEntryPoints, r.exp)}</td>
+                {MONPARK_DAYS.map((d) => {
+                  const exp = r.exp * (1 + d.bonus + (tonic ? 0.5 : 0));
+                  return (
+                    <td key={d.id} className={`num${tonic ? ' boosted' : ''}`}>
+                      {formatKoreanNumber(exp)}
+                      <div className="small">{perTril(data.monsterPark.extraEntryPoints, exp)}</div>
+                    </td>
+                  );
+                })}
               </tr>
             ))}
           </tbody>
