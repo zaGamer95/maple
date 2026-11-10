@@ -6,6 +6,7 @@ import milestoneData from '../data/milestones.json';
 import targetSetups from '../data/targetSetups.json';
 import CharacterSprite from '../components/CharacterSprite';
 import EquipWindow from '../components/EquipWindow';
+import HoverTip from '../components/HoverTip';
 import { linkSkillLabel, unionEffectLabel } from '../lib/unionEffect';
 import { EQUIP_SLOTS } from '../lib/equip';
 import { formatCheck, formatMeso, formatNumber, todayKst } from '../lib/format';
@@ -25,9 +26,7 @@ export default function CharacterDetail() {
   const setup = (targetSetups as TargetSetup[]).find((t) => t.characterId === id);
   const [tab, setTab] = useState<Tab>('overview');
   const [editing, setEditing] = useState(false);
-  const bought = purchases
-    .filter((p) => p.characterId === id)
-    .sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''));
+  const bought = purchases.filter((p) => p.characterId === id).sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''));
   const inUnion = unionMembers(characters).some((c) => c.id === id);
   const api = nexon.characters[id];
 
@@ -225,11 +224,7 @@ function Overview({ c }: { c: Character }) {
       '링크 스킬',
       (() => {
         const l = linkSkillLabel(nexon.characters[c.id]?.link, c.linkEffect);
-        return l ? (
-          <span title={l.effect ?? undefined} className={l.effect ? 'has-tip' : undefined}>
-            {l.title}
-          </span>
-        ) : null;
+        return l ? <HoverTip tip={l.effect}>{l.title}</HoverTip> : null;
       })(),
     ],
     ['육성 계획', c.plan],

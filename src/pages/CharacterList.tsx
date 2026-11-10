@@ -5,6 +5,7 @@ import { EQUIP_SLOTS } from '../lib/equip';
 import { formatPower, nexon } from '../lib/nexon';
 import { levelTotal, unionLevel, unionMembers, UNION_SLOTS } from '../lib/union';
 import { useStore } from '../store';
+import HoverTip from '../components/HoverTip';
 import { linkSkillLabel, unionEffectLabel } from '../lib/unionEffect';
 import type { Character } from '../types';
 
@@ -208,8 +209,8 @@ function Row({ c, showEquip, inUnion }: { c: Character; showEquip: boolean; inUn
 function LinkCell({ c }: { c: Character }) {
   const link = linkSkillLabel(nexon.characters[c.id]?.link, c.linkEffect);
   return (
-    <td title={link?.effect ?? undefined} className={link?.effect ? 'has-tip' : undefined}>
-      {link?.title}
+    <td>
+      <HoverTip tip={link?.effect}>{link?.title}</HoverTip>
     </td>
   );
 }

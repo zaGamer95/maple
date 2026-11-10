@@ -901,3 +901,17 @@ tr.champion-row td:first-child {
   text-decoration: underline dotted var(--muted);
   text-underline-offset: 3px;
 }
+.hover-tip {
+  position: fixed;
+  z-index: 100;
+  max-width: 320px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(20, 22, 30, 0.96);
+  color: #eceef3;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-line;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
