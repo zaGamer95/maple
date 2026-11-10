@@ -147,7 +147,12 @@ export interface NexonCharacter {
 
 export interface NexonData {
   fetchedAt: string | null;
-  union: { level: number; grade: string } | null;
+  union: {
+    level: number;
+    grade: string;
+    /** 유니온 챔피언 (슬롯 순) */
+    champions?: { name: string; grade: string | null; slot: number | null; job: string | null }[];
+  } | null;
   characters: Record<string, NexonCharacter>;
   errors: Record<string, string>;
 }

@@ -209,7 +209,18 @@ async function main() {
 
     try {
       const u = await call('user/union', { ocid: result.characters[mainChar.id].ocid });
-      result.union = { level: u.union_level, grade: u.union_grade };
+      result.union = { level: u.union_level, grade: u.union_grade, champions: [] };
+      // 유니온 챔피언 (캐릭터 목록 맨 위에 고정해서 보여 준다)
+      const ch = await call('user/union-champion', { ocid: result.characters[mainChar.id].ocid }).catch((e) => {
+        console.warn(`[nexon] 유니온 챔피언: ${e.message}`);
+        return null;
+      });
+      result.union.champions = (ch?.union_champion ?? []).map((c) => ({
+        name: c.champion_name,
+        grade: c.champion_grade ?? null,
+        slot: c.champion_slot ?? null,
+        job: c.champion_class ?? null,
+      }));
     } catch (e) {
       console.warn(`[nexon] 유니온: ${e.message}`);
     }

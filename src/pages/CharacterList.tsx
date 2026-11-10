@@ -18,6 +18,21 @@ interface Column {
 }
 
 const CHECK_ORDER = { yes: 2, partial: 1, no: 0 } as const;
+
+/** 유니온 챔피언: 넥슨 API 값이 없을 때 쓰는 기록 (2026-11-10 인게임 화면) */
+const CHAMPIONS_FALLBACK = [
+  { name: '자그3', grade: 'SSS', slot: 1 },
+  { name: '비숍자그', grade: 'A', slot: 2 },
+  { name: '자그0', grade: 'S', slot: 3 },
+  { name: '자그666', grade: 'SS', slot: 4 },
+];
+const champions = new Map(
+  (nexon.union?.champions?.length ? nexon.union.champions : CHAMPIONS_FALLBACK).map((c, i) => [
+    c.name,
+    { grade: c.grade, order: c.slot ?? i + 1 },
+  ]),
+);
+const championOrder = (c: Character) => champions.get(c.name)?.order ?? Infinity;
 const checkValue = (v: Character['boss']['karut']) => (v ? CHECK_ORDER[v] : null);
 
 /** 정렬 기준. 칸 순서는 표 순서와 같다 */
@@ -76,13 +91,16 @@ export default function CharacterList() {
         (!bossOnly || c.boss.karut === 'yes' || c.boss.stoneDesire === 'yes'),
     );
     const col = sort && [...COLUMNS, ...EQUIP_COLUMNS].find((c) => c.id === sort.id);
-    if (!col) return filtered;
-    return [...filtered].sort((a, b) => compare(col.get(a), col.get(b), sort!.dir));
+    const sorted = col ? [...filtered].sort((a, b) => compare(col.get(a), col.get(b), sort!.dir)) : filtered;
+    // 유니온 챔피언은 정렬과 상관없이 맨 위에 슬롯 순서로 고정
+    return [...sorted].sort((a, b) => championOrder(a) - championOrder(b));
   }, [characters, query, jobGroup, guild, plan, bossOnly, sort]);
 
   const toggleSort = (col: Column) => {
     const first: 1 | -1 = col.num ? -1 : 1;
-    setSort((s) => (!s || s.id !== col.id ? { id: col.id, dir: first } : s.dir === first ? { id: col.id, dir: -first as 1 | -1 } : null));
+    setSort((s) =>
+      !s || s.id !== col.id ? { id: col.id, dir: first } : s.dir === first ? { id: col.id, dir: -first as 1 | -1 } : null,
+    );
   };
   const header = (col: Column) => {
     const active = sort?.id === col.id;
@@ -104,8 +122,8 @@ export default function CharacterList() {
     <section>
       <h1>캐릭터</h1>
       <p className="muted">
-        유니온 레벨 <b>{formatNumber(unionLevel(characters))}</b> (레벨 상위 {UNION_SLOTS}캐릭, 흐린 행은 미포함) · 전체
-        레벨 합 {formatNumber(levelTotal(characters))} · {rows.length}/{characters.length}캐릭 표시
+        유니온 레벨 <b>{formatNumber(unionLevel(characters))}</b> (레벨 상위 {UNION_SLOTS}캐릭, 흐린 행은 미포함) · 전체 레벨 합{' '}
+        {formatNumber(levelTotal(characters))} · {rows.length}/{characters.length}캐릭 표시
       </p>
 
       <div className="filters">
@@ -148,13 +166,20 @@ export default function CharacterList() {
 }
 
 function Row({ c, showEquip, inUnion }: { c: Character; showEquip: boolean; inUnion: boolean }) {
-  const className = [c.isMain && 'main-row', !inUnion && 'out-of-union'].filter(Boolean).join(' ');
+  const className = [c.isMain && 'main-row', champions.has(c.name) && 'champion-row', !inUnion && 'out-of-union']
+    .filter(Boolean)
+    .join(' ');
   return (
     <tr className={className || undefined} title={inUnion ? undefined : '유니온 레벨에 포함되지 않는 캐릭터'}>
       <td>{c.jobGroup}</td>
       <td>{c.job}</td>
       <td>
         <Link to={`/characters/${encodeURIComponent(c.id)}`}>{c.name}</Link>
+        {champions.has(c.name) && (
+          <span className="badge champion" title="유니온 챔피언">
+            유챔 {champions.get(c.name)!.grade}
+          </span>
+        )}
       </td>
       <td className="num">{c.level || '-'}</td>
       <td>{c.unionEffect}</td>
@@ -167,7 +192,12 @@ function Row({ c, showEquip, inUnion }: { c: Character; showEquip: boolean; inUn
       <td className="num">{formatPower(nexon.characters[c.id]?.combatPower ?? null).replace(/^-$/, '')}</td>
       <td className="num">{c.unionPower ? formatNumber(c.unionPower) : ''}</td>
       <td className="note-cell">{c.note}</td>
-      {showEquip && EQUIP_SLOTS.map((s) => <td key={s} className="pre">{c.equip[s]}</td>)}
+      {showEquip &&
+        EQUIP_SLOTS.map((s) => (
+          <td key={s} className="pre">
+            {c.equip[s]}
+          </td>
+        ))}
     </tr>
   );
 }
