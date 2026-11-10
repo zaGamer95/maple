@@ -8,9 +8,11 @@ import { useEffect, useRef, useState } from 'react';
 export default function CharacterSprite({ src, scale = 2, className }: { src: string; scale?: number; className?: string }) {
   const ref = useRef<HTMLCanvasElement>(null);
   const [failed, setFailed] = useState(false);
+  const [gone, setGone] = useState(false);
 
   useEffect(() => {
     setFailed(false);
+    setGone(false);
     const img = new Image();
     img.crossOrigin = 'anonymous';
     img.onload = () => {
@@ -48,7 +50,18 @@ export default function CharacterSprite({ src, scale = 2, className }: { src: st
     img.src = src;
   }, [src, scale]);
 
-  // 원본은 300×300 캔버스라 그대로 두면 너무 크다
-  if (failed) return <img className={className} src={src} alt="" width={100 * scale} height={100 * scale} />;
+  // 원본은 300×300 캔버스라 그대로 두면 너무 크다. 원본마저 못 불러오면 깨진 그림 대신 아무것도 안 보인다
+  if (gone) return null;
+  if (failed)
+    return (
+      <img
+        className={`sprite ${className ?? ''}`}
+        src={src}
+        alt=""
+        width={100 * scale}
+        height={100 * scale}
+        onError={() => setGone(true)}
+      />
+    );
   return <canvas ref={ref} className={`sprite ${className ?? ''}`} role="img" aria-label="캐릭터 이미지" />;
 }
