@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-10T01:55:30.022Z",
+  "fetchedAt": "2026-11-10T02:39:52.091Z",
   "character": "자그3",
   "character/stat": {
     "date": null,
@@ -13584,7 +13584,7 @@
     "date": null,
     "character_gender": "여",
     "character_class": "엔젤릭버스터",
-    "character_look_mode": "1",
+    "character_look_mode": "0",
     "world_share_master_label_activate_flag": "0",
     "preset_no": null,
     "cash_item_equipment_base": [
