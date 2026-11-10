@@ -5,6 +5,7 @@ import { EQUIP_SLOTS } from '../lib/equip';
 import { formatPower, nexon } from '../lib/nexon';
 import { levelTotal, unionLevel, unionMembers, UNION_SLOTS } from '../lib/union';
 import { useStore } from '../store';
+import { linkSkillLabel, unionEffectLabel } from '../lib/unionEffect';
 import type { Character } from '../types';
 
 type Value = string | number | null | undefined;
@@ -16,6 +17,8 @@ interface Column {
   num?: boolean;
   get: (c: Character) => Value;
 }
+
+const unionText = (c: Character) => unionEffectLabel(nexon.characters[c.id]?.job, c.level, c.unionEffect);
 
 const CHECK_ORDER = { yes: 2, partial: 1, no: 0 } as const;
 
@@ -41,8 +44,8 @@ const COLUMNS: Column[] = [
   { id: 'job', label: '직업', get: (c) => c.job },
   { id: 'name', label: '닉네임', get: (c) => c.name },
   { id: 'level', label: '레벨', num: true, get: (c) => c.level || null },
-  { id: 'union', label: '유니온', get: (c) => c.unionEffect },
-  { id: 'link', label: '링크', get: (c) => c.linkEffect },
+  { id: 'union', label: '유니온', get: (c) => unionText(c) },
+  { id: 'link', label: '링크', get: (c) => linkSkillLabel(nexon.characters[c.id]?.link, c.linkEffect)?.title },
   { id: 'plan', label: '육성 계획', get: (c) => c.plan },
   { id: 'guild', label: '길드', get: (c) => c.guild },
   { id: 'karut', label: '카룻', title: '카루타', num: true, get: (c) => checkValue(c.boss.karut) },
@@ -182,8 +185,8 @@ function Row({ c, showEquip, inUnion }: { c: Character; showEquip: boolean; inUn
         )}
       </td>
       <td className="num">{c.level || '-'}</td>
-      <td>{c.unionEffect}</td>
-      <td>{c.linkEffect}</td>
+      <td>{unionText(c)}</td>
+      <LinkCell c={c} />
       <td>{c.plan}</td>
       <td>{c.guild}</td>
       <td className="center">{formatCheck(c.boss.karut)}</td>
@@ -199,6 +202,16 @@ function Row({ c, showEquip, inUnion }: { c: Character; showEquip: boolean; inUn
           </td>
         ))}
     </tr>
+  );
+}
+
+function LinkCell({ c }: { c: Character }) {
+  const link = linkSkillLabel(nexon.characters[c.id]?.link, c.linkEffect);
+  return (
+    <td className="note-cell" title={link?.effect ?? undefined}>
+      {link?.title}
+      {link?.effect && <div className="muted small link-effect">{link.effect}</div>}
+    </td>
   );
 }
 

@@ -892,3 +892,7 @@ tr.champion-row td:first-child {
     color: #d8b4fe;
   }
 }
+.link-effect {
+  max-width: 320px;
+  white-space: normal;
+}

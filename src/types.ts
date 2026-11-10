@@ -143,6 +143,8 @@ export interface NexonCharacter {
   stat?: Record<string, string>;
   equipment: NexonEquipment[];
   sets?: SetEffect[];
+  /** 이 캐릭터의 링크 스킬 (넥슨 API) */
+  link?: { name: string; level: number; effect: string | null; icon: string | null } | null;
 }
 
 export interface NexonData {

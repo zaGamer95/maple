@@ -101,6 +101,8 @@ async function fetchCharacter(name) {
   const stat = await call('character/stat', { ocid });
   const equip = await call('character/item-equipment', { ocid });
   const setEffect = await call('character/set-effect', { ocid }).catch(() => null);
+  const linkSkill = await call('character/link-skill', { ocid }).catch(() => null);
+  const owned = linkSkill?.character_owned_link_skill;
   const combatPower = stat.final_stat?.find((s) => s.stat_name === '전투력')?.stat_value;
   return {
     ocid,
@@ -119,6 +121,10 @@ async function fetchCharacter(name) {
     // 종합 능력치 전체 (전투력 공식 검증용)
     stat: Object.fromEntries((stat.final_stat ?? []).map((s) => [s.stat_name, s.stat_value])),
     equipment: (equip.item_equipment ?? []).map(toEquipment),
+    // 이 캐릭터가 다른 캐릭터에게 주는 링크 스킬
+    link: owned
+      ? { name: owned.skill_name, level: owned.skill_level, effect: owned.skill_effect ?? null, icon: owned.skill_icon ?? null }
+      : null,
     sets: (setEffect?.set_effect ?? [])
       .filter((st) => st.set_effect_info?.length)
       .map((st) => ({

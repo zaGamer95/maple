@@ -6,6 +6,7 @@ import milestoneData from '../data/milestones.json';
 import targetSetups from '../data/targetSetups.json';
 import CharacterSprite from '../components/CharacterSprite';
 import EquipWindow from '../components/EquipWindow';
+import { linkSkillLabel, unionEffectLabel } from '../lib/unionEffect';
 import { EQUIP_SLOTS } from '../lib/equip';
 import { formatCheck, formatMeso, formatNumber, todayKst } from '../lib/format';
 import { formatFetchedAt, formatPower, nexon } from '../lib/nexon';
@@ -219,8 +220,19 @@ function birthday(date: string | null | undefined): string | null {
 function Overview({ c }: { c: Character }) {
   const rows: [string, ReactNode][] = [
     ['생일', birthday(nexon.characters[c.id]?.createdAt)],
-    ['유니온 효과', c.unionEffect],
-    ['링크 효과', c.linkEffect],
+    ['유니온 효과', unionEffectLabel(nexon.characters[c.id]?.job, c.level, c.unionEffect)],
+    [
+      '링크 스킬',
+      (() => {
+        const l = linkSkillLabel(nexon.characters[c.id]?.link, c.linkEffect);
+        return l ? (
+          <>
+            {l.title}
+            {l.effect && <div className="muted small">{l.effect}</div>}
+          </>
+        ) : null;
+      })(),
+    ],
     ['육성 계획', c.plan],
     ['유니온 전투력', c.unionPower ? formatNumber(c.unionPower) : null],
     ['카루타', formatCheck(c.boss.karut)],
