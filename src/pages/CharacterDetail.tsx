@@ -226,10 +226,9 @@ function Overview({ c }: { c: Character }) {
       (() => {
         const l = linkSkillLabel(nexon.characters[c.id]?.link, c.linkEffect);
         return l ? (
-          <>
+          <span title={l.effect ?? undefined} className={l.effect ? 'has-tip' : undefined}>
             {l.title}
-            {l.effect && <div className="muted small">{l.effect}</div>}
-          </>
+          </span>
         ) : null;
       })(),
     ],

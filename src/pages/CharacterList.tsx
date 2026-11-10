@@ -208,9 +208,8 @@ function Row({ c, showEquip, inUnion }: { c: Character; showEquip: boolean; inUn
 function LinkCell({ c }: { c: Character }) {
   const link = linkSkillLabel(nexon.characters[c.id]?.link, c.linkEffect);
   return (
-    <td className="note-cell" title={link?.effect ?? undefined}>
+    <td title={link?.effect ?? undefined} className={link?.effect ? 'has-tip' : undefined}>
       {link?.title}
-      {link?.effect && <div className="muted small link-effect">{link.effect}</div>}
     </td>
   );
 }

@@ -896,3 +896,8 @@ tr.champion-row td:first-child {
   max-width: 320px;
   white-space: normal;
 }
+.has-tip {
+  cursor: help;
+  text-decoration: underline dotted var(--muted);
+  text-underline-offset: 3px;
+}
