@@ -1,0 +1,101 @@
+import { useMemo } from 'react';
+import bmData from '../data/expBm.json';
+import { formatKoreanNumber } from '../lib/format';
+
+interface ExpBm {
+  id: string;
+  name: string;
+  /** 한 번 쓰는 데 드는 값: 현금(원), 메이플포인트, 메이플크레딧 중 하나 */
+  cost: { won?: number; points?: number; credits?: number };
+  /** 한 번에 얻는 경험치 (모르면 null) */
+  exp: number | null;
+  /** 같이 얻어서 팔 수 있는 것의 현금 가치 (원) */
+  refundWon: number;
+  measuredAt: string | null;
+  source: string;
+  note?: string;
+}
+
+const ITEMS = bmData as ExpBm[];
+
+/** 환산 기준 (MVP작 계산기와 같은 값) */
+const WON_PER_EOK = 1450; // 메소 1억의 현금 시세
+const MESO_MARKET = 2246; // 메이플포인트 / 1억 메소
+const CREDIT_WON = 0.83; // 메이플크레딧 1개를 큐브로 팔 때 현금 (2026-11 프라임 에디셔널 큐브 기준)
+const CREDIT_RATE = 0.05; // 캐시로 산 것은 5% 가 크레딧으로 돌아온다
+
+/** 메이플포인트는 메소로 사는 값으로 친다 (포인트 1 = 1450/2246 원) */
+function costWon(c: ExpBm['cost']): number {
+  if (c.won != null) return c.won * (1 - CREDIT_RATE * CREDIT_WON);
+  if (c.points != null) return (c.points * WON_PER_EOK) / MESO_MARKET;
+  if (c.credits != null) return c.credits * CREDIT_WON;
+  return 0;
+}
+
+function costLabel(c: ExpBm['cost']): string {
+  if (c.won != null) return `${c.won.toLocaleString()}캐시`;
+  if (c.points != null) return `${c.points.toLocaleString()} 포인트`;
+  if (c.credits != null) return `${c.credits.toLocaleString()} 크레딧`;
+  return '-';
+}
+
+const won = (n: number) => `${Math.round(n).toLocaleString()}원`;
+
+export default function ExpBmTable() {
+  const rows = useMemo(
+    () =>
+      ITEMS.map((it) => {
+        const net = costWon(it.cost) - it.refundWon;
+        return { it, net, perTril: it.exp ? net / (it.exp / 1e12) : null };
+      }).sort((a, b) => (a.perTril ?? Infinity) - (b.perTril ?? Infinity)),
+    [],
+  );
+
+  return (
+    <section>
+      <h1>경험치 BM 가성비</h1>
+      <p className="muted">
+        경험치를 사는 수단별로 경험치 1조를 얻는 데 드는 실제 비용을 비교해요. 값은 기록해 둔 실측·시세 기준이고, 새로 재면 갱신해요.
+      </p>
+      <div className="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>수단</th>
+              <th className="num">가격</th>
+              <th className="num">실제 비용</th>
+              <th className="num">경험치</th>
+              <th className="num">1조당 비용</th>
+              <th>기준</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map(({ it, net, perTril }) => (
+              <tr key={it.id}>
+                <td className="note-cell">
+                  <b>{it.name}</b>
+                  {it.note && <div className="muted small">{it.note}</div>}
+                </td>
+                <td className="num">{costLabel(it.cost)}</td>
+                <td className="num">
+                  {won(net)}
+                  {it.refundWon > 0 && <div className="muted small">회수 {won(it.refundWon)} 반영</div>}
+                </td>
+                <td className="num">{it.exp ? formatKoreanNumber(it.exp) : <span className="muted">측정 필요</span>}</td>
+                <td className="num">{perTril != null ? <b>{won(perTril)}</b> : '-'}</td>
+                <td className="note-cell muted small">
+                  {it.source}
+                  {it.measuredAt && ` (${it.measuredAt})`}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="muted small">
+        환산: 메소 1억 = {WON_PER_EOK.toLocaleString()}원, 메이플포인트는 메소마켓({MESO_MARKET.toLocaleString()}포인트/억)으로 산다고 보고,
+        크레딧 1개 = {CREDIT_WON}원. 캐시로 산 것은 크레딧 5%를 빼고 계산해요.
+      </p>
+    </section>
+  );
+}
