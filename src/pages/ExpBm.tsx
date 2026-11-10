@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import bmData from '../data/expBm.json';
 import { formatKoreanNumber, formatMeso } from '../lib/format';
 
@@ -8,12 +8,16 @@ interface ExpBm {
   category: string;
   /** 시즌 한정 BM 의 판매 시기 메모 */
   season?: string;
+  /** 단종되어 지금은 구할 수 없음 (회색으로 맨 아래) */
+  discontinued?: boolean;
   /** 사용 횟수·시간 한도 */
   limit: string;
   /** 한 번 쓰는 데 드는 값: 현금(원), 메이플포인트, 메이플크레딧, 메소 중 하나 */
   cost: { won?: number; points?: number; credits?: number; meso?: number };
   /** 한 번에 얻는 경험치 (모르면 null) */
   exp: number | null;
+  /** 지속형(반지 등): 사냥 1시간에 더 얻는 경험치. 한 달 사냥 시간을 곱해 exp 로 쓴다 */
+  expPerHour?: number;
   /** 같이 얻어서 팔 수 있는 것의 현금 가치 (원) */
   refundWon: number;
   measuredAt: string | null;
@@ -49,22 +53,37 @@ function costLabel(c: ExpBm['cost']): string {
 const won = (n: number) => `${Math.round(n).toLocaleString()}원`;
 
 export default function ExpBmTable() {
+  const [hours, setHours] = useState(30);
   const rows = useMemo(
     () =>
       ITEMS.map((it) => {
         const net = costWon(it.cost) - it.refundWon;
-        return { it, net, perTril: it.exp ? net / (it.exp / 1e12) : null };
-      }).sort((a, b) => (a.perTril ?? Infinity) - (b.perTril ?? Infinity)),
-    [],
+        const exp = it.expPerHour ? it.expPerHour * hours : it.exp;
+        return { it, net, exp, perTril: exp ? net / (exp / 1e12) : null };
+      }).sort(
+        (a, b) => Number(!!a.it.discontinued) - Number(!!b.it.discontinued) || (a.perTril ?? Infinity) - (b.perTril ?? Infinity),
+      ),
+    [hours],
   );
 
   return (
     <section>
       <h1>경험치 BM 가성비</h1>
       <p className="muted">
-        경험치를 사는 수단별로 경험치 1조를 얻는 데 드는 실제 비용을 비교해요 (Lv.291 기준). 콘텐츠 경험치는 고정값이라 공개 시트 값을,
-        쿠폰은 밤의 길 3에서 분당 320마리 사냥을 가정한 이론값을, 시간제는 실측을 써요. 시즌마다 새 BM 이 나오면 같은 기준으로 추가해요.
+        경험치를 사는 수단별로 경험치 1조를 얻는 데 드는 실제 비용을 비교해요 (Lv.291 기준). 콘텐츠 경험치는 고정값이라 공개 시트
+        값을, 쿠폰은 밤의 길 3에서 분당 320마리 사냥을 가정한 이론값을, 시간제는 실측을 써요. 시즌마다 새 BM 이 나오면 같은
+        기준으로 추가해요.
       </p>
+      <label className="check small">
+        한 달 사냥 시간 (반지처럼 끼고 사냥하는 것에 적용)
+        <input
+          className="cell-input"
+          inputMode="numeric"
+          value={hours}
+          onChange={(e) => setHours(Number(e.target.value.replace(/[^0-9]/g, '')) || 0)}
+        />
+        시간
+      </label>
       <div className="table-wrap">
         <table>
           <thead>
@@ -79,10 +98,14 @@ export default function ExpBmTable() {
             </tr>
           </thead>
           <tbody>
-            {rows.map(({ it, net, perTril }) => (
-              <tr key={it.id}>
+            {rows.map(({ it, net, exp, perTril }) => (
+              <tr
+                key={it.id}
+                className={it.discontinued ? 'row-disabled' : undefined}
+                aria-disabled={it.discontinued || undefined}
+              >
                 <td className="note-cell">
-                  <b>{it.name}</b>
+                  <b>{it.name}</b> {it.discontinued && <span className="badge">단종</span>}
                   {it.note && <div className="muted small">{it.note}</div>}
                 </td>
                 <td className="note-cell small">
@@ -95,7 +118,10 @@ export default function ExpBmTable() {
                   {won(net)}
                   {it.refundWon > 0 && <div className="muted small">회수 {won(it.refundWon)} 반영</div>}
                 </td>
-                <td className="num">{it.exp ? formatKoreanNumber(it.exp) : <span className="muted">측정 필요</span>}</td>
+                <td className="num">
+                  {exp ? formatKoreanNumber(exp) : <span className="muted">측정 필요</span>}
+                  {it.expPerHour && <div className="muted small">시간당 {formatKoreanNumber(it.expPerHour)}</div>}
+                </td>
                 <td className="num">{perTril != null ? <b>{won(perTril)}</b> : '-'}</td>
                 <td className="note-cell muted small">
                   {it.source}
@@ -107,9 +133,9 @@ export default function ExpBmTable() {
         </table>
       </div>
       <p className="muted small">
-        환산: 메소 1억 = {WON_PER_EOK.toLocaleString()}원, 메이플포인트는 메소마켓({MESO_MARKET.toLocaleString()}포인트/억)으로 산다고 보고,
-        크레딧 1개 = {CREDIT_WON}원. 캐시로 산 것은 크레딧 5%를 빼고 계산해요. 주간·일일 한도가 있는 것은 1조당 비용이 싸도 그만큼만 쓸
-        수 있어요.
+        환산: 메소 1억 = {WON_PER_EOK.toLocaleString()}원, 메이플포인트는 메소마켓({MESO_MARKET.toLocaleString()}포인트/억)으로
+        산다고 보고, 크레딧 1개 = {CREDIT_WON}원. 캐시로 산 것은 크레딧 5%를 빼고 계산해요. 주간·일일 한도가 있는 것은 1조당
+        비용이 싸도 그만큼만 쓸 수 있어요.
       </p>
     </section>
   );

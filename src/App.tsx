@@ -10,6 +10,7 @@ import Upgrade from './pages/Upgrade';
 import Hunts from './pages/Hunts';
 import MvpCalc from './pages/MvpCalc';
 import ExpBmTable from './pages/ExpBm';
+import ExpContent from './pages/ExpContent';
 
 const NAV = [
   { to: '/', label: '대시보드', end: true },
@@ -83,6 +84,7 @@ export default function App() {
               <>
                 <MvpCalc />
                 <ExpBmTable />
+                <ExpContent />
               </>
             }
           />

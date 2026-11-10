@@ -837,3 +837,6 @@ td.good {
 td.bad {
   color: var(--muted);
 }
+tr.row-disabled td {
+  opacity: 0.45;
+}
