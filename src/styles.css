@@ -840,3 +840,7 @@ td.bad {
 tr.row-disabled td {
   opacity: 0.45;
 }
+td.bm-name {
+  min-width: 260px;
+  cursor: help;
+}
