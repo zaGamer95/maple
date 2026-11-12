@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-11T00:59:41.335Z",
+  "fetchedAt": "2026-11-12T02:07:04.687Z",
   "character": "자그3",
   "character/stat": {
     "date": null,
@@ -7,11 +7,11 @@
     "final_stat": [
       {
         "stat_name": "최소 스탯공격력",
-        "stat_value": "74638082"
+        "stat_value": "78728871"
       },
       {
         "stat_name": "최대 스탯공격력",
-        "stat_value": "78566400"
+        "stat_value": "82872494"
       },
       {
         "stat_name": "데미지",
@@ -19,7 +19,7 @@
       },
       {
         "stat_name": "보스 몬스터 데미지",
-        "stat_value": "295.00"
+        "stat_value": "301.00"
       },
       {
         "stat_name": "최종 데미지",
@@ -27,19 +27,19 @@
       },
       {
         "stat_name": "방어율 무시",
-        "stat_value": "88.44"
+        "stat_value": "89.14"
       },
       {
         "stat_name": "크리티컬 확률",
-        "stat_value": "84"
+        "stat_value": "104"
       },
       {
         "stat_name": "크리티컬 데미지",
-        "stat_value": "71.60"
+        "stat_value": "114.60"
       },
       {
         "stat_name": "상태이상 내성",
-        "stat_value": "87"
+        "stat_value": "91"
       },
       {
         "stat_name": "스탠스",
@@ -47,11 +47,11 @@
       },
       {
         "stat_name": "방어력",
-        "stat_value": "50065"
+        "stat_value": "52324"
       },
       {
         "stat_name": "이동속도",
-        "stat_value": "165"
+        "stat_value": "171"
       },
       {
         "stat_name": "점프력",
@@ -63,7 +63,7 @@
       },
       {
         "stat_name": "아케인포스",
-        "stat_value": "1350"
+        "stat_value": "1370"
       },
       {
         "stat_name": "어센틱포스",
@@ -71,27 +71,27 @@
       },
       {
         "stat_name": "STR",
-        "stat_value": "7191"
+        "stat_value": "8165"
       },
       {
         "stat_name": "DEX",
-        "stat_value": "54084"
+        "stat_value": "55019"
       },
       {
         "stat_name": "INT",
-        "stat_value": "4031"
+        "stat_value": "4808"
       },
       {
         "stat_name": "LUK",
-        "stat_value": "3203"
+        "stat_value": "3797"
       },
       {
         "stat_name": "HP",
-        "stat_value": "59157"
+        "stat_value": "65703"
       },
       {
         "stat_name": "MP",
-        "stat_value": "32432"
+        "stat_value": "33945"
       },
       {
         "stat_name": "AP 배분 STR",
@@ -99,7 +99,7 @@
       },
       {
         "stat_name": "AP 배분 DEX",
-        "stat_value": "1473"
+        "stat_value": "1478"
       },
       {
         "stat_name": "AP 배분 INT",
@@ -123,11 +123,11 @@
       },
       {
         "stat_name": "메소 획득량",
-        "stat_value": "116"
+        "stat_value": "121"
       },
       {
         "stat_name": "버프 지속시간",
-        "stat_value": "50"
+        "stat_value": "91"
       },
       {
         "stat_name": "공격 속도",
@@ -135,7 +135,7 @@
       },
       {
         "stat_name": "일반 몬스터 데미지",
-        "stat_value": "58.00"
+        "stat_value": "98.00"
       },
       {
         "stat_name": "재사용 대기시간 감소 (초)",
@@ -143,7 +143,7 @@
       },
       {
         "stat_name": "재사용 대기시간 감소 (%)",
-        "stat_value": "0"
+        "stat_value": "6"
       },
       {
         "stat_name": "재사용 대기시간 미적용",
@@ -163,23 +163,23 @@
       },
       {
         "stat_name": "추가 경험치 획득",
-        "stat_value": "286.00"
+        "stat_value": "313.00"
       },
       {
         "stat_name": "공격력",
-        "stat_value": "6117"
+        "stat_value": "6319"
       },
       {
         "stat_name": "마력",
-        "stat_value": "1496"
+        "stat_value": "1581"
       },
       {
         "stat_name": "전투력",
-        "stat_value": "107316953"
+        "stat_value": "129076797"
       },
       {
         "stat_name": "소환수 지속시간 증가",
-        "stat_value": "0"
+        "stat_value": "12"
       }
     ],
     "remain_ap": 0
@@ -2234,10 +2234,10 @@
         "item_equipment_part": "펜던트",
         "item_equipment_slot": "펜던트",
         "item_name": "정령의 펜던트",
-        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJFPE",
+        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJENF",
         "item_description": "착용 시 30%의 추가 경험치 효과를 얻습니다.",
         "item_shape_name": "정령의 펜던트",
-        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJFPE",
+        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJENF",
         "item_gender": null,
         "item_total_option": {
           "str": "0",
@@ -2363,7 +2363,7 @@
           "jump": "0"
         },
         "special_ring_level": 0,
-        "date_expire": "2026-11-11T19:04+09:00",
+        "date_expire": "2026-12-12T01:06+09:00",
         "freestyle_flag": "0"
       },
       {
@@ -7814,10 +7814,10 @@
         "item_equipment_part": "펜던트",
         "item_equipment_slot": "펜던트",
         "item_name": "정령의 펜던트",
-        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJFPE",
+        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJENF",
         "item_description": "착용 시 30%의 추가 경험치 효과를 얻습니다.",
         "item_shape_name": "정령의 펜던트",
-        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJFPE",
+        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEOAJENF",
         "item_gender": null,
         "item_total_option": {
           "str": "0",
@@ -7943,7 +7943,7 @@
           "jump": "0"
         },
         "special_ring_level": 0,
-        "date_expire": "2026-11-11T19:04+09:00",
+        "date_expire": "2026-12-12T01:06+09:00",
         "freestyle_flag": "0"
       },
       {
@@ -13586,7 +13586,7 @@
     "character_class": "엔젤릭버스터",
     "character_look_mode": "1",
     "world_share_master_label_activate_flag": "0",
-    "preset_no": null,
+    "preset_no": 1,
     "cash_item_equipment_base": [
       {
         "cash_item_equipment_part": "눈장식",
@@ -15055,7 +15055,7 @@
         "symbol_drop_rate": "11%",
         "symbol_meso_rate": "11%",
         "symbol_exp_rate": "34%",
-        "symbol_growth_count": 1137,
+        "symbol_growth_count": 1761,
         "symbol_require_growth_count": 581
       }
     ]
@@ -15064,7 +15064,7 @@
     "date": null,
     "character_class": "엔젤릭버스터",
     "use_preset_no": "2",
-    "use_available_hyper_stat": 1536,
+    "use_available_hyper_stat": 1554,
     "hyper_stat_preset_1": [
       {
         "stat_type": "STR",
@@ -15169,7 +15169,7 @@
         "stat_increase": null
       }
     ],
-    "hyper_stat_preset_1_remain_point": 18,
+    "hyper_stat_preset_1_remain_point": 36,
     "hyper_stat_preset_2": [
       {
         "stat_type": "STR",
@@ -15274,7 +15274,7 @@
         "stat_increase": "일반 몬스터 공격 시 데미지 39% 증가"
       }
     ],
-    "hyper_stat_preset_2_remain_point": 41,
+    "hyper_stat_preset_2_remain_point": 59,
     "hyper_stat_preset_3": [
       {
         "stat_type": "STR",
@@ -15379,7 +15379,7 @@
         "stat_increase": null
       }
     ],
-    "hyper_stat_preset_3_remain_point": 61
+    "hyper_stat_preset_3_remain_point": 79
   },
   "character/ability": {
     "date": null,
@@ -15401,7 +15401,7 @@
         "ability_value": "일반 몬스터 공격 시 데미지 7% 증가"
       }
     ],
-    "remain_fame": 787114,
+    "remain_fame": 849212,
     "preset_no": 3,
     "ability_preset_1": {
       "ability_preset_grade": "레전드리",
