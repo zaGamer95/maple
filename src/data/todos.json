@@ -22,5 +22,17 @@
     "text": "주흔 작",
     "note": "12/10 토드",
     "done": false
+  },
+  {
+    "id": "t5",
+    "text": "유니온 챔피언 SSS 다 찍기",
+    "note": "11-12 기준: 자그3 SSS · 비숍자그 A · 자그0 S · 자그666 SS",
+    "done": false
+  },
+  {
+    "id": "t6",
+    "text": "다음 챌린저스 서버 캐릭터 고르기",
+    "note": null,
+    "done": false
   }
 ]
