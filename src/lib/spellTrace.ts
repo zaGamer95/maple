@@ -60,12 +60,8 @@ export const DEFAULT_TRACE_SETTINGS: TraceSettings = {
   targetSuccess: 20,
 };
 
-export const DEFAULT_TRACE_SCROLLS: TraceScroll[] = [
-  { id: 's15', name: '15%', base: 15, traces: 1560, stat: 10, att: 0 },
-  { id: 's30', name: '30%', base: 30, traces: null, stat: null, att: 0 },
-  { id: 's70', name: '70%', base: 70, traces: null, stat: null, att: 0 },
-  { id: 's100', name: '100%', base: 100, traces: null, stat: null, att: 0 },
-];
+/** 요즘은 아이템 값어치 때문에 방어구·장갑은 15%작만 한다 (사용자 기준). 15% 한 줄만 계산 */
+export const DEFAULT_TRACE_SCROLLS: TraceScroll[] = [{ id: 's15', name: '15%', base: 15, traces: 1560, stat: 10, att: 0 }];
 
 /** 주흔 1개 값 (메소) */
 export function traceValue(s: TraceSettings): number {

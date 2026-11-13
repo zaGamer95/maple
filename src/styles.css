@@ -927,3 +927,9 @@ input.inline {
   padding: 2px 4px;
   text-align: right;
 }
+
+/* NavLink 로 만든 하위 탭 (계산기) */
+a.tab {
+  padding: 6px 12px;
+  text-decoration: none;
+}

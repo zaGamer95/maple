@@ -24,10 +24,11 @@ function load(): Saved {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
       const saved = JSON.parse(raw) as Saved;
-      const known = new Set(saved.scrolls.map((x) => x.id));
+      // 15%작만 쓴다. 예전에 저장된 30%·70%·100% 줄은 버린다
+      const kept = saved.scrolls.filter((x) => DEFAULT_TRACE_SCROLLS.some((d) => d.id === x.id));
       return {
         settings: { ...DEFAULT_TRACE_SETTINGS, ...saved.settings },
-        scrolls: [...saved.scrolls, ...DEFAULT_TRACE_SCROLLS.filter((x) => !known.has(x.id))],
+        scrolls: kept.length ? kept : DEFAULT_TRACE_SCROLLS,
       };
     }
   } catch {
@@ -72,10 +73,10 @@ export default function SpellTraceCalc() {
 
   return (
     <section>
-      <h1>주흔 효율 계산기</h1>
+      <h1>주흔 15%작 효율 계산기</h1>
       <p className="muted">
-        주흔작에서 실패한 슬롯을 순백으로 복구하고 같은 슬롯을 다시 시도할 때, 성공 1작에 드는 비용을 비교해요. 순백은 경매장
-        5%·10%와 주흔 순백 100% 중 가장 싼 것을 써요. 입력값은 이 브라우저에 저장돼요.
+        방어구·장갑 주흔 15%작에서 실패한 슬롯을 순백으로 복구하고 같은 슬롯을 다시 시도할 때, 성공 1작에 드는 비용을 계산해요.
+        순백은 경매장 5%·10%와 주흔 순백 100% 중 가장 싼 것을 써요. 입력값은 이 브라우저에 저장돼요.
       </p>
 
       <div className="card edit-form">

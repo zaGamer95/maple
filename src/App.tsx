@@ -8,10 +8,7 @@ import Purchases from './pages/Purchases';
 import Prices from './pages/Prices';
 import Upgrade from './pages/Upgrade';
 import Hunts from './pages/Hunts';
-import MvpCalc from './pages/MvpCalc';
-import SpellTraceCalc from './pages/SpellTraceCalc';
-import ExpBmTable from './pages/ExpBm';
-import ExpContent from './pages/ExpContent';
+import Tools from './pages/Tools';
 
 const NAV = [
   { to: '/', label: '대시보드', end: true },
@@ -81,17 +78,7 @@ export default function App() {
           <Route path="/characters/:id" element={<CharacterDetail />} />
           <Route path="/purchases" element={<Purchases />} />
           <Route path="/guides" element={<ComingSoon title="공략 노트" phase={5} />} />
-          <Route
-            path="/tools"
-            element={
-              <>
-                <MvpCalc />
-                <SpellTraceCalc />
-                <ExpBmTable />
-                <ExpContent />
-              </>
-            }
-          />
+          <Route path="/tools/*" element={<Tools />} />
           <Route path="/prices" element={<Prices />} />
           <Route path="/upgrade" element={<Upgrade />} />
           <Route path="/hunts" element={<Hunts />} />
