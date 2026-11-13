@@ -9,6 +9,7 @@ import Prices from './pages/Prices';
 import Upgrade from './pages/Upgrade';
 import Hunts from './pages/Hunts';
 import MvpCalc from './pages/MvpCalc';
+import SpellTraceCalc from './pages/SpellTraceCalc';
 import ExpBmTable from './pages/ExpBm';
 import ExpContent from './pages/ExpContent';
 
@@ -37,7 +38,9 @@ function DraftBanner() {
   if (changed.length === 0) return null;
   return (
     <div className="draft-banner">
-      <span>이 브라우저에만 저장된 수정 사항이 있어요. 공유 링크에도 반영하려면 JSON을 내보내 src/data 에 덮어쓰고 커밋하세요.</span>
+      <span>
+        이 브라우저에만 저장된 수정 사항이 있어요. 공유 링크에도 반영하려면 JSON을 내보내 src/data 에 덮어쓰고 커밋하세요.
+      </span>
       <span className="draft-actions">
         {changed.map((name) => (
           <button key={name} onClick={() => exportDataset(name)}>
@@ -83,6 +86,7 @@ export default function App() {
             element={
               <>
                 <MvpCalc />
+                <SpellTraceCalc />
                 <ExpBmTable />
                 <ExpContent />
               </>
@@ -95,9 +99,7 @@ export default function App() {
           <Route path="*" element={<ComingSoon title="페이지를 찾을 수 없어요" />} />
         </Routes>
       </main>
-      <footer className="footer">
-        Data based on NEXON Open API · 넥슨코리아와 관련 없는 개인 페이지입니다.
-      </footer>
+      <footer className="footer">Data based on NEXON Open API · 넥슨코리아와 관련 없는 개인 페이지입니다.</footer>
     </div>
   );
 }
