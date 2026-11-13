@@ -292,5 +292,29 @@
     "characterId": "자그3",
     "type": "sell",
     "feeRate": 0.03
+  },
+  {
+    "id": "p27",
+    "date": "2026-11-09",
+    "dateText": "26.11.09",
+    "itemName": "트와일라이트 마크",
+    "detail": "22성, 잠재 레전더리 (STR +12% · STR +9% · 최대 HP +12%), 에디 에픽 (공격력 +11 · STR +2% · 공격력 +10), 1회 교환 가능, 가위 8/10",
+    "price": 4949999999,
+    "priceText": "49억 4999만 9999",
+    "comment": "렌 장비",
+    "characterId": "자그0",
+    "type": "buy"
+  },
+  {
+    "id": "p28",
+    "date": "2026-11-09",
+    "dateText": "26.11.09",
+    "itemName": "데이브레이크 펜던트",
+    "detail": "22성, 잠재 유니크 (STR +9% · STR +6% · STR +6%), 에디 에픽 (STR +4% · 올스탯 +3 · 공격력 +10), 1회 교환 가능, 가위 8/10",
+    "price": 6466666666,
+    "priceText": "64억 6666만 6666",
+    "comment": "렌 장비",
+    "characterId": "자그0",
+    "type": "buy"
   }
 ]
