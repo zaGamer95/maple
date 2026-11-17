@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-16T00:45:58.196Z",
+  "fetchedAt": "2026-11-17T03:23:48.763Z",
   "character": "자그3",
   "character/stat": {
     "date": null,
@@ -7,11 +7,11 @@
     "final_stat": [
       {
         "stat_name": "최소 스탯공격력",
-        "stat_value": "79379767"
+        "stat_value": "81345808"
       },
       {
         "stat_name": "최대 스탯공격력",
-        "stat_value": "83557648"
+        "stat_value": "85627164"
       },
       {
         "stat_name": "데미지",
@@ -47,7 +47,7 @@
       },
       {
         "stat_name": "방어력",
-        "stat_value": "52062"
+        "stat_value": "52605"
       },
       {
         "stat_name": "이동속도",
@@ -71,27 +71,27 @@
       },
       {
         "stat_name": "STR",
-        "stat_value": "7828"
+        "stat_value": "8087"
       },
       {
         "stat_name": "DEX",
-        "stat_value": "55575"
+        "stat_value": "56071"
       },
       {
         "stat_name": "INT",
-        "stat_value": "4671"
+        "stat_value": "4839"
       },
       {
         "stat_name": "LUK",
-        "stat_value": "3797"
+        "stat_value": "3949"
       },
       {
         "stat_name": "HP",
-        "stat_value": "65942"
+        "stat_value": "72005"
       },
       {
         "stat_name": "MP",
-        "stat_value": "33945"
+        "stat_value": "38847"
       },
       {
         "stat_name": "AP 배분 STR",
@@ -119,11 +119,11 @@
       },
       {
         "stat_name": "아이템 드롭률",
-        "stat_value": "243"
+        "stat_value": "223"
       },
       {
         "stat_name": "메소 획득량",
-        "stat_value": "121"
+        "stat_value": "141"
       },
       {
         "stat_name": "버프 지속시간",
@@ -167,15 +167,15 @@
       },
       {
         "stat_name": "공격력",
-        "stat_value": "6319"
+        "stat_value": "6413"
       },
       {
         "stat_name": "마력",
-        "stat_value": "1581"
+        "stat_value": "1617"
       },
       {
         "stat_name": "전투력",
-        "stat_value": "130097729"
+        "stat_value": "132965584"
       },
       {
         "stat_name": "소환수 지속시간 증가",
@@ -1689,22 +1689,22 @@
       {
         "item_equipment_part": "반지",
         "item_equipment_slot": "반지1",
-        "item_name": "어센던트 펄스 링",
-        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPENE",
-        "item_description": "아르고 호의 정보원들이 그란디스에서 확보한 반지이다.\n고대신의 신비한 힘이 담겨있는 것으로 추정된다.",
-        "item_shape_name": "어센던트 펄스 링",
-        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPENE",
+        "item_name": "어웨이크 링",
+        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEPJ",
+        "item_description": "각성의 산에서 얻을 수 있는 특별한 능력의 반지이다.\r\n어웨이크 링 전용 강화 주문서만 사용 가능\r\n잠재능력 및 에디셔널 잠재능력 부여 가능",
+        "item_shape_name": "어웨이크 링",
+        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEPJ",
         "item_gender": null,
         "item_total_option": {
-          "str": "5",
-          "dex": "5",
-          "int": "5",
-          "luk": "5",
-          "max_hp": "200",
-          "max_mp": "200",
-          "attack_power": "1",
-          "magic_power": "1",
-          "armor": "150",
+          "str": "40",
+          "dex": "40",
+          "int": "40",
+          "luk": "40",
+          "max_hp": "4000",
+          "max_mp": "4000",
+          "attack_power": "25",
+          "magic_power": "25",
+          "armor": "0",
           "speed": "0",
           "jump": "0",
           "boss_damage": "0",
@@ -1716,15 +1716,15 @@
           "max_mp_rate": "0"
         },
         "item_base_option": {
-          "str": "5",
-          "dex": "5",
-          "int": "5",
-          "luk": "5",
-          "max_hp": "200",
-          "max_mp": "200",
-          "attack_power": "1",
-          "magic_power": "1",
-          "armor": "150",
+          "str": "10",
+          "dex": "10",
+          "int": "10",
+          "luk": "10",
+          "max_hp": "1000",
+          "max_mp": "1000",
+          "attack_power": "10",
+          "magic_power": "10",
+          "armor": "0",
           "speed": "0",
           "jump": "0",
           "boss_damage": "0",
@@ -1732,18 +1732,18 @@
           "all_stat": "0",
           "max_hp_rate": "0",
           "max_mp_rate": "0",
-          "base_equipment_level": 130
+          "base_equipment_level": 120
         },
         "potential_option_grade": "레전드리",
         "additional_potential_option_grade": "레어",
         "potential_option_flag": "false",
-        "potential_option_1": "모든 스킬의 MP 소모 -30%",
-        "potential_option_2": "DEX +9%",
-        "potential_option_3": "아이템 드롭률 +20%",
+        "potential_option_1": "메소 획득량 +20%",
+        "potential_option_2": "올스탯 +6%",
+        "potential_option_3": "DEX +9%",
         "additional_potential_option_flag": "false",
-        "additional_potential_option_1": "이동속도 +6",
-        "additional_potential_option_2": "LUK +6",
-        "additional_potential_option_3": "INT +6",
+        "additional_potential_option_1": "공격력 +10",
+        "additional_potential_option_2": "이동속도 +4",
+        "additional_potential_option_3": "점프력 +4",
         "equipment_level_increase": 0,
         "item_exceptional_option": {
           "str": "0",
@@ -1775,7 +1775,7 @@
         },
         "growth_exp": 0,
         "growth_level": 0,
-        "scroll_upgrade": "0",
+        "scroll_upgrade": "3",
         "cuttable_count": "255",
         "golden_hammer_flag": "미적용",
         "scroll_resilience_count": "0",
@@ -1791,14 +1791,14 @@
         "soul_potential_option_2": null,
         "soul_potential_option_3": null,
         "item_etc_option": {
-          "str": "0",
-          "dex": "0",
-          "int": "0",
-          "luk": "0",
-          "max_hp": "0",
-          "max_mp": "0",
-          "attack_power": "0",
-          "magic_power": "0",
+          "str": "30",
+          "dex": "30",
+          "int": "30",
+          "luk": "30",
+          "max_hp": "3000",
+          "max_mp": "3000",
+          "attack_power": "15",
+          "magic_power": "15",
           "armor": "0",
           "speed": "0",
           "jump": "0"
@@ -7269,22 +7269,22 @@
       {
         "item_equipment_part": "반지",
         "item_equipment_slot": "반지1",
-        "item_name": "어센던트 펄스 링",
-        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPENE",
-        "item_description": "아르고 호의 정보원들이 그란디스에서 확보한 반지이다.\n고대신의 신비한 힘이 담겨있는 것으로 추정된다.",
-        "item_shape_name": "어센던트 펄스 링",
-        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPENE",
+        "item_name": "어웨이크 링",
+        "item_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEPJ",
+        "item_description": "각성의 산에서 얻을 수 있는 특별한 능력의 반지이다.\r\n어웨이크 링 전용 강화 주문서만 사용 가능\r\n잠재능력 및 에디셔널 잠재능력 부여 가능",
+        "item_shape_name": "어웨이크 링",
+        "item_shape_icon": "https://open.api.nexon.com/static/maplestory/item/icon/KEODPEPJ",
         "item_gender": null,
         "item_total_option": {
-          "str": "5",
-          "dex": "5",
-          "int": "5",
-          "luk": "5",
-          "max_hp": "200",
-          "max_mp": "200",
-          "attack_power": "1",
-          "magic_power": "1",
-          "armor": "150",
+          "str": "40",
+          "dex": "40",
+          "int": "40",
+          "luk": "40",
+          "max_hp": "4000",
+          "max_mp": "4000",
+          "attack_power": "25",
+          "magic_power": "25",
+          "armor": "0",
           "speed": "0",
           "jump": "0",
           "boss_damage": "0",
@@ -7296,15 +7296,15 @@
           "max_mp_rate": "0"
         },
         "item_base_option": {
-          "str": "5",
-          "dex": "5",
-          "int": "5",
-          "luk": "5",
-          "max_hp": "200",
-          "max_mp": "200",
-          "attack_power": "1",
-          "magic_power": "1",
-          "armor": "150",
+          "str": "10",
+          "dex": "10",
+          "int": "10",
+          "luk": "10",
+          "max_hp": "1000",
+          "max_mp": "1000",
+          "attack_power": "10",
+          "magic_power": "10",
+          "armor": "0",
           "speed": "0",
           "jump": "0",
           "boss_damage": "0",
@@ -7312,18 +7312,18 @@
           "all_stat": "0",
           "max_hp_rate": "0",
           "max_mp_rate": "0",
-          "base_equipment_level": 130
+          "base_equipment_level": 120
         },
         "potential_option_grade": "레전드리",
         "additional_potential_option_grade": "레어",
         "potential_option_flag": "false",
-        "potential_option_1": "모든 스킬의 MP 소모 -30%",
-        "potential_option_2": "DEX +9%",
-        "potential_option_3": "아이템 드롭률 +20%",
+        "potential_option_1": "메소 획득량 +20%",
+        "potential_option_2": "올스탯 +6%",
+        "potential_option_3": "DEX +9%",
         "additional_potential_option_flag": "false",
-        "additional_potential_option_1": "이동속도 +6",
-        "additional_potential_option_2": "LUK +6",
-        "additional_potential_option_3": "INT +6",
+        "additional_potential_option_1": "공격력 +10",
+        "additional_potential_option_2": "이동속도 +4",
+        "additional_potential_option_3": "점프력 +4",
         "equipment_level_increase": 0,
         "item_exceptional_option": {
           "str": "0",
@@ -7355,7 +7355,7 @@
         },
         "growth_exp": 0,
         "growth_level": 0,
-        "scroll_upgrade": "0",
+        "scroll_upgrade": "3",
         "cuttable_count": "255",
         "golden_hammer_flag": "미적용",
         "scroll_resilience_count": "0",
@@ -7371,14 +7371,14 @@
         "soul_potential_option_2": null,
         "soul_potential_option_3": null,
         "item_etc_option": {
-          "str": "0",
-          "dex": "0",
-          "int": "0",
-          "luk": "0",
-          "max_hp": "0",
-          "max_mp": "0",
-          "attack_power": "0",
-          "magic_power": "0",
+          "str": "30",
+          "dex": "30",
+          "int": "30",
+          "luk": "30",
+          "max_hp": "3000",
+          "max_mp": "3000",
+          "attack_power": "15",
+          "magic_power": "15",
           "armor": "0",
           "speed": "0",
           "jump": "0"
@@ -15401,7 +15401,7 @@
         "ability_value": "일반 몬스터 공격 시 데미지 7% 증가"
       }
     ],
-    "remain_fame": 869812,
+    "remain_fame": 876582,
     "preset_no": 3,
     "ability_preset_1": {
       "ability_preset_grade": "레전드리",
