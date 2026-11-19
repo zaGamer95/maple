@@ -1,0 +1,393 @@
+{
+  "name": "블루 아카이브 굿즈 컬렉션 Vol.1",
+  "cash": 3300,
+  "sale": "2026-11-19 점검 후 ~ 2027-01-20 23:59",
+  "source": "메이플스토리 테스트월드 업데이트 공지 (news/update/206)",
+  "note": "사용 시 확률에 따라 아래 중 1개. 확률표는 아직 못 찾음. 교환권은 모두 1회 교환 가능. 누적 사용 20회 일루전 링: 페로로지라, 30회 페로로지라 명찰&말풍선 반지 (메이플ID당 1회)",
+  "items": [
+    {
+      "no": 1,
+      "category": "명찰 반지",
+      "name": "블루 아카이브 학생 이름표 명찰 반지 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 2,
+      "category": "컷인 이펙트",
+      "name": "이로하 컷인 이펙트 획득권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 3,
+      "category": "컷인 이펙트",
+      "name": "키쿄 컷인 이펙트 획득권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 4,
+      "category": "액션 헤어",
+      "name": "아로나 액션 헤어 쿠폰",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 5,
+      "category": "액션 헤어",
+      "name": "아루 액션 헤어 쿠폰",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 6,
+      "category": "액션 헤어",
+      "name": "이부키 액션 헤어 쿠폰",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 7,
+      "category": "액션 헤어",
+      "name": "유우카 액션 헤어 쿠폰",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 8,
+      "category": "액션 헤어",
+      "name": "나기사 액션 헤어 쿠폰",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 9,
+      "category": "액션 헤어",
+      "name": "미카 액션 헤어 쿠폰",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 10,
+      "category": "액션 헤어",
+      "name": "세이아 액션 헤어 쿠폰",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 11,
+      "category": "액션 헤어",
+      "name": "키쿄 액션 헤어 쿠폰",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 12,
+      "category": "액션 헤어",
+      "name": "와카모 액션 헤어 쿠폰",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 13,
+      "category": "액션 헤어",
+      "name": "아리스(메이드) 액션 헤어 쿠폰",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 14,
+      "category": "명찰&말풍선 반지",
+      "name": "아루 명찰&말풍선 반지 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 15,
+      "category": "명찰&말풍선 반지",
+      "name": "이부키 명찰&말풍선 반지 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 16,
+      "category": "명찰&말풍선 반지",
+      "name": "유우카 명찰&말풍선 반지 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 17,
+      "category": "명찰&말풍선 반지",
+      "name": "나기사 명찰&말풍선 반지 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 18,
+      "category": "명찰&말풍선 반지",
+      "name": "미카 명찰&말풍선 반지 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 19,
+      "category": "명찰&말풍선 반지",
+      "name": "세이아 명찰&말풍선 반지 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 20,
+      "category": "명찰&말풍선 반지",
+      "name": "키쿄 명찰&말풍선 반지 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 21,
+      "category": "명찰&말풍선 반지",
+      "name": "와카모 명찰&말풍선 반지 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 22,
+      "category": "소울 스킨",
+      "name": "아로나 소울 스킨",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 23,
+      "category": "소울 스킨",
+      "name": "이로하 소울 스킨",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 24,
+      "category": "소울 스킨",
+      "name": "키쿄 소울 스킨",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 25,
+      "category": "배경·일러스트",
+      "name": "블루 아카이브 커스텀 배경 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 26,
+      "category": "배경·일러스트",
+      "name": "아로나(기본 표정) 스페셜 일러스트 등록권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 27,
+      "category": "배경·일러스트",
+      "name": "아로나(당황 표정) 스페셜 일러스트 등록권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 28,
+      "category": "배경·일러스트",
+      "name": "아로나(기쁜 표정) 스페셜 일러스트 등록권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 29,
+      "category": "치장",
+      "name": "소라 아르바이트 한벌옷 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 30,
+      "category": "치장",
+      "name": "콩콩 아로나 모자 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 31,
+      "category": "치장",
+      "name": "페로로지라 얼굴장식 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 32,
+      "category": "치장",
+      "name": "딸기우유 콤플렉스 선글라스 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 33,
+      "category": "의자",
+      "name": "블루 이터니티 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 34,
+      "category": "의자",
+      "name": "아로나의 고래 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 35,
+      "category": "의자",
+      "name": "블루 스카이 판타지 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 36,
+      "category": "의자",
+      "name": "티파티 타임 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 37,
+      "category": "의자",
+      "name": "블루 아카이브 교실에서 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 38,
+      "category": "의자",
+      "name": "샬레 사무실 회의 시간 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 39,
+      "category": "안드로이드",
+      "name": "아로나로이드 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 40,
+      "category": "안드로이드",
+      "name": "아리스로이드(메이드) 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 41,
+      "category": "안드로이드",
+      "name": "아루로이드 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 42,
+      "category": "안드로이드",
+      "name": "이부키로이드 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 43,
+      "category": "안드로이드",
+      "name": "유우카로이드 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 44,
+      "category": "안드로이드",
+      "name": "나기사로이드 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 45,
+      "category": "안드로이드",
+      "name": "미카로이드 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 46,
+      "category": "안드로이드",
+      "name": "세이아로이드 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 47,
+      "category": "안드로이드",
+      "name": "키쿄로이드 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    },
+    {
+      "no": 48,
+      "category": "안드로이드",
+      "name": "와카모로이드 교환권",
+      "price": null,
+      "priceText": null,
+      "checkedAt": null
+    }
+  ]
+}
