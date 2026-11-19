@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-11-18T02:44:59.483Z",
+  "updatedAt": "2026-11-19T02:16:00.923Z",
   "characters": [
     "자그3"
   ],
   "state": {
     "starforce": {
       "firstDate": "2024-10-16",
-      "lastDate": "2026-11-17",
+      "lastDate": "2026-11-18",
       "error": null
     },
     "cube": {
       "firstDate": "2024-10-17",
-      "lastDate": "2026-11-17",
+      "lastDate": "2026-11-18",
       "error": null
     },
     "potential": {
       "firstDate": "2024-10-17",
-      "lastDate": "2026-11-17",
+      "lastDate": "2026-11-18",
       "error": null
     }
   },
@@ -334,22 +334,22 @@
       "item": "어센던트 펄스 링",
       "level": 130,
       "starforce": {
-        "attempts": 0,
-        "success": 0,
-        "fail": 0,
+        "attempts": 14,
+        "success": 10,
+        "fail": 4,
         "destroy": 0,
-        "maxStar": 0,
-        "last": null,
+        "maxStar": 10,
+        "last": "2026-11-18T23:01:45.936+09:00",
         "meso": 0,
         "mesoUnknown": 0
       },
       "cube": {
-        "uses": 96,
+        "uses": 98,
         "gradeUps": 0,
         "byKind": {
-          "펄스 인핸서": 96
+          "펄스 인핸서": 98
         },
-        "last": "2026-11-17T13:11:23.077+09:00"
+        "last": "2026-11-18T23:01:07.398+09:00"
       },
       "potential": {
         "uses": 3,
