@@ -9,385 +9,387 @@
       "no": 1,
       "category": "명찰 반지",
       "name": "블루 아카이브 학생 이름표 명찰 반지 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 5000000000,
+      "priceText": "50억",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 2,
       "category": "컷인 이펙트",
       "name": "이로하 컷인 이펙트 획득권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 1500000000,
+      "priceText": "15억",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 3,
       "category": "컷인 이펙트",
       "name": "키쿄 컷인 이펙트 획득권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 2000000000,
+      "priceText": "20억",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 4,
       "category": "액션 헤어",
       "name": "아로나 액션 헤어 쿠폰",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 200000000,
+      "priceText": "2억",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 5,
       "category": "액션 헤어",
       "name": "아루 액션 헤어 쿠폰",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 10000000,
+      "priceText": "1,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 6,
       "category": "액션 헤어",
       "name": "이부키 액션 헤어 쿠폰",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 40000000,
+      "priceText": "4,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 7,
       "category": "액션 헤어",
       "name": "유우카 액션 헤어 쿠폰",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 20000000,
+      "priceText": "2,000만",
+      "checkedAt": "2026-11-19",
+      "note": "\"2천\"으로 불러 줘서 2천만으로 기록"
     },
     {
       "no": 8,
       "category": "액션 헤어",
       "name": "나기사 액션 헤어 쿠폰",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 15000000,
+      "priceText": "1,500만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 9,
       "category": "액션 헤어",
       "name": "미카 액션 헤어 쿠폰",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 80000000,
+      "priceText": "8,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 10,
       "category": "액션 헤어",
       "name": "세이아 액션 헤어 쿠폰",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 25000000,
+      "priceText": "2,500만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 11,
       "category": "액션 헤어",
       "name": "키쿄 액션 헤어 쿠폰",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 300000000,
+      "priceText": "3억",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 12,
       "category": "액션 헤어",
       "name": "와카모 액션 헤어 쿠폰",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 20000000,
+      "priceText": "2,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 13,
       "category": "액션 헤어",
       "name": "아리스(메이드) 액션 헤어 쿠폰",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 30000000,
+      "priceText": "3,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 14,
       "category": "명찰&말풍선 반지",
       "name": "아루 명찰&말풍선 반지 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 8000000,
+      "priceText": "800만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 15,
       "category": "명찰&말풍선 반지",
       "name": "이부키 명찰&말풍선 반지 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 30000000,
+      "priceText": "3,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 16,
       "category": "명찰&말풍선 반지",
       "name": "유우카 명찰&말풍선 반지 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 10000000,
+      "priceText": "1,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 17,
       "category": "명찰&말풍선 반지",
       "name": "나기사 명찰&말풍선 반지 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 70000000,
+      "priceText": "7,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 18,
       "category": "명찰&말풍선 반지",
       "name": "미카 명찰&말풍선 반지 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 100000000,
+      "priceText": "1억",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 19,
       "category": "명찰&말풍선 반지",
       "name": "세이아 명찰&말풍선 반지 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 26000000,
+      "priceText": "2,600만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 20,
       "category": "명찰&말풍선 반지",
       "name": "키쿄 명찰&말풍선 반지 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 50000000,
+      "priceText": "5,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 21,
       "category": "명찰&말풍선 반지",
       "name": "와카모 명찰&말풍선 반지 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 20000000,
+      "priceText": "2,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 22,
       "category": "소울 스킨",
       "name": "아로나 소울 스킨",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 400000000,
+      "priceText": "4억",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 23,
       "category": "소울 스킨",
       "name": "이로하 소울 스킨",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 150000000,
+      "priceText": "1억 5,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 24,
       "category": "소울 스킨",
       "name": "키쿄 소울 스킨",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 250000000,
+      "priceText": "2억 5,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 25,
       "category": "배경·일러스트",
       "name": "블루 아카이브 커스텀 배경 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 220000000,
+      "priceText": "2억 2,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 26,
       "category": "배경·일러스트",
       "name": "아로나(기본 표정) 스페셜 일러스트 등록권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 20000000,
+      "priceText": "2,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 27,
       "category": "배경·일러스트",
       "name": "아로나(당황 표정) 스페셜 일러스트 등록권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 10000000,
+      "priceText": "1,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 28,
       "category": "배경·일러스트",
       "name": "아로나(기쁜 표정) 스페셜 일러스트 등록권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 20000000,
+      "priceText": "2,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 29,
       "category": "치장",
       "name": "소라 아르바이트 한벌옷 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 5000000,
+      "priceText": "500만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 30,
       "category": "치장",
       "name": "콩콩 아로나 모자 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 5000000,
+      "priceText": "500만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 31,
       "category": "치장",
       "name": "페로로지라 얼굴장식 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 80000000,
+      "priceText": "8,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 32,
       "category": "치장",
       "name": "딸기우유 콤플렉스 선글라스 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 28000000,
+      "priceText": "2,800만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 33,
       "category": "의자",
       "name": "블루 이터니티 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 11000000,
+      "priceText": "1,100만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 34,
       "category": "의자",
       "name": "아로나의 고래 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 8000000,
+      "priceText": "800만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 35,
       "category": "의자",
       "name": "블루 스카이 판타지 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 12000000,
+      "priceText": "1,200만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 36,
       "category": "의자",
       "name": "티파티 타임 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 2500000,
+      "priceText": "250만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 37,
       "category": "의자",
       "name": "블루 아카이브 교실에서 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 10000000,
+      "priceText": "1,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 38,
       "category": "의자",
       "name": "샬레 사무실 회의 시간 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 2000000,
+      "priceText": "200만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 39,
       "category": "안드로이드",
       "name": "아로나로이드 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 20000000,
+      "priceText": "2,000만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 40,
       "category": "안드로이드",
       "name": "아리스로이드(메이드) 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 5000000,
+      "priceText": "500만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 41,
       "category": "안드로이드",
       "name": "아루로이드 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 500000,
+      "priceText": "50만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 42,
       "category": "안드로이드",
       "name": "이부키로이드 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 9000000,
+      "priceText": "900만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 43,
       "category": "안드로이드",
       "name": "유우카로이드 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 1000000,
+      "priceText": "100만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 44,
       "category": "안드로이드",
       "name": "나기사로이드 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 1000000,
+      "priceText": "100만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 45,
       "category": "안드로이드",
       "name": "미카로이드 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 2000000,
+      "priceText": "200만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 46,
       "category": "안드로이드",
       "name": "세이아로이드 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 1000000,
+      "priceText": "100만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 47,
       "category": "안드로이드",
       "name": "키쿄로이드 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 7000000,
+      "priceText": "700만",
+      "checkedAt": "2026-11-19"
     },
     {
       "no": 48,
       "category": "안드로이드",
       "name": "와카모로이드 교환권",
-      "price": null,
-      "priceText": null,
-      "checkedAt": null
+      "price": 1000000,
+      "priceText": "100만",
+      "checkedAt": "2026-11-19"
     }
-  ]
+  ],
+  "priceNote": "2026-11-19 사용자 경매장 검색 시세 (등록 최저가 기준으로 보임)"
 }
