@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-11-21T01:59:11.802Z",
+  "updatedAt": "2026-11-22T00:58:33.316Z",
   "characters": [
     "자그3"
   ],
   "state": {
     "starforce": {
       "firstDate": "2024-10-16",
-      "lastDate": "2026-11-20",
+      "lastDate": "2026-11-21",
       "error": null
     },
     "cube": {
       "firstDate": "2024-10-17",
-      "lastDate": "2026-11-20",
+      "lastDate": "2026-11-21",
       "error": null
     },
     "potential": {
       "firstDate": "2024-10-17",
-      "lastDate": "2026-11-20",
+      "lastDate": "2026-11-21",
       "error": null
     }
   },
@@ -552,16 +552,16 @@
         "mesoUnknown": 0
       },
       "cube": {
-        "uses": 325,
+        "uses": 332,
         "gradeUps": 0,
         "byKind": {
           "카르마 블랙 큐브": 128,
           "카르마 화이트 에디셔널 큐브": 80,
-          "메멘토 골드 큐브 (200제)": 64,
+          "메멘토 골드 큐브 (200제)": 71,
           "대적자의 화이트 에디셔널 큐브": 48,
           "대적자의 블랙 큐브": 5
         },
-        "last": "2026-11-17T19:26:08.076+09:00"
+        "last": "2026-11-21T04:12:19.985+09:00"
       },
       "potential": {
         "uses": 0,
